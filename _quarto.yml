@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
   resources:
     - "graph_output.html"
     - "nodes/*.ipynb"

@@ -248,7 +248,7 @@ function highlightFilter(filter) {
              #mynetwork {
                  width: 100%;
                  height: 700px;
-                 background-color: #0b1020;
+                 background-color: #ffffff;
                  border: 1px solid lightgray;
                  position: relative;
                  float: left;
@@ -260,7 +260,13 @@ function highlightFilter(filter) {
 
              
         </style>
-    </head>
+    
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  #mynetwork { border: 0 !important; }
+</style>
+
+</head>
 
 
     <body>
@@ -302,8 +308,8 @@ function highlightFilter(filter) {
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#4a90e2", "font": {"color": "#f5f7ff"}, "id": "inclusion-exclusion.ipynb", "label": "Inclusion Exclusion", "shape": "dot", "title": "Click to open Inclusion Exclusion", "url": "nodes/inclusion-exclusion.html"}, {"color": "#4a90e2", "font": {"color": "#f5f7ff"}, "id": "occupancy-problem.ipynb", "label": "Occupancy Problem", "shape": "dot", "title": "Click to open Occupancy Problem", "url": "nodes/occupancy-problem.html"}]);
-                  edges = new vis.DataSet([{"arrows": "to", "color": "#888888", "from": "occupancy-problem.ipynb", "to": "inclusion-exclusion.ipynb"}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "#111111"}, "id": "inclusion-exclusion.ipynb", "label": "Inclusion Exclusion", "shape": "dot", "title": "Click to open Inclusion Exclusion", "url": "nodes/inclusion-exclusion.html"}, {"color": "#97c2fc", "font": {"color": "#111111"}, "id": "occupancy-problem.ipynb", "label": "Occupancy Problem", "shape": "dot", "title": "Click to open Occupancy Problem", "url": "nodes/occupancy-problem.html"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "#444444", "from": "inclusion-exclusion.ipynb", "to": "occupancy-problem.ipynb"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -314,7 +320,7 @@ function highlightFilter(filter) {
                   // adding nodes and edges to the graph
                   data = {nodes: nodes, edges: edges};
 
-                  var options = {"layout": {"improvedLayout": true}, "nodes": {"shape": "dot", "size": 18, "borderWidth": 2, "color": {"border": "#ffffff", "background": "#4a90e2", "highlight": {"border": "#ffffff", "background": "#50e3c2"}, "hover": {"border": "#ffffff", "background": "#50e3c2"}}, "font": {"size": 16, "color": "#f5f7ff"}}, "edges": {"width": 1.5, "color": {"color": "#888888", "highlight": "#50e3c2", "hover": "#50e3c2"}, "smooth": {"type": "dynamic"}}, "interaction": {"hover": true, "tooltipDelay": 150, "navigationButtons": true}, "physics": {"stabilization": {"iterations": 250}, "barnesHut": {"gravitationalConstant": -8000, "springLength": 140, "springConstant": 0.02}}};
+                  var options = {"layout": {"improvedLayout": true}, "nodes": {"shape": "dot", "size": 16, "borderWidth": 2, "color": {"border": "#111111", "background": "#ffffff", "highlight": {"border": "#111111", "background": "#f2f2f2"}, "hover": {"border": "#111111", "background": "#f2f2f2"}}, "font": {"size": 15, "color": "#111111", "face": "TimesNewRoman"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "width": 1.2, "color": {"color": "#444444", "highlight": "#111111", "hover": "#111111"}, "smooth": {"type": "continuous"}}, "interaction": {"hover": true, "tooltipDelay": 150, "navigationButtons": false}, "physics": {"stabilization": {"iterations": 250}, "barnesHut": {"gravitationalConstant": -6000, "springLength": 150, "springConstant": 0.02, "damping": 0.25}}};
 
                   
 

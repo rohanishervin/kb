@@ -1,0 +1,28 @@
+project:
+  type: website
+  resources:
+    - "graph_output.html"
+    - "nodes/*.ipynb"
+
+website:
+  title: "Knowledge Base"
+  navbar:
+    left:
+      - href: index.ipynb
+        text: Home
+      - href: graph.ipynb
+        text: "Graph"
+  sidebar:
+    contents:
+      - section: "Theorems"
+        contents:
+          - nodes/inclusion-exclusion.ipynb
+      - section: "Problems"
+        contents:
+          - nodes/occupancy-problem.ipynb
+
+format:
+  html:
+    theme: cosmo
+    code-fold: true
+    toc: true

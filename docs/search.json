@@ -1,0 +1,40 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Knowledge Base",
+    "section": "",
+    "text": "Welcome to the knowledge base."
+  },
+  {
+    "objectID": "nodes/occupancy-problem.html",
+    "href": "nodes/occupancy-problem.html",
+    "title": "The Occupancy Problem",
+    "section": "",
+    "text": "The question is: what is the probability that after \\(n\\) trials, all \\(m\\) possible outcomes have occurred at least once?\n\nConnection to Theory\nTo solve this, we define \\(A_i\\) as the event that outcome \\(i\\) never occurs. We then use the Principle of Inclusion-Exclusion to find the probability that at least one outcome is missing.\n\n\nSimulation\nBelow we simulate 7 people being assigned to 4 seasons.\n\n\nCode\nimport numpy as np\n\ndef sim_occupancy(balls=7, bins=4, trials=10000):\n    results = [len(np.unique(np.random.randint(0, bins, balls))) for _ in range(trials)]\n    return np.mean([r == bins for r in results])\n\nprint(f\"Success rate: {sim_occupancy():.4f}\")\n\n\nSuccess rate: 0.5093",
+    "crumbs": [
+      "Home",
+      "Problems",
+      "The Occupancy Problem"
+    ]
+  },
+  {
+    "objectID": "nodes/inclusion-exclusion.html",
+    "href": "nodes/inclusion-exclusion.html",
+    "title": "Principle of Inclusion-Exclusion (PIE)",
+    "section": "",
+    "text": "The Principle of Inclusion-Exclusion is a counting technique to find the size of a union of sets.\n\nThe Formula\nFor \\(n\\) sets, the probability of the union is: \\[P(\\cup_{i=1}^n A_i) = \\sum P(A_i) - \\sum P(A_i \\cap A_j) + \\dots + (-1)^{n-1} P(\\cap A_i)\\]\nThis is essential for problems where outcomes are not mutually exclusive.",
+    "crumbs": [
+      "Home",
+      "Theorems",
+      "Principle of Inclusion-Exclusion (PIE)"
+    ]
+  },
+  {
+    "objectID": "graph.html",
+    "href": "graph.html",
+    "title": "Graph",
+    "section": "",
+    "text": "This page will show the knowledge graph.\n\n\nCode\nimport os\nimport re\nimport json\nfrom pyvis.network import Network\n\nnet = Network(height='700px', width='100%', notebook=False, directed=True, cdn_resources='in_line', bgcolor='#0b1020', font_color='#f5f7ff')\n\nnode_path = 'nodes'\nfiles = sorted([f for f in os.listdir(node_path) if f.endswith('.ipynb')])\n\nfor f in files:\n    label = f.replace('.ipynb', '').replace('-', ' ').title()\n    url = f\"nodes/{f.replace('.ipynb', '.html')}\"\n    net.add_node(f, label=label, color='#4a90e2', title=f\"Click to open {label}\", url=url)\n\n    with open(os.path.join(node_path, f), 'r', encoding='utf-8') as file:\n        content = file.read()\n        links = re.findall(r'\\]\\((.*?\\.ipynb)', content)\n        for link in links:\n            target = os.path.basename(link)\n            if target in files:\n                net.add_edge(f, target, color='#888888')\n\noptions = {\n    \"layout\": {\"improvedLayout\": True},\n    \"nodes\": {\n        \"shape\": \"dot\",\n        \"size\": 18,\n        \"borderWidth\": 2,\n        \"color\": {\n            \"border\": \"#ffffff\",\n            \"background\": \"#4a90e2\",\n            \"highlight\": {\"border\": \"#ffffff\", \"background\": \"#50e3c2\"},\n            \"hover\": {\"border\": \"#ffffff\", \"background\": \"#50e3c2\"},\n        },\n        \"font\": {\"size\": 16, \"color\": \"#f5f7ff\"},\n    },\n    \"edges\": {\n        \"width\": 1.5,\n        \"color\": {\n            \"color\": \"#888888\",\n            \"highlight\": \"#50e3c2\",\n            \"hover\": \"#50e3c2\",\n        },\n        \"smooth\": {\"type\": \"dynamic\"},\n    },\n    \"interaction\": {\n        \"hover\": True,\n        \"tooltipDelay\": 150,\n        \"navigationButtons\": True,\n    },\n    \"physics\": {\n        \"stabilization\": {\"iterations\": 250},\n        \"barnesHut\": {\n            \"gravitationalConstant\": -8000,\n            \"springLength\": 140,\n            \"springConstant\": 0.02,\n        },\n    },\n}\n\nnet.set_options(json.dumps(options))\n\nnet.save_graph(\"graph_output.html\")\n\nwith open(\"graph_output.html\", \"r\") as f:\n    html_content = f.read()\n\nclick_script = \"\"\"\n    network.on(\"click\", function (params) {\n        if (params.nodes.length &gt; 0) {\n            var nodeId = params.nodes[0];\n            var nodeData = nodes.get(nodeId);\n            if (nodeData && nodeData.url) {\n                window.parent.location.href = nodeData.url;\n            }\n        }\n    });\n\"\"\"\n\nhtml_content = html_content.replace(\"&lt;/body&gt;\", f\"&lt;script&gt;{click_script}&lt;/script&gt;&lt;/body&gt;\")\n\nwith open(\"graph_output.html\", \"w\") as f:\n    f.write(html_content)"
+  }
+]

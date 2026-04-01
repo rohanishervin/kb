@@ -1,235 +1,154 @@
 import os
-
 import re
-
 import json
-
 from pyvis.network import Network
 
-
-
 net = Network(
-
-    height="700px",
-
+    height="100vh",
     width="100%",
-
     notebook=False,
-
     directed=True,
-
     cdn_resources="in_line",
-
-    bgcolor="#ffffff",      # white background
-
-    font_color="#111111",   # dark text
-
+    bgcolor="#ffffff",
+    font_color="#111111",
 )
 
-
-
 node_path = "nodes"
-
 files = sorted([f for f in os.listdir(node_path) if f.endswith(".ipynb")])
 
-
-
+# --- Nodes ---
 for f in files:
-
     label = f.replace(".ipynb", "").replace("-", " ").title()
-
     url = f"nodes/{f.replace('.ipynb', '.html')}"
 
     net.add_node(
-
         f,
-
         label=label,
-
-        title=f"Click to open {label}",
-
+        title=f"<b>{label}</b><br>Click to open",
         url=url,
-
     )
 
-
-
+# --- Edges ---
 for f in files:
-
     with open(os.path.join(node_path, f), "r", encoding="utf-8") as file:
-
         content = file.read()
-
         links = re.findall(r"\]\((.*?\.ipynb)", content)
 
         for link in links:
-
             target = os.path.basename(link)
-
             if target in files:
+                net.add_edge(target, f)
 
-                net.add_edge(target, f, color="#444444")
-
-
-
+# --- Styling (UPGRADED) ---
 options = {
-
-    "layout": {"improvedLayout": True},
-
+    "layout": {
+        "improvedLayout": True
+    },
     "nodes": {
-
         "shape": "dot",
-
-        "size": 16,
-
-        "borderWidth": 2,
+        "size": 14,
+        "borderWidth": 1.5,
 
         "color": {
-
-            "border": "#111111",
-
+            "border": "#2c2c2c",
             "background": "#ffffff",
-
-            "highlight": {"border": "#111111", "background": "#f2f2f2"},
-
-            "hover": {"border": "#111111", "background": "#f2f2f2"},
-
+            "highlight": {"border": "#000000", "background": "#f5f5f5"},
+            "hover": {"border": "#000000", "background": "#f0f0f0"},
         },
 
         "font": {
-
-            "size": 15,
-
+            "size": 16,
             "color": "#111111",
-
             "face": "Times New Roman",
-
+            "strokeWidth": 0,
         },
-
     },
 
     "edges": {
-
-        "arrows": {"to": {"enabled": True, "scaleFactor": 0.7}},
-
-        "width": 1.2,
-
-        "color": {
-
-            "color": "#444444",
-
-            "highlight": "#111111",
-
-            "hover": "#111111",
-
+        "arrows": {
+            "to": {"enabled": True, "scaleFactor": 0.6}
         },
-
-        "smooth": {"type": "continuous"},
-
+        "width": 1,
+        "color": {
+            "color": "#999999",
+            "highlight": "#000000",
+            "hover": "#000000",
+        },
+        "smooth": {
+            "type": "cubicBezier",
+            "roundness": 0.2,
+        },
     },
 
     "interaction": {
-
         "hover": True,
-
-        "tooltipDelay": 150,
-
-        "navigationButtons": False,  # remove bottom navigation buttons
-
+        "tooltipDelay": 120,
+        "zoomView": True,
+        "dragView": True,
     },
-
     "physics": {
-
-        "stabilization": {"iterations": 250},
-
-        "barnesHut": {
-
-            "gravitationalConstant": -6000,
-
-            "springLength": 150,
-
-            "springConstant": 0.02,
-
-            "damping": 0.25,
-
+        "stabilization": {
+            "enabled": True,
+            "iterations": 500
         },
-
-    },
-
+        "barnesHut": {
+            "gravitationalConstant": -200000,   # 🔥 much stronger repulsion
+            "centralGravity": 0.05,            # ⬅️ reduce pull to center
+            "springLength": 70,                # ⬅️ longer edges = more spread
+            "springConstant": 0.015,
+            "damping": 0.35,
+            "avoidOverlap": 100                  # ✅ important
+        },
+        "minVelocity": 0.75
+    }
 }
 
-
-
-
-
 net.set_options(json.dumps(options))
-
 net.save_graph("graph_output.html")
 
-
-
+# --- Post-process HTML ---
 with open("graph_output.html", "r", encoding="utf-8") as f:
-
     html_content = f.read()
 
-
-
-# KEEP your click behavior exactly as-is
-
+# ✅ Robust navigation fix
 click_script = """
+network.on("click", function (params) {
+    if (params.nodes.length > 0) {
+        var nodeId = params.nodes[0];
+        var nodeData = nodes.get(nodeId);
 
-    network.on("click", function (params) {
-
-        if (params.nodes.length > 0) {
-
-            var nodeId = params.nodes[0];
-
-            var nodeData = nodes.get(nodeId);
-
-            if (nodeData && nodeData.url) {
-
-                window.parent.location.href = nodeData.url;
-
-            }
-
+        if (nodeData && nodeData.url) {
+            // 🔥 always escape iframe / Quarto embedding
+            window.top.location.href = nodeData.url;
         }
-
-    });
-
+    }
+});
 """
 
-
-
-# Optional: make the embed cleaner in Quarto by removing margins (style-only)
-
+# ✅ Clean academic styling
 css_tune = """
-
 <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Times New Roman", serif;
+  }
 
-  html, body { margin: 0; padding: 0; background: #fff; }
+  #mynetwork {
+    border: none !important;
+  }
 
-  #mynetwork { border: 0 !important; }
-
+  canvas {
+    background-color: #ffffff !important;
+  }
 </style>
-
 """
 
-
-
-if "</head>" in html_content:
-
-    html_content = html_content.replace("</head>", css_tune + "\n</head>")
-
-else:
-
-    html_content = css_tune + html_content
-
-
-
+html_content = html_content.replace("</head>", css_tune + "\n</head>")
 html_content = html_content.replace("</body>", f"<script>{click_script}</script></body>")
 
-
-
 with open("graph_output.html", "w", encoding="utf-8") as f:
-
     f.write(html_content)
+
+print("Clean math knowledge graph generated!")

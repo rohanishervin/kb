@@ -92,8 +92,8 @@ options = {
             "iterations": 500
         },
         "barnesHut": {
-            "gravitationalConstant": -200000,   # 🔥 much stronger repulsion
-            "centralGravity": 0.05,            # ⬅️ reduce pull to center
+            "gravitationalConstant": -150000,   # 🔥 much stronger repulsion
+            "centralGravity": 0.1,            # ⬅️ reduce pull to center
             "springLength": 70,                # ⬅️ longer edges = more spread
             "springConstant": 0.015,
             "damping": 0.35,

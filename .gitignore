@@ -1,5 +1,7 @@
 TODO.md
 guideline.md
+create_anki.py
+anki_cards.txt
 __pycache__/
 *.py[cod]
 *.pyo

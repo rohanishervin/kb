@@ -14,13 +14,40 @@ website:
         text: "Graph"
   sidebar:
     contents:
+      - section: "Definitions"
+        contents:
+          - nodes/experiment.ipynb
+          - nodes/outcome.ipynb
+          - nodes/sample-space.ipynb
+          - nodes/multiplication-rule.ipynb
+          - nodes/sampling-with-replacement.ipynb
+          - nodes/sampling-without-replacement.ipynb
+          - nodes/adjusting-for-overcounting.ipynb
+          - nodes/binomial-coefficient.ipynb
+          - nodes/probability-naive-definition.ipynb
+          - nodes/probability.ipynb
+          - nodes/field.ipynb
+          - nodes/order.ipynb
+          - nodes/ordered-set.ipynb
+          - nodes/ordered-field.ipynb
+          - nodes/absolute-value.ipynb
       - section: "Theorems"
         contents:
-          - nodes/inclusion-exclusion.ipynb
+          - nodes/binomial-coefficient-formula.ipynb 
+          - nodes/binomial-theorem.ipynb
+          - nodes/probability-properties.ipynb
       - section: "Problems"
         contents:
           - nodes/occupancy-problem.ipynb
-
+          - nodes/birthday-problem.ipynb
+          - nodes/full-house.ipynb
+          - nodes/newton-pepys-problem.ipynb
+          - nodes/bose-einstein-problem.ipynb
+          - nodes/vandermonde’s-identity.ipynb
+          - nodes/partnerships.ipynb
+      - section: "Techniques"
+        contents:
+          - nodes/story-proofs.ipynb
 format:
   html:
     theme: cosmo

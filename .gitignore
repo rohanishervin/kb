@@ -57,3 +57,6 @@ cache/
 !.github/workflows/
 !.github/workflows/publish.yml
 **/*.quarto_ipynb
+
+prompt.txt
+gemini_kb_prompt.txt

@@ -27,6 +27,9 @@ jobs:
       - name: Render site
         run: quarto render
 
+      - name: Add .nojekyll to prevent GitHub Pages from using Jekyll
+        run: touch _site/.nojekyll
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

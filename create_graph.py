@@ -15,13 +15,19 @@ for f in files:
     with open(os.path.join(node_path, f), "r", encoding="utf-8") as file:
         content = file.read()
         extracted_links = re.findall(r"\]\((.*?\.ipynb)", content)
-        
+
+        # Dedupe targets per source file — only connect A -> B once,
+        # regardless of how many times B is linked to from within A.
+        unique_targets = set()
         for link in extracted_links:
             target = os.path.basename(link)
             if target in files:
-                links.append({"source": f, "target": target})
-                outgoing[f].append(target)
-                incoming[target].append(f)
+                unique_targets.add(target)
+
+        for target in unique_targets:
+            links.append({"source": f, "target": target})
+            outgoing[f].append(target)
+            incoming[target].append(f)
 
 # Build nodes
 nodes = []

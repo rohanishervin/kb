@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - "graph_output.html"
+    - "coverage_output.html"
     - "nodes/*.ipynb"
 
 website:
@@ -13,6 +14,8 @@ website:
         text: Home
       - href: graph.ipynb
         text: "Graph"
+      - href: coverage.ipynb
+        text: "Study Focus"
     right:
       - icon: envelope
         href: mailto:shervin.rowhani@gmail.com

@@ -89,7 +89,7 @@ def run_graph_build(py_exe: str, run_anki: bool = False):
             check=False
         )
         if res.returncode == 0:
-            log("GRAPH", "Knowledge graph rebuilt successfully -> graph_output.html")
+            log("GRAPH", "Knowledge graph & study coverage rebuilt -> graph_output.html, coverage_output.html")
         else:
             log("ERR", f"create_graph.py failed:\n{res.stderr.strip()}")
             return False
@@ -128,8 +128,8 @@ def get_files_snapshot():
             except OSError:
                 pass
 
-    # Also watch create_graph.py and _quarto.yml
-    for extra in ["create_graph.py", "_quarto.yml", "graph.ipynb", "index.ipynb"]:
+    # Also watch create_graph.py, _quarto.yml, and root notebooks
+    for extra in ["create_graph.py", "_quarto.yml", "graph.ipynb", "coverage.ipynb", "index.ipynb"]:
         p = ROOT_DIR / extra
         if p.exists():
             try:

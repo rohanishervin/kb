@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Focus & Knowledge Coverage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #ffffff;
+      --text-main: #212529;
+      --text-muted: #6c757d;
+      --border-color: #dee2e6;
+      --border-light: #e9ecef;
+      --purple: #8e44ad;
+      --green: #27ae60;
+      --amber: #d35400;
+      --red: #c0392b;
+      --blue: #2980b9;
+      --font-kb: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body, html, input, select, button, table, td, th {
+      font-family: var(--font-kb);
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 12px 16px;
+    }
+    .dashboard-container {
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 14px 18px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+    }
+    .kpi-card.purple::before { background: var(--purple); }
+    .kpi-card.green::before { background: var(--green); }
+    .kpi-card.amber::before { background: var(--amber); }
+    .kpi-card.red::before { background: var(--red); }
+    .kpi-card.blue::before { background: var(--blue); }
+
+    .kpi-label {
+      font-family: var(--font-kb);
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .kpi-value {
+      font-size: 24px;
+      font-family: var(--font-kb);
+      font-weight: bold;
+      color: #111;
+    }
+    .kpi-subtext {
+      font-family: var(--font-kb);
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* Main Grid Sections */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 18px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .section-title {
+      font-family: var(--font-kb);
+      font-size: 17px;
+      font-weight: 600;
+      color: #222;
+    }
+    .section-badge {
+      font-family: var(--font-kb);
+      font-size: 11px;
+      background: #f8f9fa;
+      color: #495057;
+      border: 1px solid var(--border-light);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 500;
+    }
+
+    /* Topic Progress Bars */
+    .domain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .domain-row {
+      cursor: pointer;
+      padding: 3px 6px;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .domain-row:hover {
+      background: #f8f9fa;
+    }
+    .domain-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .domain-name {
+      font-weight: 600;
+      color: #2c3e50;
+      font-family: var(--font-kb);
+    }
+    .domain-pct {
+      font-family: var(--font-kb);
+      color: #111;
+      font-weight: bold;
+      font-size: 12.5px;
+    }
+    .progress-bar-container {
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+    .bar-direct {
+      background: var(--green);
+      height: 100%;
+      transition: width 0.3s;
+    }
+    .bar-transitive {
+      background: var(--amber);
+      height: 100%;
+      transition: width 0.3s;
+    }
+    .bar-uncovered {
+      background: #e9ecef;
+      height: 100%;
+    }
+    .progress-legend {
+      display: flex;
+      gap: 14px;
+      font-family: var(--font-kb);
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 0.5px dashed var(--border-light);
+    }
+    .legend-dot-inline {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    /* Priority Practice Queue */
+    .priority-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .priority-item {
+      border: 1px solid var(--border-light);
+      border-radius: 5px;
+      padding: 9px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .priority-item:hover {
+      border-color: #ced4da;
+      background: #fdfdfd;
+    }
+    .priority-item-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .priority-name {
+      font-family: var(--font-kb);
+      font-weight: 600;
+      font-size: 14px;
+      color: #1e293b;
+      text-decoration: none;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .priority-name:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+    .priority-meta {
+      font-family: var(--font-kb);
+      display: flex;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .priority-item-right {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .score-badge {
+      font-family: var(--font-kb);
+      font-size: 11.5px;
+      font-weight: bold;
+      background: #fff5f5;
+      color: var(--red);
+      padding: 1px 7px;
+      border-radius: 10px;
+      border: 1px solid #fed7d7;
+    }
+
+    /* Table Explorer Section */
+    .table-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 18px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .table-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      font-family: var(--font-kb);
+      background: #f8f9fa;
+      border: 1px solid var(--border-light);
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      color: #495057;
+      transition: all 0.15s;
+    }
+    .tab-btn:hover {
+      background: #e9ecef;
+    }
+    .tab-btn.active {
+      background: #212529;
+      color: #fff;
+      border-color: #212529;
+      font-weight: 500;
+    }
+    .filter-inputs {
+      display: flex;
+      gap: 8px;
+    }
+    .search-input {
+      font-family: var(--font-kb);
+      font-style: italic;
+      padding: 5px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      font-size: 12.5px;
+      outline: none;
+      width: 200px;
+    }
+    .search-input:focus {
+      border-color: #495057;
+    }
+    .domain-select {
+      font-family: var(--font-kb);
+      padding: 5px 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      font-size: 12.5px;
+      background: #fff;
+      outline: none;
+    }
+
+    /* Note Table */
+    .table-responsive {
+      overflow-x: auto;
+      max-height: 500px;
+    }
+    table.notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+    table.notes-table th {
+      position: sticky;
+      top: 0;
+      background: #f8f9fa;
+      padding: 8px 10px;
+      font-family: var(--font-kb);
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1.5px solid var(--border-color);
+      font-size: 12px;
+      letter-spacing: 0.02em;
+    }
+    table.notes-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #f1f3f5;
+      color: #212529;
+    }
+    table.notes-table tr:hover td {
+      background: #f8f9fa;
+    }
+    .note-link {
+      font-weight: 600;
+      color: #212529;
+      text-decoration: none;
+      font-family: var(--font-kb);
+    }
+    .note-link:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+    .status-pill {
+      font-family: var(--font-kb);
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+    .status-pill.direct {
+      background: #d4edda;
+      color: #155724;
+    }
+    .status-pill.transitive {
+      background: #fff3cd;
+      color: #856404;
+    }
+    .status-pill.uncovered {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    .psets-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+    .pset-tag {
+      font-family: var(--font-kb);
+      background: #f3e8ff;
+      color: #6b21a8;
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Hero KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card purple">
+        <div class="kpi-label">Problem Sets Active</div>
+        <div class="kpi-value">7</div>
+        <div class="kpi-subtext">21 direct nodes tested</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-label">Direct Practice Rate</div>
+        <div class="kpi-value">12.2%</div>
+        <div class="kpi-subtext">21 / 172 notes tested directly</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-label">Prerequisites Touched</div>
+        <div class="kpi-value">42</div>
+        <div class="kpi-subtext">Foundational concepts in problem paths</div>
+      </div>
+      <div class="kpi-card red">
+        <div class="kpi-label">Uncovered Notes</div>
+        <div class="kpi-value">109</div>
+        <div class="kpi-subtext">63.4% of KB requires problem coverage</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-label">Total Knowledge Nodes</div>
+        <div class="kpi-value">172</div>
+        <div class="kpi-subtext">Across 13 fine-resolution topics</div>
+      </div>
+    </div>
+
+    <!-- 2-Column Analytics Grid -->
+    <div class="dashboard-grid">
+      <!-- Domain Breakdown Progress -->
+      <div class="section-card">
+        <div class="section-header">
+          <h2 class="section-title">Topic Practice Coverage</h2>
+          <span class="section-badge">Sorted by Practice Urgency</span>
+        </div>
+        <div class="domain-list" id="domain-list-container">
+          <!-- Rendered via JS -->
+        </div>
+        <div class="progress-legend">
+          <span><span class="legend-dot-inline" style="background:var(--green)"></span>Directly Tested</span>
+          <span><span class="legend-dot-inline" style="background:var(--amber)"></span>Prerequisites</span>
+          <span><span class="legend-dot-inline" style="background:#e9ecef"></span>Uncovered</span>
+        </div>
+      </div>
+
+      <!-- Priority Queue: Where to Focus Next -->
+      <div class="section-card">
+        <div class="section-header">
+          <h2 class="section-title">Where to Focus Next</h2>
+          <span class="section-badge" style="background:#fff5f5; color:#c53030;">High Impact Targets</span>
+        </div>
+        <div class="priority-list" id="priority-queue-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Note Explorer Table -->
+    <div class="table-section">
+      <div class="section-header">
+        <h2 class="section-title">Note Coverage Matrix</h2>
+        <span class="section-badge" id="table-count-badge">Showing 172 Notes</span>
+      </div>
+
+      <div class="table-controls">
+        <div class="filter-tabs">
+          <button class="tab-btn active" onclick="setFilterStatus('all')">All Notes (172)</button>
+          <button class="tab-btn" onclick="setFilterStatus('uncovered')">Uncovered (109)</button>
+          <button class="tab-btn" onclick="setFilterStatus('transitive')">Prerequisites (42)</button>
+          <button class="tab-btn" onclick="setFilterStatus('direct')">Directly Practiced (21)</button>
+        </div>
+        <div class="filter-inputs">
+          <select id="domain-filter-select" class="domain-select" onchange="onFilterChange()">
+            <option value="all">All Topics</option>
+          </select>
+          <input type="text" id="note-search-input" class="search-input" placeholder="Search notes..." oninput="onFilterChange()" />
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Note Name</th>
+              <th>Topic</th>
+              <th>Status</th>
+              <th style="text-align:center;">Usages</th>
+              <th style="text-align:center;">Prerequisites</th>
+              <th>Problem Sets Covering Concept</th>
+            </tr>
+          </thead>
+          <tbody id="notes-table-body">
+            <!-- Rendered via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const data = {"kpis": {"total_notes": 172, "total_psets": 7, "direct_count": 21, "transitive_count": 42, "uncovered_count": 109, "overall_coverage_pct": 36.6, "direct_coverage_pct": 12.2}, "domains": [{"domain": "Measure Theory & Integration", "total": 14, "direct": 0, "transitive": 0, "uncovered": 14, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Time Series Analysis", "total": 11, "direct": 0, "transitive": 0, "uncovered": 11, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Mathematical Finance & Portfolio Theory", "total": 6, "direct": 0, "transitive": 0, "uncovered": 6, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Stochastic Processes", "total": 5, "direct": 0, "transitive": 0, "uncovered": 5, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Difference Equations & Dynamics", "total": 3, "direct": 0, "transitive": 0, "uncovered": 3, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Statistical Inference & Estimation", "total": 2, "direct": 0, "transitive": 0, "uncovered": 2, "coverage_pct": 0.0, "direct_pct": 0.0}, {"domain": "Random Variables & Distributions", "total": 32, "direct": 2, "transitive": 4, "uncovered": 26, "coverage_pct": 18.8, "direct_pct": 6.2}, {"domain": "Inequalities & Limit Theorems", "total": 7, "direct": 0, "transitive": 2, "uncovered": 5, "coverage_pct": 28.6, "direct_pct": 0.0}, {"domain": "Function Spaces & Fixed Points", "total": 5, "direct": 2, "transitive": 0, "uncovered": 3, "coverage_pct": 40.0, "direct_pct": 40.0}, {"domain": "Metric Spaces & Topology", "total": 19, "direct": 6, "transitive": 4, "uncovered": 9, "coverage_pct": 52.6, "direct_pct": 31.6}, {"domain": "Probability Foundations & Combinatorics", "total": 30, "direct": 4, "transitive": 13, "uncovered": 13, "coverage_pct": 56.7, "direct_pct": 13.3}, {"domain": "Real Analysis (Foundations & Sequences)", "total": 33, "direct": 6, "transitive": 14, "uncovered": 13, "coverage_pct": 60.6, "direct_pct": 18.2}, {"domain": "Optimization & Linear Programming", "total": 5, "direct": 1, "transitive": 4, "uncovered": 0, "coverage_pct": 100.0, "direct_pct": 20.0}], "priorities": [{"id": "normal-distribution.ipynb", "name": "Normal Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 174, "usages": 12, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "measure.ipynb", "name": "Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 162, "usages": 9, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "sigma-algebra.ipynb", "name": "Sigma Algebra", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 153, "usages": 8, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "autocorrelation-and-stationarity.ipynb", "name": "Autocorrelation And Stationarity", "domain": "Time Series Analysis", "status": "uncovered", "score": 144, "usages": 7, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "gamma-function-and-distribution.ipynb", "name": "Gamma Function And Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 138, "usages": 4, "prelims": 13, "distance": null, "covering_psets": []}, {"id": "measurable-sets.ipynb", "name": "Measurable Sets", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 135, "usages": 6, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "probability-density-function.ipynb", "name": "Probability Density Function", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 132, "usages": 7, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "lebesgue-outer-measure.ipynb", "name": "Lebesgue Outer Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 132, "usages": 5, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "measurable-functions.ipynb", "name": "Measurable Functions", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 132, "usages": 3, "prelims": 9, "distance": null, "covering_psets": []}, {"id": "stochastic-processes-foundations.ipynb", "name": "Stochastic Processes Foundations", "domain": "Stochastic Processes", "status": "uncovered", "score": 126, "usages": 4, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "covariance-and-correlation.ipynb", "name": "Covariance And Correlation", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 123, "usages": 3, "prelims": 11, "distance": null, "covering_psets": []}, {"id": "lebesgue-integral.ipynb", "name": "Lebesgue Integral", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 123, "usages": 1, "prelims": 12, "distance": null, "covering_psets": []}, {"id": "indicator-rv.ipynb", "name": "Indicator Rv", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 120, "usages": 5, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "Lebesgue-measure.ipynb", "name": "Lebesgue Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 120, "usages": 3, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "single-period-investment-model.ipynb", "name": "Single Period Investment Model", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 120, "usages": 2, "prelims": 8, "distance": null, "covering_psets": []}, {"id": "moment-generating-functions.ipynb", "name": "Moment Generating Functions", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 117, "usages": 5, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "continuity-of-measure.ipynb", "name": "Continuity Of Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 117, "usages": 4, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "limits-of-measurable-functions.ipynb", "name": "Limits Of Measurable Functions", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 117, "usages": 2, "prelims": 7, "distance": null, "covering_psets": []}, {"id": "poisson-distribution.ipynb", "name": "Poisson Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 114, "usages": 5, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "measure-properties-and-completion.ipynb", "name": "Measure Properties And Completion", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 114, "usages": 3, "prelims": 3, "distance": null, "covering_psets": []}], "all_notes": [{"id": "normal-distribution.ipynb", "name": "Normal Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 174, "usages": 12, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "measure.ipynb", "name": "Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 162, "usages": 9, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "sigma-algebra.ipynb", "name": "Sigma Algebra", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 153, "usages": 8, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "autocorrelation-and-stationarity.ipynb", "name": "Autocorrelation And Stationarity", "domain": "Time Series Analysis", "status": "uncovered", "score": 144, "usages": 7, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "gamma-function-and-distribution.ipynb", "name": "Gamma Function And Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 138, "usages": 4, "prelims": 13, "distance": null, "covering_psets": []}, {"id": "measurable-sets.ipynb", "name": "Measurable Sets", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 135, "usages": 6, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "probability-density-function.ipynb", "name": "Probability Density Function", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 132, "usages": 7, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "lebesgue-outer-measure.ipynb", "name": "Lebesgue Outer Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 132, "usages": 5, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "measurable-functions.ipynb", "name": "Measurable Functions", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 132, "usages": 3, "prelims": 9, "distance": null, "covering_psets": []}, {"id": "stochastic-processes-foundations.ipynb", "name": "Stochastic Processes Foundations", "domain": "Stochastic Processes", "status": "uncovered", "score": 126, "usages": 4, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "covariance-and-correlation.ipynb", "name": "Covariance And Correlation", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 123, "usages": 3, "prelims": 11, "distance": null, "covering_psets": []}, {"id": "lebesgue-integral.ipynb", "name": "Lebesgue Integral", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 123, "usages": 1, "prelims": 12, "distance": null, "covering_psets": []}, {"id": "indicator-rv.ipynb", "name": "Indicator Rv", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 120, "usages": 5, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "Lebesgue-measure.ipynb", "name": "Lebesgue Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 120, "usages": 3, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "single-period-investment-model.ipynb", "name": "Single Period Investment Model", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 120, "usages": 2, "prelims": 8, "distance": null, "covering_psets": []}, {"id": "moment-generating-functions.ipynb", "name": "Moment Generating Functions", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 117, "usages": 5, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "continuity-of-measure.ipynb", "name": "Continuity Of Measure", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 117, "usages": 4, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "limits-of-measurable-functions.ipynb", "name": "Limits Of Measurable Functions", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 117, "usages": 2, "prelims": 7, "distance": null, "covering_psets": []}, {"id": "poisson-distribution.ipynb", "name": "Poisson Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 114, "usages": 5, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "measure-properties-and-completion.ipynb", "name": "Measure Properties And Completion", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 114, "usages": 3, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "conditional-expectation.ipynb", "name": "Conditional Expectation", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 114, "usages": 0, "prelims": 17, "distance": null, "covering_psets": []}, {"id": "geometric-and-negative-binomial-dist.ipynb", "name": "Geometric And Negative Binomial Dist", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 111, "usages": 5, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "gaussian-processes.ipynb", "name": "Gaussian Processes", "domain": "Stochastic Processes", "status": "uncovered", "score": 111, "usages": 3, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "multivariate-normal-distribution.ipynb", "name": "Multivariate Normal Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 108, "usages": 3, "prelims": 6, "distance": null, "covering_psets": []}, {"id": "autoregressive-models.ipynb", "name": "Autoregressive Models", "domain": "Time Series Analysis", "status": "uncovered", "score": 108, "usages": 3, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "sigma-algebra-of-measurable-sets.ipynb", "name": "Sigma Algebra Of Measurable Sets", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 108, "usages": 2, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "random-variables.ipynb", "name": "Random Variables", "domain": "Random Variables & Distributions", "status": "transitive", "score": 105, "usages": 27, "prelims": 3, "distance": 2, "covering_psets": ["Pset Rvs 01", "Pset Linear Programs 01", "Pset Discrete Rvs"]}, {"id": "joint-distribution.ipynb", "name": "Joint Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 105, "usages": 4, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "law-of-large-numbers-and-central-limit-theorem.ipynb", "name": "Law Of Large Numbers And Central Limit Theorem", "domain": "Inequalities & Limit Theorems", "status": "uncovered", "score": 102, "usages": 2, "prelims": 10, "distance": null, "covering_psets": []}, {"id": "chi-square-distribution.ipynb", "name": "Chi Square Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 102, "usages": 2, "prelims": 7, "distance": null, "covering_psets": []}, {"id": "Borel-sets-and-measurability.ipynb", "name": "Borel Sets And Measurability", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 102, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "time-series-returns.ipynb", "name": "Time Series Returns", "domain": "Time Series Analysis", "status": "uncovered", "score": 102, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "moving-average-models.ipynb", "name": "Moving Average Models", "domain": "Time Series Analysis", "status": "uncovered", "score": 99, "usages": 2, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "multivariate-time-series.ipynb", "name": "Multivariate Time Series", "domain": "Time Series Analysis", "status": "uncovered", "score": 99, "usages": 2, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "intro-to-difference-equations.ipynb", "name": "Intro To Difference Equations", "domain": "Difference Equations & Dynamics", "status": "uncovered", "score": 96, "usages": 2, "prelims": 0, "distance": null, "covering_psets": []}, {"id": "arma-models.ipynb", "name": "Arma Models", "domain": "Time Series Analysis", "status": "uncovered", "score": 96, "usages": 1, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "lotus.ipynb", "name": "Lotus", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 93, "usages": 3, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "exponential-distribution.ipynb", "name": "Exponential Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 93, "usages": 2, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "transformations-and-convolutions.ipynb", "name": "Transformations And Convolutions", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 93, "usages": 2, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "vector-autoregressive-models.ipynb", "name": "Vector Autoregressive Models", "domain": "Time Series Analysis", "status": "uncovered", "score": 93, "usages": 1, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "brownian-motion.ipynb", "name": "Brownian Motion", "domain": "Stochastic Processes", "status": "uncovered", "score": 93, "usages": 0, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "fatous-lemma-and-convergence-theorems.ipynb", "name": "Fatous Lemma And Convergence Theorems", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 93, "usages": 0, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "risk-measures.ipynb", "name": "Risk Measures", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 93, "usages": 0, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "beta-distribution.ipynb", "name": "Beta Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 90, "usages": 2, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "second-order-linear-difference-equations.ipynb", "name": "Second Order Linear Difference Equations", "domain": "Difference Equations & Dynamics", "status": "uncovered", "score": 90, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "markowitz-portfolio-theory-2-assets.ipynb", "name": "Markowitz Portfolio Theory 2 Assets", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 90, "usages": 0, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "chebyshevs-inequality.ipynb", "name": "Chebyshevs Inequality", "domain": "Inequalities & Limit Theorems", "status": "uncovered", "score": 87, "usages": 2, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "hypergeometric-distribution.ipynb", "name": "Hypergeometric Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 87, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "uniform-distribution.ipynb", "name": "Uniform Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 87, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "statistical-inference.ipynb", "name": "Statistical Inference", "domain": "Statistical Inference & Estimation", "status": "uncovered", "score": 87, "usages": 1, "prelims": 0, "distance": null, "covering_psets": []}, {"id": "maximum-likelihood-estimation.ipynb", "name": "Maximum Likelihood Estimation", "domain": "Statistical Inference & Estimation", "status": "uncovered", "score": 87, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "measurable-sets-algebra.ipynb", "name": "Measurable Sets Algebra", "domain": "Measure Theory & Integration", "status": "uncovered", "score": 87, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "stochastic-models-in-finance.ipynb", "name": "Stochastic Models In Finance", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 87, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "probability-mass-function.ipynb", "name": "Probability Mass Function", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 84, "usages": 2, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "arch-and-garch-models.ipynb", "name": "Arch And Garch Models", "domain": "Time Series Analysis", "status": "uncovered", "score": 84, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "augmented-dickey-fuller-test.ipynb", "name": "Augmented Dickey Fuller Test", "domain": "Time Series Analysis", "status": "uncovered", "score": 84, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "cointegration.ipynb", "name": "Cointegration", "domain": "Time Series Analysis", "status": "uncovered", "score": 84, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "gamblers-ruin.ipynb", "name": "Gamblers Ruin", "domain": "Stochastic Processes", "status": "uncovered", "score": 84, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "vector-moving-average.ipynb", "name": "Vector Moving Average", "domain": "Time Series Analysis", "status": "uncovered", "score": 84, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "student-t-distribution.ipynb", "name": "Student T Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 81, "usages": 0, "prelims": 6, "distance": null, "covering_psets": []}, {"id": "branching-process.ipynb", "name": "Branching Process", "domain": "Stochastic Processes", "status": "uncovered", "score": 81, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "first-order-linear-difference-equations-and-equilibriums.ipynb", "name": "First Order Linear Difference Equations And Equilibriums", "domain": "Difference Equations & Dynamics", "status": "uncovered", "score": 81, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "markovs-inequality.ipynb", "name": "Markovs Inequality", "domain": "Inequalities & Limit Theorems", "status": "uncovered", "score": 78, "usages": 1, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "Cauchy-distribution.ipynb", "name": "Cauchy Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 78, "usages": 1, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "multinomial-distribution.ipynb", "name": "Multinomial Distribution", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 78, "usages": 1, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "cs-emh-btc-ma-model.ipynb", "name": "Cs Emh Btc Ma Model", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 78, "usages": 0, "prelims": 0, "distance": null, "covering_psets": []}, {"id": "cs-mab-signal-selection.ipynb", "name": "Cs Mab Signal Selection", "domain": "Mathematical Finance & Portfolio Theory", "status": "uncovered", "score": 78, "usages": 0, "prelims": 0, "distance": null, "covering_psets": []}, {"id": "expectation.ipynb", "name": "Expectation", "domain": "Random Variables & Distributions", "status": "transitive", "score": 76, "usages": 18, "prelims": 1, "distance": 4, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "expectations-of-discrete-distributions.ipynb", "name": "Expectations Of Discrete Distributions", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 75, "usages": 0, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "order-statistics.ipynb", "name": "Order Statistics", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 75, "usages": 0, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "binomial-hypergeometric-connections.ipynb", "name": "Binomial Hypergeometric Connections", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 69, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "banach-fp-thm.ipynb", "name": "Banach Fp Thm", "domain": "Function Spaces & Fixed Points", "status": "uncovered", "score": 66, "usages": 1, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "functions-of-random-variables.ipynb", "name": "Functions Of Random Variables", "domain": "Random Variables & Distributions", "status": "uncovered", "score": 66, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "real-valued-functions.ipynb", "name": "Real Valued Functions", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 60, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "borel-cantelli-lemma.ipynb", "name": "Borel Cantelli Lemma", "domain": "Inequalities & Limit Theorems", "status": "uncovered", "score": 60, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "probabilistic-for-existence-proof.ipynb", "name": "Probabilistic For Existence Proof", "domain": "Inequalities & Limit Theorems", "status": "uncovered", "score": 60, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "binomial-coefficient-formula.ipynb", "name": "Binomial Coefficient Formula", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 57, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "story-proofs.ipynb", "name": "Story Proofs", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 57, "usages": 2, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "brouwer-fixed-point-theorem.ipynb", "name": "Brouwer Fixed Point Theorem", "domain": "Function Spaces & Fixed Points", "status": "uncovered", "score": 57, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "ode-and-picards-thm.ipynb", "name": "Ode And Picards Thm", "domain": "Function Spaces & Fixed Points", "status": "uncovered", "score": 54, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "birthday-problem.ipynb", "name": "Birthday Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 51, "usages": 1, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "de-montmorts-matching-problem.ipynb", "name": "De Montmorts Matching Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 51, "usages": 1, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "limit.ipynb", "name": "Limit", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 51, "usages": 1, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "interval.ipynb", "name": "Interval", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 48, "usages": 2, "prelims": 0, "distance": null, "covering_psets": []}, {"id": "density-theorem-of-R.ipynb", "name": "Density Theorem Of R", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 48, "usages": 1, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "occupancy-problem.ipynb", "name": "Occupancy Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 48, "usages": 1, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "continuity-and-compactness.ipynb", "name": "Continuity And Compactness", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 48, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "contractions.ipynb", "name": "Contractions", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 48, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "nests-of-compacts.ipynb", "name": "Nests Of Compacts", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 48, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "variance.ipynb", "name": "Variance", "domain": "Random Variables & Distributions", "status": "transitive", "score": 47, "usages": 8, "prelims": 2, "distance": 4, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "prop-dedekind-cuts.ipynb", "name": "Prop Dedekind Cuts", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 45, "usages": 0, "prelims": 5, "distance": null, "covering_psets": []}, {"id": "bose-einstein-problem.ipynb", "name": "Bose Einstein Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 45, "usages": 0, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "newton-pepys-problem.ipynb", "name": "Newton Pepys Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 45, "usages": 0, "prelims": 4, "distance": null, "covering_psets": []}, {"id": "homeomorphisms-compactness.ipynb", "name": "Homeomorphisms Compactness", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 45, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "event.ipynb", "name": "Event", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 43, "usages": 10, "prelims": 2, "distance": 2, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "probability.ipynb", "name": "Probability", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 42, "usages": 9, "prelims": 4, "distance": 2, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "cantor-set.ipynb", "name": "Cantor Set", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 42, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "sequence-limit.ipynb", "name": "Sequence Limit", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 42, "usages": 1, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "coupon-collector-problem.ipynb", "name": "Coupon Collector Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 42, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "full-house.ipynb", "name": "Full House", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 42, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "partnerships.ipynb", "name": "Partnerships", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 42, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "vandermonde\u2019s-identity.ipynb", "name": "Vandermonde\u2019S Identity", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 42, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "func-lim-seq-lim.ipynb", "name": "Func Lim Seq Lim", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 42, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "function-continuity.ipynb", "name": "Function Continuity", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 42, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "metric-spaces.ipynb", "name": "Metric Spaces", "domain": "Metric Spaces & Topology", "status": "transitive", "score": 41, "usages": 9, "prelims": 2, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "real-numbers.ipynb", "name": "Real Numbers", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 39, "usages": 9, "prelims": 2, "distance": 3, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "existence-of-nth-roots-in-R.ipynb", "name": "Existence Of Nth Roots In R", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 39, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "nested-interval-property.ipynb", "name": "Nested Interval Property", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 39, "usages": 0, "prelims": 3, "distance": null, "covering_psets": []}, {"id": "monty-hall-problem.ipynb", "name": "Monty Hall Problem", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 39, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "product-metrics-continuity.ipynb", "name": "Product Metrics Continuity", "domain": "Metric Spaces & Topology", "status": "uncovered", "score": 39, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "sample-space.ipynb", "name": "Sample Space", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 36, "usages": 7, "prelims": 4, "distance": 2, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "cardinality.ipynb", "name": "Cardinality", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 36, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "composite-sequences-limit.ipynb", "name": "Composite Sequences Limit", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 36, "usages": 0, "prelims": 2, "distance": null, "covering_psets": []}, {"id": "simpsons-paradox.ipynb", "name": "Simpsons Paradox", "domain": "Probability Foundations & Combinatorics", "status": "uncovered", "score": 36, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "cumulative-distribution-functions.ipynb", "name": "Cumulative Distribution Functions", "domain": "Random Variables & Distributions", "status": "transitive", "score": 34, "usages": 4, "prelims": 1, "distance": 3, "covering_psets": ["Pset Rvs 01", "Pset Discrete Rvs"]}, {"id": "multiplication-rule.ipynb", "name": "Multiplication Rule", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 33, "usages": 7, "prelims": 1, "distance": 4, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "arithmetic-geometric-mean-inequality.ipynb", "name": "Arithmetic Geometric Mean Inequality", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 33, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "existence-of-decimal-expansion-in-R.ipynb", "name": "Existence Of Decimal Expansion In R", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 33, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "geometric-sequence.ipynb", "name": "Geometric Sequence", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 33, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "squeeze-theorem-for-sequences.ipynb", "name": "Squeeze Theorem For Sequences", "domain": "Real Analysis (Foundations & Sequences)", "status": "uncovered", "score": 33, "usages": 0, "prelims": 1, "distance": null, "covering_psets": []}, {"id": "binomial-coefficient.ipynb", "name": "Binomial Coefficient", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 31, "usages": 6, "prelims": 2, "distance": 2, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "sampling-with-replacement.ipynb", "name": "Sampling With Replacement", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 28, "usages": 5, "prelims": 2, "distance": 4, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "probability-naive-definition.ipynb", "name": "Probability Naive Definition", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 28, "usages": 4, "prelims": 5, "distance": 3, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "ordered-field.ipynb", "name": "Ordered Field", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 27, "usages": 5, "prelims": 2, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "sequence.ipynb", "name": "Sequence", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 27, "usages": 5, "prelims": 2, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "experiment.ipynb", "name": "Experiment", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 27, "usages": 5, "prelims": 1, "distance": 3, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "jensens-inequality.ipynb", "name": "Jensens Inequality", "domain": "Inequalities & Limit Theorems", "status": "transitive", "score": 27, "usages": 2, "prelims": 3, "distance": 3, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "outcome.ipynb", "name": "Outcome", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 26, "usages": 4, "prelims": 3, "distance": 3, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "Cauchy-Schwarz-inequality.ipynb", "name": "Cauchy Schwarz Inequality", "domain": "Inequalities & Limit Theorems", "status": "transitive", "score": 26, "usages": 2, "prelims": 2, "distance": 3, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "pre-logic.ipynb", "name": "Pre Logic", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 25, "usages": 5, "prelims": 0, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "Cauchy-sequences.ipynb", "name": "Cauchy Sequences", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 25, "usages": 4, "prelims": 3, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "adjusting-for-overcounting.ipynb", "name": "Adjusting For Overcounting", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 25, "usages": 4, "prelims": 2, "distance": 3, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "def-functions-mappings.ipynb", "name": "Def Functions Mappings", "domain": "Metric Spaces & Topology", "status": "transitive", "score": 24, "usages": 4, "prelims": 0, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "completeness.ipynb", "name": "Completeness", "domain": "Metric Spaces & Topology", "status": "transitive", "score": 24, "usages": 3, "prelims": 3, "distance": 2, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "sampling-without-replacement.ipynb", "name": "Sampling Without Replacement", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 22, "usages": 3, "prelims": 2, "distance": 3, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "binomial-theorem.ipynb", "name": "Binomial Theorem", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 21, "usages": 3, "prelims": 1, "distance": 2, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "pre-set-theory.ipynb", "name": "Pre Set Theory", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 19, "usages": 3, "prelims": 0, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "normed-vector-spaces.ipynb", "name": "Normed Vector Spaces", "domain": "Metric Spaces & Topology", "status": "transitive", "score": 19, "usages": 2, "prelims": 1, "distance": 2, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "absolute-value.ipynb", "name": "Absolute Value", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 17, "usages": 2, "prelims": 1, "distance": 2, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01"]}, {"id": "field.ipynb", "name": "Field", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 16, "usages": 2, "prelims": 0, "distance": 3, "covering_psets": ["Pset Real Numbers 01"]}, {"id": "limsup-liminf.ipynb", "name": "Limsup Liminf", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 16, "usages": 1, "prelims": 3, "distance": 3, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "probability-properties.ipynb", "name": "Probability Properties", "domain": "Probability Foundations & Combinatorics", "status": "transitive", "score": 16, "usages": 1, "prelims": 2, "distance": 3, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "zero-squeeze-in-R.ipynb", "name": "Zero Squeeze In R", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 15, "usages": 1, "prelims": 2, "distance": 4, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "adding-inequalities.ipynb", "name": "Adding Inequalities", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 14, "usages": 1, "prelims": 1, "distance": 2, "covering_psets": ["Pset Real Numbers 01"]}, {"id": "ordered-set.ipynb", "name": "Ordered Set", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 14, "usages": 1, "prelims": 1, "distance": 3, "covering_psets": ["Pset Real Numbers 01"]}, {"id": "subsequences.ipynb", "name": "Subsequences", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 14, "usages": 1, "prelims": 1, "distance": 2, "covering_psets": ["Pset Topology 01"]}, {"id": "order.ipynb", "name": "Order", "domain": "Real Analysis (Foundations & Sequences)", "status": "transitive", "score": 13, "usages": 1, "prelims": 0, "distance": 4, "covering_psets": ["Pset Real Numbers 01"]}, {"id": "convex-sets-and-convex-hulls.ipynb", "name": "Convex Sets And Convex Hulls", "domain": "Optimization & Linear Programming", "status": "transitive", "score": 12, "usages": 3, "prelims": 2, "distance": 2, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "hyperplane-separation-theorems.ipynb", "name": "Hyperplane Separation Theorems", "domain": "Optimization & Linear Programming", "status": "transitive", "score": 10, "usages": 2, "prelims": 3, "distance": 2, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "polyhedra-and-polytopes.ipynb", "name": "Polyhedra And Polytopes", "domain": "Optimization & Linear Programming", "status": "transitive", "score": 8, "usages": 1, "prelims": 4, "distance": 2, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "lagrangian-and-kkt-conditions.ipynb", "name": "Lagrangian And Kkt Conditions", "domain": "Optimization & Linear Programming", "status": "transitive", "score": 4, "usages": 1, "prelims": 0, "distance": 3, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "bernoulli-and-binomial-distributions.ipynb", "name": "Bernoulli And Binomial Distributions", "domain": "Random Variables & Distributions", "status": "direct", "score": 0, "usages": 13, "prelims": 1, "distance": 1, "covering_psets": ["Pset Discrete Rvs"]}, {"id": "independence-of-rvs.ipynb", "name": "Independence Of Rvs", "domain": "Random Variables & Distributions", "status": "direct", "score": 0, "usages": 11, "prelims": 1, "distance": 1, "covering_psets": ["Pset Rvs 01"]}, {"id": "law-of-total-probability.ipynb", "name": "Law Of Total Probability", "domain": "Probability Foundations & Combinatorics", "status": "direct", "score": 0, "usages": 10, "prelims": 4, "distance": 1, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "compactness.ipynb", "name": "Compactness", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 8, "prelims": 3, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "axiom-of-completeness.ipynb", "name": "Axiom Of Completeness", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 8, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "metric-space-topology.ipynb", "name": "Metric Space Topology", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 6, "prelims": 3, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "conditional-probability.ipynb", "name": "Conditional Probability", "domain": "Probability Foundations & Combinatorics", "status": "direct", "score": 0, "usages": 6, "prelims": 2, "distance": 1, "covering_psets": ["Pset Rvs 01", "Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "continuity-topology.ipynb", "name": "Continuity Topology", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 5, "prelims": 3, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "sequences-metric-spaces.ipynb", "name": "Sequences Metric Spaces", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 5, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Topology 01"]}, {"id": "triangle-inequality.ipynb", "name": "Triangle Inequality", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 5, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01"]}, {"id": "linear-programs.ipynb", "name": "Linear Programs", "domain": "Optimization & Linear Programming", "status": "direct", "score": 0, "usages": 4, "prelims": 3, "distance": 1, "covering_psets": ["Pset Linear Programs 01"]}, {"id": "def-dedekind-cuts.ipynb", "name": "Def Dedekind Cuts", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 4, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "function-spaces.ipynb", "name": "Function Spaces", "domain": "Function Spaces & Fixed Points", "status": "direct", "score": 0, "usages": 3, "prelims": 3, "distance": 1, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "inclusion-exclusion.ipynb", "name": "Inclusion Exclusion", "domain": "Probability Foundations & Combinatorics", "status": "direct", "score": 0, "usages": 3, "prelims": 3, "distance": 1, "covering_psets": ["Pset Cond Prob 01"]}, {"id": "independence-of-events.ipynb", "name": "Independence Of Events", "domain": "Probability Foundations & Combinatorics", "status": "direct", "score": 0, "usages": 3, "prelims": 3, "distance": 1, "covering_psets": ["Pset Cond Prob 01", "Pset Discrete Rvs"]}, {"id": "archimedean-property-of-R.ipynb", "name": "Archimedean Property Of R", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 3, "prelims": 1, "distance": 1, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "uniform-continuity.ipynb", "name": "Uniform Continuity", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 2, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "supremum-infimum.ipynb", "name": "Supremum Infimum", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 2, "prelims": 1, "distance": 1, "covering_psets": ["Pset Function Spaces 01", "Pset Real Numbers 01", "Pset Topology 01"]}, {"id": "Bolzano-Weierstrass-theorem.ipynb", "name": "Bolzano Weierstrass Theorem", "domain": "Real Analysis (Foundations & Sequences)", "status": "direct", "score": 0, "usages": 1, "prelims": 2, "distance": 1, "covering_psets": ["Pset Topology 01"]}, {"id": "equicontinuity-Arzela-Ascoli-Thm.ipynb", "name": "Equicontinuity Arzela Ascoli Thm", "domain": "Function Spaces & Fixed Points", "status": "direct", "score": 0, "usages": 1, "prelims": 2, "distance": 1, "covering_psets": ["Pset Function Spaces 01"]}, {"id": "relative-topology-inheritance.ipynb", "name": "Relative Topology Inheritance", "domain": "Metric Spaces & Topology", "status": "direct", "score": 0, "usages": 1, "prelims": 2, "distance": 1, "covering_psets": ["Pset Topology 01"]}]};
+    let currentStatusFilter = 'all';
+
+    // 1. Populate Domain Progress Bars
+    function renderDomainBars() {
+      const container = document.getElementById('domain-list-container');
+      const select = document.getElementById('domain-filter-select');
+      container.innerHTML = '';
+      
+      data.domains.forEach(d => {
+        const opt = document.createElement('option');
+        opt.value = d.domain;
+        opt.textContent = d.domain;
+        select.appendChild(opt);
+
+        const directW = (d.direct / d.total) * 100;
+        const transW = (d.transitive / d.total) * 100;
+        const uncovW = (d.uncovered / d.total) * 100;
+
+        const row = document.createElement('div');
+        row.className = 'domain-row';
+        row.onclick = () => {
+          select.value = d.domain;
+          onFilterChange();
+        };
+        row.innerHTML = `
+          <div class="domain-info">
+            <span class="domain-name">${d.domain}</span>
+            <span class="domain-pct">${d.coverage_pct}% <span style="font-weight:normal; font-size:11px; color:#777;">(${d.direct + d.transitive}/${d.total})</span></span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="bar-direct" style="width: ${directW}%" title="Direct: ${d.direct} (${directW.toFixed(1)}%)"></div>
+            <div class="bar-transitive" style="width: ${transW}%" title="Prerequisites: ${d.transitive} (${transW.toFixed(1)}%)"></div>
+            <div class="bar-uncovered" style="width: ${uncovW}%" title="Uncovered: ${d.uncovered} (${uncovW.toFixed(1)}%)"></div>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    // 2. Populate Priority Queue
+    function renderPriorityQueue() {
+      const container = document.getElementById('priority-queue-container');
+      container.innerHTML = '';
+
+      data.priorities.forEach((p, idx) => {
+        const item = document.createElement('div');
+        item.className = 'priority-item';
+        item.innerHTML = `
+          <div class="priority-item-left">
+            <a href="nodes/${p.id.replace('.ipynb', '.html')}" target="_top" class="priority-name">
+              #${idx + 1}. ${p.name}
+            </a>
+            <div class="priority-meta">
+              <span><b>${p.domain}</b></span>
+              <span>•</span>
+              <span>Used by <b>${p.usages}</b> notes</span>
+              <span>•</span>
+              <span><b>${p.prelims}</b> prerequisites</span>
+            </div>
+          </div>
+          <div class="priority-item-right">
+            <span class="score-badge">${p.score} pts</span>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    // 3. Populate Notes Table with Dynamic Filtering
+    function renderNotesTable() {
+      const tbody = document.getElementById('notes-table-body');
+      const badge = document.getElementById('table-count-badge');
+      const query = document.getElementById('note-search-input').value.trim().toLowerCase();
+      const domainFilter = document.getElementById('domain-filter-select').value;
+
+      tbody.innerHTML = '';
+
+      const filtered = data.all_notes.filter(n => {
+        if (currentStatusFilter !== 'all' && n.status !== currentStatusFilter) return false;
+        if (domainFilter !== 'all' && n.domain !== domainFilter) return false;
+        if (query && !n.name.toLowerCase().includes(query) && !n.domain.toLowerCase().includes(query)) return false;
+        return true;
+      });
+
+      badge.textContent = `Showing ${filtered.length} / ${data.all_notes.length} Notes`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#888; padding:20px; font-style:italic;">No notes match the selected filters.</td></tr>';
+        return;
+      }
+
+      filtered.forEach(n => {
+        const tr = document.createElement('tr');
+        
+        let statusBadge = '';
+        if (n.status === 'direct') {
+          statusBadge = '<span class="status-pill direct">Direct</span>';
+        } else if (n.status === 'transitive') {
+          statusBadge = `<span class="status-pill transitive">Prerequisite</span>`;
+        } else {
+          statusBadge = '<span class="status-pill uncovered">Uncovered</span>';
+        }
+
+        let psetsHtml = '-';
+        if (n.covering_psets && n.covering_psets.length > 0) {
+          psetsHtml = '<div class="psets-tag-list">' + n.covering_psets.map(p => `<span class="pset-tag">${p}</span>`).join('') + '</div>';
+        }
+
+        tr.innerHTML = `
+          <td><a href="nodes/${n.id.replace('.ipynb', '.html')}" target="_top" class="note-link">${n.name}</a></td>
+          <td style="font-size:12px; color:#555;">${n.domain}</td>
+          <td>${statusBadge}</td>
+          <td style="text-align:center;">${n.usages}</td>
+          <td style="text-align:center;">${n.prelims}</td>
+          <td>${psetsHtml}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function setFilterStatus(status) {
+      currentStatusFilter = status;
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      renderNotesTable();
+    }
+
+    function onFilterChange() {
+      renderNotesTable();
+    }
+
+    // Init
+    renderDomainBars();
+    renderPriorityQueue();
+    renderNotesTable();
+  </script>
+</body>
+</html>

@@ -23,6 +23,9 @@ website:
       - icon: github
         href: https://github.com/rohanishervin
         aria-label: GitHub
+execute:
+  enabled: false
+
 format:
   html:
     theme: cosmo

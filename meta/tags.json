@@ -1,0 +1,2688 @@
+{
+ "notes": {
+  "Borel-sets-and-measurability": {
+   "chars": 4942,
+   "domain": "Measure Theory & Integration",
+   "hash": "87ede77273e6",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that all Borel sets are Lebesgue measurable by showing open and closed sets are measurable and using sigma-algebra properties.",
+   "tagged_at": "2026-10-19T12:56:27"
+  },
+  "Cauchy-Schwarz-inequality": {
+   "chars": 3959,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "c47f0c8db5e2",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines inner product spaces and proves the Cauchy-Schwarz inequality using quadratic forms, extending to infinite-dimensional function spaces.",
+   "tagged_at": "2026-10-19T12:56:29"
+  },
+  "Cauchy-distribution": {
+   "chars": 8318,
+   "domain": "Random Variables & Distributions",
+   "hash": "74325fe3b450",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Cauchy distribution as a ratio of normals, derives its PDF via CDF differentiation, and highlights its undefined moments.",
+   "tagged_at": "2026-10-19T12:56:31"
+  },
+  "Cauchy-sequences": {
+   "chars": 6605,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "1fb1c63a4d75",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that every Cauchy sequence in R converges using the Least Upper Bound property and auxiliary lemmas.",
+   "tagged_at": "2026-10-19T12:56:32"
+  },
+  "Lebesgue-measure": {
+   "chars": 3632,
+   "domain": "Measure Theory & Integration",
+   "hash": "c1dc97f0eeae",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Lebesgue measure on measurable sets, proves countable additivity, and establishes the complete measure space structure.",
+   "tagged_at": "2026-10-19T12:56:34"
+  },
+  "adjusting-for-overcounting": {
+   "chars": 4072,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "3d28c9fcfe46",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the multinomial coefficient formula by dividing total permutations by factorials of identical item counts.",
+   "tagged_at": "2026-10-19T12:56:35"
+  },
+  "arch-and-garch-models": {
+   "chars": 5061,
+   "domain": "Time Series Analysis",
+   "hash": "cf14096bf8a7",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines ARCH/GARCH models for conditional heteroscedasticity in financial time series, including stationarity conditions and simulation code.",
+   "tagged_at": "2026-10-19T12:56:37"
+  },
+  "archimedean-property-of-R": {
+   "chars": 1039,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "727b952875e8",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Archimedean property of real numbers and proves it using the Axiom of Completeness via contradiction.",
+   "tagged_at": "2026-10-19T12:56:38"
+  },
+  "arma-models": {
+   "chars": 4697,
+   "domain": "Time Series Analysis",
+   "hash": "b8a60ecf7613",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines ARMA(p,q) models, derives stationarity conditions using characteristic roots, and discusses model selection via AIC/BIC.",
+   "tagged_at": "2026-10-19T12:56:40"
+  },
+  "augmented-dickey-fuller-test": {
+   "chars": 7440,
+   "domain": "Time Series Analysis",
+   "hash": "e00df33e9123",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note explains the Augmented Dickey-Fuller test structure, hypotheses, and interpretation of Python output for checking time series stationarity.",
+   "tagged_at": "2026-10-19T12:56:41"
+  },
+  "autocorrelation-and-stationarity": {
+   "chars": 4679,
+   "domain": "Time Series Analysis",
+   "hash": "5c1f890982e5",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines strict and weak stationarity, derives autocovariance/autocorrelation formulas, and introduces the white noise model.",
+   "tagged_at": "2026-10-19T12:56:43"
+  },
+  "autoregressive-models": {
+   "chars": 5360,
+   "domain": "Time Series Analysis",
+   "hash": "2122063000cd",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines AR(p) models, derives stationarity conditions, explains PACF behavior, and covers model selection via AIC/BIC.",
+   "tagged_at": "2026-10-19T12:56:44"
+  },
+  "axiom-of-completeness": {
+   "chars": 5521,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "d6141796f00c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the Axiom of Completeness by showing Q is incomplete and deriving a specific rational approximation function.",
+   "tagged_at": "2026-10-19T12:56:46"
+  },
+  "bagging-and-random-forests": {
+   "chars": 16298,
+   "domain": "Statistical Inference & Estimation",
+   "hash": "d4bb90a5a079",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives variance reduction for bagging and random forests, proves OOB error probability (1/e), and analyzes tree correlation limits.",
+   "tagged_at": "2026-10-19T12:56:48"
+  },
+  "banach-fp-thm": {
+   "chars": 4188,
+   "domain": "Metric Spaces & Topology",
+   "hash": "284740da6b83",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note states and proves the Banach Contraction Principle for complete metric spaces, establishing existence, uniqueness, and constructive convergence of fixed points.",
+   "tagged_at": "2026-10-19T12:56:50"
+  },
+  "bernoulli-and-binomial-distributions": {
+   "chars": 7775,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "2110fd1340a7",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Bernoulli and Binomial distributions, derives the PMF via combinatorial arguments, and proves symmetry properties.",
+   "tagged_at": "2026-10-19T12:56:51"
+  },
+  "beta-distribution": {
+   "chars": 16299,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "8f727c50a250",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Beta distribution, proves its conjugacy with the Binomial, and derives its normalization constant via a probabilistic argument.",
+   "tagged_at": "2026-10-19T12:56:53"
+  },
+  "binomial-coefficient": {
+   "chars": 3536,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "9ebfc1415ac9",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the binomial coefficient formula and proves key properties like symmetry using elementary combinatorial arguments.",
+   "tagged_at": "2026-10-19T12:56:56"
+  },
+  "binomial-coefficient-formula": {
+   "chars": 3690,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "f185beed0414",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines binomial coefficients, derives the factorial formula, and proves Pascal's identity via combinatorial argument.",
+   "tagged_at": "2026-10-19T12:56:55"
+  },
+  "binomial-hypergeometric-connections": {
+   "chars": 4145,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "eb9a59f456ce",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the hypergeometric distribution arises as a conditional binomial and converges to it as population size grows.",
+   "tagged_at": "2026-10-19T12:56:58"
+  },
+  "binomial-theorem": {
+   "chars": 3601,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "bc164bbc9f9a",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "States the algebraic expansion of binomials and provides a combinatorial proof plus probability corollaries.",
+   "tagged_at": "2026-10-19T12:56:59"
+  },
+  "birthday-problem": {
+   "chars": 5609,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "15acffbb2314",
+   "kind": "application",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note explains the Birthday Problem using complementary counting, permutations, and an exponential approximation to derive the probability of shared birthdays.",
+   "tagged_at": "2026-10-19T12:57:01"
+  },
+  "boosting": {
+   "chars": 12906,
+   "domain": "Optimization & Linear Programming",
+   "hash": "dcee7675a929",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Covers boosting algorithms as sequential gradient descent on residuals using additive tree models and decision stumps.",
+   "tagged_at": "2026-10-19T12:57:03"
+  },
+  "borel-cantelli-lemma": {
+   "chars": 4550,
+   "domain": "Measure Theory & Integration",
+   "hash": "04779ecc4842",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note states and proves the first Borel-Cantelli Lemma using measure theory concepts like countable subadditivity and continuity from above.",
+   "tagged_at": "2026-10-19T12:57:04"
+  },
+  "bose-einstein-problem": {
+   "chars": 5715,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "560aa5fbbb92",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the Bose-Einstein counting formula using stars and bars to solve combinations with replacement.",
+   "tagged_at": "2026-10-19T12:57:06"
+  },
+  "branching-process": {
+   "chars": 5100,
+   "domain": "Random Variables & Distributions",
+   "hash": "9939bdf1f7c0",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines branching processes and derives extinction probability via first-step analysis using a critical amoeba example.",
+   "tagged_at": "2026-10-19T12:57:07"
+  },
+  "brouwer-fixed-point-theorem": {
+   "chars": 6161,
+   "domain": "Metric Spaces & Topology",
+   "hash": "56cb3d035bb1",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers the Brouwer Fixed Point Theorem, its 1D proof using the Intermediate Value Theorem, counterexamples, and topological invariance.",
+   "tagged_at": "2026-10-19T12:57:09"
+  },
+  "brownian-motion": {
+   "chars": 26247,
+   "domain": "Stochastic Processes",
+   "hash": "54df4a03ef68",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines standard Brownian motion via axioms, proves its Gaussian nature and covariance structure, and establishes self-similarity properties.",
+   "tagged_at": "2026-10-19T12:57:11"
+  },
+  "cantor-set": {
+   "chars": 5881,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "2006874ea99c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Cantor set via iterative removal, proves its compactness and uncountability, calculates its zero measure, and constructs space-filling Peano curves.",
+   "tagged_at": "2026-10-19T12:57:13"
+  },
+  "cardinality": {
+   "chars": 2920,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "b3f17dfebb5c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines set cardinality, proves R is uncountable via diagonalization, and states the Schröder-Bernstein theorem.",
+   "tagged_at": "2026-10-19T12:57:14"
+  },
+  "cayley-hamilton-theorem-and-matrix-polynomials": {
+   "chars": 25524,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "20a93049498d",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the Cayley-Hamilton theorem via diagonalizable cases and algebraic foundations in rings.",
+   "tagged_at": "2026-10-19T12:57:16"
+  },
+  "change-of-basis-matrix-inversion-and-trace": {
+   "chars": 31405,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "ff2d85859fb3",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines change-of-basis matrices, proves similarity invariants like determinant and trace, and derives geometric volume scaling properties.",
+   "tagged_at": "2026-10-19T12:57:18"
+  },
+  "chebyshevs-inequality": {
+   "chars": 5989,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "d8346be86590",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note defines Chebyshev's inequality, provides a proof using Markov's inequality, and illustrates its application with examples comparing it to the normal distribution.",
+   "tagged_at": "2026-10-19T12:57:20"
+  },
+  "chi-square-distribution": {
+   "chars": 8573,
+   "domain": "Random Variables & Distributions",
+   "hash": "3c5d77640cf8",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Chi-Square distribution as a sum of squared normals, proves its Gamma relationship via MGFs, and derives mean/variance.",
+   "tagged_at": "2026-10-19T12:57:22"
+  },
+  "cointegration": {
+   "chars": 2896,
+   "domain": "Time Series Analysis",
+   "hash": "246f51ab84bb",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines cointegration and error correction models (ECM) for non-stationary time series to capture long-term equilibrium relationships.",
+   "tagged_at": "2026-10-19T12:57:23"
+  },
+  "compactness": {
+   "chars": 7793,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "c5a4f872edf4",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines compactness in metric spaces and proves Heine-Borel, Bolzano-Weierstrass, and necessary conditions.",
+   "tagged_at": "2026-10-19T12:57:25"
+  },
+  "complements-direct-sums-quotient-spaces": {
+   "chars": 18977,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "03d6f97fba51",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines complements, direct sums, and quotient spaces with proofs of dimension formulas for subspace sums.",
+   "tagged_at": "2026-10-19T12:57:27"
+  },
+  "completeness": {
+   "chars": 6306,
+   "domain": "Metric Spaces & Topology",
+   "hash": "4fff96610f52",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Cauchy sequences and complete metric spaces, proving R^m is complete and that closed subsets of complete spaces are complete.",
+   "tagged_at": "2026-10-19T12:57:29"
+  },
+  "composite-sequences-limit": {
+   "chars": 4520,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "3e539fe67fac",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the algebraic limit theorem for sequences with full proofs for product and quotient rules using epsilon-delta definitions.",
+   "tagged_at": "2026-10-19T12:57:30"
+  },
+  "conditional-expectation": {
+   "chars": 32299,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "aeeeffe55c77",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines conditional expectation given events and random variables, analyzes the two-envelope paradox, and solves coin-flip waiting times.",
+   "tagged_at": "2026-10-19T12:57:32"
+  },
+  "conditional-probability": {
+   "chars": 2239,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "fe8bafaab035",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines conditional probability, the multiplication rule, and proves Bayes' theorem with an explanation of sequential coherence.",
+   "tagged_at": "2026-10-19T12:57:33"
+  },
+  "continuity-and-compactness": {
+   "chars": 3974,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "31dd1349e63c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that continuous images of compact sets are compact and establishes the Extreme Value Theorem with counterexamples.",
+   "tagged_at": "2026-10-19T12:57:35"
+  },
+  "continuity-of-measure": {
+   "chars": 7574,
+   "domain": "Measure Theory & Integration",
+   "hash": "a60a320678f0",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note proves continuity of measure for ascending and descending sequences, explaining the necessary finiteness condition.",
+   "tagged_at": "2026-10-19T12:57:37"
+  },
+  "continuity-topology": {
+   "chars": 6937,
+   "domain": "Metric Spaces & Topology",
+   "hash": "e9f1754b0e67",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines continuity via sequences and epsilon-delta, proves composite properties, and establishes equivalence with open/closed set preimages.",
+   "tagged_at": "2026-10-19T12:57:38"
+  },
+  "contractions": {
+   "chars": 1730,
+   "domain": "Metric Spaces & Topology",
+   "hash": "39ed3f3ae00e",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines fixed points and contraction mappings in metric spaces, distinguishing strict inequalities from uniform contractions.",
+   "tagged_at": "2026-10-19T12:57:39"
+  },
+  "convex-sets-and-convex-hulls": {
+   "chars": 20932,
+   "domain": "Optimization & Linear Programming",
+   "hash": "06d083dd47a0",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines convex sets/functions and proves the equivalence between convex hulls defined via intersections and convex combinations.",
+   "tagged_at": "2026-10-19T12:57:41"
+  },
+  "coupon-collector-problem": {
+   "chars": 5730,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "78337c97d32e",
+   "kind": "application",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the expected number of draws to collect all n coupons using geometric distributions and linearity of expectation.",
+   "tagged_at": "2026-10-19T12:57:43"
+  },
+  "covariance-and-correlation": {
+   "chars": 25940,
+   "domain": "Random Variables & Distributions",
+   "hash": "1bdef59808ab",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines covariance and correlation, proves bilinearity properties, distinguishes independence from uncorrelatedness, and derives bounds using Cauchy-Schwarz.",
+   "tagged_at": "2026-10-19T12:57:45"
+  },
+  "cumulative-distribution-functions": {
+   "chars": 3758,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "eb4f1fd40f8a",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines CDFs for discrete and continuous variables, lists three validity properties with proofs, and visualizes the relationship to PMFs.",
+   "tagged_at": "2026-10-19T12:57:57"
+  },
+  "de-montmorts-matching-problem": {
+   "chars": 5886,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "cb9ed6fa236a",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the probability of at least one match in a random permutation using inclusion-exclusion and connects it to e^-1.",
+   "tagged_at": "2026-10-19T12:57:59"
+  },
+  "decision-trees": {
+   "chars": 19182,
+   "domain": "Statistical Inference & Estimation",
+   "hash": "6f89e9b68b1f",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Covers decision tree models for regression and classification, including recursive splitting, pruning via cost complexity, and node purity metrics.",
+   "tagged_at": "2026-10-19T12:58:01"
+  },
+  "deep-neural-networks": {
+   "chars": 19087,
+   "domain": "Machine Learning & Optimization",
+   "hash": "0a23a749d895",
+   "kind": "survey",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Establishes mathematical foundations of deep networks, proves linear collapse without non-linearity, and derives CPWL geometry bounds.",
+   "tagged_at": "2026-10-19T12:58:03"
+  },
+  "def-dedekind-cuts": {
+   "chars": 2248,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "b41335a93930",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines real numbers via Dedekind cuts on rationals, ensuring uniqueness by excluding the largest element in the lower set.",
+   "tagged_at": "2026-10-19T12:58:04"
+  },
+  "def-functions-mappings": {
+   "chars": 4151,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "a149794ac48a",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines functions, injections, surjections, and bijections, proving preimage/set operation properties with a counterexample for image intersections.",
+   "tagged_at": "2026-10-19T12:58:06"
+  },
+  "density-theorem-of-R": {
+   "chars": 5880,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "bbd2da59e1a4",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that rationals and irrationals are dense in reals using the Archimedean property and Dedekind cuts.",
+   "tagged_at": "2026-10-19T12:58:08"
+  },
+  "determinants-multilinear-forms-and-orientation": {
+   "chars": 20645,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "485cfdd5baea",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines multilinear and alternating forms, proves uniqueness of the determinant via Leibniz formula, and establishes multiplicativity.",
+   "tagged_at": "2026-10-19T12:58:10"
+  },
+  "dual-maps-transposes-and-affine-subspaces": {
+   "chars": 19251,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "964214d220a2",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines affine subspaces and dual maps, proving that the matrix of a dual map is the transpose and deriving related algebraic properties.",
+   "tagged_at": "2026-10-19T12:58:12"
+  },
+  "eigenvalues-eigenvectors-and-diagonalization": {
+   "chars": 25296,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "97bc7893ec03",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines eigenvalues/eigenvectors, proves their independence for distinct roots, and establishes conditions for diagonalization.",
+   "tagged_at": "2026-10-19T12:58:14"
+  },
+  "equicontinuity-Arzela-Ascoli-Thm": {
+   "chars": 13774,
+   "domain": "Function Spaces & Fixed Points",
+   "hash": "ac0ff6e0238a",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains why closed/bounded sets aren't compact in C^0 and proves the Arzelà-Ascoli theorem using diagonalization.",
+   "tagged_at": "2026-10-19T12:58:16"
+  },
+  "euler-method": {
+   "chars": 8153,
+   "domain": "Difference Equations & Dynamics",
+   "hash": "fc9d9787d7a9",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Euler's method for ODEs, derives its first-order convergence via Taylor expansion and Lipschitz conditions, and analyzes stability.",
+   "tagged_at": "2026-10-19T12:58:18"
+  },
+  "event": {
+   "chars": 1049,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "7a670c1a05ad",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines an event as a subset of the sample space and describes basic set operations like intersection, union, complement, and disjointness.",
+   "tagged_at": "2026-10-19T12:58:19"
+  },
+  "existence-of-nth-roots-in-R": {
+   "chars": 1192,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "efa2026df2c4",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves existence and uniqueness of n^th roots in R using the Axiom of Completeness and continuity.",
+   "tagged_at": "2026-10-19T12:58:21"
+  },
+  "expectation": {
+   "chars": 5987,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "d8bdfdfd72dd",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines expected value, proves linearity and monotonicity, introduces LOTUS, and illustrates the St. Petersburg paradox.",
+   "tagged_at": "2026-10-19T12:58:22"
+  },
+  "expectations-of-discrete-distributions": {
+   "chars": 3457,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "3ff2a2a283f9",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives expectations for discrete distributions using algebraic summation and linearity of expectation with indicator variables.",
+   "tagged_at": "2026-10-19T12:58:23"
+  },
+  "experiment": {
+   "chars": 1265,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "f8c0b1050369",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines a random experiment by repeatability, known outcomes, and uncertainty, distinguishing physical reality from mathematical models.",
+   "tagged_at": "2026-10-19T12:58:25"
+  },
+  "exponential-distribution": {
+   "chars": 7286,
+   "domain": "Random Variables & Distributions",
+   "hash": "1d1e119422db",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the exponential distribution, proves its memoryless property and uniqueness among continuous distributions, and links it to Poisson processes.",
+   "tagged_at": "2026-10-19T12:58:26"
+  },
+  "fatous-lemma-and-convergence-theorems": {
+   "chars": 9062,
+   "domain": "Measure Theory & Integration",
+   "hash": "73348e0888cc",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note covers Fatou's Lemma, the Monotone Convergence Theorem, and the Lebesgue Dominated Convergence Theorem with full proofs.",
+   "tagged_at": "2026-10-19T12:58:28"
+  },
+  "field": {
+   "chars": 3251,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "47a7891acd5a",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines algebraic fields with axioms and proves basic arithmetic properties like zero multiplication.",
+   "tagged_at": "2026-10-19T12:58:30"
+  },
+  "first-order-linear-difference-equations-and-equilibriums": {
+   "chars": 3757,
+   "domain": "Difference Equations & Dynamics",
+   "hash": "c4d4cd83b7f5",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines equilibrium points and stability criteria for first-order difference equations, contrasting discrete vs. continuous dynamics.",
+   "tagged_at": "2026-10-19T12:58:31"
+  },
+  "full-house": {
+   "chars": 4576,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "b3726ee1e158",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Calculates the probability of a full house in poker using combinatorial counting and explains an asymmetry pitfall.",
+   "tagged_at": "2026-10-19T12:58:32"
+  },
+  "func-lim-seq-lim": {
+   "chars": 3377,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "7f81870fc7c3",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Establishes the equivalence between function limits and sequence limits, providing a practical method to prove non-existence of limits.",
+   "tagged_at": "2026-10-19T12:58:34"
+  },
+  "function-spaces": {
+   "chars": 18266,
+   "domain": "Function Spaces & Fixed Points",
+   "hash": "c94fe4e8ad46",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines pointwise and uniform convergence, proves preservation of continuity via the epsilon/3 technique, and introduces the supremum norm on bounded function spaces.",
+   "tagged_at": "2026-10-19T12:58:36"
+  },
+  "functions-of-random-variables": {
+   "chars": 3792,
+   "domain": "Random Variables & Distributions",
+   "hash": "d61c5701484a",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines random variable transformations via Borel measurability and derives the PMF of g(X) for discrete variables.",
+   "tagged_at": "2026-10-19T12:58:37"
+  },
+  "gamblers-ruin": {
+   "chars": 7382,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "00a143ded9fa",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the probability of winning a biased or fair random walk game using difference equations and boundary conditions.",
+   "tagged_at": "2026-10-19T12:58:39"
+  },
+  "gamma-function-and-distribution": {
+   "chars": 34834,
+   "domain": "Random Variables & Distributions",
+   "hash": "1eaa512a879d",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Gamma function and distribution, proving recurrence relations, Stirling's approximation, and deriving moments via LOTUS.",
+   "tagged_at": "2026-10-19T12:58:41"
+  },
+  "gaussian-processes": {
+   "chars": 12992,
+   "domain": "Stochastic Processes",
+   "hash": "141a5e680128",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Gaussian processes via mean and covariance kernels, proves positive semi-definiteness, analyzes white noise pathologies, and compares canonical stochastic models.",
+   "tagged_at": "2026-10-19T12:58:43"
+  },
+  "geometric-and-negative-binomial-dist": {
+   "chars": 4833,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "6c544ad0d3f1",
+   "kind": "model",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines geometric and negative binomial distributions as waiting-time models for Bernoulli trials with intuitive stories and PMF derivations.",
+   "tagged_at": "2026-10-19T12:58:45"
+  },
+  "gradient-descent-and-variants": {
+   "chars": 19790,
+   "domain": "Machine Learning & Optimization",
+   "hash": "e6975101822a",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives convergence bounds for gradient descent, analyzes SGD variance, and proves Adam's bias-corrected moment estimates.",
+   "tagged_at": "2026-10-19T12:58:47"
+  },
+  "homeomorphisms-compactness": {
+   "chars": 5411,
+   "domain": "Metric Spaces & Topology",
+   "hash": "5971985c3ee1",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves compactness is a topological invariant and shows continuous bijections from compact spaces are homeomorphisms.",
+   "tagged_at": "2026-10-19T12:58:48"
+  },
+  "hypergeometric-distribution": {
+   "chars": 5518,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "980008e82884",
+   "kind": "model",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the hypergeometric distribution, derives its PMF via combinatorial counting, and demonstrates symmetry properties.",
+   "tagged_at": "2026-10-19T12:58:50"
+  },
+  "hyperplane-separation-theorems": {
+   "chars": 18221,
+   "domain": "Optimization & Linear Programming",
+   "hash": "5ffa277ebc32",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves hyperplane separation theorems for convex sets using projection arguments and characterizes sets with convex complements.",
+   "tagged_at": "2026-10-19T12:58:52"
+  },
+  "importance-sampling": {
+   "chars": 14943,
+   "domain": "Statistical Inference & Estimation",
+   "hash": "a1ac1e34ce9c",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives unbiased importance sampling estimators, proves optimal zero-variance proposals via Cauchy-Schwarz, and analyzes self-normalized variants with effective sample size.",
+   "tagged_at": "2026-10-19T12:58:55"
+  },
+  "inclusion-exclusion": {
+   "chars": 4025,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "61bcea1ed626",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note defines the Principle of Inclusion-Exclusion, provides its general formula, and offers a combinatorial proof using the binomial theorem.",
+   "tagged_at": "2026-10-19T12:58:56"
+  },
+  "independence-of-events": {
+   "chars": 3542,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "3c28d1fea15c",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines independence for events and complements, distinguishing it from disjointness, and explains mutual versus pairwise independence.",
+   "tagged_at": "2026-10-19T12:58:58"
+  },
+  "independence-of-rvs": {
+   "chars": 4049,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "aee1a29ea519",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines independence for random variables, distinguishes i.i.d., proves sums of independent binomials, and explains conditional independence.",
+   "tagged_at": "2026-10-19T12:58:59"
+  },
+  "indicator-rv": {
+   "chars": 3177,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "1f983cd42c88",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines indicator random variables and uses linearity of expectation to solve counting problems like the matching problem.",
+   "tagged_at": "2026-10-19T12:59:00"
+  },
+  "intro-to-difference-equations": {
+   "chars": 2149,
+   "domain": "Difference Equations & Dynamics",
+   "hash": "8fb334c607ac",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines difference equations, explains order and linearity with examples, and distinguishes homogeneous from non-homogeneous forms.",
+   "tagged_at": "2026-10-19T12:59:02"
+  },
+  "jensens-inequality": {
+   "chars": 5575,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "8214f6416113",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines convex functions and proves Jensen's Inequality using supporting hyperplanes, deriving the non-negativity of variance.",
+   "tagged_at": "2026-10-19T12:59:03"
+  },
+  "joint-distribution": {
+   "chars": 14129,
+   "domain": "Random Variables & Distributions",
+   "hash": "476d8efe13aa",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines joint, marginal, and conditional distributions for discrete and continuous variables, including independence criteria and specific derived distributions.",
+   "tagged_at": "2026-10-19T12:59:05"
+  },
+  "lagrangian-and-kkt-conditions": {
+   "chars": 20566,
+   "domain": "Optimization & Linear Programming",
+   "hash": "009573d47149",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives Lagrangian and KKT first-order conditions for constrained optimization with equality and inequality constraints.",
+   "tagged_at": "2026-10-19T12:59:08"
+  },
+  "law-of-large-numbers-and-central-limit-theorem": {
+   "chars": 19388,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "f60d311d4aa6",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the Law of Large Numbers and Central Limit Theorem with proofs via Chebyshev's inequality and MGFs.",
+   "tagged_at": "2026-10-19T12:59:10"
+  },
+  "law-of-total-probability": {
+   "chars": 1275,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "57e3becae1b4",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note defines the Law of Total Probability and provides a short proof using set partitions and the multiplication rule.",
+   "tagged_at": "2026-10-19T12:59:11"
+  },
+  "lebesgue-integral": {
+   "chars": 50324,
+   "domain": "Measure Theory & Integration",
+   "hash": "e46e748e0945",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Lebesgue integral via simple functions and proves its well-definedness using measure space properties.",
+   "tagged_at": "2026-10-19T12:59:13"
+  },
+  "lebesgue-outer-measure": {
+   "chars": 18891,
+   "domain": "Measure Theory & Integration",
+   "hash": "4e9de4b06a17",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Lebesgue outer measure, proves monotonicity and that countable sets have measure zero, and establishes volume agreement on boxes using compactness.",
+   "tagged_at": "2026-10-19T12:59:15"
+  },
+  "limits-of-measurable-functions": {
+   "chars": 18738,
+   "domain": "Measure Theory & Integration",
+   "hash": "f9dbc2ac2cc3",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that pointwise and almost everywhere limits of measurable functions remain measurable in complete measure spaces.",
+   "tagged_at": "2026-10-19T12:59:18"
+  },
+  "limsup-liminf": {
+   "chars": 4085,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "8a3386f781f2",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines limit inferior/superior for sequences, proves their monotonicity, and establishes the equivalence of convergence with equal liminf/limsup.",
+   "tagged_at": "2026-10-19T12:59:19"
+  },
+  "linear-functionals-dual-spaces": {
+   "chars": 17288,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "b8013624d6ec",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines linear functionals and dual spaces, proves the dual basis theorem, and applies these concepts to polynomial quadrature.",
+   "tagged_at": "2026-10-19T12:59:21"
+  },
+  "linear-independence-basis-dimension": {
+   "chars": 22885,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "8ed52fc7b4ef",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines linear independence, span, and basis; proves the Exchange Lemma to establish that all bases of a finite-dimensional vector space have the same cardinality.",
+   "tagged_at": "2026-10-19T12:59:24"
+  },
+  "linear-maps-and-rank-nullity": {
+   "chars": 34125,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "5e181dd51557",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines linear maps between vector spaces and proves the Rank-Nullity Theorem and subspace preservation properties.",
+   "tagged_at": "2026-10-19T12:59:26"
+  },
+  "linear-maps-inverses-and-matrices": {
+   "chars": 19431,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "9c0c7ede2a52",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Characterizes injectivity/surjectivity via one-sided inverses and proves the vector space structure of linear maps.",
+   "tagged_at": "2026-10-19T12:59:28"
+  },
+  "linear-programs": {
+   "chars": 3550,
+   "domain": "Optimization & Linear Programming",
+   "hash": "fcb9c1f38927",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines linear programs, feasible regions, and outcomes while showing how to model absolute values and equalities.",
+   "tagged_at": "2026-10-19T12:59:30"
+  },
+  "lotus": {
+   "chars": 1497,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "4d9bf6a1feb1",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines continuous expectation and the Law of the Unconscious Statistician (LOTUS) for transforming random variables.",
+   "tagged_at": "2026-10-19T12:59:31"
+  },
+  "markovs-inequality": {
+   "chars": 6006,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "13717153affc",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents Markov's Inequality with a proof using indicator functions and an example comparing the bound to an exponential distribution.",
+   "tagged_at": "2026-10-19T12:59:33"
+  },
+  "markowitz-portfolio-theory-2-assets": {
+   "chars": 21851,
+   "domain": "Mathematical Finance & Portfolio Theory",
+   "hash": "dd561ddfaeb5",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives portfolio return/variance formulas and proves the hyperbolic efficient frontier for a two-asset Markowitz model.",
+   "tagged_at": "2026-10-19T12:59:35"
+  },
+  "maximum-likelihood-estimation": {
+   "chars": 9753,
+   "domain": "Statistical Inference & Estimation",
+   "hash": "8554c80eec0f",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the likelihood function and log-likelihood, derives the MLE for an exponential distribution, and analyzes estimator bias via reparameterization.",
+   "tagged_at": "2026-10-19T12:59:37"
+  },
+  "measurable-functions": {
+   "chars": 21661,
+   "domain": "Measure Theory & Integration",
+   "hash": "66d0fd5fa7ee",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines measurable functions via preimages of rays, proves equivalent characterizations, and connects measurability to topology.",
+   "tagged_at": "2026-10-19T12:59:39"
+  },
+  "measurable-sets": {
+   "chars": 6624,
+   "domain": "Measure Theory & Integration",
+   "hash": "2b76c5b54d6f",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Lebesgue measurable sets via Carathéodory's criterion and proves an infinite ray is measurable.",
+   "tagged_at": "2026-10-19T12:59:43"
+  },
+  "measurable-sets-algebra": {
+   "chars": 5874,
+   "domain": "Measure Theory & Integration",
+   "hash": "99c9c3c17561",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that the collection of Carathéodory-measurable sets forms an algebra by demonstrating closure under complements and finite unions.",
+   "tagged_at": "2026-10-19T12:59:41"
+  },
+  "measure": {
+   "chars": 18705,
+   "domain": "Measure Theory & Integration",
+   "hash": "f8bcb17294d6",
+   "kind": "definition",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines measure spaces, sigma-algebras, and common measures like Lebesgue and Dirac, with proofs of basic properties.",
+   "tagged_at": "2026-10-19T12:59:46"
+  },
+  "measure-properties-and-completion": {
+   "chars": 4666,
+   "domain": "Measure Theory & Integration",
+   "hash": "e06f914acc7f",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines finite, sigma-finite, and probability measures; explains completeness of measure spaces and the construction of their completion.",
+   "tagged_at": "2026-10-19T12:59:44"
+  },
+  "metric-space-topology": {
+   "chars": 16122,
+   "domain": "Metric Spaces & Topology",
+   "hash": "b2e50104f5d6",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines open/closed sets in metric spaces, proves their duality and topology axioms, and introduces closure/interior/boundary concepts.",
+   "tagged_at": "2026-10-19T12:59:49"
+  },
+  "metric-spaces": {
+   "chars": 2316,
+   "domain": "Metric Spaces & Topology",
+   "hash": "2822cd347226",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines metric spaces, lists standard metrics in R^n, and proves the reverse triangle inequality.",
+   "tagged_at": "2026-10-19T12:59:50"
+  },
+  "moment-generating-functions": {
+   "chars": 5866,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "393758ed6f21",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines moment generating functions, proves properties like uniqueness and sum rules, and derives moments for common distributions.",
+   "tagged_at": "2026-10-19T12:59:52"
+  },
+  "monty-hall-problem": {
+   "chars": 7360,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "121d4ac3f8a4",
+   "kind": "application",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains the Monty Hall problem using conditional probability, Bayes' rule, and simulations to show why switching doors doubles winning chances.",
+   "tagged_at": "2026-10-19T12:59:54"
+  },
+  "moving-average-models": {
+   "chars": 5815,
+   "domain": "Time Series Analysis",
+   "hash": "37fcc364a233",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines MA(q) models, proves their stationarity, explains ACF cutoff properties, and covers MLE estimation techniques.",
+   "tagged_at": "2026-10-19T12:59:55"
+  },
+  "multinomial-distribution": {
+   "chars": 5001,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "14f454010817",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the multinomial distribution as a generalization of the binomial, deriving its PMF, marginals, lumping property, and conditional distributions.",
+   "tagged_at": "2026-10-19T12:59:57"
+  },
+  "multiplication-rule": {
+   "chars": 2081,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "1f29c33fdd36",
+   "kind": "technique",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the multiplication rule for counting sequential outcomes using Cartesian products and provides a simple menu example.",
+   "tagged_at": "2026-10-19T12:59:58"
+  },
+  "multivariate-normal-distribution": {
+   "chars": 13985,
+   "domain": "Random Variables & Distributions",
+   "hash": "812932e31cec",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the multivariate normal distribution, proves its MGF and independence properties, and derives its joint PDF.",
+   "tagged_at": "2026-10-19T13:00:00"
+  },
+  "multivariate-time-series": {
+   "chars": 4624,
+   "domain": "Time Series Analysis",
+   "hash": "7f247977c86d",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines multivariate time series vectors, cross-covariance/correlation matrices, and weak stationarity with a Python simulation.",
+   "tagged_at": "2026-10-19T13:00:02"
+  },
+  "nested-interval-property": {
+   "chars": 3699,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "7a669334ee58",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that nested closed bounded intervals have a nonempty intersection using the Axiom of Completeness.",
+   "tagged_at": "2026-10-19T13:00:03"
+  },
+  "nests-of-compacts": {
+   "chars": 4680,
+   "domain": "Metric Spaces & Topology",
+   "hash": "09081faca4fa",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that nested sequences of compact nonempty sets have a nonempty compact intersection and converges to a point if diameters vanish.",
+   "tagged_at": "2026-10-19T13:00:05"
+  },
+  "newton-pepys-problem": {
+   "chars": 6158,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "1315c68cdc96",
+   "kind": "application",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Solves the Newton-Pepys problem using binomial distributions and complements to show probability decay toward 1/2.",
+   "tagged_at": "2026-10-19T13:00:07"
+  },
+  "normal-distribution": {
+   "chars": 14114,
+   "domain": "Random Variables & Distributions",
+   "hash": "9558c6d36732",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the normal distribution, proves its properties via calculus, and derives the general case from the standard form.",
+   "tagged_at": "2026-10-19T13:00:09"
+  },
+  "normed-vector-spaces": {
+   "chars": 2656,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "3cd5d33eb5e4",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines vector spaces and norms, lists their axioms, and distinguishes normed spaces from inner product spaces.",
+   "tagged_at": "2026-10-19T13:00:10"
+  },
+  "occupancy-problem": {
+   "chars": 4339,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "d7072514061d",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the exact probability for the occupancy problem using the Principle of Inclusion-Exclusion and verifies it with Python simulation.",
+   "tagged_at": "2026-10-19T13:00:12"
+  },
+  "ode-and-picards-thm": {
+   "chars": 6563,
+   "domain": "Difference Equations & Dynamics",
+   "hash": "34fbba69a0b7",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note proves Picard's existence and uniqueness theorem for ODEs using the Banach Contraction Principle on a space of continuous functions.",
+   "tagged_at": "2026-10-19T13:00:13"
+  },
+  "ode-direction-fields": {
+   "chars": 4592,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "05c388a80997",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines direction fields and isoclines for first-order ODEs, linking geometric slopes to vector fields with a Python visualization example.",
+   "tagged_at": "2026-10-19T13:00:15"
+  },
+  "ode-intro": {
+   "chars": 4123,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "cac63c331816",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines ordinary differential equations, solutions, linearity, and initial value problems with standard forms.",
+   "tagged_at": "2026-10-19T13:00:17"
+  },
+  "order-statistics": {
+   "chars": 17963,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "23b5e41c2dc9",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives CDF and PDF for order statistics via binomial sums and infinitesimal heuristics, linking them to the Beta distribution.",
+   "tagged_at": "2026-10-19T13:00:19"
+  },
+  "ordered-field": {
+   "chars": 1239,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "fe50a7326912",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines ordered fields and proves basic properties like positivity of squares and impossibility for finite fields.",
+   "tagged_at": "2026-10-19T13:00:20"
+  },
+  "outcome": {
+   "chars": 1296,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "5cc2faa87a78",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines outcome, sample space, and distinguishes between mutually exclusive/exhaustive outcomes versus events.",
+   "tagged_at": "2026-10-19T13:00:21"
+  },
+  "partnerships": {
+   "chars": 3335,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "f7df7d93cd27",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the double factorial identity for pairing items using two distinct combinatorial counting arguments.",
+   "tagged_at": "2026-10-19T13:00:22"
+  },
+  "poisson-distribution": {
+   "chars": 9131,
+   "domain": "Random Variables & Distributions",
+   "hash": "243963e39132",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Poisson distribution, proves its moments and limit theorem, and demonstrates applications.",
+   "tagged_at": "2026-10-19T13:00:24"
+  },
+  "polyhedra-and-polytopes": {
+   "chars": 16322,
+   "domain": "Optimization & Linear Programming",
+   "hash": "5fbcec9b584c",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines polyhedra and proves the Minkowski-Weyl theorem linking H- and V-representations while analyzing representation complexity.",
+   "tagged_at": "2026-10-19T13:00:26"
+  },
+  "power-law-distribution": {
+   "chars": 12263,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "0162ce5fca97",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives power-law distributions, proves moment divergence conditions, and derives the Hill estimator for heavy-tailed data in recommendation systems.",
+   "tagged_at": "2026-10-19T13:00:29"
+  },
+  "pre-logic": {
+   "chars": 6148,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "475667cf665c",
+   "kind": "technique",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines propositional logic operators, truth tables, quantifiers, and basic proof strategies like contradiction.",
+   "tagged_at": "2026-10-19T13:00:37"
+  },
+  "pre-set-theory": {
+   "chars": 2117,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "4e9a2cb1da65",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sets, basic operations, number systems, and equivalence relations as foundational vocabulary.",
+   "tagged_at": "2026-10-19T13:00:38"
+  },
+  "probabilistic-for-existence-proof": {
+   "chars": 12181,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "116130caa620",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note formalizes the probabilistic method's first moment technique to prove combinatorial existence via expectation and indicator variables.",
+   "tagged_at": "2026-10-19T13:00:40"
+  },
+  "probability": {
+   "chars": 1441,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "500e6b24c4c2",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the axiomatic probability space and lists Kolmogorov's three fundamental axioms for a valid probability measure.",
+   "tagged_at": "2026-10-19T13:00:47"
+  },
+  "probability-density-function": {
+   "chars": 2782,
+   "domain": "Random Variables & Distributions",
+   "hash": "6f834f833aa4",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines PDFs as CDF derivatives, lists non-negativity and normalization properties with a short proof, and gives standard examples.",
+   "tagged_at": "2026-10-19T13:00:42"
+  },
+  "probability-mass-function": {
+   "chars": 2309,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "8a5de34ff83d",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the probability mass function for discrete random variables and lists its two fundamental axiomatic properties.",
+   "tagged_at": "2026-10-19T13:00:43"
+  },
+  "probability-naive-definition": {
+   "chars": 1234,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "c4a73e859139",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines naive probability as a ratio for finite, equiprobable sample spaces and lists its limitations.",
+   "tagged_at": "2026-10-19T13:00:44"
+  },
+  "probability-properties": {
+   "chars": 2078,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "2a948eff95b9",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives fundamental probability properties like complements, monotonicity, and the addition rule from axioms.",
+   "tagged_at": "2026-10-19T13:00:45"
+  },
+  "product-metrics-continuity": {
+   "chars": 5815,
+   "domain": "Metric Spaces & Topology",
+   "hash": "ad1f25bcc3c3",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines product metrics on Cartesian spaces, proves their topological equivalence, and establishes continuity of distance functions.",
+   "tagged_at": "2026-10-19T13:00:48"
+  },
+  "prop-dedekind-cuts": {
+   "chars": 5369,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "c7c229871ca9",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the Least Upper Bound property and triangle inequality for real numbers constructed via Dedekind cuts.",
+   "tagged_at": "2026-10-19T13:00:50"
+  },
+  "random-variables": {
+   "chars": 2202,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "dd2602b10a55",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines random variables as deterministic functions from sample spaces to real numbers and distinguishes discrete from continuous types.",
+   "tagged_at": "2026-10-19T13:00:51"
+  },
+  "relative-topology-inheritance": {
+   "chars": 6765,
+   "domain": "Metric Spaces & Topology",
+   "hash": "c1e8a28cbe75",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains how open and closed sets are inherited by metric subspaces via intersection with parent space sets.",
+   "tagged_at": "2026-10-19T13:00:52"
+  },
+  "risk-measures": {
+   "chars": 15006,
+   "domain": "Mathematical Finance & Portfolio Theory",
+   "hash": "8afec52f5f61",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines variance as a risk measure, derives leverage scaling effects on return and volatility, and introduces mean-variance dominance concepts.",
+   "tagged_at": "2026-10-19T13:00:55"
+  },
+  "sample-space": {
+   "chars": 1454,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "0295755940db",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the sample space in probability theory and classifies it by cardinality with basic examples.",
+   "tagged_at": "2026-10-19T13:00:56"
+  },
+  "sampling-bias-corrected-two-tower-model": {
+   "chars": 22269,
+   "domain": "Machine Learning & Optimization",
+   "hash": "d12d05030832",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note details the two-tower retrieval architecture, derives sampling-bias-corrected loss functions, and proves convergence bounds for streaming frequency estimation.",
+   "tagged_at": "2026-10-19T13:00:58"
+  },
+  "sampling-with-replacement": {
+   "chars": 3920,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "614ccb0b6786",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sampling with replacement, derives the n^k formula via the multiplication rule, and contrasts it with sampling without replacement.",
+   "tagged_at": "2026-10-19T13:00:59"
+  },
+  "sampling-without-replacement": {
+   "chars": 3020,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "ee0dc86d28fc",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sampling without replacement as permutations and derives the formula using the multiplication rule.",
+   "tagged_at": "2026-10-19T13:01:00"
+  },
+  "second-order-linear-difference-equations": {
+   "chars": 1498,
+   "domain": "Difference Equations & Dynamics",
+   "hash": "8a2f9c70528a",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains solving second-order linear homogeneous difference equations via characteristic equations and distinct/repeated roots.",
+   "tagged_at": "2026-10-19T13:01:02"
+  },
+  "sequence": {
+   "chars": 2739,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "7a433f4c8657",
+   "kind": "definition",
+   "level": 1,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sequences of real numbers, provides arithmetic and geometric examples, and includes Python code for visualization.",
+   "tagged_at": "2026-10-19T13:01:04"
+  },
+  "sequence-limit": {
+   "chars": 4178,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "af81aad27b36",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sequence limits using the epsilon-N definition and proves uniqueness via contradiction.",
+   "tagged_at": "2026-10-19T13:01:03"
+  },
+  "sequences-metric-spaces": {
+   "chars": 4739,
+   "domain": "Metric Spaces & Topology",
+   "hash": "d2af3aaa9894",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines convergence and Cauchy sequences in metric spaces, proves the relationship between them, and connects metric convergence to topological definitions.",
+   "tagged_at": "2026-10-19T13:01:06"
+  },
+  "sigma-algebra": {
+   "chars": 6978,
+   "domain": "Measure Theory & Integration",
+   "hash": "9eaf8cee33a6",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines sigma-algebras, proves closure under countable intersections, and demonstrates that singletons and closed intervals are Borel sets.",
+   "tagged_at": "2026-10-19T13:01:09"
+  },
+  "sigma-algebra-of-measurable-sets": {
+   "chars": 7522,
+   "domain": "Measure Theory & Integration",
+   "hash": "098789460b1c",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that Lebesgue measurable sets form a sigma-algebra by showing closure under countable unions via disjointification and Carathéodory's criterion.",
+   "tagged_at": "2026-10-19T13:01:08"
+  },
+  "simpsons-paradox": {
+   "chars": 5634,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "efdaf5d429c7",
+   "kind": "application",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains Simpson's Paradox via examples and conditional probability formulas showing how aggregated data can reverse trends.",
+   "tagged_at": "2026-10-19T13:01:11"
+  },
+  "single-period-investment-model": {
+   "chars": 15784,
+   "domain": "Mathematical Finance & Portfolio Theory",
+   "hash": "6e5bef5f9f9a",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines a single-period economy, derives present value formulas, and models stock prices using log-normal distributions with convexity adjustments.",
+   "tagged_at": "2026-10-19T13:01:13"
+  },
+  "softmax-optimization-and-cross-entropy": {
+   "chars": 11953,
+   "domain": "Machine Learning & Optimization",
+   "hash": "84dc28f88502",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives cross-entropy loss from maximum likelihood, proves softmax gradient properties, and analyzes extreme classification bottlenecks with Bengio's correction.",
+   "tagged_at": "2026-10-19T13:01:15"
+  },
+  "squeeze-theorem-for-sequences": {
+   "chars": 2567,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "12d0d14128c3",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note states and proves the Squeeze Theorem for sequences using an epsilon-N argument with a classic sine example.",
+   "tagged_at": "2026-10-19T13:01:16"
+  },
+  "statistical-inference": {
+   "chars": 2302,
+   "domain": "Statistical Inference & Estimation",
+   "hash": "95cc7bbbaebe",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines core statistical inference concepts including random samples, statistics, and unbiased estimators.",
+   "tagged_at": "2026-10-19T13:01:17"
+  },
+  "stochastic-models-in-finance": {
+   "chars": 11372,
+   "domain": "Mathematical Finance & Portfolio Theory",
+   "hash": "bff4f1db538b",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note covers stochastic models for finance including GBM, Poisson order flows, credit rating Markov chains, and regime-switching diffusions.",
+   "tagged_at": "2026-10-19T13:01:19"
+  },
+  "stochastic-processes-foundations": {
+   "chars": 10395,
+   "domain": "Stochastic Processes",
+   "hash": "3502031d66c8",
+   "kind": "model",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines stochastic processes, state spaces, and Gaussian processes with financial examples like Brownian motion and regime switching.",
+   "tagged_at": "2026-10-19T13:01:21"
+  },
+  "story-proofs": {
+   "chars": 2866,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "c847da4e3c90",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains the combinatorial double-counting technique using a team captain example to prove an identity involving binomial coefficients.",
+   "tagged_at": "2026-10-19T13:01:22"
+  },
+  "student-t-distribution": {
+   "chars": 11504,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "1e69128c7df7",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Student's t-distribution, derives its PDF via change of variables, and proves key properties like symmetry and asymptotic normality.",
+   "tagged_at": "2026-10-19T13:01:24"
+  },
+  "supremum-infimum": {
+   "chars": 3046,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "e3125df4793c",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines supremum and infimum with epsilon-characterizations and distinguishes them from maximum/minimum.",
+   "tagged_at": "2026-10-19T13:01:26"
+  },
+  "time-series-returns": {
+   "chars": 6714,
+   "domain": "Time Series Analysis",
+   "hash": "20d8f5a9b6b7",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines asset price returns (simple, log, annualized) and portfolio statistics with elementary proofs.",
+   "tagged_at": "2026-10-19T13:01:27"
+  },
+  "transformations-and-convolutions": {
+   "chars": 16265,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "a574a74da97d",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives change-of-variables formulas for 1D and multivariate random variables and convolution identities for sums of independent variables.",
+   "tagged_at": "2026-10-19T13:01:29"
+  },
+  "triangle-inequality": {
+   "chars": 2770,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "69244ad6fc53",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the standard and reverse triangle inequalities for real numbers using basic absolute value properties.",
+   "tagged_at": "2026-10-19T13:01:31"
+  },
+  "uniform-continuity": {
+   "chars": 4541,
+   "domain": "Metric Spaces & Topology",
+   "hash": "bd9e1a571fbd",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines uniform continuity and proves the Heine-Cantor theorem linking compactness to this property via contradiction.",
+   "tagged_at": "2026-10-19T13:01:32"
+  },
+  "uniform-distribution": {
+   "chars": 5482,
+   "domain": "Random Variables & Distributions",
+   "hash": "23f066f681f8",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the uniform distribution, proves its moments, and demonstrates the universality theorem for generating any continuous distribution via inverse transform sampling.",
+   "tagged_at": "2026-10-19T13:01:34"
+  },
+  "vandermonde’s-identity": {
+   "chars": 4905,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "d9f067bd184d",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents Vandermonde's Identity with combinatorial and algebraic proofs plus a Python verification example.",
+   "tagged_at": "2026-10-19T13:01:35"
+  },
+  "variance": {
+   "chars": 2268,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "3f2fb9a3d210",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines variance and standard deviation, proves the computational formula Var(X) = E[X^2] - (E[X])^2, and shows non-negativity.",
+   "tagged_at": "2026-10-19T13:01:37"
+  },
+  "vector-autoregressive-models": {
+   "chars": 2211,
+   "domain": "Time Series Analysis",
+   "hash": "94415ed43719",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the VAR(p) model for multivariate time series and explains that OLS estimation is equivalent to MLE due to identical regressors across equations.",
+   "tagged_at": "2026-10-19T13:01:38"
+  },
+  "vector-moving-average": {
+   "chars": 3211,
+   "domain": "Time Series Analysis",
+   "hash": "d7b8d2819f91",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Vector Moving Average models, their properties like stationarity and cutoff cross-covariance, and outlines MLE fitting steps.",
+   "tagged_at": "2026-10-19T13:01:39"
+  },
+  "vector-spaces": {
+   "chars": 12456,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "8e0c79599d79",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines vector spaces, subspaces, and isomorphisms with axioms, examples like function spaces, and closure proofs.",
+   "tagged_at": "2026-10-19T13:01:41"
+  },
+  "zero-squeeze-in-R": {
+   "chars": 3120,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "cdef51789a5c",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves a real number is zero if its absolute value is less than every positive epsilon via contradiction.",
+   "tagged_at": "2026-10-19T13:01:42"
+  }
+ },
+ "problems": {
+  "pset-clt-01#1": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "f97a5a8d70fa",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:49:43",
+   "tests": [
+    "law-of-large-numbers-and-central-limit-theorem",
+    "normal-distribution",
+    "cumulative-distribution-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#1": {
+   "difficulty": 3,
+   "est_minutes": 8,
+   "hash": "cc11afd99f0b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:50:35",
+   "tests": [
+    "conditional-probability",
+    "binomial-coefficient",
+    "sampling-without-replacement",
+    "probability-naive-definition"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#10": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "70274c223ee7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:37",
+   "tests": [
+    "conditional-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#11": {
+   "difficulty": 1,
+   "est_minutes": 2,
+   "hash": "91b39063bcf2",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:38",
+   "tests": [
+    "conditional-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#12": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "e56c634d1eee",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:39",
+   "tests": [
+    "conditional-probability",
+    "law-of-total-probability"
+   ],
+   "type": "conceptual"
+  },
+  "pset-cond-prob-01#13": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "7ac0302d80eb",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:40",
+   "tests": [
+    "conditional-probability",
+    "law-of-total-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#14": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "19e3619fbbd8",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:42",
+   "tests": [
+    "conditional-probability",
+    "law-of-total-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#2": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "3dfba4ea6a28",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:53:25",
+   "tests": [
+    "law-of-total-probability",
+    "conditional-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#3": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "2323939c69c0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:54:29",
+   "tests": [
+    "independence-of-events",
+    "conditional-probability"
+   ],
+   "type": "conceptual"
+  },
+  "pset-cond-prob-01#4": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "275aee58cc58",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:18",
+   "tests": [
+    "inclusion-exclusion",
+    "probability",
+    "binomial-coefficient",
+    "independence-of-events"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#5": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "dd869caa22e9",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:32",
+   "tests": [
+    "inclusion-exclusion",
+    "binomial-coefficient"
+   ],
+   "type": "computation"
+  },
+  "pset-cond-prob-01#6": {
+   "difficulty": 1,
+   "est_minutes": 5,
+   "hash": "22b7005f72db",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:33",
+   "tests": [
+    "independence-of-events"
+   ],
+   "type": "conceptual"
+  },
+  "pset-cond-prob-01#7": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "2f051268887b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:34",
+   "tests": [
+    "independence-of-events",
+    "conditional-probability"
+   ],
+   "type": "proof"
+  },
+  "pset-cond-prob-01#8": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "90f409d27453",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:35",
+   "tests": [
+    "independence-of-events",
+    "conditional-probability"
+   ],
+   "type": "construction"
+  },
+  "pset-cond-prob-01#9": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "79f07b9dfafe",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:36",
+   "tests": [
+    "conditional-probability",
+    "probability-properties",
+    "independence-of-events"
+   ],
+   "type": "construction"
+  },
+  "pset-discrete-rvs#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "4935115d52e1",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:43",
+   "tests": [
+    "independence-of-events",
+    "bernoulli-and-binomial-distributions"
+   ],
+   "type": "computation"
+  },
+  "pset-function-spaces-01#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "8750ebafa68b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:44",
+   "tests": [
+    "function-spaces"
+   ],
+   "type": "conceptual"
+  },
+  "pset-function-spaces-01#2": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "941dee9436d0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:45",
+   "tests": [
+    "function-spaces"
+   ],
+   "type": "proof"
+  },
+  "pset-function-spaces-01#3": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "83199720c8e9",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:46",
+   "tests": [
+    "uniform-continuity",
+    "function-spaces"
+   ],
+   "type": "proof"
+  },
+  "pset-function-spaces-01#4": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "6f4241528f92",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:48",
+   "tests": [
+    "equicontinuity-Arzela-Ascoli-Thm",
+    "uniform-distribution",
+    "continuity-of-measure"
+   ],
+   "type": "proof"
+  },
+  "pset-function-spaces-01#5": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "f91c75a3d488",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:49",
+   "tests": [
+    "equicontinuity-Arzela-Ascoli-Thm",
+    "archimedean-property-of-R"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "d4d762412346",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:50",
+   "tests": [
+    "vector-spaces",
+    "field"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "a8ed350dddcd",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:51",
+   "tests": [
+    "vector-spaces"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#3": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "39ebe4b90510",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:52",
+   "tests": [
+    "linear-independence-basis-dimension"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#4": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "8f6e0a781ee7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:53",
+   "tests": [
+    "vector-spaces",
+    "linear-maps-inverses-and-matrices"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#5": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "bb3f7c5f9562",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:54",
+   "tests": [
+    "linear-independence-basis-dimension"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-01#6": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "4d7d6e89d48a",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:54",
+   "tests": [
+    "vector-spaces",
+    "linear-independence-basis-dimension"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-programs-01#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "390665c63a59",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:56",
+   "tests": [
+    "linear-programs"
+   ],
+   "type": "computation"
+  },
+  "pset-mgf-01#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "055e8ea5e16c",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:57",
+   "tests": [
+    "moment-generating-functions",
+    "variance",
+    "probability-mass-function",
+    "binomial-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-mgf-01#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "657fbdf7d164",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:58",
+   "tests": [
+    "moment-generating-functions",
+    "probability-mass-function"
+   ],
+   "type": "computation"
+  },
+  "pset-mgf-01#3": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "5f168cc07def",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:55:59",
+   "tests": [
+    "probability-density-function",
+    "moment-generating-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-mgf-01#4": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "73938ccff8c0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:00",
+   "tests": [
+    "normal-distribution",
+    "moment-generating-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-mle-01#1": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "4f279f65d915",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:02",
+   "tests": [
+    "independence-of-rvs",
+    "statistical-inference",
+    "bernoulli-and-binomial-distributions",
+    "probability-mass-function",
+    "maximum-likelihood-estimation",
+    "expectation"
+   ],
+   "type": "computation"
+  },
+  "pset-real-numbers-01#1": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "d62428879ec7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:03",
+   "tests": [
+    "def-dedekind-cuts"
+   ],
+   "type": "proof"
+  },
+  "pset-real-numbers-01#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "cab1ef66b66e",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:04",
+   "tests": [
+    "triangle-inequality"
+   ],
+   "type": "computation"
+  },
+  "pset-real-numbers-01#3": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "a6454b4f9c32",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:05",
+   "tests": [
+    "axiom-of-completeness"
+   ],
+   "type": "proof"
+  },
+  "pset-real-numbers-01#4": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "4e4387f388d5",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:07",
+   "tests": [
+    "real-numbers",
+    "function-continuity"
+   ],
+   "type": "proof"
+  },
+  "pset-real-numbers-01#5": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "a43403ef7930",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:08",
+   "tests": [
+    "real-numbers",
+    "continuity-and-compactness"
+   ],
+   "type": "proof"
+  },
+  "pset-rvs-01#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "245105ab07df",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:09",
+   "tests": [
+    "conditional-probability",
+    "law-of-total-probability"
+   ],
+   "type": "computation"
+  },
+  "pset-rvs-01#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "858370fa1bf3",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:10",
+   "tests": [
+    "independence-of-rvs"
+   ],
+   "type": "conceptual"
+  },
+  "pset-rvs-01#3": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "2d4880df6057",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:12",
+   "tests": [
+    "simpsons-paradox",
+    "law-of-total-probability"
+   ],
+   "type": "conceptual"
+  },
+  "pset-rvs-01#4": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "2a69ecf73549",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:13",
+   "tests": [
+    "normal-distribution",
+    "cumulative-distribution-functions",
+    "law-of-total-probability",
+    "independence-of-rvs"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#1": {
+   "difficulty": 1,
+   "est_minutes": 5,
+   "hash": "7340d8b8fafa",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:14",
+   "tests": [
+    "metric-space-topology"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#10": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "c51fc539f374",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:22",
+   "tests": [
+    "continuity-topology",
+    "sequences-metric-spaces"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#11": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "7ec46071ab15",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:24",
+   "tests": [
+    "relative-topology-inheritance"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#12": {
+   "difficulty": 1,
+   "est_minutes": 5,
+   "hash": "803d46c2b14f",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:25",
+   "tests": [
+    "metric-spaces",
+    "continuity-topology"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#13": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "6b0fbfd258ce",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:26",
+   "tests": [
+    "metric-spaces",
+    "continuity-and-compactness"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#2": {
+   "difficulty": 1,
+   "est_minutes": 5,
+   "hash": "cc495daa7cfd",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:14",
+   "tests": [
+    "metric-spaces"
+   ],
+   "type": "conceptual"
+  },
+  "pset-topology-01#3": {
+   "difficulty": 2,
+   "est_minutes": 5,
+   "hash": "c831e02189df",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:15",
+   "tests": [
+    "continuity-and-compactness",
+    "metric-spaces"
+   ],
+   "type": "conceptual"
+  },
+  "pset-topology-01#4": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "697771925f48",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:16",
+   "tests": [
+    "metric-spaces"
+   ],
+   "type": "conceptual"
+  },
+  "pset-topology-01#5": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "5472332274f8",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:17",
+   "tests": [
+    "metric-space-topology"
+   ],
+   "type": "construction"
+  },
+  "pset-topology-01#6": {
+   "difficulty": 2,
+   "est_minutes": 10,
+   "hash": "8c74c510718b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:18",
+   "tests": [
+    "metric-spaces",
+    "triangle-inequality"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#7": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "086558e08327",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:19",
+   "tests": [
+    "axiom-of-completeness",
+    "supremum-infimum"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#8": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "6e2b171f4115",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:20",
+   "tests": [
+    "Bolzano-Weierstrass-theorem",
+    "compactness"
+   ],
+   "type": "proof"
+  },
+  "pset-topology-01#9": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "6449d980f95d",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T12:56:21",
+   "tests": [
+    "sequence-limit",
+    "limit"
+   ],
+   "type": "proof"
+  }
+ },
+ "version": 1
+}

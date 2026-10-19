@@ -2,8 +2,9 @@
 """
 KB Development Runner
 ---------------------
-Runs Quarto Preview and Jupyter Lab concurrently while watching `nodes/`
-for notebook changes to automatically regenerate `graph_output.html`.
+Runs Quarto Preview and Jupyter Lab concurrently while watching `nodes/`,
+`practice/log.jsonl` and `study.toml`. Every change runs the pipeline (build.py):
+render graph + study page, tag NEW notes/problems with the local LLM, re-render.
 
 Usage:
     uv run dev.py
@@ -14,7 +15,7 @@ Options:
     --no-jupyter    Skip launching Jupyter Lab
     --no-quarto     Skip launching Quarto Preview
     --no-browser    Do not auto-open browser for Jupyter / Quarto
-    --anki          Also run create_anki.py on notebook changes
+    --anki          Also run create_anki.py after every full build
 """
 
 import argparse
@@ -35,6 +36,8 @@ VENV_DIR = ROOT_DIR / ".venv"
 COLORS = {
     "DEV": "\033[1;33m",      # Yellow
     "GRAPH": "\033[1;32m",    # Green
+    "BUILD": "\033[1;32m",    # Green
+    "RENDER": "\033[0;32m",   # Dim green
     "QUARTO": "\033[1;35m",   # Magenta
     "JUPYTER": "\033[1;34m",  # Blue
     "ANKI": "\033[1;36m",     # Cyan
@@ -73,49 +76,78 @@ def get_executables():
     return py_exe, jupyter_exe, quarto_exe
 
 
-def run_graph_build(py_exe: str, run_anki: bool = False):
-    """Run create_graph.py (and optionally create_anki.py) to rebuild artifacts."""
-    graph_script = ROOT_DIR / "create_graph.py"
-    if not graph_script.exists():
-        log("ERR", f"Could not find {graph_script}")
-        return False
+class Builder:
+    """Runs build.py (render -> tag new items via local LLM -> re-render).
 
-    try:
-        res = subprocess.run(
-            [py_exe, str(graph_script)],
-            cwd=str(ROOT_DIR),
-            capture_output=True,
-            text=True,
-            check=False
-        )
-        if res.returncode == 0:
-            log("GRAPH", "Knowledge graph & study coverage rebuilt -> graph_output.html, coverage_output.html")
-        else:
-            log("ERR", f"create_graph.py failed:\n{res.stderr.strip()}")
+    Full builds never overlap. If files change while the (possibly slow) tagging step
+    runs, a fast render-only pass runs immediately and a full build is queued after.
+    """
+
+    def __init__(self, py_exe: str, run_anki: bool = False):
+        self.run_anki = run_anki
+        self.py_exe = py_exe
+        self.lock = threading.Lock()
+        self.dirty = threading.Event()
+        self.full_running = False
+        self.timer = None
+
+    def _schedule(self, seconds):
+        """Re-run later so notebooks held back by the settle delay get (re)tagged."""
+        if self.timer:
+            self.timer.cancel()
+        self.timer = threading.Timer(seconds, self.request)
+        self.timer.daemon = True
+        self.timer.start()
+
+    def _run(self, extra, tag="BUILD"):
+        cmd = [self.py_exe, str(ROOT_DIR / "build.py")] + extra
+        try:
+            proc = subprocess.Popen(cmd, cwd=str(ROOT_DIR), stdout=subprocess.PIPE,
+                                    stderr=subprocess.STDOUT, text=True, bufsize=1)
+            for line in iter(proc.stdout.readline, ""):
+                if line.startswith("RECHECK_IN="):
+                    self._schedule(int(line.split("=", 1)[1]))
+                elif line.strip():
+                    log(tag, line.rstrip())
+            proc.wait()
+            if proc.returncode != 0:
+                log("ERR", f"build.py exited with {proc.returncode}")
+            return proc.returncode == 0
+        except Exception as e:
+            log("ERR", f"Failed to execute build.py: {e}")
             return False
-    except Exception as e:
-        log("ERR", f"Failed to execute create_graph.py: {e}")
-        return False
 
-    if run_anki:
+    def _anki(self):
         anki_script = ROOT_DIR / "create_anki.py"
-        if anki_script.exists():
-            try:
-                res = subprocess.run(
-                    [py_exe, str(anki_script)],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    check=False
-                )
-                if res.returncode == 0:
-                    log("ANKI", "Anki cards rebuilt successfully -> anki_cards.txt")
-                else:
-                    log("ERR", f"create_anki.py failed:\n{res.stderr.strip()}")
-            except Exception as e:
-                log("ERR", f"Failed to execute create_anki.py: {e}")
+        if self.run_anki and anki_script.exists():
+            res = subprocess.run([self.py_exe, str(anki_script)], cwd=str(ROOT_DIR),
+                                 capture_output=True, text=True, check=False)
+            log("ANKI", "Anki cards rebuilt" if res.returncode == 0 else f"create_anki.py failed: {res.stderr.strip()}")
 
-    return True
+    def _full_loop(self):
+        while True:
+            self.dirty.clear()
+            self._run(["--settle"])
+            self._anki()
+            if not self.dirty.is_set():
+                break
+        with self.lock:
+            self.full_running = False
+
+    def request(self):
+        """Called on start and on every file change."""
+        with self.lock:
+            if self.full_running:
+                self.dirty.set()
+                start_full = False
+            else:
+                self.full_running = True
+                start_full = True
+        if start_full:
+            threading.Thread(target=self._full_loop, daemon=True).start()
+        else:
+            # full build busy (probably tagging): refresh pages right away with current tags
+            threading.Thread(target=self._run, args=(["--no-tag"], "RENDER"), daemon=True).start()
 
 
 def get_files_snapshot():
@@ -128,8 +160,11 @@ def get_files_snapshot():
             except OSError:
                 pass
 
-    # Also watch create_graph.py, _quarto.yml, and root notebooks
-    for extra in ["create_graph.py", "_quarto.yml", "graph.ipynb", "coverage.ipynb", "index.ipynb"]:
+    # Also watch pipeline code/config, the practice log, and root notebooks (NOT meta/tags.json: build writes it)
+    extras = ["create_graph.py", "build.py", "study.toml", "practice/log.jsonl", "_quarto.yml",
+              "graph.ipynb", "coverage.ipynb", "index.ipynb"]
+    extras += [str(p.relative_to(ROOT_DIR)) for p in (ROOT_DIR / "pipeline").glob("*.py")]
+    for extra in extras:
         p = ROOT_DIR / extra
         if p.exists():
             try:
@@ -140,7 +175,7 @@ def get_files_snapshot():
     return snapshot
 
 
-def watch_loop(py_exe: str, run_anki: bool, stop_event: threading.Event):
+def watch_loop(builder: "Builder", stop_event: threading.Event):
     """Poll filesystem for notebook/graph changes and trigger rebuild."""
     last_snapshot = get_files_snapshot()
     debounce_sec = 0.5
@@ -168,7 +203,7 @@ def watch_loop(py_exe: str, run_anki: bool, stop_event: threading.Event):
             last_snapshot = get_files_snapshot()
             trigger_info = ", ".join(changes[:3]) + ("..." if len(changes) > 3 else "")
             log("GRAPH", f"Change detected ({trigger_info}) -> Rebuilding...")
-            run_graph_build(py_exe, run_anki)
+            builder.request()
         else:
             last_snapshot = current_snapshot
 
@@ -201,9 +236,10 @@ def main():
     log("DEV", f"Python executable: {py_exe}")
     log("DEV", "=" * 60)
 
-    # Initial graph build
-    log("GRAPH", "Running initial graph generation...")
-    run_graph_build(py_exe, args.anki)
+    # Initial pipeline run (render immediately, then tag any new notes/problems in the background)
+    builder = Builder(py_exe, args.anki)
+    log("BUILD", "Running pipeline: render -> tag new notes/problems (local LLM) -> re-render")
+    builder.request()
 
     processes = []
     stop_event = threading.Event()
@@ -272,7 +308,7 @@ def main():
     # Start File Watcher Thread
     watcher_thread = threading.Thread(
         target=watch_loop,
-        args=(py_exe, args.anki, stop_event),
+        args=(builder, stop_event),
         daemon=True
     )
     watcher_thread.start()

@@ -1,0 +1,3233 @@
+{
+ "Borel-sets-and-measurability": {
+  "at": "2026-10-19T13:31:01",
+  "connections": [],
+  "hash": "87ede77273e6",
+  "model": "qwen3.5:9b"
+ },
+ "Cauchy-Schwarz-inequality": {
+  "at": "2026-10-19T13:31:16",
+  "connections": [
+   {
+    "id": "triangle-inequality",
+    "new": false,
+    "why": "The note explicitly uses Cauchy-Schwarz as the key step to prove the Triangle Inequality ($|x+y| \\leq |x| + |y|$), making it a direct prerequisite for that result."
+   },
+   {
+    "id": "normed-vector-spaces",
+    "new": false,
+    "why": "This note defines the induced norm $|x| = \\sqrt{\\langle x, x \\rangle}$ and relies on the properties of inner product spaces, which are a specific, highly structured type of normed vector space."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Both are fundamental inequalities in analysis; Chebyshev's inequality provides a bound on tail probabilities using variance (which relies on inner product concepts), while Cauchy-Schwarz bounds the correlation between two functions or vectors."
+   }
+  ],
+  "hash": "c47f0c8db5e2",
+  "model": "qwen3.5:9b"
+ },
+ "Cauchy-distribution": {
+  "at": "2026-10-19T13:31:24",
+  "connections": [],
+  "hash": "74325fe3b450",
+  "model": "qwen3.5:9b"
+ },
+ "Cauchy-sequences": {
+  "at": "2026-10-19T13:31:34",
+  "connections": [
+   {
+    "id": "completeness",
+    "new": false,
+    "why": "This note proves the specific case for $\text{ℝ}$, while 'completeness' generalizes this definition and theorem to arbitrary metric spaces where the LUB property is replaced by the existence of limits for all Cauchy sequences."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": false,
+    "why": "The proof constructs a sequence using the infimum of tails, which is the formal definition of $\text{liminf}$; understanding this concept clarifies why $b_n$ converges to the limit of the original Cauchy sequence."
+   },
+   {
+    "id": "axiom-of-completeness",
+    "new": false,
+    "why": "The proof explicitly invokes the Least Upper Bound property (established in 'axiom-of-completeness') as the foundational reason why every bounded monotone sequence converges, bridging order-theoretic completeness to metric completeness."
+   }
+  ],
+  "hash": "1fb1c63a4d75",
+  "model": "qwen3.5:9b"
+ },
+ "Lebesgue-measure": {
+  "at": "2026-10-19T13:31:43",
+  "connections": [
+   {
+    "id": "lebesgue-outer-measure",
+    "new": false,
+    "why": "This note relies directly on the definition and properties of the outer measure introduced in that note to establish countable additivity."
+   },
+   {
+    "id": "measure-properties-and-completion",
+    "new": false,
+    "why": "The concept of a 'complete measure space' defined here is the specific application of the general properties discussed in that note regarding subsets of null sets."
+   }
+  ],
+  "hash": "c1dc97f0eeae",
+  "model": "qwen3.5:9b"
+ },
+ "adjusting-for-overcounting": {
+  "at": "2026-10-19T13:31:54",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both principles address correcting counts based on indistinguishability or overlapping sets: adjusting for overcounting handles internal symmetry of identical items, while Inclusion-Exclusion handles external overlaps between distinct sets to avoid double-counting."
+   },
+   {
+    "id": "binomial-coefficient",
+    "new": false,
+    "why": "The note explicitly derives the binomial coefficient formula by applying the overcounting principle to permutations where order does not matter, making it a direct algebraic application of this concept."
+   },
+   {
+    "id": "bose-einstein-problem",
+    "new": false,
+    "why": "This problem counts arrangements of indistinguishable items into distinguishable bins (stars and bars), which is the dual scenario to arranging distinguishable items with some indistinguishable copies; both rely on correcting for symmetry in counting."
+   }
+  ],
+  "hash": "3d28c9fcfe46",
+  "model": "qwen3.5:9b"
+ },
+ "arch-and-garch-models": {
+  "at": "2026-10-19T13:32:01",
+  "connections": [],
+  "hash": "cf14096bf8a7",
+  "model": "qwen3.5:9b"
+ },
+ "archimedean-property-of-R": {
+  "at": "2026-10-19T13:32:08",
+  "connections": [],
+  "hash": "727b952875e8",
+  "model": "qwen3.5:9b"
+ },
+ "arma-models": {
+  "at": "2026-10-19T13:32:18",
+  "connections": [
+   {
+    "id": "vector-autoregressive-models",
+    "new": true,
+    "why": "VAR models generalize ARMA models to multiple time series by stacking them into a vector equation, requiring the same stationarity conditions on the eigenvalues of the coefficient matrix."
+   },
+   {
+    "id": "cointegration",
+    "new": true,
+    "why": "Cointegration addresses the case where individual series are non-stationary (violating ARMA stationarity) but a linear combination is stationary, extending the modeling framework to handle unit roots."
+   },
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion represents the continuous-time limit of a random walk, which is the non-stationary case of an AR(1) process with a root exactly on the unit circle."
+   }
+  ],
+  "hash": "b8a60ecf7613",
+  "model": "qwen3.5:9b"
+ },
+ "augmented-dickey-fuller-test": {
+  "at": "2026-10-19T13:39:07",
+  "connections": [
+   {
+    "id": "cointegration",
+    "new": true,
+    "why": "Cointegration relies on the ADF test to verify that individual non-stationary series are stationary enough to form a stable long-run equilibrium relationship."
+   },
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "The null hypothesis of the ADF test corresponds to a random walk, which is mathematically equivalent to Brownian motion (Wiener process) with no drift."
+   }
+  ],
+  "hash": "e00df33e9123",
+  "model": "qwen3.5:9b"
+ },
+ "autocorrelation-and-stationarity": {
+  "at": "2026-10-19T13:34:50",
+  "connections": [],
+  "hash": "5c1f890982e5",
+  "model": "qwen3.5:9b"
+ },
+ "autoregressive-models": {
+  "at": "2026-10-19T13:34:58",
+  "connections": [],
+  "hash": "2122063000cd",
+  "model": "qwen3.5:9b"
+ },
+ "axiom-of-completeness": {
+  "at": "2026-10-19T13:39:11",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "The algebraic construction of $q$ in the proof is a discrete analogue to the fixed-point iteration used in the Banach Contraction Principle, which guarantees convergence in complete spaces."
+   },
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "This note establishes the specific property (existence of suprema) that defines a 'complete' metric space, generalizing the real number axiom to abstract metric spaces."
+   }
+  ],
+  "hash": "d6141796f00c",
+  "model": "qwen3.5:9b"
+ },
+ "bagging-and-random-forests": {
+  "at": "2026-10-19T13:39:15",
+  "connections": [
+   {
+    "id": "sampling-with-replacement",
+    "new": false,
+    "why": "Bagging relies entirely on sampling with replacement to generate the bootstrap datasets that form the ensemble."
+   },
+   {
+    "id": "variance",
+    "new": false,
+    "why": "The core mathematical justification for bagging is the reduction of variance through averaging, derived directly from the properties of variance."
+   },
+   {
+    "id": "decision-trees",
+    "new": false,
+    "why": "Bagging is specifically designed to stabilize the high-variance predictions produced by individual decision trees."
+   }
+  ],
+  "hash": "d4bb90a5a079",
+  "model": "qwen3.5:9b"
+ },
+ "banach-fp-thm": {
+  "at": "2026-10-19T13:39:18",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both are fundamental fixed-point theorems, but Banach relies on metric contraction and completeness for uniqueness/construction, whereas Brouwer relies on topological compactness/convexity for existence in non-metric settings."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness is a topological generalization of completeness that often serves as the alternative hypothesis to ensure convergence or existence of limits in fixed-point contexts."
+   }
+  ],
+  "hash": "284740da6b83",
+  "model": "qwen3.5:9b"
+ },
+ "bernoulli-and-binomial-distributions": {
+  "at": "2026-10-19T13:39:22",
+  "connections": [
+   {
+    "id": "binomial-theorem",
+    "new": true,
+    "why": "The Binomial Theorem provides the algebraic identity that proves the sum of the Bernoulli/Binomial probabilities equals 1, ensuring they form a valid distribution."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both concepts rely on fundamental counting principles (PIE for unions, combinations for sums) to handle overlapping or distinct event structures in probability spaces."
+   }
+  ],
+  "hash": "2110fd1340a7",
+  "model": "qwen3.5:9b"
+ },
+ "beta-distribution": {
+  "at": "2026-10-19T13:39:26",
+  "connections": [
+   {
+    "id": "chi-square-distribution",
+    "new": true,
+    "why": "The Beta distribution is a fundamental building block for deriving the Chi-Square distribution (via Gamma functions), which is essential for understanding variance and goodness-of-fit tests."
+   },
+   {
+    "id": "student-t-distribution",
+    "new": true,
+    "why": "The Student's t-distribution is constructed as a ratio involving a Normal variable and a Chi-Square variable (which relates to Beta), making it crucial for inference on means with unknown variance."
+   },
+   {
+    "id": "multivariate-normal-distribution",
+    "new": true,
+    "why": "The distribution of the sample correlation coefficient follows a transformation of the Beta distribution, which is derived from the joint density of bivariate normal samples."
+   }
+  ],
+  "hash": "8f727c50a250",
+  "model": "qwen3.5:9b"
+ },
+ "binomial-coefficient": {
+  "at": "2026-10-19T13:39:32",
+  "connections": [
+   {
+    "id": "multinomial-distribution",
+    "new": true,
+    "why": "The multinomial distribution generalizes the binomial concept by using multinomial coefficients, which are derived from the same combinatorial principles as the binomial coefficient."
+   }
+  ],
+  "hash": "9ebfc1415ac9",
+  "model": "qwen3.5:9b"
+ },
+ "binomial-coefficient-formula": {
+  "at": "2026-10-19T13:39:29",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both principles are foundational counting techniques used to derive exact probabilities by systematically handling overlaps or partitions of sets, often appearing together in complex combinatorial proofs."
+   }
+  ],
+  "hash": "f185beed0414",
+  "model": "qwen3.5:9b"
+ },
+ "binomial-hypergeometric-connections": {
+  "at": "2026-10-19T13:39:36",
+  "connections": [
+   {
+    "id": "sampling-without-replacement",
+    "new": true,
+    "why": "The hypergeometric distribution is the precise mathematical model for sampling without replacement, which is the core mechanism described in this note."
+   },
+   {
+    "id": "sampling-with-replacement",
+    "new": true,
+    "why": "The binomial distribution models sampling with replacement, providing the limiting case and conceptual contrast to the finite population scenario discussed here."
+   }
+  ],
+  "hash": "eb9a59f456ce",
+  "model": "qwen3.5:9b"
+ },
+ "binomial-theorem": {
+  "at": "2026-10-19T13:39:39",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": false,
+    "why": "Both principles rely on counting arguments over sets and can be viewed as dual algebraic expansions (one for sums of powers, one for intersections/unions) used to derive probability identities."
+   }
+  ],
+  "hash": "bc164bbc9f9a",
+  "model": "qwen3.5:9b"
+ },
+ "birthday-problem": {
+  "at": "2026-10-19T13:39:42",
+  "connections": [
+   {
+    "id": "coupon-collector-problem",
+    "new": true,
+    "why": "Both problems rely on counting permutations of distinct items (sampling without replacement) to derive probabilities, contrasting with sampling with replacement used in the Birthday Problem's total space."
+   },
+   {
+    "id": "de-montmorts-matching-problem",
+    "new": true,
+    "why": "This is a direct generalization where the 'birthday' constraint is removed, reducing the problem to finding the probability of zero fixed points (derangements) in a random permutation."
+   }
+  ],
+  "hash": "15acffbb2314",
+  "model": "qwen3.5:9b"
+ },
+ "boosting": {
+  "at": "2026-10-19T13:39:45",
+  "connections": [
+   {
+    "id": "gradient-descent-and-variants",
+    "new": false,
+    "why": "Boosting is mathematically equivalent to functional gradient descent, where each tree fits the negative gradient of the loss function."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The additive structure of boosting relies on convex combinations of base learners and relates to the geometry of convex optimization landscapes."
+   }
+  ],
+  "hash": "dcee7675a929",
+  "model": "qwen3.5:9b"
+ },
+ "borel-cantelli-lemma": {
+  "at": "2026-10-19T13:39:47",
+  "connections": [
+   {
+    "id": "continuity-of-measure",
+    "new": false,
+    "why": "The proof explicitly relies on the continuity of measure from above to evaluate the limit of the decreasing sequence of sets."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma provides the converse direction (or a related condition) for events occurring infinitely often, completing the logical picture with Borel-Cantelli."
+   }
+  ],
+  "hash": "04779ecc4842",
+  "model": "qwen3.5:9b"
+ },
+ "bose-einstein-problem": {
+  "at": "2026-10-19T13:39:51",
+  "connections": [
+   {
+    "id": "birthday-problem",
+    "new": true,
+    "why": "Both problems rely on the same fundamental combinatorial structure of distributing indistinguishable items into distinguishable bins, though the Birthday Problem applies it to a specific probability calculation."
+   },
+   {
+    "id": "coupon-collector-problem",
+    "new": true,
+    "why": "The Coupon Collector's Problem uses Bose-Einstein counting (combinations with replacement) as its core mechanism to calculate the expected number of trials needed to collect all items."
+   },
+   {
+    "id": "occupancy-problem",
+    "new": true,
+    "why": "This is a direct generalization where Bose-Einstein counting provides the total number of ways to distribute $k$ balls into $n$ bins, which is the foundational step for analyzing occupancy distributions."
+   }
+  ],
+  "hash": "560aa5fbbb92",
+  "model": "qwen3.5:9b"
+ },
+ "branching-process": {
+  "at": "2026-10-19T13:39:54",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Both model populations evolving over time via independent increments, but branching processes use discrete reproduction rules while Brownian motion uses continuous diffusion."
+   }
+  ],
+  "hash": "9939bdf1f7c0",
+  "model": "qwen3.5:9b"
+ },
+ "brouwer-fixed-point-theorem": {
+  "at": "2026-10-19T13:39:58",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "This note describes a different fixed-point theorem (Banach Contraction Principle) that provides a stronger result (uniqueness and constructive convergence) under the stricter condition of being a contraction mapping, contrasting with Brouwer's existence-only result for general continuous maps."
+   },
+   {
+    "id": "ode-and-picards-thm",
+    "new": true,
+    "why": "This note describes Picard's Existence and Uniqueness Theorem for ODEs, which relies on a fixed-point argument (often the Banach Contraction Principle) in a function space to prove the existence of solutions, sharing the same underlying functional analytic technique."
+   },
+   {
+    "id": "compactness",
+    "new": false,
+    "why": "This note describes compactness, which is a necessary condition for the Brouwer theorem; the proof often relies on the fact that a continuous image of a compact set is compact (specifically, using the finite subcover property to handle the supremum argument)."
+   }
+  ],
+  "hash": "56cb3d035bb1",
+  "model": "qwen3.5:9b"
+ },
+ "brownian-motion": {
+  "at": "2026-10-19T13:40:02",
+  "connections": [
+   {
+    "id": "branching-process",
+    "new": true,
+    "why": "Both are fundamental continuous-time stochastic processes defined by specific increment properties (independent increments for Brownian motion vs. reproduction laws for branching processes) and often serve as building blocks for more complex models."
+   },
+   {
+    "id": "gaussian-processes",
+    "new": false,
+    "why": "Brownian motion is the canonical example of a Gaussian process, where its finite-dimensional distributions are multivariate normal with a specific covariance kernel derived from independent increments."
+   },
+   {
+    "id": "multivariate-normal-distribution",
+    "new": false,
+    "why": "The proof that Brownian motion is a Gaussian process relies entirely on the property that linear combinations of independent normal increments yield a multivariate normal distribution."
+   }
+  ],
+  "hash": "54df4a03ef68",
+  "model": "qwen3.5:9b"
+ },
+ "cantor-set": {
+  "at": "2026-10-19T13:40:06",
+  "connections": [
+   {
+    "id": "cardinality",
+    "new": true,
+    "why": "The Cantor set's uncountability relies on the same bijection logic used to define cardinality and prove that the real numbers are uncountable."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof that the Cantor set is compact explicitly uses the property that an infinite intersection of nested compact sets is compact."
+   }
+  ],
+  "hash": "2006874ea99c",
+  "model": "qwen3.5:9b"
+ },
+ "cardinality": {
+  "at": "2026-10-19T13:40:10",
+  "connections": [
+   {
+    "id": "cantor-set",
+    "new": true,
+    "why": "The Cantor set is the canonical example of an uncountable set with measure zero, directly utilizing the concept of cardinality to demonstrate that a subset of ℝ can have the same size as ℝ itself."
+   },
+   {
+    "id": "adjusting-for-overcounting",
+    "new": true,
+    "why": "This note deals with combinatorial counting principles (like inclusion-exclusion) which are the finite analogues to the infinite bijection arguments used to define and compare cardinalities."
+   },
+   {
+    "id": "measure-properties-and-completion",
+    "new": true,
+    "why": "The distinction between countable and uncountable sets is fundamental to measure theory, as Lebesgue measure treats countable sets as negligible (measure zero) while uncountable sets like intervals have positive measure."
+   }
+  ],
+  "hash": "b3f17dfebb5c",
+  "model": "qwen3.5:9b"
+ },
+ "cayley-hamilton-theorem-and-matrix-polynomials": {
+  "at": "2026-10-19T13:40:15",
+  "connections": [
+   {
+    "id": "determinants-multilinear-forms-and-orientation",
+    "new": true,
+    "why": "The characteristic polynomial $p_A(x) = \text{tr}(\bigwedge^k A)$ relies on the determinant (defined via multilinear forms) to establish the universal annihilating polynomial."
+   },
+   {
+    "id": "linear-maps-inverses-and-matrices",
+    "new": true,
+    "why": "Matrix inversion and the adjugate formula ($A^{-1} = \frac{1}{\text{det}(A)}\text{adj}(A)$) provide the algebraic mechanism to prove Cayley-Hamilton by showing $p_A(A) = 0$ via the identity $\text{adj}(xI-A)(xI-A) = \text{det}(xI-A)I$."
+   },
+   {
+    "id": "linear-maps-and-rank-nullity",
+    "new": true,
+    "why": "The proof that a matrix satisfying its characteristic polynomial implies specific structural properties (like nilpotency or diagonalizability) often utilizes the Rank-Nullity theorem to analyze the kernel of $p_A(A)$."
+   }
+  ],
+  "hash": "20a93049498d",
+  "model": "qwen3.5:9b"
+ },
+ "change-of-basis-matrix-inversion-and-trace": {
+  "at": "2026-10-19T13:40:21",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The invertibility of the change-of-basis matrix relies on the fact that a linear map between finite-dimensional spaces of equal dimension is an isomorphism, which is the algebraic foundation for the Banach Fixed Point Theorem's requirement of a contraction mapping on a complete metric space to have a unique fixed point."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "The trace (sum of diagonal entries), which is invariant under the change of basis described in this note, equals the sum of eigenvalues; this spectral property connects to the Brouwer Fixed Point Theorem where the Lefschetz number (computed via traces of induced maps on homology) determines the existence of fixed points."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "The determinant's invariance under similarity transformations ($P^{-1}AP$) is a specific instance of how certain functionals remain constant under group actions, analogous to how Jensen's Inequality relates convex functions to expectations, both relying on deep structural properties of the underlying space (vector space vs. probability measure)."
+   }
+  ],
+  "hash": "ff2d85859fb3",
+  "model": "qwen3.5:9b"
+ },
+ "chebyshevs-inequality": {
+  "at": "2026-10-19T13:40:25",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality provides a general framework for bounding expectations of convex functions, which underpins many proofs and interpretations of concentration inequalities like Chebyshev's."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": false,
+    "why": "Chebyshev's inequality is derived directly from Markov's inequality by applying it to the non-negative random variable $(X - \text{mean})^2$."
+   }
+  ],
+  "hash": "d8346be86590",
+  "model": "qwen3.5:9b"
+ },
+ "chi-square-distribution": {
+  "at": "2026-10-19T13:40:30",
+  "connections": [
+   {
+    "id": "exponential-distribution",
+    "new": true,
+    "why": "The Chi-Square distribution with 2 degrees of freedom is mathematically identical to the Exponential distribution with rate parameter 1/2, making it a specific instance of the latter."
+   },
+   {
+    "id": "gamma-function-and-distribution",
+    "new": false,
+    "why": "The Chi-Square distribution is formally defined as a special case of the Gamma distribution where the shape parameter is half the degrees of freedom and the scale is 2."
+   },
+   {
+    "id": "moment-generating-functions",
+    "new": false,
+    "why": "The proof that Chi-Square is a Gamma distribution relies on deriving the Moment Generating Function (MGF) of the sum of squared normals and matching it to the known MGF of the Gamma family."
+   }
+  ],
+  "hash": "3c5d77640cf8",
+  "model": "qwen3.5:9b"
+ },
+ "cointegration": {
+  "at": "2026-10-19T13:40:34",
+  "connections": [
+   {
+    "id": "augmented-dickey-fuller-test",
+    "new": true,
+    "why": "The Augmented Dickey-Fuller (ADF) test is the standard statistical procedure used to verify the 'non-stationary' condition of individual series required before establishing cointegration."
+   },
+   {
+    "id": "vector-autoregressive-models",
+    "new": false,
+    "why": "Cointegration addresses the specific failure mode of standard VAR models when applied to non-stationary data, leading directly to the development of Vector Error Correction Models (VECM)."
+   },
+   {
+    "id": "multivariate-time-series",
+    "new": true,
+    "why": "Cointegration is a fundamental structural concept within the broader domain of multivariate time series analysis, describing how multiple stochastic trends interact."
+   }
+  ],
+  "hash": "246f51ab84bb",
+  "model": "qwen3.5:9b"
+ },
+ "compactness": {
+  "at": "2026-10-19T13:40:39",
+  "connections": [
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "Compactness in metric spaces is equivalent to sequential compactness, which relies fundamentally on the completeness of the underlying space (every Cauchy sequence converges), making it a deep analogy between topological finiteness and analytical convergence."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli Lemma uses the concept of 'finite' behavior (occurrence only finitely often) to prove almost sure convergence, mirroring how compactness reduces infinite sequences to finite subsequence limits."
+   },
+   {
+    "id": "probabilistic-for-existence-proof",
+    "new": true,
+    "why": "This note describes a proof technique where one proves existence by assuming non-existence and deriving a contradiction (often involving infinite sets), which is the exact logical structure used in many compactness arguments (e.g., proving a set is closed)."
+   }
+  ],
+  "hash": "c5a4f872edf4",
+  "model": "qwen3.5:9b"
+ },
+ "complements-direct-sums-quotient-spaces": {
+  "at": "2026-10-19T13:40:42",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The dimension formula for the sum of subspaces is the direct algebraic analogue of the Principle of Inclusion-Exclusion for finite sets, relating the size of a union to the sizes of individual sets and their intersection."
+   }
+  ],
+  "hash": "03d6f97fba51",
+  "model": "qwen3.5:9b"
+ },
+ "completeness": {
+  "at": "2026-10-19T13:40:45",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness implies completeness in metric spaces, making it a stronger topological property that generalizes the idea of having no 'missing' limit points."
+   },
+   {
+    "id": "continuity-topology",
+    "new": false,
+    "why": "The note explicitly contrasts completeness with topological properties like homeomorphism, using continuity and open sets to demonstrate why completeness is metric-dependent rather than purely topological."
+   }
+  ],
+  "hash": "4fff96610f52",
+  "model": "qwen3.5:9b"
+ },
+ "composite-sequences-limit": {
+  "at": "2026-10-19T13:40:48",
+  "connections": [
+   {
+    "id": "triangle-inequality",
+    "new": false,
+    "why": "The proof of the product limit explicitly relies on the triangle inequality to split $|a_n b_n - ab|$ into manageable terms."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "Both concepts deal with the behavior of sequences at infinity, where limsup/liminf are often used to prove properties of limits or handle cases where standard limits don't exist."
+   }
+  ],
+  "hash": "3e539fe67fac",
+  "model": "qwen3.5:9b"
+ },
+ "conditional-expectation": {
+  "at": "2026-10-19T13:40:53",
+  "connections": [
+   {
+    "id": "lotus",
+    "new": true,
+    "why": "LOTUS (Law of the Unconscious Statistician) is the fundamental theorem that justifies computing $E(g(X))$ by integrating against the distribution of $X$, which is the specific mechanism used to derive the formula for $E(Y|X)$ as an integral over the conditional density."
+   },
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The definition of conditional expectation given a random variable relies on the Lebesgue integral to average $Y$ over the level sets of $X$, making it a direct application of measure-theoretic integration concepts."
+   },
+   {
+    "id": "functions-of-random-variables",
+    "new": true,
+    "why": "Conditional expectation $E(Y|X)$ is formally defined as a specific type of function of a random variable (a measurable function of $X$), directly connecting to the theory of transformations and functions applied to random variables."
+   }
+  ],
+  "hash": "aeeeffe55c77",
+  "model": "qwen3.5:9b"
+ },
+ "conditional-probability": {
+  "at": "2026-10-19T13:40:56",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both concepts rely on the fundamental measure-theoretic definition of conditional probability to handle dependencies and limit behaviors in stochastic processes."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "The rigorous construction of conditional expectation (the generalization of conditional probability) is a prerequisite for proving Fatou's Lemma and other convergence theorems in measure theory."
+   }
+  ],
+  "hash": "fe8bafaab035",
+  "model": "qwen3.5:9b"
+ },
+ "continuity-and-compactness": {
+  "at": "2026-10-19T13:40:59",
+  "connections": [
+   {
+    "id": "uniform-continuity",
+    "new": true,
+    "why": "Uniform continuity on a compact domain implies boundedness, directly linking the topological property of compactness to the behavior of continuous functions."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The Banach Contraction Principle relies on the completeness of metric spaces (often derived from compactness arguments) to guarantee fixed points, similar to how compactness guarantees extrema."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Brouwer's theorem is a deep topological result stating that continuous maps on compact convex sets have fixed points, generalizing the extreme value intuition."
+   }
+  ],
+  "hash": "31dd1349e63c",
+  "model": "qwen3.5:9b"
+ },
+ "continuity-of-measure": {
+  "at": "2026-10-19T13:41:02",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Continuity from above relies on the finiteness condition, which is a specific instance of the general topological principle that compact sets (or finite measure spaces in this context) allow limits to commute with intersections."
+   }
+  ],
+  "hash": "a60a320678f0",
+  "model": "qwen3.5:9b"
+ },
+ "continuity-topology": {
+  "at": "2026-10-19T13:41:05",
+  "connections": [
+   {
+    "id": "equicontinuity-Arzela-Ascoli-Thm",
+    "new": true,
+    "why": "The Arzelà-Ascoli theorem characterizes compact subsets of function spaces using uniform continuity, which is a stronger form of the sequential convergence preservation defined in this note."
+   },
+   {
+    "id": "uniform-continuity",
+    "new": true,
+    "why": "Uniform continuity strengthens the standard continuity definition by requiring the $\forall \forall \to \forall$ quantifier structure rather than the pointwise $\forall \forall \to \forall$, linking local behavior to global topological properties."
+   }
+  ],
+  "hash": "e9f1754b0e67",
+  "model": "qwen3.5:9b"
+ },
+ "contractions": {
+  "at": "2026-10-19T13:41:08",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": false,
+    "why": "This is the fundamental theorem that guarantees the existence and uniqueness of the fixed point for any contraction mapping on a complete metric space."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "While Brouwer's theorem applies to continuous maps on convex sets in Euclidean space (where the map isn't necessarily a contraction), it shares the same ultimate goal: proving the existence of a fixed point under weaker continuity assumptions."
+   }
+  ],
+  "hash": "39ed3f3ae00e",
+  "model": "qwen3.5:9b"
+ },
+ "convex-sets-and-convex-hulls": {
+  "at": "2026-10-19T13:41:13",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on the geometric property that a continuous function mapping a compact convex set to itself must have a fixed point, with convexity being the critical structural requirement for Brouwer's theorem."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": false,
+    "why": "The separation of disjoint convex sets by a hyperplane is a direct consequence of the geometry defined in this note (convex sets and hulls), often used to prove existence results like those in optimization."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "While convexity is an algebraic/linear property, compactness is a topological one; their intersection (e.g., in fixed-point theorems or optimization) creates the conditions where local minima become global minima."
+   }
+  ],
+  "hash": "06d083dd47a0",
+  "model": "qwen3.5:9b"
+ },
+ "coupon-collector-problem": {
+  "at": "2026-10-19T13:41:16",
+  "connections": [
+   {
+    "id": "birthday-problem",
+    "new": true,
+    "why": "Both problems model sampling with replacement and rely on the same underlying geometric distribution logic to calculate expected times or probabilities of completion."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The Coupon Collector's Problem can be solved using the Principle of Inclusion-Exclusion by calculating the probability of missing at least one coupon, offering an alternative derivation technique."
+   },
+   {
+    "id": "bose-einstein-problem",
+    "new": true,
+    "why": "This note describes Bose-Einstein counting (combinations with replacement), which is the fundamental combinatorial model for the coupon collection process where items are drawn independently."
+   }
+  ],
+  "hash": "78337c97d32e",
+  "model": "qwen3.5:9b"
+ },
+ "covariance-and-correlation": {
+  "at": "2026-10-19T13:41:20",
+  "connections": [
+   {
+    "id": "gaussian-processes",
+    "new": true,
+    "why": "Gaussian processes are defined entirely by their mean function and covariance kernel, making the mathematical structure of covariance the fundamental building block for this stochastic process."
+   },
+   {
+    "id": "eigenvalues-eigenvectors-and-diagonalization",
+    "new": true,
+    "why": "The covariance matrix of a multivariate normal distribution is symmetric and positive semi-definite, allowing it to be diagonalized via eigenvalues and eigenvectors to understand its principal components."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Both concepts rely on the relationship between variance (or covariance) and tail probabilities, though Chebyshev's inequality provides a bound for any distribution while correlation bounds the linear dependence structure."
+   }
+  ],
+  "hash": "1bdef59808ab",
+  "model": "qwen3.5:9b"
+ },
+ "cumulative-distribution-functions": {
+  "at": "2026-10-19T13:41:24",
+  "connections": [
+   {
+    "id": "lotus",
+    "new": true,
+    "why": "The LOTUS (Law of the Unconscious Statistic) theorem uses the CDF to derive the distribution of a transformed random variable $Y=g(X)$, linking the concept directly to functions of random variables."
+   },
+   {
+    "id": "order-statistics",
+    "new": true,
+    "why": "Order statistics are defined by the CDFs of the underlying independent random variables, making the CDF the fundamental tool for deriving their distributions."
+   },
+   {
+    "id": "functions-of-random-variables",
+    "new": true,
+    "why": "The distribution of a function of a random variable $Y=g(X)$ is derived directly from the CDF of $X$ via the transformation technique $F_Y(y) = P(g(X) \neq y)$."
+   }
+  ],
+  "hash": "eb4f1fd40f8a",
+  "model": "qwen3.5:9b"
+ },
+ "de-montmorts-matching-problem": {
+  "at": "2026-10-19T13:41:27",
+  "connections": [
+   {
+    "id": "birthday-problem",
+    "new": true,
+    "why": "Both problems use the Principle of Inclusion-Exclusion to calculate the probability of at least one 'collision' or match occurring in a random permutation, leading to similar alternating series expansions."
+   },
+   {
+    "id": "coupon-collector-problem",
+    "new": true,
+    "why": "This problem is the dual of the Coupon Collector's Problem; while the latter counts trials to collect all items (related to harmonic numbers), the former counts permutations with no fixed points (related to $1/e$), both arising from fundamental combinatorial structures."
+   }
+  ],
+  "hash": "cb9ed6fa236a",
+  "model": "qwen3.5:9b"
+ },
+ "decision-trees": {
+  "at": "2026-10-19T13:41:32",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "Decision trees construct piecewise constant models using axis-aligned splits, which is a discrete approximation of the continuous hyperplane separation boundaries used in convex optimization and support vector machines."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "The cost complexity pruning objective function for decision trees ($RSS + \text{penalty} \times |T|$) is mathematically analogous to the Lagrangian formulation of constrained optimization, where the penalty term acts like a regularization parameter in KKT conditions."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The regions defined by decision trees are axis-aligned rectangles (intersections of half-spaces), which relates to the study of convex sets and their properties in optimization theory, even though the tree model itself is non-convex."
+   }
+  ],
+  "hash": "6f89e9b68b1f",
+  "model": "qwen3.5:9b"
+ },
+ "deep-neural-networks": {
+  "at": "2026-10-19T13:41:35",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on topological fixed-point arguments to establish existence properties (approximation vs. stability) in function spaces."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The Banach Contraction Principle provides the rigorous metric-space foundation for proving convergence of gradient descent, which trains these networks."
+   },
+   {
+    "id": "compactness",
+    "new": false,
+    "why": "The Universal Approximation Theorem explicitly requires the input domain to be a compact set, making this note a direct application of that topological constraint."
+   }
+  ],
+  "hash": "0a23a749d895",
+  "model": "qwen3.5:9b"
+ },
+ "def-dedekind-cuts": {
+  "at": "2026-10-19T13:41:39",
+  "connections": [
+   {
+    "id": "axiom-of-completeness",
+    "new": true,
+    "why": "The construction of ℝ via Dedekind cuts is the standard proof technique used to establish the Axiom of Completeness (every non-empty bounded-above subset has a supremum)."
+   },
+   {
+    "id": "nested-interval-property",
+    "new": true,
+    "why": "Both the Nested Interval Property and Dedekind Cuts are equivalent characterizations of the completeness property that distinguishes ℝ from ℚ."
+   },
+   {
+    "id": "existence-of-nth-roots-in-R",
+    "new": true,
+    "why": "The existence of n-th roots in ℝ relies on the completeness of the real line, which is fundamentally constructed via Dedekind cuts (or Cauchy sequences)."
+   }
+  ],
+  "hash": "b41335a93930",
+  "model": "qwen3.5:9b"
+ },
+ "def-functions-mappings": {
+  "at": "2026-10-19T13:41:42",
+  "connections": [
+   {
+    "id": "linear-maps-and-rank-nullity",
+    "new": true,
+    "why": "This note connects via the deep analogy that linear maps are a specific class of functions where the 'image' and 'preimage' properties generalize to the Rank-Nullity theorem, linking the abstract set-theoretic definitions to matrix representations."
+   },
+   {
+    "id": "measurable-functions",
+    "new": true,
+    "why": "This note connects because it relies on the definition of a function (mapping) to define measurability, specifically using preimages of Borel sets to characterize measurable functions in measure theory."
+   }
+  ],
+  "hash": "a149794ac48a",
+  "model": "qwen3.5:9b"
+ },
+ "density-theorem-of-R": {
+  "at": "2026-10-19T13:41:46",
+  "connections": [
+   {
+    "id": "axiom-of-completeness",
+    "new": true,
+    "why": "The axiom of completeness is the fundamental property that distinguishes ℝ from ℚ, making the density theorem possible by ensuring no 'gaps' exist between rationals and irrationals."
+   },
+   {
+    "id": "cantor-set",
+    "new": true,
+    "why": "The Cantor set provides a concrete counter-example to density in a specific subset of ℝ, illustrating how removing dense sets (like rationals) can leave a nowhere-dense perfect set."
+   },
+   {
+    "id": "cardinality",
+    "new": true,
+    "why": "Cardinality theory explains the underlying reason for density: both ℚ and ℝ\textbackslashℚ are countable or uncountable in ways that allow them to interleave infinitely within any interval."
+   }
+  ],
+  "hash": "bbd2da59e1a4",
+  "model": "qwen3.5:9b"
+ },
+ "determinants-multilinear-forms-and-orientation": {
+  "at": "2026-10-19T13:41:49",
+  "connections": [],
+  "hash": "485cfdd5baea",
+  "model": "qwen3.5:9b"
+ },
+ "dual-maps-transposes-and-affine-subspaces": {
+  "at": "2026-10-19T13:41:52",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The dual map defines the normal vectors to affine subspaces, which are the geometric objects central to hyperplane separation theorems."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "The KKT conditions for constrained optimization rely on the transpose of the constraint Jacobian matrix to define the Lagrange multipliers (dual variables)."
+   }
+  ],
+  "hash": "964214d220a2",
+  "model": "qwen3.5:9b"
+ },
+ "eigenvalues-eigenvectors-and-diagonalization": {
+  "at": "2026-10-19T13:41:57",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Both rely on the spectral mapping principle to reduce complex operators to scalar actions (eigenvalues for linear maps, contraction factors for fixed points) to prove existence or stability properties."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "The proof of diagonalizability often uses the fact that an operator with distinct eigenvalues decomposes the space into invariant subspaces, analogous to how Brouwer's theorem guarantees a fixed point (eigenvalue 1) under continuous maps on compact convex sets."
+   }
+  ],
+  "hash": "97bc7893ec03",
+  "model": "qwen3.5:9b"
+ },
+ "equicontinuity-Arzela-Ascoli-Thm": {
+  "at": "2026-10-19T13:42:02",
+  "connections": [
+   {
+    "id": "uniform-continuity",
+    "new": true,
+    "why": "Uniform continuity is the single-function analogue of equicontinuity, and the Arzelà-Ascoli theorem essentially states that a bounded set in $C^0$ is relatively compact if and only if it is uniformly equicontinuous."
+   },
+   {
+    "id": "compactness",
+    "new": false,
+    "why": "The core conclusion of the Arzelà-Ascoli theorem is that a specific condition (equicontinuity) restores compactness to closed and bounded sets in infinite-dimensional function spaces, where Heine-Borel fails."
+   },
+   {
+    "id": "completeness",
+    "new": false,
+    "why": "The proof of Arzelà-Ascoli relies on the space $C^0$ being complete (a Banach space) so that a uniformly Cauchy sequence (constructed via diagonalization) converges to a limit within the space."
+   }
+  ],
+  "hash": "ac0ff6e0238a",
+  "model": "qwen3.5:9b"
+ },
+ "euler-method": {
+  "at": "2026-10-19T13:42:05",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Euler's method is a specific instance of the Banach Contraction Principle applied to the Picard iteration operator, where the Lipschitz condition ensures convergence."
+   },
+   {
+    "id": "ode-and-picards-thm",
+    "new": true,
+    "why": "Picard's theorem provides the theoretical foundation for Euler's method by proving that the sequence of successive approximations (of which Euler is the first-order truncation) converges to the unique solution."
+   }
+  ],
+  "hash": "fc9d9787d7a9",
+  "model": "qwen3.5:9b"
+ },
+ "event": {
+  "at": "2026-10-19T13:42:07",
+  "connections": [
+   {
+    "id": "sigma-algebra",
+    "new": true,
+    "why": "Events form a sigma-algebra, which is the mathematical structure defining the collection of all subsets to which probability can be assigned."
+   },
+   {
+    "id": "measure",
+    "new": true,
+    "why": "The assignment of probabilities to events relies on the axiomatic definition of a measure (specifically a probability measure) defined over a sigma-algebra of events."
+   }
+  ],
+  "hash": "7a670c1a05ad",
+  "model": "qwen3.5:9b"
+ },
+ "existence-of-nth-roots-in-R": {
+  "at": "2026-10-19T13:42:10",
+  "connections": [
+   {
+    "id": "axiom-of-completeness",
+    "new": false,
+    "why": "The existence proof explicitly constructs the root as the supremum of a set, relying directly on the Axiom of Completeness to guarantee this least upper bound exists in ℝ."
+   },
+   {
+    "id": "supremum-infimum",
+    "new": true,
+    "why": "The proof technique identifies the candidate root as the supremum of a specific subset of real numbers, making the definition and properties of supremum/infimum essential to the argument."
+   }
+  ],
+  "hash": "efa2026df2c4",
+  "model": "qwen3.5:9b"
+ },
+ "expectation": {
+  "at": "2026-10-19T13:42:14",
+  "connections": [
+   {
+    "id": "lotus",
+    "new": true,
+    "why": "LOTUS (Law of the Unconscious Statistician) is the precise mathematical tool used to compute expectations of non-linear functions like $E[g(X)]$, which is the central topic of this note."
+   },
+   {
+    "id": "lebesgue-integral",
+    "new": false,
+    "why": "Expected value is formally defined as the Lebesgue integral of a random variable with respect to its probability measure, making this the rigorous foundation for the concept."
+   }
+  ],
+  "hash": "d8bdfdfd72dd",
+  "model": "qwen3.5:9b"
+ },
+ "expectations-of-discrete-distributions": {
+  "at": "2026-10-19T13:42:17",
+  "connections": [
+   {
+    "id": "indicator-rv",
+    "new": false,
+    "why": "The note explicitly uses indicator random variables as the foundational tool for the Linearity of Expectation proofs, demonstrating a direct application of this concept."
+   },
+   {
+    "id": "expectation",
+    "new": false,
+    "why": "This note provides specific calculations for the expected value (mean) of discrete distributions, which is the core subject defined in the general 'Expectation' note."
+   },
+   {
+    "id": "binomial-theorem",
+    "new": true,
+    "why": "The algebraic proof for the Binomial distribution relies on the Binomial Theorem to collapse the summation of probabilities into 1."
+   }
+  ],
+  "hash": "3ff2a2a283f9",
+  "model": "qwen3.5:9b"
+ },
+ "experiment": {
+  "at": "2026-10-19T13:42:20",
+  "connections": [
+   {
+    "id": "sample-space",
+    "new": false,
+    "why": "The set of all possible outcomes defined by an experiment constitutes the sample space."
+   },
+   {
+    "id": "outcome",
+    "new": false,
+    "why": "Executing an experiment yields a single specific outcome from its sample space."
+   },
+   {
+    "id": "random-variables",
+    "new": false,
+    "why": "Random variables are functions that map the outcomes of an experiment to numerical values for analysis."
+   }
+  ],
+  "hash": "f8c0b1050369",
+  "model": "qwen3.5:9b"
+ },
+ "exponential-distribution": {
+  "at": "2026-10-19T13:42:23",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion is constructed as the limit of random walks and relies on the exponential distribution to describe the waiting times between jumps in its underlying Poisson process representation."
+   },
+   {
+    "id": "poisson-distribution",
+    "new": false,
+    "why": "The exponential distribution describes the inter-arrival times in a Poisson process, while the Poisson distribution counts the number of arrivals in a fixed interval; they are dual representations of the same stochastic mechanism."
+   }
+  ],
+  "hash": "1d1e119422db",
+  "model": "qwen3.5:9b"
+ },
+ "fatous-lemma-and-convergence-theorems": {
+  "at": "2026-10-19T13:42:27",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both are fundamental limit theorems in measure theory that relate the convergence of a sequence of functions/events to properties of their integrals or probabilities, often serving as the basis for proving other probabilistic results."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality is a direct consequence of Markov's inequality, which itself is a special case of Fatou's Lemma when applied to non-negative random variables (integrals)."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Law of Large Numbers and Central Limit Theorem are the ultimate applications of convergence theorems like Fatou's and Dominated Convergence, which justify interchanging limits and expectations."
+   }
+  ],
+  "hash": "73348e0888cc",
+  "model": "qwen3.5:9b"
+ },
+ "field": {
+  "at": "2026-10-19T13:42:31",
+  "connections": [
+   {
+    "id": "ordered-field",
+    "new": false,
+    "why": "This note describes a field equipped with an order relation, adding axioms that generalize the standard properties of real numbers while retaining the core algebraic structure defined in 'field'."
+   },
+   {
+    "id": "prop-dedekind-cuts",
+    "new": false,
+    "why": "Dedekind cuts are used to construct the real numbers $\text{ℝ}$ from rationals, providing a specific model of an ordered field that satisfies the completeness axiom missing from the general definition."
+   },
+   {
+    "id": "archimedean-property-of-R",
+    "new": true,
+    "why": "The Archimedean property is a characteristic condition often imposed on fields (specifically ordered ones like $\text{ℝ}$) to distinguish them from non-Archimedean fields like hyperreals."
+   }
+  ],
+  "hash": "47a7891acd5a",
+  "model": "qwen3.5:9b"
+ },
+ "first-order-linear-difference-equations-and-equilibriums": {
+  "at": "2026-10-19T13:42:34",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The stability criterion $|f'(x^*)| < 1$ implies the function is a local contraction near the equilibrium, which is the core condition for the Banach Fixed Point Theorem to guarantee convergence."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both concepts define conditions under which a system settles at a fixed point ($f(x)=x$), though Brouwer applies to continuous maps on compact convex sets while this note focuses on discrete dynamics and local stability."
+   }
+  ],
+  "hash": "c4d4cd83b7f5",
+  "model": "qwen3.5:9b"
+ },
+ "full-house": {
+  "at": "2026-10-19T13:42:37",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The 'asymmetry' pitfall discussed in this note is a specific instance of the Principle of Inclusion-Exclusion, where failing to distinguish between ordered selections (triplet-rank then pair-rank) leads to overcounting by a factor of 2."
+   },
+   {
+    "id": "bose-einstein-problem",
+    "new": true,
+    "why": "Both notes deal with counting outcomes under different constraints: this note counts combinations without replacement for distinct ranks (poker), while the Bose-Einstein problem counts combinations with replacement, illustrating how sampling methods change combinatorial formulas."
+   }
+  ],
+  "hash": "b3726ee1e158",
+  "model": "qwen3.5:9b"
+ },
+ "func-lim-seq-lim": {
+  "at": "2026-10-19T13:42:41",
+  "connections": [
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "The sequential criterion is the specific mechanism that allows one to define and prove properties of limit superior and limit inferior by analyzing convergent subsequences."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness in metric spaces is fundamentally characterized by the property that every sequence has a convergent subsequence, which relies on the same sequential logic used in this criterion."
+   },
+   {
+    "id": "continuity-topology",
+    "new": true,
+    "why": "The topological definition of continuity (preimage of open sets) is equivalent to the sequential definition of continuity, making this criterion the bridge between metric limits and general topology."
+   }
+  ],
+  "hash": "7f81870fc7c3",
+  "model": "qwen3.5:9b"
+ },
+ "function-spaces": {
+  "at": "2026-10-19T13:42:45",
+  "connections": [
+   {
+    "id": "equicontinuity-Arzela-Ascoli-Thm",
+    "new": true,
+    "why": "The Arzelà-Ascoli theorem uses uniform convergence (defined in this note) as a necessary condition to characterize compact subsets of function spaces, bridging the gap between metric topology and infinite-dimensional analysis."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "While Brouwer applies to finite dimensions, its proof techniques for fixed points in continuous functions rely heavily on the topological properties (like continuity preservation) established by uniform convergence in function spaces."
+   }
+  ],
+  "hash": "c94fe4e8ad46",
+  "model": "qwen3.5:9b"
+ },
+ "functions-of-random-variables": {
+  "at": "2026-10-19T13:42:48",
+  "connections": [
+   {
+    "id": "lotus",
+    "new": true,
+    "why": "The LOTUS (Law of the Unconscious Statistic) is the fundamental theorem used to compute expectations of functions of random variables, which is the primary application discussed in this note."
+   }
+  ],
+  "hash": "d61c5701484a",
+  "model": "qwen3.5:9b"
+ },
+ "gamblers-ruin": {
+  "at": "2026-10-19T13:42:50",
+  "connections": [
+   {
+    "id": "branching-process",
+    "new": true,
+    "why": "Both model stochastic processes with absorbing states where the probability of reaching a specific state (extinction or ruin) is derived from recursive expectations."
+   },
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Gambler's Ruin is the discrete-time, finite-interval analogue to Brownian motion, sharing the same underlying random walk structure and hitting time analysis."
+   }
+  ],
+  "hash": "00a143ded9fa",
+  "model": "qwen3.5:9b"
+ },
+ "gamma-function-and-distribution": {
+  "at": "2026-10-19T13:42:55",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The Gamma function is defined as an improper integral that relies on the rigorous framework of Lebesgue integration (specifically for handling the singularity at 0 and the tail at infinity) rather than just Riemann integration."
+   }
+  ],
+  "hash": "1eaa512a879d",
+  "model": "qwen3.5:9b"
+ },
+ "gaussian-processes": {
+  "at": "2026-10-19T13:42:58",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": false,
+    "why": "Brownian motion is the canonical example of a Gaussian process with the specific covariance kernel $C(s,t) = \text{min}(s,t)$, linking the general theory to this fundamental stochastic model."
+   }
+  ],
+  "hash": "141a5e680128",
+  "model": "qwen3.5:9b"
+ },
+ "geometric-and-negative-binomial-dist": {
+  "at": "2026-10-19T13:43:01",
+  "connections": [
+   {
+    "id": "branching-process",
+    "new": true,
+    "why": "The Negative Binomial distribution is the fundamental probability model for a Galton-Watson branching process starting with one individual, where the total population size follows this distribution if offspring counts are Geometric."
+   },
+   {
+    "id": "gamma-function-and-distribution",
+    "new": false,
+    "why": "The Negative Binomial distribution can be derived as a Poisson-Gamma mixture (Poisson with a Gamma-distributed rate parameter), linking discrete waiting times to continuous gamma distributions."
+   },
+   {
+    "id": "poisson-distribution",
+    "new": true,
+    "why": "The Negative Binomial is the generalization of the Poisson distribution where the rate parameter $\theta$ is replaced by a random variable following a Gamma distribution, creating a deep analogy between these two fundamental count data models."
+   }
+  ],
+  "hash": "6c544ad0d3f1",
+  "model": "qwen3.5:9b"
+ },
+ "gradient-descent-and-variants": {
+  "at": "2026-10-19T13:43:06",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The convergence of gradient descent with momentum (and variants like Nesterov) can be rigorously analyzed using the Banach Contraction Principle, which guarantees fixed points for contraction mappings in complete metric spaces."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The theoretical analysis of gradient descent convergence bounds relies heavily on the geometry of convex sets and functions to ensure that descent directions lead toward global minima."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "While gradient descent handles unconstrained optimization, its generalization to constrained problems is governed by the Lagrangian formulation and KKT conditions, which provide first-order necessary conditions for optimality."
+   }
+  ],
+  "hash": "e6975101822a",
+  "model": "qwen3.5:9b"
+ },
+ "homeomorphisms-compactness": {
+  "at": "2026-10-19T13:43:09",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on compactness (specifically via sequential compactness or the finite subcover property) to guarantee that continuous maps behave well, such as having a fixed point or a continuous inverse."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The proof technique for the 'Automatic Homeomorphism' theorem mirrors the Banach Contraction Principle's reliance on compactness (or completeness + contraction) to ensure convergence of sequences and existence of unique limits."
+   }
+  ],
+  "hash": "5971985c3ee1",
+  "model": "qwen3.5:9b"
+ },
+ "hypergeometric-distribution": {
+  "at": "2026-10-19T13:43:12",
+  "connections": [
+   {
+    "id": "sampling-without-replacement",
+    "new": true,
+    "why": "The hypergeometric distribution is the specific probability model for sampling without replacement, whereas this note covers the general combinatorial concept of that process."
+   }
+  ],
+  "hash": "980008e82884",
+  "model": "qwen3.5:9b"
+ },
+ "hyperplane-separation-theorems": {
+  "at": "2026-10-19T13:43:16",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on topological properties of convex sets (specifically compactness and connectedness) to derive existence results, with separation theorems often serving as a key step in proving fixed-point theorems like Brouwer's."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proofs of strict separation and the Hilbert projection theorem explicitly utilize the concept of compactness (e.g., via Bolzano-Weierstrass or the Extreme Value Theorem) to ensure existence and uniqueness of separating hyperplanes or projections."
+   }
+  ],
+  "hash": "5ffa277ebc32",
+  "model": "qwen3.5:9b"
+ },
+ "importance-sampling": {
+  "at": "2026-10-19T13:43:21",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Importance sampling is fundamentally a technique for approximating Lebesgue integrals when the target measure $p$ is intractable or sampling from it is difficult."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "The asymptotic consistency of Self-Normalized Importance Sampling relies on convergence theorems (like the Law of Large Numbers) which are often proved using Fatou's Lemma and Monotone Convergence Theorem in measure theory."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality provides a bound on the probability of large deviations, which is directly relevant to analyzing the variance and tail behavior (weight degeneracy) discussed in importance sampling."
+   }
+  ],
+  "hash": "a1ac1e34ce9c",
+  "model": "qwen3.5:9b"
+ },
+ "inclusion-exclusion": {
+  "at": "2026-10-19T13:43:24",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both principles handle the complexity of unions of events by systematically correcting for overlaps, though Borel-Cantelli focuses on infinite sequences and convergence rather than finite exact counts."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "The proof of Chebyshev's inequality relies on the Principle of Inclusion-Exclusion to bound the probability of a union of events based on their individual probabilities."
+   }
+  ],
+  "hash": "61bcea1ed626",
+  "model": "qwen3.5:9b"
+ },
+ "independence-of-events": {
+  "at": "2026-10-19T13:43:27",
+  "connections": [
+   {
+    "id": "independence-of-rvs",
+    "new": true,
+    "why": "This note extends the concept of event independence to random variables, establishing that $X$ and $Y$ are independent if and only if their joint CDF factors into the product of marginal CDFs."
+   },
+   {
+    "id": "covariance-and-correlation",
+    "new": true,
+    "why": "This note provides a crucial distinction by showing that zero correlation (a linear property) does not imply independence, whereas independence implies zero covariance."
+   }
+  ],
+  "hash": "3c28d1fea15c",
+  "model": "qwen3.5:9b"
+ },
+ "independence-of-rvs": {
+  "at": "2026-10-19T13:43:31",
+  "connections": [
+   {
+    "id": "independence-of-events",
+    "new": true,
+    "why": "This is the foundational concept for random variables, as variable independence is defined by the multiplicative property of their underlying joint and marginal event probabilities."
+   },
+   {
+    "id": "joint-distribution",
+    "new": true,
+    "why": "Independence provides the specific factorization rule ($f_{X,Y} = f_X f_Y$) that simplifies the analysis of joint distributions into products of marginals."
+   },
+   {
+    "id": "covariance-and-correlation",
+    "new": false,
+    "why": "Zero correlation is a necessary (but not sufficient) condition for independence, making this note essential for distinguishing between linear dependence and full statistical independence."
+   }
+  ],
+  "hash": "aee1a29ea519",
+  "model": "qwen3.5:9b"
+ },
+ "indicator-rv": {
+  "at": "2026-10-19T13:43:34",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Indicator functions are the fundamental building blocks used to define the Lebesgue integral, allowing integration over sets by summing values weighted by their indicator."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli lemma is often proved and applied using sums of indicator variables to determine if events occur infinitely often."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's lemma, a cornerstone of measure theory, is proven by applying the monotone convergence theorem to sequences of non-negative functions that can be approximated or bounded using indicators."
+   }
+  ],
+  "hash": "1f983cd42c88",
+  "model": "qwen3.5:9b"
+ },
+ "intro-to-difference-equations": {
+  "at": "2026-10-19T13:43:36",
+  "connections": [
+   {
+    "id": "euler-method",
+    "new": true,
+    "why": "Euler's method uses a first-order difference equation as its discrete approximation to solve continuous Ordinary Differential Equations."
+   }
+  ],
+  "hash": "8fb334c607ac",
+  "model": "qwen3.5:9b"
+ },
+ "jensens-inequality": {
+  "at": "2026-10-19T13:43:41",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality is a specific probabilistic bound often derived from Markov's inequality, which itself can be viewed as a special case of Jensen's inequality applied to the convex function $g(x)=x^2$."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": true,
+    "why": "Markov's inequality is the foundational step for many concentration inequalities and can be seen as the simplest instance of Jensen's inequality where the convex function is the identity or a power function."
+   }
+  ],
+  "hash": "8214f6416113",
+  "model": "qwen3.5:9b"
+ },
+ "joint-distribution": {
+  "at": "2026-10-19T13:43:45",
+  "connections": [
+   {
+    "id": "multivariate-normal-distribution",
+    "new": true,
+    "why": "The joint distribution of independent normal variables is the specific case known as the multivariate normal distribution, which generalizes the bivariate normal shown in the note."
+   },
+   {
+    "id": "independence-of-rvs",
+    "new": true,
+    "why": "Independence of random variables is defined precisely by the factorization of their joint distribution into the product of marginals, a central theme of this note."
+   },
+   {
+    "id": "cumulative-distribution-functions",
+    "new": true,
+    "why": "The joint CDF is the multivariate extension of the univariate CDF, and the note explicitly defines the joint CDF as the foundation for deriving joint PDFs/PMFs."
+   }
+  ],
+  "hash": "476d8efe13aa",
+  "model": "qwen3.5:9b"
+ },
+ "lagrangian-and-kkt-conditions": {
+  "at": "2026-10-19T13:43:49",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "KKT conditions rely on convexity to ensure that first-order necessary conditions are also sufficient for global optimality, linking directly to the geometry of convex sets and functions."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": false,
+    "why": "The geometric intuition behind KKT multipliers (gradients being parallel) is a specific instance of the broader hyperplane separation principle used to characterize boundaries between feasible and infeasible regions."
+   }
+  ],
+  "hash": "009573d47149",
+  "model": "qwen3.5:9b"
+ },
+ "law-of-large-numbers-and-central-limit-theorem": {
+  "at": "2026-10-19T13:43:53",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli Lemma provides the rigorous foundation for the Strong Law of Large Numbers by characterizing almost sure convergence through the probability of infinitely many rare events, whereas the Weak Law (covered in your note) relies on Chebyshev's inequality and variance decay."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's Inequality is the fundamental convexity tool used to prove moment inequalities and concentration bounds that underpin both the Law of Large Numbers and the Central Limit Theorem, often serving as a bridge between probabilistic limits and deterministic analysis."
+   }
+  ],
+  "hash": "f60d311d4aa6",
+  "model": "qwen3.5:9b"
+ },
+ "law-of-total-probability": {
+  "at": "2026-10-19T13:43:56",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both are fundamental decomposition rules for probability measures, where the Law of Total Probability sums over a partition while Inclusion-Exclusion handles unions of non-disjoint events."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli Lemma relies on summing probabilities of disjoint events (a partition concept) to determine convergence, mirroring the additive structure of the Law of Total Probability."
+   }
+  ],
+  "hash": "57e3becae1b4",
+  "model": "qwen3.5:9b"
+ },
+ "lebesgue-integral": {
+  "at": "2026-10-19T13:44:01",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's Inequality is a direct consequence of the convexity properties inherent in the Lebesgue integral definition and is used to prove many convergence results related to it."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Law of Large Numbers and Central Limit Theorem are often proved using tools from measure theory (like the Lebesgue integral) and describe the asymptotic behavior of expectations defined via integration."
+   }
+  ],
+  "hash": "e46e748e0945",
+  "model": "qwen3.5:9b"
+ },
+ "lebesgue-outer-measure": {
+  "at": "2026-10-19T13:44:05",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both rely on the fundamental distinction between countable and uncountable sets to establish properties of measure, specifically that countable sets have outer measure zero which is a prerequisite for the Borel-Cantelli lemma's handling of null sets."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma is proven using the definition of outer measure and the properties of measurable sets, making it a direct application of the concepts introduced in Lebesgue Outer Measure."
+   },
+   {
+    "id": "measure-properties-and-completion",
+    "new": true,
+    "why": "This note discusses the completion of a measure space, which directly relies on the concept of outer measure to define null sets and extend the sigma-algebra."
+   }
+  ],
+  "hash": "4e9de4b06a17",
+  "model": "qwen3.5:9b"
+ },
+ "limits-of-measurable-functions": {
+  "at": "2026-10-19T13:44:09",
+  "connections": [
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "The proof that pointwise limits preserve measurability relies on expressing the limit condition using countable intersections and unions, which directly utilizes the definitions of limit superior and limit inferior to handle cases where convergence is not immediate."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "Both concepts address how measure-theoretic properties behave under limiting processes: this note focuses on the measurability of the limit function itself, while continuity of measure addresses the behavior of the measure of sets under limits."
+   }
+  ],
+  "hash": "f9dbc2ac2cc3",
+  "model": "qwen3.5:9b"
+ },
+ "limsup-liminf": {
+  "at": "2026-10-19T13:44:12",
+  "connections": [
+   {
+    "id": "supremum-infimum",
+    "new": true,
+    "why": "The definitions of liminf and limsup rely directly on the concepts of supremum and infimum as the bounds of the tails of a sequence."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma is the measure-theoretic generalization of the relationship between liminf and limsup, specifically stating that the integral of the liminf is less than or equal to the liminf of the integrals."
+   }
+  ],
+  "hash": "8a3386f781f2",
+  "model": "qwen3.5:9b"
+ },
+ "linear-functionals-dual-spaces": {
+  "at": "2026-10-19T13:44:17",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "Linear functionals define hyperplanes, and the separation theorem relies on the geometric structure of these linear maps to divide convex sets."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "The KKT conditions use Lagrange multipliers, which are essentially coordinates in the dual space corresponding to constraints defined by linear functionals."
+   },
+   {
+    "id": "complements-direct-sums-quotient-spaces",
+    "new": true,
+    "why": "The kernel of a linear functional is a hyperplane (codimension 1 subspace), and quotient spaces are constructed by modding out such kernels."
+   }
+  ],
+  "hash": "b8013624d6ec",
+  "model": "qwen3.5:9b"
+ },
+ "linear-independence-basis-dimension": {
+  "at": "2026-10-19T13:44:20",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The principle of inclusion-exclusion provides the combinatorial counting logic that underpins the algebraic definition of dimension via linear independence, as both deal with structuring a set (vectors or events) by removing redundancies (dependencies or overlaps)."
+   }
+  ],
+  "hash": "8ed52fc7b4ef",
+  "model": "qwen3.5:9b"
+ },
+ "linear-maps-and-rank-nullity": {
+  "at": "2026-10-19T13:44:24",
+  "connections": [
+   {
+    "id": "determinants-multilinear-forms-and-orientation",
+    "new": true,
+    "why": "Determinants provide the algebraic tool to compute the dimension of the image (rank) and characterize invertibility, which is central to the Rank-Nullity theorem."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Both concepts rely on mapping properties between spaces (linear maps vs. contractions) where understanding the structure of the map's action (image/kernel) is fundamental to proving existence/uniqueness results."
+   }
+  ],
+  "hash": "5e181dd51557",
+  "model": "qwen3.5:9b"
+ },
+ "linear-maps-inverses-and-matrices": {
+  "at": "2026-10-19T13:44:28",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both characterize the existence of a unique two-sided inverse in an associative algebra (linear maps vs. continuous functions on compact convex sets) by linking bijectivity to the coincidence of left and right inverses."
+   },
+   {
+    "id": "complements-direct-sums-quotient-spaces",
+    "new": true,
+    "why": "The non-uniqueness of one-sided inverses when dimensions differ is structurally identical to decomposing a space into a direct sum of the image and a complement (kernel), which underpins the construction of these inverses."
+   }
+  ],
+  "hash": "9c0c7ede2a52",
+  "model": "qwen3.5:9b"
+ },
+ "linear-programs": {
+  "at": "2026-10-19T13:44:31",
+  "connections": [
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "KKT conditions generalize the optimality conditions for linear programs to nonlinear convex optimization by using Lagrange multipliers."
+   },
+   {
+    "id": "boosting",
+    "new": true,
+    "why": "Boosting algorithms often formulate their sub-problems as linear programs to optimize weak learners via hinge loss or similar convex objectives."
+   }
+  ],
+  "hash": "fcb9c1f38927",
+  "model": "qwen3.5:9b"
+ },
+ "lotus": {
+  "at": "2026-10-19T13:44:34",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The continuous definition of expectation relies on the Lebesgue integral, which provides the rigorous foundation for integrating functions against a probability density."
+   },
+   {
+    "id": "functions-of-random-variables",
+    "new": true,
+    "why": "LOTUS is the fundamental theorem that allows us to define expectations of arbitrary functions of random variables without needing their explicit distributions."
+   }
+  ],
+  "hash": "4d9bf6a1feb1",
+  "model": "qwen3.5:9b"
+ },
+ "markovs-inequality": {
+  "at": "2026-10-19T13:44:37",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Both are fundamental inequalities in analysis that bound tail probabilities or function values using moments, often sharing the same proof technique of integrating against a non-negative weight."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": false,
+    "why": "Chebyshev's inequality is a direct generalization of Markov's inequality applied to the squared deviation from the mean, relying on the same indicator function argument."
+   }
+  ],
+  "hash": "13717153affc",
+  "model": "qwen3.5:9b"
+ },
+ "markowitz-portfolio-theory-2-assets": {
+  "at": "2026-10-19T13:44:43",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The set of attainable portfolios forms a convex region in risk-return space (specifically bounded by a hyperbola), and the Global Minimum Variance Portfolio lies on the boundary of this convex hull, making convexity analysis essential for optimization."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "While the two-asset MVP can be found via simple calculus, the general $N$-asset efficient frontier requires Lagrange multipliers to handle the budget constraint ($w_1 + \text{...} + w_N = 1$) while minimizing variance, establishing a direct methodological link."
+   }
+  ],
+  "hash": "dd561ddfaeb5",
+  "model": "qwen3.5:9b"
+ },
+ "maximum-likelihood-estimation": {
+  "at": "2026-10-19T13:44:45",
+  "connections": [
+   {
+    "id": "gradient-descent-and-variants",
+    "new": true,
+    "why": "MLE optimization often requires numerical methods like gradient descent when the likelihood function lacks a closed-form solution, making this a direct application of the same optimization techniques."
+   }
+  ],
+  "hash": "8554c80eec0f",
+  "model": "qwen3.5:9b"
+ },
+ "measurable-functions": {
+  "at": "2026-10-19T13:44:50",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Both rely on the preimage characterization of measurability to establish that the set where a function exceeds a threshold belongs to the sigma-algebra, allowing the derivation of tail probability bounds."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "The proof technique for Jensen's inequality relies on the convexity of functions and the definition of measurable functions to pull back level sets into the domain sigma-algebra."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "Convergence theorems (LLN/CLT) are built upon the stability of integrals under limits, which fundamentally requires the limit function to be measurable."
+   }
+  ],
+  "hash": "66d0fd5fa7ee",
+  "model": "qwen3.5:9b"
+ },
+ "measurable-sets": {
+  "at": "2026-10-19T13:44:56",
+  "connections": [
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "The proof technique of splitting a set and bounding the sum of measures (using subadditivity) is the foundational mechanism behind proving that measure is continuous from above and below."
+   }
+  ],
+  "hash": "2b76c5b54d6f",
+  "model": "qwen3.5:9b"
+ },
+ "measurable-sets-algebra": {
+  "at": "2026-10-19T13:44:54",
+  "connections": [
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "The closure properties of measurable sets (algebra) are the foundational prerequisite for proving that measure is continuous from below and above."
+   },
+   {
+    "id": "sigma-algebra",
+    "new": true,
+    "why": "The algebra of measurable sets is the specific structure required to define a sigma-algebra, which generalizes this concept to allow countable unions."
+   },
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The definition of the Lebesgue integral relies on the collection of measurable sets forming an algebra (or sigma-algebra) to ensure the function is well-defined."
+   }
+  ],
+  "hash": "99c9c3c17561",
+  "model": "qwen3.5:9b"
+ },
+ "measure": {
+  "at": "2026-10-19T13:45:05",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness provides the topological condition that ensures sequences have convergent subsequences, which is often used alongside measure theory to prove properties like tightness or the existence of limits in function spaces."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": false,
+    "why": "This note describes a fundamental property of measures (continuity from above/below) that relies on the countable additivity defined in 'measure' and is essential for proving convergence theorems like Fatou's Lemma."
+   },
+   {
+    "id": "measurable-functions",
+    "new": false,
+    "why": "The definition of a measure space requires a sigma-algebra to define measurable functions, making this note a prerequisite for understanding how measures integrate over function spaces."
+   }
+  ],
+  "hash": "f8bcb17294d6",
+  "model": "qwen3.5:9b"
+ },
+ "measure-properties-and-completion": {
+  "at": "2026-10-19T13:45:00",
+  "connections": [
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma is a fundamental result in measure theory that relies on the properties of measures (specifically non-negativity and countable additivity) to establish convergence theorems for sequences of measurable functions."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli Lemma connects the measure-theoretic concept of sets with finite or infinite measure (specifically the sum of measures) to probabilistic events occurring infinitely often, bridging measure theory and probability foundations."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": false,
+    "why": "Continuity of measure describes how a measure behaves under limits of increasing or decreasing sequences of sets, which is a direct property derived from the definition of a measure space and its $\tau$-additivity."
+   }
+  ],
+  "hash": "e06f914acc7f",
+  "model": "qwen3.5:9b"
+ },
+ "metric-space-topology": {
+  "at": "2026-10-19T13:45:08",
+  "connections": [
+   {
+    "id": "continuity-topology",
+    "new": true,
+    "why": "Both notes define continuity using the topological concept of open sets (inverse image of open is open) rather than just metric distances."
+   },
+   {
+    "id": "homeomorphisms-compactness",
+    "new": true,
+    "why": "The definition of a homeomorphism relies on the topology axioms (open/closed sets) to establish continuous bijections with continuous inverses."
+   }
+  ],
+  "hash": "b2e50104f5d6",
+  "model": "qwen3.5:9b"
+ },
+ "metric-spaces": {
+  "at": "2026-10-19T13:45:11",
+  "connections": [
+   {
+    "id": "triangle-inequality",
+    "new": true,
+    "why": "The triangle inequality is the third axiom defining a metric space, making it a fundamental structural requirement for this domain."
+   },
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "Every normed vector space induces a metric via $d(x,y) = ||x-y||$, establishing a deep analogy where norms generalize metrics to linear structures."
+   }
+  ],
+  "hash": "2822cd347226",
+  "model": "qwen3.5:9b"
+ },
+ "moment-generating-functions": {
+  "at": "2026-10-19T13:45:15",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality provides bounds on tail probabilities using moments ($E[X^2]$), which are precisely the coefficients extracted from the moment generating function via differentiation."
+   }
+  ],
+  "hash": "393758ed6f21",
+  "model": "qwen3.5:9b"
+ },
+ "monty-hall-problem": {
+  "at": "2026-10-19T13:45:18",
+  "connections": [
+   {
+    "id": "de-montmorts-matching-problem",
+    "new": true,
+    "why": "Both problems rely on the same core mechanism of an informed agent revealing information to eliminate options, shifting probability mass from a single choice to the remaining unchosen set."
+   },
+   {
+    "id": "newton-pepys-problem",
+    "new": true,
+    "why": "Like the Monty Hall problem, this classic puzzle demonstrates how intuitive reasoning fails when conditioning on specific outcomes generated by an all-knowing agent rather than random chance."
+   }
+  ],
+  "hash": "121d4ac3f8a4",
+  "model": "qwen3.5:9b"
+ },
+ "moving-average-models": {
+  "at": "2026-10-19T13:45:21",
+  "connections": [
+   {
+    "id": "arma-models",
+    "new": false,
+    "why": "This is a generalization where the current observation depends on both past errors (MA) and past observations (AR)."
+   },
+   {
+    "id": "autocorrelation-and-stationarity",
+    "new": false,
+    "why": "The defining characteristic of an MA(q) process is that its autocorrelation function cuts off after lag q, which relies directly on the theory of stationarity and autocovariance."
+   },
+   {
+    "id": "vector-moving-average",
+    "new": false,
+    "why": "This is the multivariate extension where a single white noise vector replaces the scalar white noise in the definition."
+   }
+  ],
+  "hash": "37fcc364a233",
+  "model": "qwen3.5:9b"
+ },
+ "multinomial-distribution": {
+  "at": "2026-10-19T13:45:26",
+  "connections": [
+   {
+    "id": "bose-einstein-problem",
+    "new": true,
+    "why": "The multinomial distribution is the generalization of Bose-Einstein counting (combinations with replacement), where both describe partitioning items into categories but differ in whether the items are distinguishable."
+   },
+   {
+    "id": "binomial-theorem",
+    "new": true,
+    "why": "The multinomial coefficient $\frac{n!}{x_1!\times \text{...}\times x_k!}$ is the direct multivariate extension of the binomial coefficient, and the multinomial expansion generalizes the binomial theorem to $k$ terms."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both concepts rely on combinatorial counting principles to handle overlapping or mutually exclusive categories, with inclusion-exclusion providing the foundational logic for partitioning sample spaces used in multinomial derivations."
+   }
+  ],
+  "hash": "14f454010817",
+  "model": "qwen3.5:9b"
+ },
+ "multiplication-rule": {
+  "at": "2026-10-19T13:45:28",
+  "connections": [
+   {
+    "id": "binomial-theorem",
+    "new": true,
+    "why": "The binomial theorem is the algebraic expansion of the multiplication rule applied to repeated independent choices (powers), generalizing the product of set sizes to sums of products."
+   }
+  ],
+  "hash": "1f29c33fdd36",
+  "model": "qwen3.5:9b"
+ },
+ "multivariate-normal-distribution": {
+  "at": "2026-10-19T13:45:32",
+  "connections": [
+   {
+    "id": "eigenvalues-eigenvectors-and-diagonalization",
+    "new": true,
+    "why": "The covariance matrix Σ in the MVN PDF is diagonalized using eigenvalues and eigenvectors to define the principal axes of the elliptical contours."
+   }
+  ],
+  "hash": "812932e31cec",
+  "model": "qwen3.5:9b"
+ },
+ "multivariate-time-series": {
+  "at": "2026-10-19T13:45:35",
+  "connections": [
+   {
+    "id": "covariance-and-correlation",
+    "new": true,
+    "why": "The cross-covariance matrix is constructed directly from the concept of covariance between two random variables, generalizing the univariate definition to a matrix form."
+   }
+  ],
+  "hash": "7f247977c86d",
+  "model": "qwen3.5:9b"
+ },
+ "nested-interval-property": {
+  "at": "2026-10-19T13:45:38",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The Nested Interval Property is a specific instance of the general topological concept of compactness (specifically in $\text{ℝ}$, where closed and bounded sets are compact), which guarantees that every nested sequence of non-empty closed sets has a non-empty intersection."
+   },
+   {
+    "id": "nests-of-compacts",
+    "new": true,
+    "why": "This note describes the Nested Interval Property as a special case of the more general 'Nests of Compact Sets' theorem in metric spaces, where the requirement for intervals to be bounded is replaced by the sets being compact."
+   }
+  ],
+  "hash": "7a669334ee58",
+  "model": "qwen3.5:9b"
+ },
+ "nests-of-compacts": {
+  "at": "2026-10-19T13:45:42",
+  "connections": [
+   {
+    "id": "nested-interval-property",
+    "new": true,
+    "why": "This is the specific one-dimensional analogue of the nested compact sets theorem, where closed intervals replace general compact sets to guarantee a nonempty intersection."
+   },
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "The proof that the intersection contains a point relies on extracting a convergent subsequence from a bounded sequence, which is equivalent to the Bolzano-Weierstrass property derived from completeness."
+   }
+  ],
+  "hash": "09081faca4fa",
+  "model": "qwen3.5:9b"
+ },
+ "newton-pepys-problem": {
+  "at": "2026-10-19T13:45:45",
+  "connections": [
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The note explicitly attributes the probability drop to the Law of Large Numbers and Central Limit Theorem, which are listed as distinct topics in the catalog."
+   },
+   {
+    "id": "binomial-hypergeometric-connections",
+    "new": true,
+    "why": "Both notes rely on combinatorial counting principles (specifically binomial coefficients) to calculate probabilities for events defined by counts of successes in a fixed number of trials."
+   }
+  ],
+  "hash": "1315c68cdc96",
+  "model": "qwen3.5:9b"
+ },
+ "normal-distribution": {
+  "at": "2026-10-19T13:45:49",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion is mathematically defined as a stochastic process where the increments follow a normal distribution, making it the fundamental link between probability theory and continuous-time dynamics."
+   },
+   {
+    "id": "gaussian-processes",
+    "new": true,
+    "why": "Gaussian processes generalize the concept of the normal distribution to functions, defining a random field where every finite collection of points follows a multivariate normal distribution."
+   }
+  ],
+  "hash": "9558c6d36732",
+  "model": "qwen3.5:9b"
+ },
+ "normed-vector-spaces": {
+  "at": "2026-10-19T13:45:53",
+  "connections": [
+   {
+    "id": "triangle-inequality",
+    "new": true,
+    "why": "The triangle inequality is the third defining axiom of a norm, making it a direct generalization of the same geometric principle."
+   },
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "Completeness in metric spaces (specifically Banach spaces) relies on the norm to define Cauchy sequences, linking the structure of norms to topological completeness."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The Banach Contraction Principle applies specifically to complete normed vector spaces (Banach spaces) to guarantee fixed points."
+   }
+  ],
+  "hash": "3cd5d33eb5e4",
+  "model": "qwen3.5:9b"
+ },
+ "occupancy-problem": {
+  "at": "2026-10-19T13:45:57",
+  "connections": [
+   {
+    "id": "birthday-problem",
+    "new": true,
+    "why": "The Birthday Problem is a specific instance of the Occupancy Problem where $n$ (people) and $m$ (days) are fixed to find the probability that at least one bin (day) contains $\text{at least 2}$ items, often solved via the complement using similar occupancy logic."
+   },
+   {
+    "id": "bose-einstein-problem",
+    "new": true,
+    "why": "The Bose-Einstein problem counts distributions of indistinguishable balls into distinguishable bins (combinations with replacement), which is the combinatorial dual to the Occupancy Problem's focus on distinguishable balls and the probability of empty bins."
+   }
+  ],
+  "hash": "d7072514061d",
+  "model": "qwen3.5:9b"
+ },
+ "ode-and-picards-thm": {
+  "at": "2026-10-19T13:46:00",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Brouwer's theorem provides a topological existence guarantee for fixed points in continuous maps, contrasting with Picard's reliance on metric contraction for uniqueness."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof of Picard's theorem relies on restricting the solution search to a compact neighborhood where the vector field is bounded, utilizing properties inherent to compact sets."
+   }
+  ],
+  "hash": "34fbba69a0b7",
+  "model": "qwen3.5:9b"
+ },
+ "ode-direction-fields": {
+  "at": "2026-10-19T13:46:03",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The existence and uniqueness of integral curves along direction fields relies on the same fixed-point logic (contraction mapping) formalized in the Banach Contraction Principle."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both concepts utilize topological fixed-point arguments to guarantee the existence of equilibrium points or invariant sets within a continuous flow field."
+   }
+  ],
+  "hash": "05c388a80997",
+  "model": "qwen3.5:9b"
+ },
+ "ode-intro": {
+  "at": "2026-10-19T13:46:06",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion is the unique continuous stochastic process whose infinitesimal changes satisfy a specific second-order ODE (the heat equation) in expectation, linking deterministic calculus to stochastic dynamics."
+   },
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Picard's existence theorem for ODEs relies on the Banach Fixed Point Theorem, using the contraction mapping principle to prove the convergence of successive approximations."
+   }
+  ],
+  "hash": "cac63c331816",
+  "model": "qwen3.5:9b"
+ },
+ "order-statistics": {
+  "at": "2026-10-19T13:46:10",
+  "connections": [
+   {
+    "id": "uniform-distribution",
+    "new": true,
+    "why": "The note establishes that order statistics of a Uniform distribution are exactly Beta distributed, making the Uniform distribution the canonical special case used to derive the general Beta connection."
+   },
+   {
+    "id": "binomial-hypergeometric-connections",
+    "new": true,
+    "why": "The derivation of the Order Statistic CDF relies on summing Binomial probabilities (counting successes $X_i \neq x$), creating a direct mathematical bridge between Binomial and Hypergeometric combinatorial structures."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The proof technique for the Order Statistic CDF involves partitioning the sample space by counting configurations where at least $j$ variables fall below a threshold, a structural operation analogous to inclusion-exclusion principles in probability foundations."
+   }
+  ],
+  "hash": "23b5e41c2dc9",
+  "model": "qwen3.5:9b"
+ },
+ "ordered-field": {
+  "at": "2026-10-19T13:46:14",
+  "connections": [
+   {
+    "id": "field",
+    "new": false,
+    "why": "This note defines the algebraic axioms (addition, multiplication, inverses) that must be combined with order axioms to form an ordered field."
+   },
+   {
+    "id": "archimedean-property-of-R",
+    "new": true,
+    "why": "The Archimedean property is a specific consequence that holds in $\text{ℝ}$ (an ordered field) but fails in non-Archimedean ordered fields, linking general ordered field theory to specific real number properties."
+   }
+  ],
+  "hash": "fe50a7326912",
+  "model": "qwen3.5:9b"
+ },
+ "outcome": {
+  "at": "2026-10-19T13:46:17",
+  "connections": [
+   {
+    "id": "experiment",
+    "new": false,
+    "why": "An experiment is the process that generates an outcome, defining the context in which the sample space exists."
+   },
+   {
+    "id": "sample-space",
+    "new": false,
+    "why": "The sample space is the set containing all possible outcomes, making it the container for any specific outcome."
+   },
+   {
+    "id": "event",
+    "new": false,
+    "why": "An event is a subset of the sample space composed of one or more outcomes, distinguishing the collection from the single element."
+   }
+  ],
+  "hash": "5cc2faa87a78",
+  "model": "qwen3.5:9b"
+ },
+ "partnerships": {
+  "at": "2026-10-19T13:46:20",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The double factorial identity is a specific case of partitioning a set, which shares the same foundational logic as the Principle of Inclusion-Exclusion for handling overlapping counts in combinatorics."
+   }
+  ],
+  "hash": "f7df7d93cd27",
+  "model": "qwen3.5:9b"
+ },
+ "poisson-distribution": {
+  "at": "2026-10-19T13:46:24",
+  "connections": [
+   {
+    "id": "binomial-hypergeometric-connections",
+    "new": true,
+    "why": "The Poisson distribution is the specific limit of the Binomial distribution (large $n$, small $p$), making it a direct generalization/special case relationship."
+   },
+   {
+    "id": "exponential-distribution",
+    "new": false,
+    "why": "The Poisson process (counting events) and Exponential distribution (time between events) are dual representations of the same underlying stochastic mechanism, linked by the memoryless property."
+   },
+   {
+    "id": "gamma-function-and-distribution",
+    "new": false,
+    "why": "The sum of independent Poisson random variables follows a Poisson distribution with an additive rate parameter, which connects to the Gamma function's role in defining the distribution of waiting times for Poisson events."
+   }
+  ],
+  "hash": "243963e39132",
+  "model": "qwen3.5:9b"
+ },
+ "polyhedra-and-polytopes": {
+  "at": "2026-10-19T13:46:28",
+  "connections": [
+   {
+    "id": "cayley-hamilton-theorem-and-matrix-polynomials",
+    "new": true,
+    "why": "The Cayley-Hamilton theorem relates a matrix to its characteristic polynomial, which is the algebraic foundation for understanding eigenvalues and eigenvectors that define the geometry of polytopes and their representations."
+   },
+   {
+    "id": "eigenvalues-eigenvectors-and-diagonalization",
+    "new": true,
+    "why": "Eigenvalues and eigenvectors are essential tools in analyzing the symmetry and structure of canonical polyhedra like the hypercube and cross-polytope, which are duals of each other."
+   },
+   {
+    "id": "linear-independence-basis-dimension",
+    "new": true,
+    "why": "Linear independence is the core concept used to define vertices (extreme points) of polytopes as basic feasible solutions in linear programming."
+   }
+  ],
+  "hash": "5fbcec9b584c",
+  "model": "qwen3.5:9b"
+ },
+ "power-law-distribution": {
+  "at": "2026-10-19T13:46:32",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's Inequality provides a fundamental bound on tail probabilities that is particularly relevant when analyzing heavy-tailed distributions where variance may be infinite."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The note explicitly contrasts power-law behavior with the Central Limit Theorem, explaining why standard convergence rates fail when moments diverge."
+   }
+  ],
+  "hash": "0162ce5fca97",
+  "model": "qwen3.5:9b"
+ },
+ "pre-logic": {
+  "at": "2026-10-19T13:46:35",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on the logical principle of vacuous truth and fixed-point arguments to establish existence without explicit construction."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness proofs often utilize logical quantifiers and the finite intersection property, which is a direct application of propositional logic over infinite sets."
+   }
+  ],
+  "hash": "475667cf665c",
+  "model": "qwen3.5:9b"
+ },
+ "pre-set-theory": {
+  "at": "2026-10-19T13:46:38",
+  "connections": [
+   {
+    "id": "sigma-algebra",
+    "new": true,
+    "why": "The concept of a $\text{\textbackslash}sigma$-algebra is the rigorous formalization of 'collections of sets' that are closed under complements and countable unions, directly extending the naive set operations defined here."
+   },
+   {
+    "id": "measure",
+    "new": true,
+    "why": "Measure theory requires a precise definition of which collections of sets (measurable sets) can be assigned a size, building upon the foundational set operations like union and intersection introduced in this note."
+   },
+   {
+    "id": "cardinality",
+    "new": false,
+    "why": "Cardinality is defined as a function on sets that assigns a 'size' to them, relying entirely on the fundamental definitions of sets, membership, and equivalence relations provided here."
+   }
+  ],
+  "hash": "4e9a2cb1da65",
+  "model": "qwen3.5:9b"
+ },
+ "probabilistic-for-existence-proof": {
+  "at": "2026-10-19T13:46:42",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both are fundamental limit theorems in probability that establish existence or almost sure properties by analyzing tail events and convergence of series rather than explicit construction."
+   },
+   {
+    "id": "expectation",
+    "new": false,
+    "why": "The probabilistic method relies entirely on the linearity of expectation to compute the average score, making this concept the primary computational engine for the proofs presented."
+   },
+   {
+    "id": "indicator-rv",
+    "new": false,
+    "why": "The strategy explicitly decomposes complex global properties into sums of simple indicator random variables, a technique central to the definition and application of both linked concepts."
+   }
+  ],
+  "hash": "116130caa620",
+  "model": "qwen3.5:9b"
+ },
+ "probability": {
+  "at": "2026-10-19T13:47:00",
+  "connections": [
+   {
+    "id": "measure",
+    "new": true,
+    "why": "Probability is a specific instance of a measure (a function satisfying non-negativity and countable additivity) where the total measure of the space is normalized to 1."
+   },
+   {
+    "id": "sigma-algebra-of-measurable-sets",
+    "new": true,
+    "why": "The collection of events in a probability space must form a $\text{\textbackslash}sigma$-algebra, which is defined by closure under complementation and countable unions, identical to the algebraic structure of measurable sets."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "This theorem describes how a measure (including probability) behaves with respect to limits of increasing or decreasing sequences of sets, deriving directly from countable additivity."
+   }
+  ],
+  "hash": "500e6b24c4c2",
+  "model": "qwen3.5:9b"
+ },
+ "probability-density-function": {
+  "at": "2026-10-19T13:46:45",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": false,
+    "why": "The definition of a PDF relies on the Lebesgue integral to define probability as an area under the curve, generalizing the Riemann integral used in basic calculus."
+   },
+   {
+    "id": "measure",
+    "new": true,
+    "why": "PDFs are defined with respect to a measure (typically Lebesgue measure), establishing the rigorous connection between probability density and abstract measure theory."
+   },
+   {
+    "id": "lotus",
+    "new": true,
+    "why": "LOTUS (Law of the Unconscious Statistician) uses PDFs to compute expectations via integration, demonstrating how densities transform under functions of random variables."
+   }
+  ],
+  "hash": "6f834f833aa4",
+  "model": "qwen3.5:9b"
+ },
+ "probability-mass-function": {
+  "at": "2026-10-19T13:46:49",
+  "connections": [
+   {
+    "id": "probability-density-function",
+    "new": true,
+    "why": "The PMF is the discrete counterpart to the Probability Density Function (PDF), both serving as the fundamental descriptors of a random variable's distribution within their respective domains (discrete vs. continuous)."
+   },
+   {
+    "id": "measure",
+    "new": true,
+    "why": "The axioms defining a valid PMF (non-negativity and summing to 1) are the specific instantiation of the general definition of a measure on a countable set, making this note a special case of Measure Theory."
+   },
+   {
+    "id": "cumulative-distribution-functions",
+    "new": true,
+    "why": "The Cumulative Distribution Function (CDF) is derived by summing the PMF values up to a point; thus, the PMF acts as the discrete derivative (difference operator) of the CDF."
+   }
+  ],
+  "hash": "8a5de34ff83d",
+  "model": "qwen3.5:9b"
+ },
+ "probability-naive-definition": {
+  "at": "2026-10-19T13:46:52",
+  "connections": [
+   {
+    "id": "measure",
+    "new": true,
+    "why": "The naive definition fails for infinite spaces because it lacks the rigorous foundation of a measure space (a set function satisfying countable additivity), which is the generalization required to handle continuous sample spaces."
+   },
+   {
+    "id": "sigma-algebra",
+    "new": true,
+    "why": "The naive definition implicitly assumes a power set as the collection of events, whereas modern probability requires a sigma-algebra to ensure measurability and handle limits of sequences of events."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "This note describes how probability behaves under limits (e.g., infinite sample spaces), which is impossible under the naive definition but follows naturally from the continuity properties of measures."
+   }
+  ],
+  "hash": "c4a73e859139",
+  "model": "qwen3.5:9b"
+ },
+ "probability-properties": {
+  "at": "2026-10-19T13:46:56",
+  "connections": [
+   {
+    "id": "measure-properties-and-completion",
+    "new": true,
+    "why": "The complement and additivity properties of probability are specific instances of the general properties of measures (non-negativity, normalization, countable additivity) defined in measure theory."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "The addition rule for two events is the simplest case ($n=2$) of the Principle of Inclusion-Exclusion, which generalizes this logic to unions of any number of sets."
+   }
+  ],
+  "hash": "2a948eff95b9",
+  "model": "qwen3.5:9b"
+ },
+ "product-metrics-continuity": {
+  "at": "2026-10-19T13:47:03",
+  "connections": [
+   {
+    "id": "continuity-topology",
+    "new": true,
+    "why": "This note establishes the general topological definition of continuity (preservation of open sets/homeomorphisms) which is the abstract framework used to prove that product functions and metrics are continuous in your note."
+   },
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "Your note proves that norms are continuous functions; this note defines normed vector spaces as a specific domain where metric topology (and thus continuity) is naturally induced by the norm."
+   }
+  ],
+  "hash": "ad1f25bcc3c3",
+  "model": "qwen3.5:9b"
+ },
+ "prop-dedekind-cuts": {
+  "at": "2026-10-19T13:47:07",
+  "connections": [
+   {
+    "id": "axiom-of-completeness",
+    "new": true,
+    "why": "The Axiom of Completeness is the abstract property (Least Upper Bound) that Dedekind cuts are specifically constructed to satisfy, making it the foundational axiom for this construction."
+   },
+   {
+    "id": "nested-interval-property",
+    "new": true,
+    "why": "Both results rely on the same underlying completeness principle: the Nested Interval Property is logically equivalent to the Least Upper Bound Property proved here via Dedekind cuts."
+   },
+   {
+    "id": "existence-of-nth-roots-in-R",
+    "new": true,
+    "why": "The existence of $n$-th roots in $\text{ℝ}$ is a direct consequence of the Least Upper Bound property (supremum) established by Dedekind cuts, typically proven using the same cut construction technique."
+   }
+  ],
+  "hash": "c7c229871ca9",
+  "model": "qwen3.5:9b"
+ },
+ "random-variables": {
+  "at": "2026-10-19T13:47:10",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": false,
+    "why": "Random variables are formally measurable functions defined on a probability space, making them the primary objects of integration in Measure Theory."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "This lemma relies on the convergence properties of sequences of events derived from random variables to determine if they occur infinitely often."
+   },
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion is a continuous-time stochastic process defined as a collection of random variables indexed by time, exhibiting specific continuity and independence properties."
+   }
+  ],
+  "hash": "dd2602b10a55",
+  "model": "qwen3.5:9b"
+ },
+ "relative-topology-inheritance": {
+  "at": "2026-10-19T13:47:13",
+  "connections": [
+   {
+    "id": "complements-direct-sums-quotient-spaces",
+    "new": true,
+    "why": "The inheritance of closed sets via intersection relies on the same algebraic structure (taking complements) that defines quotient spaces and direct sums."
+   }
+  ],
+  "hash": "c1e8a28cbe75",
+  "model": "qwen3.5:9b"
+ },
+ "risk-measures": {
+  "at": "2026-10-19T13:47:17",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality provides the rigorous convexity argument required to prove that Value-at-Risk (VaR) is not a coherent risk measure, while Expected Shortfall (ES) is, by relating non-linear transformations of random variables to their expectations."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality establishes the fundamental link between variance (the second moment) and tail probabilities, serving as a foundational tool for deriving bounds on risk measures like VaR when only mean and variance are known."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": true,
+    "why": "Markov's inequality is the elementary probabilistic bound used to derive upper limits on the probability of extreme losses, forming the basis for understanding how moments (like variance) constrain tail risk in financial models."
+   }
+  ],
+  "hash": "8afec52f5f61",
+  "model": "qwen3.5:9b"
+ },
+ "sample-space": {
+  "at": "2026-10-19T13:47:20",
+  "connections": [
+   {
+    "id": "measure",
+    "new": true,
+    "why": "The sample space serves as the underlying set upon which a measure (specifically probability) is defined in Measure Theory."
+   },
+   {
+    "id": "sigma-algebra",
+    "new": true,
+    "why": "A sigma-algebra is a specific collection of subsets of the sample space that defines which events are measurable and thus assignable probabilities."
+   }
+  ],
+  "hash": "0295755940db",
+  "model": "qwen3.5:9b"
+ },
+ "sampling-bias-corrected-two-tower-model": {
+  "at": "2026-10-19T13:47:24",
+  "connections": [
+   {
+    "id": "importance-sampling",
+    "new": false,
+    "why": "The core mathematical mechanism for correcting the bias in the two-tower model is importance sampling, where the logit correction term $-\frac{1}{B}\text{log}(p_j)$ acts as an importance weight to re-weight the probability mass from the biased batch sample back to the true corpus distribution."
+   },
+   {
+    "id": "expectation",
+    "new": false,
+    "why": "The theoretical analysis of the streaming frequency estimator relies on computing expectations (mean and variance) of the random step gaps between item occurrences, which is the foundational concept for deriving the bias and variance bounds in Proposition 4.1."
+   }
+  ],
+  "hash": "d12d05030832",
+  "model": "qwen3.5:9b"
+ },
+ "sampling-with-replacement": {
+  "at": "2026-10-19T13:47:27",
+  "connections": [
+   {
+    "id": "bose-einstein-problem",
+    "new": false,
+    "why": "It describes the same counting scenario (distinguishable balls into distinguishable boxes with replacement) but focuses on the specific case where order does not matter, contrasting directly with the ordered nature of sampling-with-replacement."
+   },
+   {
+    "id": "multiplication-rule",
+    "new": false,
+    "why": "The derivation of the $n^k$ formula for sampling with replacement is a direct application of the multiplication rule to independent stages."
+   }
+  ],
+  "hash": "614ccb0b6786",
+  "model": "qwen3.5:9b"
+ },
+ "sampling-without-replacement": {
+  "at": "2026-10-19T13:47:30",
+  "connections": [
+   {
+    "id": "hypergeometric-distribution",
+    "new": true,
+    "why": "The hypergeometric distribution is the probability model specifically defined for sampling without replacement, whereas the binomial distribution applies to sampling with replacement."
+   },
+   {
+    "id": "adjusting-for-overcounting",
+    "new": true,
+    "why": "Both concepts rely on correcting naive counting methods by accounting for dependencies or indistinguishability introduced when items are removed from a pool."
+   }
+  ],
+  "hash": "ee0dc86d28fc",
+  "model": "qwen3.5:9b"
+ },
+ "second-order-linear-difference-equations": {
+  "at": "2026-10-19T13:47:33",
+  "connections": [
+   {
+    "id": "eigenvalues-eigenvectors-and-diagonalization",
+    "new": true,
+    "why": "The characteristic equation method for difference equations is the discrete-time analogue of finding eigenvalues and eigenvectors to diagonalize a linear system, as both rely on solving a polynomial whose roots determine the system's fundamental modes."
+   },
+   {
+    "id": "first-order-linear-difference-equations-and-equilibriums",
+    "new": true,
+    "why": "This note covers the simpler first-order case (a special case where one coefficient is zero), providing the foundational concept of constant-coefficient linear recurrence relations that this note generalizes to second order."
+   }
+  ],
+  "hash": "8a2f9c70528a",
+  "model": "qwen3.5:9b"
+ },
+ "sequence": {
+  "at": "2026-10-19T13:47:39",
+  "connections": [
+   {
+    "id": "Cauchy-sequences",
+    "new": true,
+    "why": "Cauchy sequences are a specific type of sequence defined by the property that terms get arbitrarily close to each other, which is central to understanding completeness in real analysis."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": false,
+    "why": "The limit superior and limit inferior are concepts specifically defined for sequences to describe their asymptotic behavior when a standard limit does not exist."
+   },
+   {
+    "id": "sequence-limit",
+    "new": true,
+    "why": "The concept of a sequence limit describes the value that a sequence approaches as its index goes to infinity, which is the primary convergence property studied in real analysis."
+   }
+  ],
+  "hash": "7a433f4c8657",
+  "model": "qwen3.5:9b"
+ },
+ "sequence-limit": {
+  "at": "2026-10-19T13:47:36",
+  "connections": [
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "The limit superior and limit inferior are defined using subsequential limits of a sequence, directly extending the concept of convergence to bounded sequences that may not converge."
+   },
+   {
+    "id": "squeeze-theorem-for-sequences",
+    "new": true,
+    "why": "This theorem uses the $\forall \forall \forall$ quantifier structure of the sequence limit definition to prove convergence by bounding a sequence between two convergent ones."
+   },
+   {
+    "id": "composite-sequences-limit",
+    "new": true,
+    "why": "This result relies on the uniqueness and existence of limits to establish algebraic rules (like sum/product) for combining convergent sequences."
+   }
+  ],
+  "hash": "af81aad27b36",
+  "model": "qwen3.5:9b"
+ },
+ "sequences-metric-spaces": {
+  "at": "2026-10-19T13:47:43",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "The Banach Fixed Point Theorem relies on the concept of Cauchy sequences in complete metric spaces to prove the existence and uniqueness of a fixed point."
+   },
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "This note defines completeness specifically for metric spaces, which is the central concept discussed in Section 3 of the current note regarding 'holes' in spaces like ℚ."
+   },
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "Normed vector spaces are a specific type of metric space where the metric is derived from a norm, making this a natural generalization/specialization relationship."
+   }
+  ],
+  "hash": "d2af3aaa9894",
+  "model": "qwen3.5:9b"
+ },
+ "sigma-algebra": {
+  "at": "2026-10-19T13:47:51",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel-Cantelli Lemma relies on the existence of a $\text{Borel } \text{ }\text{-algebra}$ to define events as measurable sets, allowing the application of measure theory to tail events."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "Continuity of measure (both from below and above) is a fundamental property derived directly from the closure properties of $\text{ }\text{-algebras}$ under countable unions and intersections."
+   },
+   {
+    "id": "measurable-sets-algebra",
+    "new": true,
+    "why": "The algebra of measurable sets describes the specific structure of a $\text{ }\text{-algebra}$, detailing how it forms a ring closed under symmetric differences and intersections."
+   }
+  ],
+  "hash": "9eaf8cee33a6",
+  "model": "qwen3.5:9b"
+ },
+ "sigma-algebra-of-measurable-sets": {
+  "at": "2026-10-19T13:47:47",
+  "connections": [
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "This note relies on the limit argument (Step 4) to pass from finite unions to countable unions, which is the core mechanism behind proving continuity of measure."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The proof explicitly constructs a disjoint sequence and uses subadditivity to handle the infinite union, techniques fundamental to establishing the Borel-Cantelli Lemma regarding almost sure convergence."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "The transition from finite additivity to countable additivity via limits is the foundational step required to prove Fatou's Lemma and other major convergence theorems in measure theory."
+   }
+  ],
+  "hash": "098789460b1c",
+  "model": "qwen3.5:9b"
+ },
+ "simpsons-paradox": {
+  "at": "2026-10-19T13:47:54",
+  "connections": [
+   {
+    "id": "law-of-total-probability",
+    "new": false,
+    "why": "The Law of Total Probability provides the mathematical formula that explains how asymmetric weighting terms ($P(C|T)$) in Simpson's Paradox can invert the direction of an inequality when aggregating data."
+   },
+   {
+    "id": "conditional-probability",
+    "new": true,
+    "why": "Conditional probability is the fundamental concept used to define and calculate the stratified rates that, when combined with varying base rates, create the reversal seen in Simpson's Paradox."
+   }
+  ],
+  "hash": "efdaf5d429c7",
+  "model": "qwen3.5:9b"
+ },
+ "single-period-investment-model": {
+  "at": "2026-10-19T13:47:58",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality provides a general probabilistic bound on the tail probabilities of asset returns based solely on their mean and variance, concepts explicitly defined in this note."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": true,
+    "why": "Markov's inequality is used to establish upper bounds on the probability that an asset's return exceeds a certain threshold, directly relating to the risk measures discussed in the single-period framework."
+   }
+  ],
+  "hash": "6e5bef5f9f9a",
+  "model": "qwen3.5:9b"
+ },
+ "softmax-optimization-and-cross-entropy": {
+  "at": "2026-10-19T13:48:02",
+  "connections": [
+   {
+    "id": "importance-sampling",
+    "new": false,
+    "why": "Bengio's $\text{log } Q$ correction is a specific instance of importance sampling applied to approximate the partition function in extreme classification."
+   },
+   {
+    "id": "multinomial-distribution",
+    "new": false,
+    "why": "The cross-entropy loss is derived from the log-likelihood of the categorical distribution, which is the special case of the multinomial distribution with $n=1$."
+   },
+   {
+    "id": "sampling-bias-corrected-two-tower-model",
+    "new": false,
+    "why": "This model relies on the same sampled softmax and importance weighting techniques to correct for bias when training retrieval models over massive candidate sets."
+   }
+  ],
+  "hash": "84dc28f88502",
+  "model": "qwen3.5:9b"
+ },
+ "squeeze-theorem-for-sequences": {
+  "at": "2026-10-19T13:48:06",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both the Squeeze Theorem and the Borel-Cantelli Lemma are fundamental limit theorems that establish convergence or specific behavior by bounding a sequence or event probability between known limits."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's Inequality provides the probabilistic bounds (upper and lower) often used to construct the 'squeezing' sequences required to prove convergence in measure theory contexts."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "The Squeeze Theorem is essentially a practical application of the property that if $\text{liminf } b_n = \text{limsup } b_n$, then the limit exists, which is directly related to how limsup and liminf are defined via bounding sequences."
+   }
+  ],
+  "hash": "12d0d14128c3",
+  "model": "qwen3.5:9b"
+ },
+ "statistical-inference": {
+  "at": "2026-10-19T13:48:09",
+  "connections": [
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Central Limit Theorem is the fundamental theoretical justification for why sample statistics (like the mean) converge to population parameters, forming the basis of confidence intervals and hypothesis testing in statistical inference."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality provides a rigorous bound on the probability that an estimator deviates from its expected value, which is essential for deriving general bounds on estimation error and constructing confidence intervals without assuming normality."
+   }
+  ],
+  "hash": "95cc7bbbaebe",
+  "model": "qwen3.5:9b"
+ },
+ "stochastic-models-in-finance": {
+  "at": "2026-10-19T13:48:13",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Geometric Brownian Motion, the core continuous-time model in this note, is constructed directly from standard Brownian motion (Wiener process) as its fundamental stochastic driver."
+   },
+   {
+    "id": "poisson-distribution",
+    "new": false,
+    "why": "The note explicitly models high-frequency order arrivals using a homogeneous Poisson process, which relies on the Poisson distribution for counting events over time intervals."
+   },
+   {
+    "id": "stochastic-processes-foundations",
+    "new": false,
+    "why": "This note applies specific financial applications (diffusions, point processes, Markov chains) that are built upon the general theoretical framework of stochastic processes."
+   }
+  ],
+  "hash": "bff4f1db538b",
+  "model": "qwen3.5:9b"
+ },
+ "stochastic-processes-foundations": {
+  "at": "2026-10-19T13:48:17",
+  "connections": [
+   {
+    "id": "branching-process",
+    "new": true,
+    "why": "Both are fundamental examples of stochastic processes where the future evolution depends on the current state (Markov property), though branching processes typically use discrete time and integer states while the target note covers continuous-time models like Brownian motion."
+   }
+  ],
+  "hash": "3502031d66c8",
+  "model": "qwen3.5:9b"
+ },
+ "story-proofs": {
+  "at": "2026-10-19T13:48:21",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both rely on the fundamental principle of counting to derive identities by summing or partitioning outcomes, though inclusion-exclusion handles overlaps while story proofs handle distinct partitions."
+   },
+   {
+    "id": "bose-einstein-problem",
+    "new": true,
+    "why": "This note describes Bose-Einstein counting (combinations with replacement), which is a classic alternative 'story' used to prove combinatorial identities involving stars and bars, just as story proofs do for standard combinations."
+   },
+   {
+    "id": "adjusting-for-overcounting",
+    "new": true,
+    "why": "Adjusting for overcounting is the logical counterpart to story proofs: while story proofs show two ways to count the same set without overlap, this technique corrects counts when overlaps exist, often using similar combinatorial scenarios."
+   }
+  ],
+  "hash": "c847da4e3c90",
+  "model": "qwen3.5:9b"
+ },
+ "student-t-distribution": {
+  "at": "2026-10-19T13:48:25",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Both describe stochastic processes where the t-distribution arises as the finite-sample distribution of increments in a Brownian motion with unknown variance, linking random variable theory to continuous-time stochastic calculus."
+   },
+   {
+    "id": "gaussian-processes",
+    "new": true,
+    "why": "Gaussian processes generalize normal distributions and often involve t-processes when modeling uncertainty about mean functions with unknown covariance structures, connecting multivariate normal theory to functional random variables."
+   },
+   {
+    "id": "covariance-and-correlation",
+    "new": true,
+    "why": "The derivation of the t-distribution relies on understanding how sample variance (a function of covariance) scales with degrees of freedom, directly linking the algebraic properties of correlation matrices to heavy-tailed inference."
+   }
+  ],
+  "hash": "1e69128c7df7",
+  "model": "qwen3.5:9b"
+ },
+ "supremum-infimum": {
+  "at": "2026-10-19T13:48:29",
+  "connections": [
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "The limit superior and limit inferior of a sequence are defined precisely as the supremum and infimum of the set of its subsequential limits, directly applying these concepts to sequences."
+   },
+   {
+    "id": "nested-interval-property",
+    "new": true,
+    "why": "The Nested Interval Property is a direct consequence of the completeness axiom (which guarantees suprema) and relies on the existence of bounds for nested sets."
+   },
+   {
+    "id": "existence-of-nth-roots-in-R",
+    "new": true,
+    "why": "The proof that every positive real number has an n-th root typically constructs the solution as the supremum of the set of all numbers whose n-th power is less than or equal to the target."
+   }
+  ],
+  "hash": "e3125df4793c",
+  "model": "qwen3.5:9b"
+ },
+ "time-series-returns": {
+  "at": "2026-10-19T13:48:32",
+  "connections": [
+   {
+    "id": "brownian-motion",
+    "new": true,
+    "why": "Brownian motion is the continuous-time stochastic process that models asset prices, making log returns (which are additive increments of this process) the natural mathematical object for analysis."
+   },
+   {
+    "id": "gaussian-processes",
+    "new": true,
+    "why": "Gaussian processes generalize the concept of normal distributions to functions over time, providing the theoretical framework for modeling the joint distribution of multivariate time series returns."
+   },
+   {
+    "id": "moment-generating-functions",
+    "new": true,
+    "why": "Moment generating functions are used to derive the moments (like variance and skewness) of return distributions, which is essential for characterizing the statistical properties of financial assets."
+   }
+  ],
+  "hash": "20d8f5a9b6b7",
+  "model": "qwen3.5:9b"
+ },
+ "transformations-and-convolutions": {
+  "at": "2026-10-19T13:48:35",
+  "connections": [
+   {
+    "id": "moment-generating-functions",
+    "new": true,
+    "why": "Moment generating functions transform sums of independent random variables (convolutions) into products of their individual transforms, linearizing the convolution operation."
+   }
+  ],
+  "hash": "a574a74da97d",
+  "model": "qwen3.5:9b"
+ },
+ "triangle-inequality": {
+  "at": "2026-10-19T13:48:39",
+  "connections": [
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "The triangle inequality is the defining property of a norm, generalizing the real-number case to vector spaces where $||x+y|| \neq |x|+|y|$."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Both are fundamental inequalities in analysis used to bound probabilities and deviations, often appearing together in limit theorems."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": true,
+    "why": "Like the triangle inequality, Markov's inequality provides a foundational bound on random variables based on their moments, sharing the same domain of 'Inequalities & Limit Theorems'."
+   }
+  ],
+  "hash": "69244ad6fc53",
+  "model": "qwen3.5:9b"
+ },
+ "uniform-continuity": {
+  "at": "2026-10-19T13:48:42",
+  "connections": [
+   {
+    "id": "equicontinuity-Arzela-Ascoli-Thm",
+    "new": true,
+    "why": "The Arzelà-Ascoli theorem generalizes the link between compactness and uniform continuity by characterizing compact subsets of function spaces using equicontinuity (a uniform condition) rather than just domain compactness."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "Both concepts rely on a 'uniform' control over behavior across an entire space (domain for functions, measure space for sets) to ensure limits or integrals behave predictably without depending on specific points."
+   }
+  ],
+  "hash": "bd9e1a571fbd",
+  "model": "qwen3.5:9b"
+ },
+ "uniform-distribution": {
+  "at": "2026-10-19T13:48:45",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The uniform distribution's constant PDF is the simplest example of a measurable function integrated against Lebesgue measure to define probability."
+   },
+   {
+    "id": "probability-density-function",
+    "new": false,
+    "why": "The note explicitly defines the Uniform distribution using its Probability Density Function (PDF), establishing the foundational link between the two concepts."
+   }
+  ],
+  "hash": "23f066f681f8",
+  "model": "qwen3.5:9b"
+ },
+ "vandermonde’s-identity": {
+  "at": "2026-10-19T13:48:47",
+  "connections": [
+   {
+    "id": "hypergeometric-distribution",
+    "new": true,
+    "why": "Vandermonde's Identity is the exact combinatorial foundation for the probability mass function of the Hypergeometric Distribution."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both are fundamental counting principles that relate a global count to a sum of local counts, often proven using similar 'story proof' or coefficient extraction techniques."
+   }
+  ],
+  "hash": "d9f067bd184d",
+  "model": "qwen3.5:9b"
+ },
+ "variance": {
+  "at": "2026-10-19T13:48:51",
+  "connections": [
+   {
+    "id": "moment-generating-functions",
+    "new": true,
+    "why": "Moment generating functions are defined as $M_X(t) = E[e^{tX}]$ and their second derivative at zero yields the variance, linking this concept to higher-order moments."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Central Limit Theorem relies on the variance of sums of independent random variables (specifically $Var(\bar{X}) = \frac{\text{Var}(X)}{n}$) to establish the convergence rate and scaling of the normal distribution."
+   }
+  ],
+  "hash": "3f2fb9a3d210",
+  "model": "qwen3.5:9b"
+ },
+ "vector-autoregressive-models": {
+  "at": "2026-10-19T13:48:55",
+  "connections": [
+   {
+    "id": "arma-models",
+    "new": true,
+    "why": "VAR models are the multivariate generalization of univariate ARMA models, sharing the same underlying structure of linear dependence on past values and noise terms."
+   },
+   {
+    "id": "multivariate-normal-distribution",
+    "new": true,
+    "why": "The error term in a standard VAR model is assumed to follow a multivariate normal distribution, making this concept fundamental to the model's likelihood function and inference."
+   },
+   {
+    "id": "covariance-and-correlation",
+    "new": true,
+    "why": "The covariance matrix of the noise terms (Σ) in the VAR equation defines the contemporaneous relationships between variables, directly linking to the concepts of covariance and correlation."
+   }
+  ],
+  "hash": "94415ed43719",
+  "model": "qwen3.5:9b"
+ },
+ "vector-moving-average": {
+  "at": "2026-10-19T13:48:58",
+  "connections": [
+   {
+    "id": "multivariate-normal-distribution",
+    "new": true,
+    "why": "The VMA model relies on the multivariate normal distribution to define the joint behavior of correlated shock vectors and facilitate Maximum Likelihood Estimation."
+   },
+   {
+    "id": "covariance-and-correlation",
+    "new": true,
+    "why": "The concept of concurrent correlation in the VMA shock vector is defined by the covariance matrix, which measures linear dependence between components of the multivariate noise."
+   },
+   {
+    "id": "maximum-likelihood-estimation",
+    "new": true,
+    "why": "Fitting the VMA model requires numerical optimization of a non-linear likelihood function, a core technique described in this note."
+   }
+  ],
+  "hash": "d7b8d2819f91",
+  "model": "qwen3.5:9b"
+ },
+ "vector-spaces": {
+  "at": "2026-10-19T13:49:02",
+  "connections": [
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "This note extends the vector space concept by adding a norm to define distance and convergence, bridging linear algebra with metric topology."
+   },
+   {
+    "id": "function-spaces",
+    "new": true,
+    "why": "This note treats functions as vectors, demonstrating that the abstract vector space structure applies directly to spaces of continuous or differentiable functions."
+   },
+   {
+    "id": "ode-intro",
+    "new": false,
+    "why": "This note illustrates a deep analogy where the solution set of a homogeneous linear ODE forms a finite-dimensional vector space, connecting differential equations to linear algebra."
+   }
+  ],
+  "hash": "8e0c79599d79",
+  "model": "qwen3.5:9b"
+ },
+ "zero-squeeze-in-R": {
+  "at": "2026-10-19T13:49:04",
+  "connections": [
+   {
+    "id": "nested-interval-property",
+    "new": true,
+    "why": "Both rely on the Archimedean property to show that no non-zero number can persist under arbitrary small bounds or nested intervals."
+   },
+   {
+    "id": "density-theorem-of-R",
+    "new": true,
+    "why": "The proof's ability to choose an arbitrarily small epsilon relies on the density of rationals/irrationals ensuring such epsilons exist between any positive numbers."
+   }
+  ],
+  "hash": "cdef51789a5c",
+  "model": "qwen3.5:9b"
+ }
+}

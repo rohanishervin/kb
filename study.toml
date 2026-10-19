@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────
+# KB study pipeline settings (read by build.py / dev.sh)
+# ─────────────────────────────────────────────────────────────
+
+[llm]
+# api = "ollama": Ollama's native API (lets this file set the context length per request).
+# api = "openai": any OpenAI-compatible server, e.g. LM Studio at http://localhost:1234/v1
+#                 (num_ctx and think are ignored there; set context in the server itself).
+api = "ollama"
+base_url = "http://localhost:11434"
+num_ctx = 16384            # context window in tokens, sent with every request (Ollama's default is too small)
+think = false            # reasoning models: false = skip the thinking phase (much faster, a bit less careful)
+model = "qwen3.5:9b"       # exact name from `ollama list`
+samples = 1                # >1 = ask N times and take the median (slower, steadier)
+timeout = 300              # seconds per request
+max_chars = 12000          # truncate very long notes before sending
+enabled = true             # false = never call the LLM (or run with KB_NO_LLM=1)
+
+[tagging]
+min_chars = 600            # notes shorter than this are treated as drafts and not tagged yet
+retag_on_change = true     # re-tag a note/problem whenever its content changed since it was tagged
+settle_minutes = 5         # ...but only once its notebook has been untouched this long (avoids tagging mid-edit)
+retag_on_growth = true     # (only matters if retag_on_change = false) re-tag a note that grew a lot
+growth_ratio = 1.6         # "a lot" = 60% longer
+
+[practice]
+implicit_grade = 2         # a problem written up in a pset counts as one attempt with this grade (0-3)
+target = 0.8               # coverage you want on every note (0-1)
+
+[study]
+exclude_prefixes = ["cs-"]   # notes left out of tagging and the Study Focus tab (case studies)
+
+[goals]
+# Domain weights for prioritising. Unlisted domains = 1.0. Examples:
+# "Linear Algebra" = 2.0
+# "Measure Theory & Integration" = 0.5

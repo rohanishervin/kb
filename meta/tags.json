@@ -2542,6 +2542,363 @@
    ],
    "type": "proof"
   },
+  "pset-linear-algebra-02#1": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "87a5c2c9443f",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:31",
+   "tests": [
+    "subspaces",
+    "basis-and-dimension",
+    "direct-sums-and-complements"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#10": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "e4e24d449b7c",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:39",
+   "tests": [
+    "change-of-basis-and-similarity"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#11": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "ea9631e9413e",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:40",
+   "tests": [
+    "dual-spaces"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#12": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "ad102d4f4eeb",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:41",
+   "tests": [
+    "annihilators"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#13": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "a5611461459b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:42",
+   "tests": [
+    "dual-maps-and-transpose"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#14": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "12945994dc11",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:42",
+   "tests": [
+    "multilinear-and-alternating-forms",
+    "permutations-and-sign"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#15": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "3978807f64cc",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:43",
+   "tests": [
+    "permutations-and-sign"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#16": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "12c32f6222d1",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:44",
+   "tests": [
+    "determinant"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#17": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "c8593b1bb612",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:45",
+   "tests": [
+    "determinant-volume-and-orientation"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#18": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "8f58726e655a",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:46",
+   "tests": [
+    "laplace-expansion-adjugate-and-cramers-rule"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#19": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "27b3040d6694",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:46",
+   "tests": [
+    "trace"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#2": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "b21e4a94fbbb",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:32",
+   "tests": [
+    "direct-sums-and-complements"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#20": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "5cb728340623",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:47",
+   "tests": [
+    "eigenvalues-and-eigenvectors",
+    "diagonalization"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#21": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "8c92d53c12b7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:48",
+   "tests": [
+    "diagonalization"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#22": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "c35e0ff23b68",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:49",
+   "tests": [
+    "triangularization-theorem",
+    "eigenvalues-and-eigenvectors"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#23": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "6baf251b57ee",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:50",
+   "tests": [
+    "polynomial-division-algorithm",
+    "polynomial-gcd-and-unique-factorization",
+    "rings-and-polynomial-rings"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#24": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "bf6c0b206679",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:51",
+   "tests": [
+    "rings-and-polynomial-rings",
+    "generalized-eigenspaces-and-spectral-theorem"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#25": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "74fe922f05b0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:52",
+   "tests": [
+    "cayley-hamilton-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#26": {
+   "difficulty": 4,
+   "est_minutes": 25,
+   "hash": "8b28bd0b7c87",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:53",
+   "tests": [
+    "generalized-eigenspaces-and-spectral-theorem",
+    "polynomial-gcd-and-unique-factorization"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#27": {
+   "difficulty": 3,
+   "est_minutes": 45,
+   "hash": "e6abd533e0b1",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:54",
+   "tests": [
+    "minimal-polynomial"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#28": {
+   "difficulty": 4,
+   "est_minutes": 45,
+   "hash": "db953ddae08c",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:55",
+   "tests": [
+    "generalized-eigenspaces-and-spectral-theorem",
+    "kernel-image-and-rank-nullity",
+    "change-of-basis-and-similarity",
+    "triangularization-theorem",
+    "minimal-polynomial"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#3": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "15fe6d99fa7e",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:33",
+   "tests": [
+    "direct-sums-and-complements",
+    "quotient-spaces",
+    "kernel-image-and-rank-nullity",
+    "affine-subspaces"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#4": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "d282987765c8",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:34",
+   "tests": [
+    "affine-subspaces"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#5": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "c2e6419d07ce",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:35",
+   "tests": [
+    "quotient-spaces",
+    "kernel-image-and-rank-nullity"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#6": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "c995f0f61d4b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:36",
+   "tests": [
+    "kernel-image-and-rank-nullity",
+    "matrix-of-a-linear-map",
+    "trace"
+   ],
+   "type": "computation"
+  },
+  "pset-linear-algebra-02#7": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "e1a1fdaed4e0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:37",
+   "tests": [
+    "kernel-image-and-rank-nullity",
+    "linear-maps"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#8": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "fb8347d1c9e1",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:37",
+   "tests": [
+    "invertible-linear-maps"
+   ],
+   "type": "proof"
+  },
+  "pset-linear-algebra-02#9": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "cd61ce9984bc",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-19T18:08:38",
+   "tests": [
+    "matrix-of-a-linear-map",
+    "change-of-basis-and-similarity"
+   ],
+   "type": "computation"
+  },
   "pset-linear-programs-01#1": {
    "difficulty": 2,
    "est_minutes": 15,

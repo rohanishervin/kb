@@ -1027,54 +1027,54 @@
   "model": "qwen3.5:9b"
  },
  "determinant-volume-and-orientation": {
-  "at": "2026-10-19T15:46:15",
+  "at": "2026-10-19T16:15:43",
   "connections": [
    {
     "id": "multilinear-and-alternating-forms",
     "new": true,
-    "why": "The determinant is the unique multilinear, alternating form that maps the standard basis to 1, providing the algebraic definition underlying the geometric volume interpretation."
+    "why": "The determinant is the unique multilinear, alternating form (up to scaling) that maps the standard basis to 1, providing the algebraic definition underlying the geometric volume interpretation."
    },
    {
-    "id": "laplace-expansion-adjugate-and-cramers-rule",
+    "id": "permutations-and-sign",
     "new": true,
-    "why": "Cramer's Rule and the adjugate matrix rely on cofactor expansions (Laplace expansion), which are the computational mechanism that proves the determinant equals the signed volume of the parallelotope."
+    "why": "The sign of a permutation determines the orientation of a basis relative to the standard basis, which is exactly what the sign of the determinant encodes."
    }
   ],
-  "hash": "99401378dd00",
+  "hash": "43a328c7d09b",
   "model": "qwen3.5:9b"
  },
  "diagonalization": {
-  "at": "2026-10-19T15:46:22",
+  "at": "2026-10-19T16:15:47",
   "connections": [
    {
     "id": "cardinality",
     "new": true,
-    "why": "Diagonalization fundamentally relies on the concept of dimension (the size of a basis), which is defined via cardinality, whereas diagonalizability fails for infinite-dimensional spaces where the sum of geometric multiplicities cannot equal the dimension."
+    "why": "Diagonalization relies on the existence of a basis (a set of n linearly independent vectors), which connects to cardinality concepts regarding finite sets and vector space dimensions."
    },
    {
-    "id": "brouwer-fixed-point-theorem",
+    "id": "cantor-set",
     "new": true,
-    "why": "Both concepts represent 'canonical forms' or simplifications: diagonalization reduces a linear operator to scaling along axes, while Brouwer's theorem guarantees a fixed point (a trivial transformation) exists under topological constraints, often used to prove existence results analogous to how diagonalization proves spectral decomposition."
+    "why": "The Cantor Set is constructed using a diagonal argument (removing middle thirds) that shares the same logical structure as Cantor's original diagonalization proof for uncountability, often taught alongside linear algebra foundations."
    }
   ],
-  "hash": "ce96df562954",
+  "hash": "75b8c31430a1",
   "model": "qwen3.5:9b"
  },
  "direct-sums-and-complements": {
-  "at": "2026-10-19T15:46:26",
+  "at": "2026-10-19T16:15:12",
   "connections": [
    {
     "id": "quotient-spaces",
     "new": false,
-    "why": "The concept of a complement $W$ in $V=U\text{ }\bigoplus\text{ }W$ is the canonical way to construct a vector space quotient $V/U$, where $W$ serves as a specific subspace isomorphic to the quotient space."
+    "why": "The concept of a complement $W$ such that $V = U \bigoplus W$ is the geometric realization of constructing a quotient space, where $W$ serves as a specific section (isomorphic copy) of $V/U$."
    },
    {
-    "id": "kernel-image-and-rank-nullity",
+    "id": "dual-maps-and-transpose",
     "new": true,
-    "why": "The decomposition of a linear map into its kernel and image components, or the splitting of a space along these subspaces, relies fundamentally on the existence of complements for the kernel."
+    "why": "In finite dimensions, choosing a complement to a subspace is equivalent to defining a projection operator, which relates directly to the properties of dual maps and the transpose operation used to define orthogonal complements."
    }
   ],
-  "hash": "e326fb127cdf",
+  "hash": "4ef265b1761b",
   "model": "qwen3.5:9b"
  },
  "dual-maps-and-transpose": {
@@ -1117,20 +1117,25 @@
   "model": "qwen3.5:9b"
  },
  "eigenvalues-and-eigenvectors": {
-  "at": "2026-10-19T15:46:39",
+  "at": "2026-10-19T16:15:51",
   "connections": [
    {
     "id": "banach-fp-thm",
     "new": true,
-    "why": "Both concepts rely on finding non-zero vectors fixed (or scaled) by a transformation, with the Banach Fixed Point Theorem guaranteeing a unique fixed point for contractions in complete metric spaces."
+    "why": "Both concepts describe special directions or points (eigenvectors/fixed points) that remain invariant under a transformation, serving as the foundation for fixed-point theory in function spaces."
    },
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "This theorem generalizes the idea of eigenvectors to continuous maps on compact convex sets, asserting the existence of a fixed point (eigenvalue 1) without requiring linearity."
+    "why": "The existence of eigenvalues relies on the Fundamental Theorem of Algebra (roots exist in ℂ), which is deeply connected to topological fixed-point results like Brouwer's theorem that guarantee invariant points under continuous maps."
+   },
+   {
+    "id": "gradient-descent-and-variants",
+    "new": true,
+    "why": "In optimization, gradient descent converges along eigenvectors of the Hessian matrix, where eigenvalues determine the curvature and convergence rate (condition number)."
    }
   ],
-  "hash": "f16b001b063b",
+  "hash": "5db9ee85f9e0",
   "model": "qwen3.5:9b"
  },
  "equicontinuity-Arzela-Ascoli-Thm": {
@@ -3380,25 +3385,25 @@
   "model": "qwen3.5:9b"
  },
  "triangularization-theorem": {
-  "at": "2026-10-19T15:47:34",
+  "at": "2026-10-19T16:15:56",
   "connections": [
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "Both results rely on the existence of invariant subspaces (fixed points for Brouwer, eigenvectors for triangularization) to construct a basis or map that simplifies the operator's action."
+    "why": "Both theorems guarantee the existence of a special invariant structure (a fixed point or an eigenvector) in any finite-dimensional space over an algebraically closed field, serving as the foundational step for their respective inductive proofs."
    },
    {
     "id": "compactness",
     "new": true,
-    "why": "The proof of triangularization implicitly uses the fact that over an algebraically closed field, eigenvalues exist, which is analogous to how compactness ensures fixed points in topological settings like Brouwer's theorem."
+    "why": "The proof of triangularization relies on the fact that every linear operator has at least one eigenvalue, which is a consequence of the compactness of the unit sphere in finite dimensions (or the algebraic closure property), mirroring how compactness ensures fixed points for continuous maps."
    },
    {
     "id": "annihilators",
     "new": true,
-    "why": "The concept of invariant subspaces in triangularization is deeply connected to annihilators, as both deal with the structure of linear operators and their kernels."
+    "why": "The concept of an invariant subspace chain used to triangularize an operator is dual to the study of annihilators, where one finds a basis that simultaneously diagonalizes a set of commuting operators or puts them in Jordan form."
    }
   ],
-  "hash": "13cbd25d2a75",
+  "hash": "ef989e99ae76",
   "model": "qwen3.5:9b"
  },
  "uniform-continuity": {

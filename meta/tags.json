@@ -650,37 +650,37 @@
    "tagged_at": "2026-10-19T15:45:06"
   },
   "determinant-volume-and-orientation": {
-   "chars": 9571,
+   "chars": 9619,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "99401378dd00",
+   "hash": "43a328c7d09b",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Explains how determinants represent volume scaling and orientation changes for linear maps via parallelotopes.",
-   "tagged_at": "2026-10-19T15:45:03"
+   "summary": "Explains how determinants represent volume scaling and orientation reversal for linear maps via parallelotopes.",
+   "tagged_at": "2026-10-19T16:15:33"
   },
   "diagonalization": {
-   "chars": 12275,
+   "chars": 12277,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "ce96df562954",
+   "hash": "75b8c31430a1",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
    "summary": "Defines diagonalizable operators, proves equivalence criteria using algebraic and geometric multiplicities, and applies the technique to compute matrix powers and Fibonacci numbers.",
-   "tagged_at": "2026-10-19T15:45:08"
+   "tagged_at": "2026-10-19T16:15:35"
   },
   "direct-sums-and-complements": {
-   "chars": 14050,
+   "chars": 14051,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "e326fb127cdf",
+   "hash": "4ef265b1761b",
    "kind": "theorem",
    "level": 2,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines direct sums and complements in vector spaces, proving the dimension formula for subspace sums.",
-   "tagged_at": "2026-10-19T15:45:10"
+   "summary": "Defines direct sums and complements in vector spaces with proofs of existence, dimension formulas, and criteria for uniqueness.",
+   "tagged_at": "2026-10-19T16:15:07"
   },
   "dual-maps-and-transpose": {
    "chars": 9817,
@@ -707,13 +707,13 @@
   "eigenvalues-and-eigenvectors": {
    "chars": 15644,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "f16b001b063b",
+   "hash": "5db9ee85f9e0",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines eigenvalues/eigenvectors, proves their independence, and derives trace/determinant formulas via the characteristic polynomial.",
-   "tagged_at": "2026-10-19T15:45:17"
+   "summary": "Defines eigenvalues/eigenvectors, proves their independence for distinct roots, and derives trace/determinant formulas via the characteristic polynomial.",
+   "tagged_at": "2026-10-19T16:15:37"
   },
   "equicontinuity-Arzela-Ascoli-Thm": {
    "chars": 13774,
@@ -2071,13 +2071,13 @@
   "triangularization-theorem": {
    "chars": 9941,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "13cbd25d2a75",
+   "hash": "ef989e99ae76",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that every linear operator over an algebraically closed field has an upper triangular matrix representation via induction on dimension.",
-   "tagged_at": "2026-10-19T15:45:46"
+   "summary": "Proves that every linear operator over an algebraically closed field is similar to an upper triangular matrix via induction.",
+   "tagged_at": "2026-10-19T16:15:39"
   },
   "uniform-continuity": {
    "chars": 4541,

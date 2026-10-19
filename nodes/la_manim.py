@@ -12,13 +12,18 @@ from IPython.display import Video
 config.media_dir = "/tmp/manim-la"
 config.pixel_width, config.pixel_height, config.frame_rate = 960, 540, 30
 config.frame_width, config.frame_height = 10, 5.625   # 1 unit = 96 px
-config.background_color = "#1a1a19"
+config.background_color = "#ffffff"   # white, like the static figures
 config.verbosity, config.progress_bar = "WARNING", "none"
 
 # palette (same hues as the static figures)
-C_BLUE, C_ORANGE, C_AQUA, C_YELLOW = "#3987e5", "#eb6834", "#1baf7a", "#eda100"
-C_MAGENTA, C_GREEN, C_VIOLET, C_RED = "#e87ba4", "#2fa82f", "#9085e9", "#e66767"
-C_INK, C_MUTED, C_GRID = "#f0efec", "#a3a29a", "#3d3d3a"
+C_BLUE, C_ORANGE, C_AQUA, C_YELLOW = "#2a78d6", "#eb6834", "#1baf7a", "#eda100"
+C_MAGENTA, C_GREEN, C_VIOLET, C_RED = "#e87ba4", "#008300", "#6250d6", "#e34948"
+C_INK, C_MUTED, C_GRID = "#0b0b0b", "#52514e", "#d9d8d4"
+C_FAINT = "#a3a29a"     # recessive grey for "ordinary" vectors
+
+# manim's defaults are white-on-black; make un-coloured text and shapes dark
+for _cls in (MathTex, Tex, Text, DecimalNumber, Integer, Line, DashedLine, Arrow, Dot, Circle):
+    _cls.set_default(color=C_INK)
 
 
 def show(scene_cls, width=760):
@@ -30,7 +35,7 @@ def show(scene_cls, width=760):
 
 
 def caption(tex, corner=UL, scale=0.8):
-    """A formula with a dark backing, pinned to a corner of the frame."""
+    """A formula on a white backing, pinned to a corner of the frame."""
     m = MathTex(tex, color=C_INK).scale(scale)
     m.to_corner(corner, buff=0.3)
     return VGroup(BackgroundRectangle(m, fill_opacity=0.85, buff=0.12, color=config.background_color), m)
@@ -53,8 +58,8 @@ class GridScene(Scene):
                               axis_config={"stroke_color": C_GRID, "stroke_width": 1})
         self.plane = NumberPlane(x_range=(-16, 16, 1), y_range=(-12, 12, 1),
                                  background_line_style={"stroke_color": C_BLUE, "stroke_width": 1.2,
-                                                        "stroke_opacity": 0.55},
-                                 axis_config={"stroke_color": C_INK, "stroke_width": 1.6},
+                                                        "stroke_opacity": 0.35},
+                                 axis_config={"stroke_color": C_MUTED, "stroke_width": 1.6},
                                  faded_line_ratio=1)
         self.add(self.bg, self.plane)
         self.vectors = []            # (arrow, current coordinates) moved by transform()
@@ -118,7 +123,7 @@ class GridScene(Scene):
         """Fade back to the identity picture (used between two maps)."""
         new_plane = NumberPlane(x_range=(-16, 16, 1), y_range=(-12, 12, 1),
                                 background_line_style={"stroke_color": C_BLUE, "stroke_width": 1.2,
-                                                       "stroke_opacity": 0.55},
-                                axis_config={"stroke_color": C_INK, "stroke_width": 1.6},
+                                                       "stroke_opacity": 0.35},
+                                axis_config={"stroke_color": C_MUTED, "stroke_width": 1.6},
                                 faded_line_ratio=1)
         self.play(Transform(self.plane, new_plane), run_time=run_time)

@@ -1459,6 +1459,23 @@
   "hash": "141a5e680128",
   "model": "qwen3.5:9b"
  },
+ "generalized-eigenspaces-and-spectral-theorem": {
+  "at": "2026-10-19T17:23:54",
+  "connections": [
+   {
+    "id": "quotient-spaces",
+    "new": true,
+    "why": "The generalized eigenspace $G_\beta$ is an invariant subspace, and the quotient space $V/G_\beta$ inherits a linear operator whose spectrum excludes $\beta$, illustrating how spectral decomposition relates to quotient constructions."
+   },
+   {
+    "id": "annihilators",
+    "new": true,
+    "why": "The definition of a generalized eigenvector relies on the concept of an annihilator: a vector $v$ is in the generalized eigenspace if some power of $(f-\beta)$ annihilates it, directly linking the two notions."
+   }
+  ],
+  "hash": "59cfbf7cdf6c",
+  "model": "qwen3.5:9b"
+ },
  "geometric-and-negative-binomial-dist": {
   "at": "2026-10-19T13:43:01",
   "connections": [
@@ -2156,20 +2173,25 @@
   "model": "qwen3.5:9b"
  },
  "minimal-polynomial": {
-  "at": "2026-10-19T15:47:07",
+  "at": "2026-10-19T17:23:59",
   "connections": [
    {
     "id": "annihilators",
     "new": true,
-    "why": "The minimal polynomial is the unique monic generator of the ideal of all annihilating polynomials, making it a specific instance of the general concept of an annihilator in module theory."
+    "why": "The minimal polynomial is defined as the monic generator of the ideal of all annihilating polynomials, making it a specific instance of the concept of an annihilator in module theory."
    },
    {
-    "id": "quotient-spaces",
-    "new": true,
-    "why": "The quotient space $V / \text{ker}(m_A)$ relates to the structure of the operator defined by the minimal polynomial, and the minimal polynomial's degree corresponds to the dimension of the cyclic subspace generating the whole space."
+    "id": "polynomial-gcd-and-unique-factorization",
+    "new": false,
+    "why": "The proof that the minimal polynomial divides any other annihilating polynomial relies on the division algorithm and unique factorization to show that if $m$ does not divide $p$, the remainder would be a smaller-degree annihilator, contradicting minimality."
+   },
+   {
+    "id": "generalized-eigenspaces-and-spectral-theorem",
+    "new": false,
+    "why": "The exponents of the minimal polynomial are precisely the indices (sizes of the largest Jordan blocks) associated with each generalized eigenspace, linking the algebraic definition to the geometric structure of the operator."
    }
   ],
-  "hash": "1c89f369a9c7",
+  "hash": "821bcba0dcc1",
   "model": "qwen3.5:9b"
  },
  "moment-generating-functions": {
@@ -2595,6 +2617,28 @@
    }
   ],
   "hash": "d92823301546",
+  "model": "qwen3.5:9b"
+ },
+ "polynomial-gcd-and-unique-factorization": {
+  "at": "2026-10-19T17:24:05",
+  "connections": [
+   {
+    "id": "permutations-and-sign",
+    "new": true,
+    "why": "Both notes explore the algebraic structure of polynomial rings over fields, where the sign of a permutation (a fundamental concept in symmetric groups) is intrinsically linked to the factorization properties and determinant calculations often discussed alongside polynomial GCDs."
+   },
+   {
+    "id": "cayley-hamilton-theorem",
+    "new": true,
+    "why": "The unique factorization and GCD theory of polynomials provides the algebraic foundation for proving the Cayley-Hamilton theorem, as it allows decomposing the characteristic polynomial into coprime factors to analyze invariant subspaces."
+   },
+   {
+    "id": "minimal-polynomial",
+    "new": false,
+    "why": "The minimal polynomial is defined via divisibility and GCD properties of the characteristic polynomial; understanding unique factorization and Bézout identities for polynomials is essential to proving that the minimal polynomial divides the characteristic polynomial and shares its roots."
+   }
+  ],
+  "hash": "43c3a6e502db",
   "model": "qwen3.5:9b"
  },
  "power-law-distribution": {

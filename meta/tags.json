@@ -913,6 +913,17 @@
    "summary": "Defines Gaussian processes via mean and covariance kernels, proves positive semi-definiteness, analyzes white noise pathologies, and compares canonical stochastic models.",
    "tagged_at": "2026-10-19T12:58:43"
   },
+  "generalized-eigenspaces-and-spectral-theorem": {
+   "chars": 29942,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "59cfbf7cdf6c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines generalized eigenvectors and proves the spectral theorem for operators over complex fields using invariant subspaces.",
+   "tagged_at": "2026-10-19T17:23:45"
+  },
   "geometric-and-negative-binomial-dist": {
    "chars": 4833,
    "domain": "Probability Foundations & Combinatorics",
@@ -1332,15 +1343,15 @@
    "tagged_at": "2026-10-19T12:59:50"
   },
   "minimal-polynomial": {
-   "chars": 6792,
+   "chars": 15828,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "1c89f369a9c7",
+   "hash": "821bcba0dcc1",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines the minimal polynomial of a matrix, proves its properties, and relates it to diagonalizability.",
-   "tagged_at": "2026-10-19T15:45:31"
+   "summary": "Defines the minimal polynomial of a matrix, proves its uniqueness and relationship to the characteristic polynomial, and characterizes diagonalizability.",
+   "tagged_at": "2026-10-19T17:23:47"
   },
   "moment-generating-functions": {
    "chars": 5866,
@@ -1616,6 +1627,17 @@
    "needs_review": false,
    "summary": "Proves the polynomial division algorithm with remainder over commutative rings and derives the factor theorem.",
    "tagged_at": "2026-10-19T15:45:36"
+  },
+  "polynomial-gcd-and-unique-factorization": {
+   "chars": 21317,
+   "domain": "Algebraic Structures & Polynomial Rings",
+   "hash": "43c3a6e502db",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines GCD, irreducibility, and unique factorization for polynomials over fields with proofs mirroring integer arithmetic.",
+   "tagged_at": "2026-10-19T17:23:50"
   },
   "power-law-distribution": {
    "chars": 12263,

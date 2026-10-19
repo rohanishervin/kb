@@ -4,7 +4,11 @@ import json
 from collections import defaultdict, deque
 
 node_path = "nodes"
-files = sorted([f for f in os.listdir(node_path) if f.endswith(".ipynb")])
+from pipeline import config as _config  # noqa: E402
+
+_CFG = _config.load()
+# index- notebooks are reading-order pages that link to everything: keep them out of the graph
+files = sorted([f for f in os.listdir(node_path) if f.endswith(".ipynb") and not _config.graph_excluded(f[:-6], _CFG)])
 psets = [f for f in files if f.startswith("pset-")]
 regular_notes = [f for f in files if not f.startswith("pset-")]
 

@@ -94,6 +94,40 @@
   "hash": "3d28c9fcfe46",
   "model": "qwen3.5:9b"
  },
+ "affine-subspaces": {
+  "at": "2026-10-19T15:45:53",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "Both characterize geometric objects defined by linear constraints (affine subspaces as solution sets of homogeneous/non-homogeneous systems, and halfspaces via separating hyperplanes), sharing the underlying theory of affine geometry and duality."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "Affine subspaces are the flat boundaries that define convex polyhedra; understanding their intersections and parallelism is essential for characterizing convex hulls and linear programming feasible regions."
+   }
+  ],
+  "hash": "5fd1be2330b5",
+  "model": "qwen3.5:9b"
+ },
+ "annihilators": {
+  "at": "2026-10-19T15:45:56",
+  "connections": [
+   {
+    "id": "dual-spaces",
+    "new": false,
+    "why": "The annihilator is defined as a subspace of the dual space, making it a direct application of the concepts of linear functionals and dual spaces."
+   },
+   {
+    "id": "quotient-spaces",
+    "new": false,
+    "why": "The dimension formula for the annihilator relies on the relationship between a subspace and its quotient space (V/W)."
+   }
+  ],
+  "hash": "9f7c42d48ef6",
+  "model": "qwen3.5:9b"
+ },
  "arch-and-garch-models": {
   "at": "2026-10-19T13:32:01",
   "connections": [],
@@ -211,6 +245,23 @@
    }
   ],
   "hash": "284740da6b83",
+  "model": "qwen3.5:9b"
+ },
+ "basis-and-dimension": {
+  "at": "2026-10-19T15:46:00",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The dimension of a subspace (like a hyperplane) is intrinsically linked to the ability to separate it from other points using linear functionals, a core concept in separation theorems."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The convex hull of a set of vectors relates directly to their span; understanding dimension (span) is necessary to characterize the geometry of convex sets defined by linear constraints."
+   }
+  ],
+  "hash": "7af33da32f22",
   "model": "qwen3.5:9b"
  },
  "bernoulli-and-binomial-distributions": {
@@ -473,48 +524,38 @@
   "hash": "b3f17dfebb5c",
   "model": "qwen3.5:9b"
  },
- "cayley-hamilton-theorem-and-matrix-polynomials": {
-  "at": "2026-10-19T13:40:15",
+ "cayley-hamilton-theorem": {
+  "at": "2026-10-19T15:46:03",
   "connections": [
    {
-    "id": "determinants-multilinear-forms-and-orientation",
+    "id": "annihilators",
     "new": true,
-    "why": "The characteristic polynomial $p_A(x) = \text{tr}(\bigwedge^k A)$ relies on the determinant (defined via multilinear forms) to establish the universal annihilating polynomial."
+    "why": "The Cayley-Hamilton theorem asserts that the characteristic polynomial annihilates the matrix, which is a specific instance of the general concept of an annihilator in module theory."
    },
    {
-    "id": "linear-maps-inverses-and-matrices",
-    "new": true,
-    "why": "Matrix inversion and the adjugate formula ($A^{-1} = \frac{1}{\text{det}(A)}\text{adj}(A)$) provide the algebraic mechanism to prove Cayley-Hamilton by showing $p_A(A) = 0$ via the identity $\text{adj}(xI-A)(xI-A) = \text{det}(xI-A)I$."
-   },
-   {
-    "id": "linear-maps-and-rank-nullity",
-    "new": true,
-    "why": "The proof that a matrix satisfying its characteristic polynomial implies specific structural properties (like nilpotency or diagonalizability) often utilizes the Rank-Nullity theorem to analyze the kernel of $p_A(A)$."
+    "id": "minimal-polynomial",
+    "new": false,
+    "why": "Cayley-Hamilton establishes that the minimal polynomial divides the characteristic polynomial, providing the fundamental relationship between these two central polynomials of a linear operator."
    }
   ],
-  "hash": "20a93049498d",
+  "hash": "59bc0d6c7c6a",
   "model": "qwen3.5:9b"
  },
- "change-of-basis-matrix-inversion-and-trace": {
-  "at": "2026-10-19T13:40:21",
+ "change-of-basis-and-similarity": {
+  "at": "2026-10-19T15:46:07",
   "connections": [
    {
-    "id": "banach-fp-thm",
+    "id": "quotient-spaces",
     "new": true,
-    "why": "The invertibility of the change-of-basis matrix relies on the fact that a linear map between finite-dimensional spaces of equal dimension is an isomorphism, which is the algebraic foundation for the Banach Fixed Point Theorem's requirement of a contraction mapping on a complete metric space to have a unique fixed point."
+    "why": "The transition matrix $P$ defines an isomorphism between the vector space and its quotient by a subspace (or vice versa), linking change of basis to the construction of quotient spaces."
    },
    {
-    "id": "brouwer-fixed-point-theorem",
+    "id": "coordinates-and-isomorphism-with-Kn",
     "new": true,
-    "why": "The trace (sum of diagonal entries), which is invariant under the change of basis described in this note, equals the sum of eigenvalues; this spectral property connects to the Brouwer Fixed Point Theorem where the Lefschetz number (computed via traces of induced maps on homology) determines the existence of fixed points."
-   },
-   {
-    "id": "jensens-inequality",
-    "new": true,
-    "why": "The determinant's invariance under similarity transformations ($P^{-1}AP$) is a specific instance of how certain functionals remain constant under group actions, analogous to how Jensen's Inequality relates convex functions to expectations, both relying on deep structural properties of the underlying space (vector space vs. probability measure)."
+    "why": "Both notes describe how coordinate representations depend on the choice of basis, with this note focusing on the transition matrix that implements the isomorphism between different coordinate systems."
    }
   ],
-  "hash": "ff2d85859fb3",
+  "hash": "f332db79c094",
   "model": "qwen3.5:9b"
  },
  "chebyshevs-inequality": {
@@ -598,18 +639,6 @@
    }
   ],
   "hash": "c5a4f872edf4",
-  "model": "qwen3.5:9b"
- },
- "complements-direct-sums-quotient-spaces": {
-  "at": "2026-10-19T13:40:42",
-  "connections": [
-   {
-    "id": "inclusion-exclusion",
-    "new": true,
-    "why": "The dimension formula for the sum of subspaces is the direct algebraic analogue of the Principle of Inclusion-Exclusion for finite sets, relating the size of a union to the sizes of individual sets and their intersection."
-   }
-  ],
-  "hash": "03d6f97fba51",
   "model": "qwen3.5:9b"
  },
  "completeness": {
@@ -773,6 +802,28 @@
    }
   ],
   "hash": "06d083dd47a0",
+  "model": "qwen3.5:9b"
+ },
+ "coordinates-and-isomorphism-with-Kn": {
+  "at": "2026-10-19T15:46:11",
+  "connections": [
+   {
+    "id": "dual-spaces",
+    "new": true,
+    "why": "The coordinate map $V \to K^n$ is a specific instance of an isomorphism between a space and its dual (or the dual of the dual), illustrating how abstract spaces are identified with concrete ones via bases."
+   },
+   {
+    "id": "change-of-basis-and-similarity",
+    "new": true,
+    "why": "Changing the basis corresponds to composing the coordinate isomorphism with another, which geometrically manifests as a similarity transformation on the matrix representing the linear map."
+   },
+   {
+    "id": "multilinear-and-alternating-forms",
+    "new": true,
+    "why": "The transition from abstract vectors to coordinates relies on the duality between vectors and linear functionals (the space of row vectors), which is formalized in multilinear forms."
+   }
+  ],
+  "hash": "28476abaf00b",
   "model": "qwen3.5:9b"
  },
  "coupon-collector-problem": {
@@ -963,44 +1014,123 @@
   "hash": "bbd2da59e1a4",
   "model": "qwen3.5:9b"
  },
- "determinants-multilinear-forms-and-orientation": {
-  "at": "2026-10-19T13:41:49",
-  "connections": [],
-  "hash": "485cfdd5baea",
-  "model": "qwen3.5:9b"
- },
- "dual-maps-transposes-and-affine-subspaces": {
-  "at": "2026-10-19T13:41:52",
+ "determinant": {
+  "at": "2026-10-19T15:46:18",
   "connections": [
    {
-    "id": "hyperplane-separation-theorems",
+    "id": "inclusion-exclusion",
     "new": true,
-    "why": "The dual map defines the normal vectors to affine subspaces, which are the geometric objects central to hyperplane separation theorems."
-   },
-   {
-    "id": "lagrangian-and-kkt-conditions",
-    "new": true,
-    "why": "The KKT conditions for constrained optimization rely on the transpose of the constraint Jacobian matrix to define the Lagrange multipliers (dual variables)."
+    "why": "The determinant's Leibniz formula relies on summing over all permutations with signs, a combinatorial principle that is the matrix-theoretic generalization of the Principle of Inclusion-Exclusion used in probability."
    }
   ],
-  "hash": "964214d220a2",
+  "hash": "33f9d3c99d26",
   "model": "qwen3.5:9b"
  },
- "eigenvalues-eigenvectors-and-diagonalization": {
-  "at": "2026-10-19T13:41:57",
+ "determinant-volume-and-orientation": {
+  "at": "2026-10-19T15:46:15",
   "connections": [
    {
-    "id": "banach-fp-thm",
+    "id": "multilinear-and-alternating-forms",
     "new": true,
-    "why": "Both rely on the spectral mapping principle to reduce complex operators to scalar actions (eigenvalues for linear maps, contraction factors for fixed points) to prove existence or stability properties."
+    "why": "The determinant is the unique multilinear, alternating form that maps the standard basis to 1, providing the algebraic definition underlying the geometric volume interpretation."
+   },
+   {
+    "id": "laplace-expansion-adjugate-and-cramers-rule",
+    "new": true,
+    "why": "Cramer's Rule and the adjugate matrix rely on cofactor expansions (Laplace expansion), which are the computational mechanism that proves the determinant equals the signed volume of the parallelotope."
+   }
+  ],
+  "hash": "99401378dd00",
+  "model": "qwen3.5:9b"
+ },
+ "diagonalization": {
+  "at": "2026-10-19T15:46:22",
+  "connections": [
+   {
+    "id": "cardinality",
+    "new": true,
+    "why": "Diagonalization fundamentally relies on the concept of dimension (the size of a basis), which is defined via cardinality, whereas diagonalizability fails for infinite-dimensional spaces where the sum of geometric multiplicities cannot equal the dimension."
    },
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "The proof of diagonalizability often uses the fact that an operator with distinct eigenvalues decomposes the space into invariant subspaces, analogous to how Brouwer's theorem guarantees a fixed point (eigenvalue 1) under continuous maps on compact convex sets."
+    "why": "Both concepts represent 'canonical forms' or simplifications: diagonalization reduces a linear operator to scaling along axes, while Brouwer's theorem guarantees a fixed point (a trivial transformation) exists under topological constraints, often used to prove existence results analogous to how diagonalization proves spectral decomposition."
    }
   ],
-  "hash": "97bc7893ec03",
+  "hash": "ce96df562954",
+  "model": "qwen3.5:9b"
+ },
+ "direct-sums-and-complements": {
+  "at": "2026-10-19T15:46:26",
+  "connections": [
+   {
+    "id": "quotient-spaces",
+    "new": false,
+    "why": "The concept of a complement $W$ in $V=U\text{ }\bigoplus\text{ }W$ is the canonical way to construct a vector space quotient $V/U$, where $W$ serves as a specific subspace isomorphic to the quotient space."
+   },
+   {
+    "id": "kernel-image-and-rank-nullity",
+    "new": true,
+    "why": "The decomposition of a linear map into its kernel and image components, or the splitting of a space along these subspaces, relies fundamentally on the existence of complements for the kernel."
+   }
+  ],
+  "hash": "e326fb127cdf",
+  "model": "qwen3.5:9b"
+ },
+ "dual-maps-and-transpose": {
+  "at": "2026-10-19T15:46:30",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The theorem that the row rank equals column rank is the finite-dimensional algebraic foundation for hyperplane separation theorems, which use the same duality between a subspace and its annihilator to separate convex sets."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "The KKT conditions in constrained optimization rely on the dual map structure (Lagrange multipliers as elements of the dual space) and the relationship between the image of the constraint map and its annihilator."
+   }
+  ],
+  "hash": "9b0367961106",
+  "model": "qwen3.5:9b"
+ },
+ "dual-spaces": {
+  "at": "2026-10-19T15:46:35",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The dual space provides the linear functionals that define the hyperplanes used in separation theorems."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "Lagrange multipliers and KKT conditions rely on identifying gradients (elements of the dual space) with normal vectors to constraint surfaces."
+   },
+   {
+    "id": "normed-vector-spaces",
+    "new": true,
+    "why": "The norm in a normed vector space is defined via duality as the supremum of linear functionals bounded by 1."
+   }
+  ],
+  "hash": "0b1c8e96c254",
+  "model": "qwen3.5:9b"
+ },
+ "eigenvalues-and-eigenvectors": {
+  "at": "2026-10-19T15:46:39",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Both concepts rely on finding non-zero vectors fixed (or scaled) by a transformation, with the Banach Fixed Point Theorem guaranteeing a unique fixed point for contractions in complete metric spaces."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "This theorem generalizes the idea of eigenvectors to continuous maps on compact convex sets, asserting the existence of a fixed point (eigenvalue 1) without requiring linearity."
+   }
+  ],
+  "hash": "f16b001b063b",
   "model": "qwen3.5:9b"
  },
  "equicontinuity-Arzela-Ascoli-Thm": {
@@ -1526,6 +1656,28 @@
   "hash": "8fb334c607ac",
   "model": "qwen3.5:9b"
  },
+ "invertible-linear-maps": {
+  "at": "2026-10-19T15:46:45",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "The Banach Contraction Principle uses the existence of a unique fixed point (analogous to a unique two-sided inverse) in a complete metric space, mirroring how invertibility relies on bijectivity and uniqueness in finite-dimensional vector spaces."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "While Brouwer's theorem guarantees existence of a fixed point for continuous maps on convex sets (often non-invertible), it contrasts with the linear algebra result that invertibility requires both injectivity and surjectivity, highlighting the difference between topological and linear structural constraints."
+   },
+   {
+    "id": "quotient-spaces",
+    "new": true,
+    "why": "The construction of quotient spaces relates to the kernel-image structure discussed in the note, as the existence of a right inverse for a surjective map is equivalent to choosing a complement subspace (a direct sum decomposition) which defines the quotient."
+   }
+  ],
+  "hash": "357516312099",
+  "model": "qwen3.5:9b"
+ },
  "jensens-inequality": {
   "at": "2026-10-19T13:43:41",
   "connections": [
@@ -1565,6 +1717,23 @@
   "hash": "476d8efe13aa",
   "model": "qwen3.5:9b"
  },
+ "kernel-image-and-rank-nullity": {
+  "at": "2026-10-19T15:46:48",
+  "connections": [
+   {
+    "id": "quotient-spaces",
+    "new": false,
+    "why": "The rank-nullity theorem relies on the dimension formula for quotient spaces to equate the image dimension with the quotient space dimension."
+   },
+   {
+    "id": "linear-maps",
+    "new": false,
+    "why": "Kernel and image are defined specifically as subspaces associated with a linear map, making this note a direct elaboration of that concept."
+   }
+  ],
+  "hash": "4390a171ef11",
+  "model": "qwen3.5:9b"
+ },
  "lagrangian-and-kkt-conditions": {
   "at": "2026-10-19T13:43:49",
   "connections": [
@@ -1580,6 +1749,23 @@
    }
   ],
   "hash": "009573d47149",
+  "model": "qwen3.5:9b"
+ },
+ "laplace-expansion-adjugate-and-cramers-rule": {
+  "at": "2026-10-19T15:46:51",
+  "connections": [
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "Both rely on the alternating sum over permutations (Leibniz formula) to compute a scalar invariant from matrix entries."
+   },
+   {
+    "id": "permutations-and-sign",
+    "new": true,
+    "why": "The definition of cofactors and the Laplace expansion explicitly uses the sign of permutations, which is the core concept of this note."
+   }
+  ],
+  "hash": "f1ede82f6d3e",
   "model": "qwen3.5:9b"
  },
  "law-of-large-numbers-and-central-limit-theorem": {
@@ -1689,72 +1875,43 @@
   "hash": "8a3386f781f2",
   "model": "qwen3.5:9b"
  },
- "linear-functionals-dual-spaces": {
-  "at": "2026-10-19T13:44:17",
+ "linear-independence": {
+  "at": "2026-10-19T15:46:55",
   "connections": [
    {
-    "id": "hyperplane-separation-theorems",
+    "id": "annihilators",
     "new": true,
-    "why": "Linear functionals define hyperplanes, and the separation theorem relies on the geometric structure of these linear maps to divide convex sets."
+    "why": "Annihilators use linear independence to define the dual space and prove that a subspace is determined by its orthogonal complement."
    },
    {
-    "id": "lagrangian-and-kkt-conditions",
+    "id": "dual-spaces",
     "new": true,
-    "why": "The KKT conditions use Lagrange multipliers, which are essentially coordinates in the dual space corresponding to constraints defined by linear functionals."
+    "why": "Dual spaces rely on extending a linearly independent set of functionals to a basis, directly applying the extension lemma for independent sets."
    },
    {
-    "id": "complements-direct-sums-quotient-spaces",
+    "id": "kernel-image-and-rank-nullity",
     "new": true,
-    "why": "The kernel of a linear functional is a hyperplane (codimension 1 subspace), and quotient spaces are constructed by modding out such kernels."
+    "why": "The Rank-Nullity theorem connects the dimension of the kernel (related to dependencies) and image to the total dimension, using independence to define the rank."
    }
   ],
-  "hash": "b8013624d6ec",
+  "hash": "1bd268d2603a",
   "model": "qwen3.5:9b"
  },
- "linear-independence-basis-dimension": {
-  "at": "2026-10-19T13:44:20",
-  "connections": [
-   {
-    "id": "inclusion-exclusion",
-    "new": true,
-    "why": "The principle of inclusion-exclusion provides the combinatorial counting logic that underpins the algebraic definition of dimension via linear independence, as both deal with structuring a set (vectors or events) by removing redundancies (dependencies or overlaps)."
-   }
-  ],
-  "hash": "8ed52fc7b4ef",
-  "model": "qwen3.5:9b"
- },
- "linear-maps-and-rank-nullity": {
-  "at": "2026-10-19T13:44:24",
-  "connections": [
-   {
-    "id": "determinants-multilinear-forms-and-orientation",
-    "new": true,
-    "why": "Determinants provide the algebraic tool to compute the dimension of the image (rank) and characterize invertibility, which is central to the Rank-Nullity theorem."
-   },
-   {
-    "id": "banach-fp-thm",
-    "new": true,
-    "why": "Both concepts rely on mapping properties between spaces (linear maps vs. contractions) where understanding the structure of the map's action (image/kernel) is fundamental to proving existence/uniqueness results."
-   }
-  ],
-  "hash": "5e181dd51557",
-  "model": "qwen3.5:9b"
- },
- "linear-maps-inverses-and-matrices": {
-  "at": "2026-10-19T13:44:28",
+ "linear-maps": {
+  "at": "2026-10-19T15:46:59",
   "connections": [
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "Both characterize the existence of a unique two-sided inverse in an associative algebra (linear maps vs. continuous functions on compact convex sets) by linking bijectivity to the coincidence of left and right inverses."
+    "why": "The Brouwer Fixed Point Theorem is a fundamental result in topology that guarantees the existence of fixed points for continuous maps on convex sets, which contrasts with linear maps where only the zero vector is always fixed unless the map is an identity or has eigenvalue 1."
    },
    {
-    "id": "complements-direct-sums-quotient-spaces",
+    "id": "compactness",
     "new": true,
-    "why": "The non-uniqueness of one-sided inverses when dimensions differ is structurally identical to decomposing a space into a direct sum of the image and a complement (kernel), which underpins the construction of these inverses."
+    "why": "Compactness is a topological property often used to prove existence results (like in optimization or fixed-point theory) that complement the algebraic structure of linear maps, which are defined on vector spaces without requiring compactness."
    }
   ],
-  "hash": "9c0c7ede2a52",
+  "hash": "acd2bb13c66a",
   "model": "qwen3.5:9b"
  },
  "linear-programs": {
@@ -1823,6 +1980,28 @@
    }
   ],
   "hash": "dd561ddfaeb5",
+  "model": "qwen3.5:9b"
+ },
+ "matrix-of-a-linear-map": {
+  "at": "2026-10-19T15:47:03",
+  "connections": [
+   {
+    "id": "cayley-hamilton-theorem",
+    "new": true,
+    "why": "The Cayley-Hamilton theorem states that a matrix satisfies its own characteristic equation, which is a fundamental property derived from the algebraic structure of matrices representing linear maps."
+   },
+   {
+    "id": "determinant-volume-and-orientation",
+    "new": true,
+    "why": "The determinant of the matrix of a linear map represents the scaling factor of volume (or orientation) under the transformation, directly linking the abstract map to geometric properties."
+   },
+   {
+    "id": "eigenvalues-and-eigenvectors",
+    "new": true,
+    "why": "Eigenvalues and eigenvectors are intrinsic properties of the linear map that remain invariant under change of basis, providing a canonical way to analyze the matrix representation."
+   }
+  ],
+  "hash": "fa49ac3a9d5a",
   "model": "qwen3.5:9b"
  },
  "maximum-likelihood-estimation": {
@@ -1971,6 +2150,23 @@
   "hash": "2822cd347226",
   "model": "qwen3.5:9b"
  },
+ "minimal-polynomial": {
+  "at": "2026-10-19T15:47:07",
+  "connections": [
+   {
+    "id": "annihilators",
+    "new": true,
+    "why": "The minimal polynomial is the unique monic generator of the ideal of all annihilating polynomials, making it a specific instance of the general concept of an annihilator in module theory."
+   },
+   {
+    "id": "quotient-spaces",
+    "new": true,
+    "why": "The quotient space $V / \text{ker}(m_A)$ relates to the structure of the operator defined by the minimal polynomial, and the minimal polynomial's degree corresponds to the dimension of the cyclic subspace generating the whole space."
+   }
+  ],
+  "hash": "1c89f369a9c7",
+  "model": "qwen3.5:9b"
+ },
  "moment-generating-functions": {
   "at": "2026-10-19T13:45:15",
   "connections": [
@@ -2020,6 +2216,18 @@
    }
   ],
   "hash": "37fcc364a233",
+  "model": "qwen3.5:9b"
+ },
+ "multilinear-and-alternating-forms": {
+  "at": "2026-10-19T15:47:10",
+  "connections": [
+   {
+    "id": "permutations-and-sign",
+    "new": true,
+    "why": "The alternating property (vanishing on repeated arguments) implies that swapping two inputs reverses the sign, which is the precise definition of the 'sign' used in the Permutations and Sign note."
+   }
+  ],
+  "hash": "6fb9606cf97a",
   "model": "qwen3.5:9b"
  },
  "multinomial-distribution": {
@@ -2311,6 +2519,23 @@
   "hash": "f7df7d93cd27",
   "model": "qwen3.5:9b"
  },
+ "permutations-and-sign": {
+  "at": "2026-10-19T15:47:13",
+  "connections": [
+   {
+    "id": "multilinear-and-alternating-forms",
+    "new": true,
+    "why": "The sign of a permutation is the precise scalar factor required to define alternating (antisymmetric) multilinear forms, which vanish whenever two arguments are equal."
+   },
+   {
+    "id": "determinant-volume-and-orientation",
+    "new": true,
+    "why": "The determinant is defined as a sum over all permutations weighted by their sign; this note provides the definition and properties of that weight function."
+   }
+  ],
+  "hash": "48a41d70f431",
+  "model": "qwen3.5:9b"
+ },
  "poisson-distribution": {
   "at": "2026-10-19T13:46:24",
   "connections": [
@@ -2353,6 +2578,18 @@
    }
   ],
   "hash": "5fbcec9b584c",
+  "model": "qwen3.5:9b"
+ },
+ "polynomial-division-algorithm": {
+  "at": "2026-10-19T15:47:15",
+  "connections": [
+   {
+    "id": "binomial-theorem",
+    "new": true,
+    "why": "The division algorithm's proof relies on subtracting multiples to cancel the leading term, which is the algebraic mechanism behind the recursive structure of the Binomial Theorem."
+   }
+  ],
+  "hash": "d92823301546",
   "model": "qwen3.5:9b"
  },
  "power-law-distribution": {
@@ -2577,6 +2814,28 @@
   "hash": "c7c229871ca9",
   "model": "qwen3.5:9b"
  },
+ "quotient-spaces": {
+  "at": "2026-10-19T15:47:20",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Both concepts describe a 'reduction' or 'collapse' of structure to a simpler form, where quotient spaces collapse a subspace to a point and compactness often arises from collapsing open covers or using the finite intersection property on closed sets."
+   },
+   {
+    "id": "continuity-topology",
+    "new": true,
+    "why": "The quotient map $\text{V} \to \text{V}/\text{W}$ is a canonical example of a continuous surjection that induces a specific topology (the quotient topology), directly linking linear algebra quotients to the general topological definition."
+   },
+   {
+    "id": "relative-topology-inheritance",
+    "new": true,
+    "why": "Quotient spaces are defined by identifying points, which creates a new topology where open sets are those whose preimages are open in the original space, mirroring how relative topology restricts open sets to a subspace."
+   }
+  ],
+  "hash": "a4a1798bb1d9",
+  "model": "qwen3.5:9b"
+ },
  "random-variables": {
   "at": "2026-10-19T13:47:10",
   "connections": [
@@ -2609,6 +2868,18 @@
    }
   ],
   "hash": "c1e8a28cbe75",
+  "model": "qwen3.5:9b"
+ },
+ "rings-and-polynomial-rings": {
+  "at": "2026-10-19T15:47:23",
+  "connections": [
+   {
+    "id": "permutations-and-sign",
+    "new": true,
+    "why": "The polynomial ring over a non-commutative ring (like matrices) requires careful handling of coefficient order during multiplication, which is the same algebraic constraint that defines the sign of a permutation in the definition of the determinant."
+   }
+  ],
+  "hash": "da35b44bf793",
   "model": "qwen3.5:9b"
  },
  "risk-measures": {
@@ -3001,6 +3272,23 @@
   "hash": "1e69128c7df7",
   "model": "qwen3.5:9b"
  },
+ "subspaces": {
+  "at": "2026-10-19T15:47:27",
+  "connections": [
+   {
+    "id": "kernel-image-and-rank-nullity",
+    "new": true,
+    "why": "The sum of subspaces and the span are foundational for defining the kernel (intersection with {0}) and image (sum of spans of basis vectors) in the Rank-Nullity Theorem."
+   },
+   {
+    "id": "direct-sums-and-complements",
+    "new": false,
+    "why": "The concept of a direct sum is a specific case of subspace sums where the intersection is trivial, making this note a prerequisite for understanding complements."
+   }
+  ],
+  "hash": "bf1089f8a50b",
+  "model": "qwen3.5:9b"
+ },
  "supremum-infimum": {
   "at": "2026-10-19T13:48:29",
   "connections": [
@@ -3045,6 +3333,18 @@
   "hash": "20d8f5a9b6b7",
   "model": "qwen3.5:9b"
  },
+ "trace": {
+  "at": "2026-10-19T15:47:30",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "The trace is linear while Jensen's inequality governs convex functions; together they underpin proofs involving expectations of matrix-valued random variables."
+   }
+  ],
+  "hash": "5d3d982c4c24",
+  "model": "qwen3.5:9b"
+ },
  "transformations-and-convolutions": {
   "at": "2026-10-19T13:48:35",
   "connections": [
@@ -3077,6 +3377,28 @@
    }
   ],
   "hash": "69244ad6fc53",
+  "model": "qwen3.5:9b"
+ },
+ "triangularization-theorem": {
+  "at": "2026-10-19T15:47:34",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both results rely on the existence of invariant subspaces (fixed points for Brouwer, eigenvectors for triangularization) to construct a basis or map that simplifies the operator's action."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof of triangularization implicitly uses the fact that over an algebraically closed field, eigenvalues exist, which is analogous to how compactness ensures fixed points in topological settings like Brouwer's theorem."
+   },
+   {
+    "id": "annihilators",
+    "new": true,
+    "why": "The concept of invariant subspaces in triangularization is deeply connected to annihilators, as both deal with the structure of linear operators and their kernels."
+   }
+  ],
+  "hash": "13cbd25d2a75",
   "model": "qwen3.5:9b"
  },
  "uniform-continuity": {
@@ -3192,25 +3514,25 @@
   "model": "qwen3.5:9b"
  },
  "vector-spaces": {
-  "at": "2026-10-19T13:49:02",
+  "at": "2026-10-19T15:47:38",
   "connections": [
    {
     "id": "normed-vector-spaces",
     "new": true,
-    "why": "This note extends the vector space concept by adding a norm to define distance and convergence, bridging linear algebra with metric topology."
+    "why": "It generalizes vector spaces by adding a norm (length) to the structure, bridging linear algebra with metric space topology."
    },
    {
     "id": "function-spaces",
     "new": true,
-    "why": "This note treats functions as vectors, demonstrating that the abstract vector space structure applies directly to spaces of continuous or differentiable functions."
+    "why": "It provides the crucial example of infinite-dimensional vector spaces where functions replace finite lists, essential for analysis and ODEs."
    },
    {
     "id": "ode-intro",
     "new": false,
-    "why": "This note illustrates a deep analogy where the solution set of a homogeneous linear ODE forms a finite-dimensional vector space, connecting differential equations to linear algebra."
+    "why": "It connects the abstract definition to a concrete application: the solution set of a homogeneous linear differential equation forms a vector space."
    }
   ],
-  "hash": "8e0c79599d79",
+  "hash": "5604af7bdb83",
   "model": "qwen3.5:9b"
  },
  "zero-squeeze-in-R": {

@@ -66,6 +66,28 @@
    "summary": "Derives the multinomial coefficient formula by dividing total permutations by factorials of identical item counts.",
    "tagged_at": "2026-10-19T12:56:35"
   },
+  "affine-subspaces": {
+   "chars": 7961,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "5fd1be2330b5",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines affine subspaces, proves properties of intersections and parallelism, and illustrates stability via Python plots.",
+   "tagged_at": "2026-10-19T15:44:50"
+  },
+  "annihilators": {
+   "chars": 7967,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "9f7c42d48ef6",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines subspace annihilators in dual spaces and proves dimension formulas and the double-annihilator theorem.",
+   "tagged_at": "2026-10-19T15:44:52"
+  },
   "arch-and-garch-models": {
    "chars": 5061,
    "domain": "Time Series Analysis",
@@ -164,6 +186,17 @@
    "needs_review": false,
    "summary": "This note states and proves the Banach Contraction Principle for complete metric spaces, establishing existence, uniqueness, and constructive convergence of fixed points.",
    "tagged_at": "2026-10-19T12:56:50"
+  },
+  "basis-and-dimension": {
+   "chars": 11545,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "7af33da32f22",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines basis and dimension, proves the exchange lemma and that all bases have equal cardinality.",
+   "tagged_at": "2026-10-19T15:44:54"
   },
   "bernoulli-and-binomial-distributions": {
    "chars": 7775,
@@ -330,27 +363,27 @@
    "summary": "Defines set cardinality, proves R is uncountable via diagonalization, and states the Schröder-Bernstein theorem.",
    "tagged_at": "2026-10-19T12:57:14"
   },
-  "cayley-hamilton-theorem-and-matrix-polynomials": {
-   "chars": 25524,
+  "cayley-hamilton-theorem": {
+   "chars": 15572,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "20a93049498d",
+   "hash": "59bc0d6c7c6a",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves the Cayley-Hamilton theorem via diagonalizable cases and algebraic foundations in rings.",
-   "tagged_at": "2026-10-19T12:57:16"
+   "summary": "This note proves the Cayley-Hamilton theorem via diagonalization, adjugate identities, and a density argument over complex numbers.",
+   "tagged_at": "2026-10-19T15:44:57"
   },
-  "change-of-basis-matrix-inversion-and-trace": {
-   "chars": 31405,
+  "change-of-basis-and-similarity": {
+   "chars": 10760,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "ff2d85859fb3",
+   "hash": "f332db79c094",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines change-of-basis matrices, proves similarity invariants like determinant and trace, and derives geometric volume scaling properties.",
-   "tagged_at": "2026-10-19T12:57:18"
+   "summary": "Defines transition matrices and proves the similarity transformation law for linear operators under basis changes.",
+   "tagged_at": "2026-10-19T15:44:59"
   },
   "chebyshevs-inequality": {
    "chars": 5989,
@@ -395,17 +428,6 @@
    "needs_review": false,
    "summary": "Defines compactness in metric spaces and proves Heine-Borel, Bolzano-Weierstrass, and necessary conditions.",
    "tagged_at": "2026-10-19T12:57:25"
-  },
-  "complements-direct-sums-quotient-spaces": {
-   "chars": 18977,
-   "domain": "Linear Algebra & Matrix Theory",
-   "hash": "03d6f97fba51",
-   "kind": "theorem",
-   "level": 3,
-   "model": "qwen3.5:9b",
-   "needs_review": false,
-   "summary": "Defines complements, direct sums, and quotient spaces with proofs of dimension formulas for subspace sums.",
-   "tagged_at": "2026-10-19T12:57:27"
   },
   "completeness": {
    "chars": 6306,
@@ -506,6 +528,17 @@
    "summary": "Defines convex sets/functions and proves the equivalence between convex hulls defined via intersections and convex combinations.",
    "tagged_at": "2026-10-19T12:57:41"
   },
+  "coordinates-and-isomorphism-with-Kn": {
+   "chars": 9502,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "28476abaf00b",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines vector space coordinates via bases and proves that all finite-dimensional spaces of the same dimension are linearly isomorphic.",
+   "tagged_at": "2026-10-19T15:45:01"
+  },
   "coupon-collector-problem": {
    "chars": 5730,
    "domain": "Probability Foundations & Combinatorics",
@@ -605,38 +638,82 @@
    "summary": "Proves that rationals and irrationals are dense in reals using the Archimedean property and Dedekind cuts.",
    "tagged_at": "2026-10-19T12:58:08"
   },
-  "determinants-multilinear-forms-and-orientation": {
-   "chars": 20645,
+  "determinant": {
+   "chars": 13099,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "485cfdd5baea",
+   "hash": "33f9d3c99d26",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines multilinear and alternating forms, proves uniqueness of the determinant via Leibniz formula, and establishes multiplicativity.",
-   "tagged_at": "2026-10-19T12:58:10"
+   "summary": "Defines the determinant via alternating multilinear forms and proves its existence, uniqueness, multiplicativity, and invertibility criteria.",
+   "tagged_at": "2026-10-19T15:45:06"
   },
-  "dual-maps-transposes-and-affine-subspaces": {
-   "chars": 19251,
+  "determinant-volume-and-orientation": {
+   "chars": 9571,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "964214d220a2",
+   "hash": "99401378dd00",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines affine subspaces and dual maps, proving that the matrix of a dual map is the transpose and deriving related algebraic properties.",
-   "tagged_at": "2026-10-19T12:58:12"
+   "summary": "Explains how determinants represent volume scaling and orientation changes for linear maps via parallelotopes.",
+   "tagged_at": "2026-10-19T15:45:03"
   },
-  "eigenvalues-eigenvectors-and-diagonalization": {
-   "chars": 25296,
+  "diagonalization": {
+   "chars": 12275,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "97bc7893ec03",
+   "hash": "ce96df562954",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines eigenvalues/eigenvectors, proves their independence for distinct roots, and establishes conditions for diagonalization.",
-   "tagged_at": "2026-10-19T12:58:14"
+   "summary": "Defines diagonalizable operators, proves equivalence criteria using algebraic and geometric multiplicities, and applies the technique to compute matrix powers and Fibonacci numbers.",
+   "tagged_at": "2026-10-19T15:45:08"
+  },
+  "direct-sums-and-complements": {
+   "chars": 14050,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "e326fb127cdf",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines direct sums and complements in vector spaces, proving the dimension formula for subspace sums.",
+   "tagged_at": "2026-10-19T15:45:10"
+  },
+  "dual-maps-and-transpose": {
+   "chars": 9817,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "9b0367961106",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines dual maps and proves that their matrix is the transpose, establishing row/column rank equality.",
+   "tagged_at": "2026-10-19T15:45:12"
+  },
+  "dual-spaces": {
+   "chars": 11641,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "0b1c8e96c254",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines linear functionals and dual spaces, proves the dual basis theorem, and establishes the natural isomorphism between a finite-dimensional space and its double dual.",
+   "tagged_at": "2026-10-19T15:45:15"
+  },
+  "eigenvalues-and-eigenvectors": {
+   "chars": 15644,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "f16b001b063b",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines eigenvalues/eigenvectors, proves their independence, and derives trace/determinant formulas via the characteristic polynomial.",
+   "tagged_at": "2026-10-19T15:45:17"
   },
   "equicontinuity-Arzela-Ascoli-Thm": {
    "chars": 13774,
@@ -957,6 +1034,17 @@
    "summary": "Defines difference equations, explains order and linearity with examples, and distinguishes homogeneous from non-homogeneous forms.",
    "tagged_at": "2026-10-19T12:59:02"
   },
+  "invertible-linear-maps": {
+   "chars": 7298,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "357516312099",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines one-sided inverses for linear maps and proves that injectivity implies left invertibility while surjectivity implies right invertibility.",
+   "tagged_at": "2026-10-19T15:45:19"
+  },
   "jensens-inequality": {
    "chars": 5575,
    "domain": "Probability Foundations & Combinatorics",
@@ -979,6 +1067,17 @@
    "summary": "Defines joint, marginal, and conditional distributions for discrete and continuous variables, including independence criteria and specific derived distributions.",
    "tagged_at": "2026-10-19T12:59:05"
   },
+  "kernel-image-and-rank-nullity": {
+   "chars": 11821,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "4390a171ef11",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines kernel and image for linear maps, proves the rank-nullity theorem via isomorphism, and applies it to polynomial interpolation.",
+   "tagged_at": "2026-10-19T15:45:21"
+  },
   "lagrangian-and-kkt-conditions": {
    "chars": 20566,
    "domain": "Optimization & Linear Programming",
@@ -989,6 +1088,17 @@
    "needs_review": false,
    "summary": "Derives Lagrangian and KKT first-order conditions for constrained optimization with equality and inequality constraints.",
    "tagged_at": "2026-10-19T12:59:08"
+  },
+  "laplace-expansion-adjugate-and-cramers-rule": {
+   "chars": 8572,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "f1ede82f6d3e",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Covers minors, cofactors, Laplace expansion, the adjugate matrix identity, and Cramer's rule for solving linear systems.",
+   "tagged_at": "2026-10-19T15:45:23"
   },
   "law-of-large-numbers-and-central-limit-theorem": {
    "chars": 19388,
@@ -1056,49 +1166,27 @@
    "summary": "Defines limit inferior/superior for sequences, proves their monotonicity, and establishes the equivalence of convergence with equal liminf/limsup.",
    "tagged_at": "2026-10-19T12:59:19"
   },
-  "linear-functionals-dual-spaces": {
-   "chars": 17288,
+  "linear-independence": {
+   "chars": 7055,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "b8013624d6ec",
-   "kind": "theorem",
-   "level": 3,
+   "hash": "1bd268d2603a",
+   "kind": "definition",
+   "level": 2,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines linear functionals and dual spaces, proves the dual basis theorem, and applies these concepts to polynomial quadrature.",
-   "tagged_at": "2026-10-19T12:59:21"
+   "summary": "Defines linear independence, proves redundancy equivalence, lists basic properties, and gives examples in R3 and function spaces.",
+   "tagged_at": "2026-10-19T15:45:25"
   },
-  "linear-independence-basis-dimension": {
-   "chars": 22885,
+  "linear-maps": {
+   "chars": 10861,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "8ed52fc7b4ef",
-   "kind": "theorem",
+   "hash": "acd2bb13c66a",
+   "kind": "definition",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines linear independence, span, and basis; proves the Exchange Lemma to establish that all bases of a finite-dimensional vector space have the same cardinality.",
-   "tagged_at": "2026-10-19T12:59:24"
-  },
-  "linear-maps-and-rank-nullity": {
-   "chars": 34125,
-   "domain": "Linear Algebra & Matrix Theory",
-   "hash": "5e181dd51557",
-   "kind": "theorem",
-   "level": 3,
-   "model": "qwen3.5:9b",
-   "needs_review": false,
-   "summary": "Defines linear maps between vector spaces and proves the Rank-Nullity Theorem and subspace preservation properties.",
-   "tagged_at": "2026-10-19T12:59:26"
-  },
-  "linear-maps-inverses-and-matrices": {
-   "chars": 19431,
-   "domain": "Linear Algebra & Matrix Theory",
-   "hash": "9c0c7ede2a52",
-   "kind": "theorem",
-   "level": 3,
-   "model": "qwen3.5:9b",
-   "needs_review": false,
-   "summary": "Characterizes injectivity/surjectivity via one-sided inverses and proves the vector space structure of linear maps.",
-   "tagged_at": "2026-10-19T12:59:28"
+   "summary": "Defines linear maps, proves they preserve combinations and map subspaces to subspaces, and establishes the vector space structure of linear operators.",
+   "tagged_at": "2026-10-19T15:45:27"
   },
   "linear-programs": {
    "chars": 3550,
@@ -1143,6 +1231,17 @@
    "needs_review": false,
    "summary": "Derives portfolio return/variance formulas and proves the hyperbolic efficient frontier for a two-asset Markowitz model.",
    "tagged_at": "2026-10-19T12:59:35"
+  },
+  "matrix-of-a-linear-map": {
+   "chars": 10497,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "fa49ac3a9d5a",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines matrix representation of linear maps and proves that composition corresponds to matrix multiplication.",
+   "tagged_at": "2026-10-19T15:45:29"
   },
   "maximum-likelihood-estimation": {
    "chars": 9753,
@@ -1232,6 +1331,17 @@
    "summary": "Defines metric spaces, lists standard metrics in R^n, and proves the reverse triangle inequality.",
    "tagged_at": "2026-10-19T12:59:50"
   },
+  "minimal-polynomial": {
+   "chars": 6792,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "1c89f369a9c7",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the minimal polynomial of a matrix, proves its properties, and relates it to diagonalizability.",
+   "tagged_at": "2026-10-19T15:45:31"
+  },
   "moment-generating-functions": {
    "chars": 5866,
    "domain": "Probability Foundations & Combinatorics",
@@ -1264,6 +1374,17 @@
    "needs_review": false,
    "summary": "Defines MA(q) models, proves their stationarity, explains ACF cutoff properties, and covers MLE estimation techniques.",
    "tagged_at": "2026-10-19T12:59:55"
+  },
+  "multilinear-and-alternating-forms": {
+   "chars": 7657,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "6fb9606cf97a",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines multilinear and alternating maps, proves sign-reversal properties, and connects them to determinants.",
+   "tagged_at": "2026-10-19T15:45:32"
   },
   "multinomial-distribution": {
    "chars": 5001,
@@ -1452,6 +1573,17 @@
    "summary": "Derives the double factorial identity for pairing items using two distinct combinatorial counting arguments.",
    "tagged_at": "2026-10-19T13:00:22"
   },
+  "permutations-and-sign": {
+   "chars": 8554,
+   "domain": "Algebraic Structures & Polynomial Rings",
+   "hash": "48a41d70f431",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines permutations and transpositions, proves decomposition into swaps, and establishes the sign via inversions.",
+   "tagged_at": "2026-10-19T15:45:34"
+  },
   "poisson-distribution": {
    "chars": 9131,
    "domain": "Random Variables & Distributions",
@@ -1473,6 +1605,17 @@
    "needs_review": false,
    "summary": "Defines polyhedra and proves the Minkowski-Weyl theorem linking H- and V-representations while analyzing representation complexity.",
    "tagged_at": "2026-10-19T13:00:26"
+  },
+  "polynomial-division-algorithm": {
+   "chars": 6873,
+   "domain": "Algebraic Structures & Polynomial Rings",
+   "hash": "d92823301546",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the polynomial division algorithm with remainder over commutative rings and derives the factor theorem.",
+   "tagged_at": "2026-10-19T15:45:36"
   },
   "power-law-distribution": {
    "chars": 12263,
@@ -1595,6 +1738,17 @@
    "summary": "Proves the Least Upper Bound property and triangle inequality for real numbers constructed via Dedekind cuts.",
    "tagged_at": "2026-10-19T13:00:50"
   },
+  "quotient-spaces": {
+   "chars": 9654,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "a4a1798bb1d9",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines quotient spaces via equivalence relations and cosets, proving the dimension formula dim(V/W) = dim V - dim W.",
+   "tagged_at": "2026-10-19T15:45:38"
+  },
   "random-variables": {
    "chars": 2202,
    "domain": "Probability Foundations & Combinatorics",
@@ -1616,6 +1770,17 @@
    "needs_review": false,
    "summary": "Explains how open and closed sets are inherited by metric subspaces via intersection with parent space sets.",
    "tagged_at": "2026-10-19T13:00:52"
+  },
+  "rings-and-polynomial-rings": {
+   "chars": 9001,
+   "domain": "Algebraic Structures & Polynomial Rings",
+   "hash": "da35b44bf793",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines rings and polynomial rings, proving degree properties and the commutation lemma for evaluation.",
+   "tagged_at": "2026-10-19T15:45:40"
   },
   "risk-measures": {
    "chars": 15006,
@@ -1837,6 +2002,17 @@
    "summary": "Defines the Student's t-distribution, derives its PDF via change of variables, and proves key properties like symmetry and asymptotic normality.",
    "tagged_at": "2026-10-19T13:01:24"
   },
+  "subspaces": {
+   "chars": 14852,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "bf1089f8a50b",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines subspaces, sums, spans, and linear combinations with elementary proofs and examples.",
+   "tagged_at": "2026-10-19T15:45:43"
+  },
   "supremum-infimum": {
    "chars": 3046,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -1859,6 +2035,17 @@
    "summary": "Defines asset price returns (simple, log, annualized) and portfolio statistics with elementary proofs.",
    "tagged_at": "2026-10-19T13:01:27"
   },
+  "trace": {
+   "chars": 6697,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "5d3d982c4c24",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines matrix trace, proves linearity and cyclic property tr(AB)=tr(BA), and shows no finite matrices satisfy AB-BA=I.",
+   "tagged_at": "2026-10-19T15:45:44"
+  },
   "transformations-and-convolutions": {
    "chars": 16265,
    "domain": "Probability Foundations & Combinatorics",
@@ -1880,6 +2067,17 @@
    "needs_review": false,
    "summary": "Proves the standard and reverse triangle inequalities for real numbers using basic absolute value properties.",
    "tagged_at": "2026-10-19T13:01:31"
+  },
+  "triangularization-theorem": {
+   "chars": 9941,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "13cbd25d2a75",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that every linear operator over an algebraically closed field has an upper triangular matrix representation via induction on dimension.",
+   "tagged_at": "2026-10-19T15:45:46"
   },
   "uniform-continuity": {
    "chars": 4541,
@@ -1948,15 +2146,15 @@
    "tagged_at": "2026-10-19T13:01:39"
   },
   "vector-spaces": {
-   "chars": 12456,
+   "chars": 11917,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "8e0c79599d79",
+   "hash": "5604af7bdb83",
    "kind": "definition",
    "level": 2,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines vector spaces, subspaces, and isomorphisms with axioms, examples like function spaces, and closure proofs.",
-   "tagged_at": "2026-10-19T13:01:41"
+   "summary": "Defines vector spaces via axioms, derives basic arithmetic rules, and provides examples like coordinate spaces, functions, matrices, polynomials, and ODE solutions.",
+   "tagged_at": "2026-10-19T15:45:49"
   },
   "zero-squeeze-in-R": {
    "chars": 3120,
@@ -2249,10 +2447,10 @@
   "pset-linear-algebra-01#1": {
    "difficulty": 2,
    "est_minutes": 15,
-   "hash": "d4d762412346",
+   "hash": "a6655e2f34b0",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:50",
+   "tagged_at": "2026-10-19T15:44:41",
    "tests": [
     "vector-spaces",
     "field"
@@ -2262,62 +2460,63 @@
   "pset-linear-algebra-01#2": {
    "difficulty": 2,
    "est_minutes": 15,
-   "hash": "a8ed350dddcd",
+   "hash": "1b2819501b4a",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:51",
+   "tagged_at": "2026-10-19T15:44:42",
    "tests": [
-    "vector-spaces"
+    "subspaces"
    ],
    "type": "proof"
   },
   "pset-linear-algebra-01#3": {
    "difficulty": 2,
-   "est_minutes": 10,
-   "hash": "39ebe4b90510",
+   "est_minutes": 15,
+   "hash": "62dfdbd406bb",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:52",
+   "tagged_at": "2026-10-19T15:44:44",
    "tests": [
-    "linear-independence-basis-dimension"
+    "linear-independence"
    ],
    "type": "proof"
   },
   "pset-linear-algebra-01#4": {
    "difficulty": 2,
    "est_minutes": 5,
-   "hash": "8f6e0a781ee7",
+   "hash": "1737e27c72fe",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:53",
+   "tagged_at": "2026-10-19T15:44:46",
    "tests": [
     "vector-spaces",
-    "linear-maps-inverses-and-matrices"
+    "subspaces"
    ],
    "type": "proof"
   },
   "pset-linear-algebra-01#5": {
    "difficulty": 2,
    "est_minutes": 15,
-   "hash": "bb3f7c5f9562",
+   "hash": "b06dd75b29f4",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:54",
+   "tagged_at": "2026-10-19T15:44:47",
    "tests": [
-    "linear-independence-basis-dimension"
+    "basis-and-dimension",
+    "subspaces"
    ],
    "type": "proof"
   },
   "pset-linear-algebra-01#6": {
    "difficulty": 2,
-   "est_minutes": 5,
-   "hash": "4d7d6e89d48a",
+   "est_minutes": 10,
+   "hash": "e042a9341883",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-19T12:55:54",
+   "tagged_at": "2026-10-19T15:44:48",
    "tests": [
     "vector-spaces",
-    "linear-independence-basis-dimension"
+    "basis-and-dimension"
    ],
    "type": "proof"
   },

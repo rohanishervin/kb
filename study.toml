@@ -28,7 +28,11 @@ implicit_grade = 2         # a problem written up in a pset counts as one attemp
 target = 0.8               # coverage you want on every note (0-1)
 
 [study]
-exclude_prefixes = ["cs-"]   # notes left out of tagging and the Study Focus tab (case studies)
+exclude_prefixes = ["cs-", "index-"]   # left out of tagging, connections and the Study Focus tab
+                                       # (cs- = case studies, index- = reading-order pages)
+
+[graph]
+exclude_prefixes = ["index-"]   # left out of the knowledge graph
 
 [goals]
 # Domain weights for prioritising. Unlisted domains = 1.0. Examples:

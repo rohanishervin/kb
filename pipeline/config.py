@@ -13,13 +13,19 @@ DEFAULTS = {
                 "retag_on_growth": True, "growth_ratio": 1.6},
     "practice": {"implicit_grade": 2, "target": 0.8},
     "goals": {},
-    "study": {"exclude_prefixes": ["cs-"]},
+    "study": {"exclude_prefixes": ["cs-", "index-"]},
+    "graph": {"exclude_prefixes": ["index-"]},
 }
 
 
 def excluded(nid, cfg):
     """Notes left out of tagging and the Study Focus tab (e.g. cs- case studies)."""
     return any(nid.startswith(p) for p in cfg.get("study", {}).get("exclude_prefixes", []))
+
+
+def graph_excluded(nid, cfg):
+    """Notebooks left out of the knowledge graph (e.g. index- reading-order pages)."""
+    return any(nid.startswith(p) for p in cfg.get("graph", {}).get("exclude_prefixes", []))
 
 
 def load(path="study.toml"):

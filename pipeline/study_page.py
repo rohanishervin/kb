@@ -64,7 +64,9 @@ def _avg(xs):
 def _health(notes, rows):
     """Maintenance list for a long-lived KB (deterministic, no LLM)."""
     import re
-    linked_to = {t for n in notes.values() for t in n.links}
+    from .config import excluded
+    cfg_ex = {"study": {"exclude_prefixes": ["index-", "cs-"]}}
+    linked_to = {t for n in notes.values() if not excluded(n.id, cfg_ex) for t in n.links}
     return {
         "broken": [[n.id, b] for n in notes.values() for b in n.broken][:60],
         "orphans": sorted(nid for nid, r in rows.items() if not notes[nid].links and nid not in linked_to),

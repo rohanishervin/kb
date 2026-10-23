@@ -248,20 +248,20 @@
   "model": "qwen3.5:9b"
  },
  "basis-and-dimension": {
-  "at": "2026-10-19T15:46:00",
+  "at": "2026-10-23T13:23:35",
   "connections": [
    {
-    "id": "hyperplane-separation-theorems",
+    "id": "cardinality",
     "new": true,
-    "why": "The dimension of a subspace (like a hyperplane) is intrinsically linked to the ability to separate it from other points using linear functionals, a core concept in separation theorems."
+    "why": "The concept of 'dimension' as the unique size of any basis is the linear algebraic analogue of 'cardinality' for infinite sets, where both serve as the fundamental invariant measuring the 'size' of a structure (finite vector space vs. set)."
    },
    {
-    "id": "convex-sets-and-convex-hulls",
+    "id": "quotient-spaces",
     "new": true,
-    "why": "The convex hull of a set of vectors relates directly to their span; understanding dimension (span) is necessary to characterize the geometry of convex sets defined by linear constraints."
+    "why": "The dimension formula $\text{dim}(V/W) = \text{dim}(V) - \text{dim}(W)$ relies directly on the definition of basis and dimension to establish that quotient spaces are finite-dimensional with a specific dimension."
    }
   ],
-  "hash": "7af33da32f22",
+  "hash": "2483b4418dcb",
   "model": "qwen3.5:9b"
  },
  "bernoulli-and-binomial-distributions": {

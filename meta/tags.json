@@ -188,15 +188,15 @@
    "tagged_at": "2026-10-19T12:56:50"
   },
   "basis-and-dimension": {
-   "chars": 11545,
+   "chars": 14896,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "7af33da32f22",
+   "hash": "2483b4418dcb",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines basis and dimension, proves the exchange lemma and that all bases have equal cardinality.",
-   "tagged_at": "2026-10-19T15:44:54"
+   "summary": "Defines basis and dimension, proves the exchange lemma, and establishes that all bases of a finite-dimensional space have equal cardinality.",
+   "tagged_at": "2026-10-23T13:23:31"
   },
   "bernoulli-and-binomial-distributions": {
    "chars": 7775,

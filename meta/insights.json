@@ -1,8 +1,19 @@
 {
  "Borel-sets-and-measurability": {
-  "at": "2026-10-19T13:31:01",
-  "connections": [],
-  "hash": "87ede77273e6",
+  "at": "2026-10-23T19:37:20",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof that every open set in R^n is a countable union of boxes relies on the fact that open sets are sigma-compact, a property deeply connected to the concept of compactness and its preservation under countable unions."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "The text explicitly mentions that Borel sets appear in approximation theorems (like continuity of measure), where one approximates measurable sets by open or closed sets using countable operations."
+   }
+  ],
+  "hash": "1ba102e259c8",
   "model": "qwen3.5:9b"
  },
  "Cauchy-Schwarz-inequality": {
@@ -56,20 +67,20 @@
   "model": "qwen3.5:9b"
  },
  "Lebesgue-measure": {
-  "at": "2026-10-19T13:31:43",
+  "at": "2026-10-23T19:37:24",
   "connections": [
    {
-    "id": "lebesgue-outer-measure",
-    "new": false,
-    "why": "This note relies directly on the definition and properties of the outer measure introduced in that note to establish countable additivity."
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "The Dominated Convergence Theorem and Monotone Convergence Theorem are the primary tools used to extend integration from simple functions (defined via Lebesgue measure) to general measurable functions, making them essential for utilizing the measure space constructed here."
    },
    {
-    "id": "measure-properties-and-completion",
-    "new": false,
-    "why": "The concept of a 'complete measure space' defined here is the specific application of the general properties discussed in that note regarding subsets of null sets."
+    "id": "lp-spaces",
+    "new": true,
+    "why": "Lebesgue measure is the foundational concept required to define the $L^p$ spaces ($L^1$, $L^\text{infty}$, etc.), which are function spaces of integrable functions with respect to this specific measure."
    }
   ],
-  "hash": "c1dc97f0eeae",
+  "hash": "c7c22fd8232d",
   "model": "qwen3.5:9b"
  },
  "adjusting-for-overcounting": {
@@ -126,6 +137,18 @@
    }
   ],
   "hash": "9f7c42d48ef6",
+  "model": "qwen3.5:9b"
+ },
+ "approximation-of-measurable-sets": {
+  "at": "2026-10-23T19:37:27",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof that every measurable set is contained in a Gδ set with arbitrarily small difference relies on taking a countable intersection of open sets, which connects to the topological concept of compactness and the fact that closed subsets of ℝⁿ are compact."
+   }
+  ],
+  "hash": "b8a0cda416f1",
   "model": "qwen3.5:9b"
  },
  "arch-and-garch-models": {
@@ -391,20 +414,25 @@
   "model": "qwen3.5:9b"
  },
  "borel-cantelli-lemma": {
-  "at": "2026-10-19T13:39:47",
+  "at": "2026-10-23T19:37:32",
   "connections": [
-   {
-    "id": "continuity-of-measure",
-    "new": false,
-    "why": "The proof explicitly relies on the continuity of measure from above to evaluate the limit of the decreasing sequence of sets."
-   },
    {
     "id": "fatous-lemma-and-convergence-theorems",
     "new": true,
-    "why": "Fatou's Lemma provides the converse direction (or a related condition) for events occurring infinitely often, completing the logical picture with Borel-Cantelli."
+    "why": "Both are fundamental convergence theorems in measure theory that relate series summability to the behavior of limits (Fatou's Lemma handles non-negative functions via liminf, while Borel-Cantelli handles sets via limsup)."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The first part of the Strong Law of Large Numbers is often proved using the Borel-Cantelli Lemma to show that the sample average converges almost surely."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": false,
+    "why": "The proof of the Borel-Cantelli Lemma relies on expressing the set of points in infinitely many $E_k$ as a limit superior ($\bigcap_n \bigcup_{k=n}^\bullet E_k$), which is defined using the same $\text{limsup}$ concept found in real analysis."
    }
   ],
-  "hash": "04779ecc4842",
+  "hash": "8f8cdd228b65",
   "model": "qwen3.5:9b"
  },
  "bose-einstein-problem": {
@@ -737,15 +765,20 @@
   "model": "qwen3.5:9b"
  },
  "continuity-of-measure": {
-  "at": "2026-10-19T13:41:02",
+  "at": "2026-10-23T19:37:35",
   "connections": [
    {
-    "id": "compactness",
+    "id": "limits-of-measurable-functions",
     "new": true,
-    "why": "Continuity from above relies on the finiteness condition, which is a specific instance of the general topological principle that compact sets (or finite measure spaces in this context) allow limits to commute with intersections."
+    "why": "Both rely on decomposing a sequence of sets or functions into disjoint 'rings' (or differences) to apply countable additivity and pass the limit inside."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "Continuity from above is the set-theoretic analogue of the dominated convergence theorem, where the finiteness condition $\nu(B_1)<\fty$ mirrors the domination $|f_n|\to 0$ in measure."
    }
   ],
-  "hash": "a60a320678f0",
+  "hash": "026ceb88355c",
   "model": "qwen3.5:9b"
  },
  "continuity-topology": {
@@ -1077,6 +1110,28 @@
   "hash": "4ef265b1761b",
   "model": "qwen3.5:9b"
  },
+ "dominated-convergence-theorem": {
+  "at": "2026-10-23T19:37:40",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Both are fundamental limit theorems in measure theory that justify interchanging limits and integrals (or expectations), with Jensen's inequality serving as a convexity-based counterpart to the domination-based DCT."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Dominated Convergence Theorem is the rigorous measure-theoretic engine used to prove the Law of Large Numbers and the Central Limit Theorem by allowing the interchange of limit and expectation operations."
+   },
+   {
+    "id": "importance-sampling",
+    "new": true,
+    "why": "Importance sampling relies on the same principle as DCT—bounding a sequence of functions (or estimators) by an integrable envelope—to ensure that the estimator converges to the true integral without requiring monotonicity."
+   }
+  ],
+  "hash": "85a8c351e1fc",
+  "model": "qwen3.5:9b"
+ },
  "dual-maps-and-transpose": {
   "at": "2026-10-19T15:46:30",
   "connections": [
@@ -1290,25 +1345,15 @@
   "model": "qwen3.5:9b"
  },
  "fatous-lemma-and-convergence-theorems": {
-  "at": "2026-10-19T13:42:27",
+  "at": "2026-10-23T19:37:43",
   "connections": [
    {
     "id": "borel-cantelli-lemma",
     "new": true,
-    "why": "Both are fundamental limit theorems in measure theory that relate the convergence of a sequence of functions/events to properties of their integrals or probabilities, often serving as the basis for proving other probabilistic results."
-   },
-   {
-    "id": "chebyshevs-inequality",
-    "new": true,
-    "why": "Chebyshev's inequality is a direct consequence of Markov's inequality, which itself is a special case of Fatou's Lemma when applied to non-negative random variables (integrals)."
-   },
-   {
-    "id": "law-of-large-numbers-and-central-limit-theorem",
-    "new": true,
-    "why": "The Law of Large Numbers and Central Limit Theorem are the ultimate applications of convergence theorems like Fatou's and Dominated Convergence, which justify interchanging limits and expectations."
+    "why": "Both Fatou's Lemma and the Borel–Cantelli Lemma are fundamental limit theorems in probability/measure theory that relate pointwise convergence (or limsup of events) to integral/convergence properties, often sharing similar proof techniques involving monotonicity and continuity of measure."
    }
   ],
-  "hash": "73348e0888cc",
+  "hash": "a71d455c2747",
   "model": "qwen3.5:9b"
  },
  "field": {
@@ -1666,6 +1711,28 @@
   "hash": "1f983cd42c88",
   "model": "qwen3.5:9b"
  },
+ "integrable-functions": {
+  "at": "2026-10-23T19:37:47",
+  "connections": [
+   {
+    "id": "simple-functions",
+    "new": true,
+    "why": "Simple functions are the fundamental building blocks used to define the integral for nonnegative measurable functions, which is the prerequisite step before defining integrable functions via positive and negative parts."
+   },
+   {
+    "id": "lebesgue-integral",
+    "new": false,
+    "why": "This note defines the integral for nonnegative measurable functions using simple function approximations, which is the essential first step required to construct the general integral for signed functions discussed in this note."
+   },
+   {
+    "id": "measurable-functions",
+    "new": false,
+    "why": "The definition of integrable functions explicitly requires the function to be measurable, and the decomposition into positive and negative parts relies on properties established for measurable functions."
+   }
+  ],
+  "hash": "de32ea72c988",
+  "model": "qwen3.5:9b"
+ },
  "intro-to-difference-equations": {
   "at": "2026-10-19T13:43:36",
   "connections": [
@@ -1825,59 +1892,64 @@
   "model": "qwen3.5:9b"
  },
  "lebesgue-integral": {
-  "at": "2026-10-19T13:44:01",
+  "at": "2026-10-23T19:37:53",
   "connections": [
    {
-    "id": "jensens-inequality",
+    "id": "dominated-convergence-theorem",
     "new": true,
-    "why": "Jensen's Inequality is a direct consequence of the convexity properties inherent in the Lebesgue integral definition and is used to prove many convergence results related to it."
+    "why": "The definition of the Lebesgue integral via simple functions is the essential first step required to prove the Dominated Convergence Theorem, which generalizes limit operations under integration."
    },
    {
     "id": "law-of-large-numbers-and-central-limit-theorem",
     "new": true,
-    "why": "The Law of Large Numbers and Central Limit Theorem are often proved using tools from measure theory (like the Lebesgue integral) and describe the asymptotic behavior of expectations defined via integration."
+    "why": "The Law of Large Numbers and Central Limit Theorem rely on expectation (the integral) and variance; their proofs often use convergence theorems for integrals like Monotone Convergence or Dominated Convergence, which are built upon the definition provided here."
    }
   ],
-  "hash": "e46e748e0945",
+  "hash": "7c48836d3aa5",
   "model": "qwen3.5:9b"
  },
  "lebesgue-outer-measure": {
-  "at": "2026-10-19T13:44:05",
+  "at": "2026-10-23T19:37:57",
   "connections": [
    {
     "id": "borel-cantelli-lemma",
     "new": true,
-    "why": "Both rely on the fundamental distinction between countable and uncountable sets to establish properties of measure, specifically that countable sets have outer measure zero which is a prerequisite for the Borel-Cantelli lemma's handling of null sets."
+    "why": "Both rely on the same geometric intuition that countable unions of sets with small total measure (or probability) can be controlled, specifically using series convergence to bound a union."
    },
    {
     "id": "fatous-lemma-and-convergence-theorems",
     "new": true,
-    "why": "Fatou's Lemma is proven using the definition of outer measure and the properties of measurable sets, making it a direct application of the concepts introduced in Lebesgue Outer Measure."
+    "why": "The outer measure construction is the foundational step required to define the integral and prove Fatou's Lemma, which itself relies on the properties of measurable sets derived from outer measure."
    },
    {
-    "id": "measure-properties-and-completion",
+    "id": "dominated-convergence-theorem",
     "new": true,
-    "why": "This note discusses the completion of a measure space, which directly relies on the concept of outer measure to define null sets and extend the sigma-algebra."
+    "why": "The dominated convergence theorem is a central result in integration theory that depends on the rigorous definition of Lebesgue measure and the class of measurable sets established via outer measure."
    }
   ],
-  "hash": "4e9de4b06a17",
+  "hash": "93586ba498c0",
   "model": "qwen3.5:9b"
  },
  "limits-of-measurable-functions": {
-  "at": "2026-10-19T13:44:09",
+  "at": "2026-10-23T19:38:01",
   "connections": [
    {
     "id": "limsup-liminf",
-    "new": true,
-    "why": "The proof that pointwise limits preserve measurability relies on expressing the limit condition using countable intersections and unions, which directly utilizes the definitions of limit superior and limit inferior to handle cases where convergence is not immediate."
+    "new": false,
+    "why": "The limit superior and limit inferior are defined using countable suprema and infima of measurable functions, which preserves measurability as shown in this note."
    },
    {
-    "id": "continuity-of-measure",
-    "new": true,
-    "why": "Both concepts address how measure-theoretic properties behave under limiting processes: this note focuses on the measurability of the limit function itself, while continuity of measure addresses the behavior of the measure of sets under limits."
+    "id": "measurable-functions",
+    "new": false,
+    "why": "This note relies on the definition of measurable functions (preimages of intervals being measurable) to prove that limits of such functions remain measurable."
+   },
+   {
+    "id": "simple-functions",
+    "new": false,
+    "why": "Simple functions are used to approximate general measurable functions, and their pointwise limits form the basis for defining the integral of measurable functions."
    }
   ],
-  "hash": "f9dbc2ac2cc3",
+  "hash": "bb098e612542",
   "model": "qwen3.5:9b"
  },
  "limsup-liminf": {
@@ -1970,6 +2042,28 @@
   "hash": "4d9bf6a1feb1",
   "model": "qwen3.5:9b"
  },
+ "lp-spaces": {
+  "at": "2026-10-23T19:38:06",
+  "connections": [
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's inequality provides a fundamental bound on tail probabilities using $L^p$ norms (specifically $L^2$), directly connecting the geometry of function spaces to probability concentration."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality is the convexity principle that underpins the definition and properties of $L^p$ norms, particularly relating expectations of powers to powers of expectations."
+   },
+   {
+    "id": "markovs-inequality",
+    "new": true,
+    "why": "Markov's inequality is a direct consequence of the definition of the $L^1$ norm (expectation), serving as a bridge between the size of a function in $L^1$ and the probability of it being large."
+   }
+  ],
+  "hash": "85f5b4961321",
+  "model": "qwen3.5:9b"
+ },
  "markovs-inequality": {
   "at": "2026-10-19T13:44:37",
   "connections": [
@@ -2039,103 +2133,98 @@
   "model": "qwen3.5:9b"
  },
  "measurable-functions": {
-  "at": "2026-10-19T13:44:50",
+  "at": "2026-10-23T19:38:10",
   "connections": [
    {
-    "id": "chebyshevs-inequality",
-    "new": true,
-    "why": "Both rely on the preimage characterization of measurability to establish that the set where a function exceeds a threshold belongs to the sigma-algebra, allowing the derivation of tail probability bounds."
+    "id": "continuity-topology",
+    "new": false,
+    "why": "Continuous functions are a specific subclass of measurable functions because the preimage of an open set under a continuous map is open, and all open sets in ℝ are Lebesgue measurable."
    },
    {
-    "id": "jensens-inequality",
-    "new": true,
-    "why": "The proof technique for Jensen's inequality relies on the convexity of functions and the definition of measurable functions to pull back level sets into the domain sigma-algebra."
+    "id": "limits-of-measurable-functions",
+    "new": false,
+    "why": "The class of measurable functions is closed under pointwise limits (e.g., sequences), which is a fundamental property distinguishing them from Riemann integrable functions and is essential for defining the Lebesgue integral."
    },
    {
-    "id": "law-of-large-numbers-and-central-limit-theorem",
-    "new": true,
-    "why": "Convergence theorems (LLN/CLT) are built upon the stability of integrals under limits, which fundamentally requires the limit function to be measurable."
+    "id": "simple-functions",
+    "new": false,
+    "why": "Simple functions are constructed as finite linear combinations of characteristic functions of measurable sets, serving as the building blocks to approximate general measurable functions in the definition of the Lebesgue integral."
    }
   ],
-  "hash": "66d0fd5fa7ee",
+  "hash": "3ea4c0774a58",
   "model": "qwen3.5:9b"
  },
  "measurable-sets": {
-  "at": "2026-10-19T13:44:56",
+  "at": "2026-10-23T19:38:18",
   "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both rely on the Carathéodory definition to identify sets where outer measure behaves additively, allowing one to prove that 'bad' sets (like those in the Borel–Cantelli lemma's exceptional set) are negligible or measurable."
+   },
    {
     "id": "continuity-of-measure",
     "new": true,
-    "why": "The proof technique of splitting a set and bounding the sum of measures (using subadditivity) is the foundational mechanism behind proving that measure is continuous from above and below."
+    "why": "The continuity properties of Lebesgue measure on a σ-algebra depend fundamentally on the fact that measurable sets form an algebra and satisfy countable additivity, which is established by this definition."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma and related convergence theorems are proved using the decomposition of functions into simple parts over measurable sets, a process grounded in the Carathéodory criterion for measurability."
    }
   ],
-  "hash": "2b76c5b54d6f",
+  "hash": "d2e2dde79711",
   "model": "qwen3.5:9b"
  },
  "measurable-sets-algebra": {
-  "at": "2026-10-19T13:44:54",
+  "at": "2026-10-23T19:38:13",
   "connections": [
    {
-    "id": "continuity-of-measure",
+    "id": "inclusion-exclusion",
     "new": true,
-    "why": "The closure properties of measurable sets (algebra) are the foundational prerequisite for proving that measure is continuous from below and above."
-   },
+    "why": "The proof of finite unions relies on partitioning a set into disjoint pieces, which is the geometric/combinatorial foundation for the Principle of Inclusion-Exclusion."
+   }
+  ],
+  "hash": "5be32a29378a",
+  "model": "qwen3.5:9b"
+ },
+ "measure": {
+  "at": "2026-10-23T19:38:26",
+  "connections": [
    {
-    "id": "sigma-algebra",
+    "id": "dominated-convergence-theorem",
     "new": true,
-    "why": "The algebra of measurable sets is the specific structure required to define a sigma-algebra, which generalizes this concept to allow countable unions."
+    "why": "The dominated convergence theorem is a cornerstone result in measure theory whose proof relies fundamentally on the properties of measures (countable additivity and monotonicity) defined in this note."
    },
    {
     "id": "lebesgue-integral",
     "new": true,
-    "why": "The definition of the Lebesgue integral relies on the collection of measurable sets forming an algebra (or sigma-algebra) to ensure the function is well-defined."
+    "why": "The Lebesgue integral is constructed by integrating simple functions, which are linear combinations of indicator functions of measurable sets—the very objects defined and manipulated in this note."
    }
   ],
-  "hash": "99c9c3c17561",
-  "model": "qwen3.5:9b"
- },
- "measure": {
-  "at": "2026-10-19T13:45:05",
-  "connections": [
-   {
-    "id": "compactness",
-    "new": true,
-    "why": "Compactness provides the topological condition that ensures sequences have convergent subsequences, which is often used alongside measure theory to prove properties like tightness or the existence of limits in function spaces."
-   },
-   {
-    "id": "continuity-of-measure",
-    "new": false,
-    "why": "This note describes a fundamental property of measures (continuity from above/below) that relies on the countable additivity defined in 'measure' and is essential for proving convergence theorems like Fatou's Lemma."
-   },
-   {
-    "id": "measurable-functions",
-    "new": false,
-    "why": "The definition of a measure space requires a sigma-algebra to define measurable functions, making this note a prerequisite for understanding how measures integrate over function spaces."
-   }
-  ],
-  "hash": "f8bcb17294d6",
+  "hash": "a665b587ca9d",
   "model": "qwen3.5:9b"
  },
  "measure-properties-and-completion": {
-  "at": "2026-10-19T13:45:00",
+  "at": "2026-10-23T19:38:21",
   "connections": [
+   {
+    "id": "completeness",
+    "new": true,
+    "why": "It defines the topological notion of completeness (Cauchy sequences converging), which is the metric-space analogue to the measure-theoretic concept of a complete measure space where subsets of null sets are measurable."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The proof of the Dominated Convergence Theorem explicitly requires the measure space to be complete, making this note a necessary technical prerequisite for that major convergence result."
+   },
    {
     "id": "fatous-lemma-and-convergence-theorems",
     "new": true,
-    "why": "Fatou's Lemma is a fundamental result in measure theory that relies on the properties of measures (specifically non-negativity and countable additivity) to establish convergence theorems for sequences of measurable functions."
-   },
-   {
-    "id": "borel-cantelli-lemma",
-    "new": true,
-    "why": "The Borel-Cantelli Lemma connects the measure-theoretic concept of sets with finite or infinite measure (specifically the sum of measures) to probabilistic events occurring infinitely often, bridging measure theory and probability foundations."
-   },
-   {
-    "id": "continuity-of-measure",
-    "new": false,
-    "why": "Continuity of measure describes how a measure behaves under limits of increasing or decreasing sequences of sets, which is a direct property derived from the definition of a measure space and its $\tau$-additivity."
+    "why": "Fatou's Lemma and related convergence theorems are foundational results in integration theory that rely on the properties of measurable functions and sets discussed here."
    }
   ],
-  "hash": "e06f914acc7f",
+  "hash": "5565c534fa25",
   "model": "qwen3.5:9b"
  },
  "metric-space-topology": {
@@ -2919,6 +3008,23 @@
   "hash": "c1e8a28cbe75",
   "model": "qwen3.5:9b"
  },
+ "riemann-and-lebesgue-integrals": {
+  "at": "2026-10-23T19:38:29",
+  "connections": [
+   {
+    "id": "uniform-continuity",
+    "new": false,
+    "why": "The proof relies on uniform continuity to show that the difference between Riemann sums and simple function integrals vanishes as the partition mesh shrinks."
+   },
+   {
+    "id": "simple-functions",
+    "new": false,
+    "why": "Both concepts use step-like functions (simple functions) as the fundamental building blocks for defining integration, bridging the gap between discrete partitions and measurable sets."
+   }
+  ],
+  "hash": "5448325d4d8c",
+  "model": "qwen3.5:9b"
+ },
  "rings-and-polynomial-rings": {
   "at": "2026-10-19T15:47:23",
   "connections": [
@@ -3105,47 +3211,64 @@
   "model": "qwen3.5:9b"
  },
  "sigma-algebra": {
-  "at": "2026-10-19T13:47:51",
+  "at": "2026-10-23T19:38:36",
   "connections": [
    {
     "id": "borel-cantelli-lemma",
     "new": true,
-    "why": "The Borel-Cantelli Lemma relies on the existence of a $\text{Borel } \text{ }\text{-algebra}$ to define events as measurable sets, allowing the application of measure theory to tail events."
+    "why": "The Borel–Cantelli Lemma relies on the σ-algebra structure to define events like 'infinitely many occurrences' as countable unions of intersections, ensuring these sets are measurable."
    },
    {
     "id": "continuity-of-measure",
     "new": true,
-    "why": "Continuity of measure (both from below and above) is a fundamental property derived directly from the closure properties of $\text{ }\text{-algebras}$ under countable unions and intersections."
+    "why": "Continuity of measure (for increasing/decreasing sequences) is a direct consequence of the closure properties of σ-algebras under countable unions and intersections."
    },
    {
-    "id": "measurable-sets-algebra",
+    "id": "dominated-convergence-theorem",
     "new": true,
-    "why": "The algebra of measurable sets describes the specific structure of a $\text{ }\text{-algebra}$, detailing how it forms a ring closed under symmetric differences and intersections."
+    "why": "The Dominated Convergence Theorem requires the sequence of functions to be measurable, which is defined relative to the underlying σ-algebra."
    }
   ],
-  "hash": "9eaf8cee33a6",
+  "hash": "4cc645aa5e82",
   "model": "qwen3.5:9b"
  },
  "sigma-algebra-of-measurable-sets": {
-  "at": "2026-10-19T13:47:47",
+  "at": "2026-10-23T19:38:32",
   "connections": [
-   {
-    "id": "continuity-of-measure",
-    "new": true,
-    "why": "This note relies on the limit argument (Step 4) to pass from finite unions to countable unions, which is the core mechanism behind proving continuity of measure."
-   },
    {
     "id": "borel-cantelli-lemma",
     "new": true,
-    "why": "The proof explicitly constructs a disjoint sequence and uses subadditivity to handle the infinite union, techniques fundamental to establishing the Borel-Cantelli Lemma regarding almost sure convergence."
+    "why": "Both rely on the σ-algebra structure to handle countable unions and intersections of events, though Borel–Cantelli uses it for limit theorems rather than defining measurability."
    },
    {
-    "id": "fatous-lemma-and-convergence-theorems",
+    "id": "continuity-of-measure",
     "new": true,
-    "why": "The transition from finite additivity to countable additivity via limits is the foundational step required to prove Fatou's Lemma and other major convergence theorems in measure theory."
+    "why": "The proof of continuity of measure often assumes the underlying collection is a σ-algebra (or at least closed under countable unions) to decompose sets into disjoint pieces, mirroring the disjointification trick used here."
    }
   ],
-  "hash": "098789460b1c",
+  "hash": "3fde2f7214b5",
+  "model": "qwen3.5:9b"
+ },
+ "simple-functions": {
+  "at": "2026-10-23T19:38:41",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both rely on measure-theoretic properties to handle limits of events/sequences, though Borel-Cantelli uses independence or convergence of sums rather than simple function approximation."
+   },
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "The proof that the integral is well-defined relies on finite additivity and the ability to manipulate measurable sets, which is the same foundational machinery used to prove continuity of measure."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "Simple functions are the building blocks used to define the Lebesgue integral, which is then extended via monotone/dominated convergence theorems to general measurable functions."
+   }
+  ],
+  "hash": "88a07f2242a8",
   "model": "qwen3.5:9b"
  },
  "simpsons-paradox": {
@@ -3582,6 +3705,28 @@
    }
   ],
   "hash": "5604af7bdb83",
+  "model": "qwen3.5:9b"
+ },
+ "why-measure-theory": {
+  "at": "2026-10-23T19:38:45",
+  "connections": [
+   {
+    "id": "continuity-of-measure",
+    "new": true,
+    "why": "Countable additivity implies that the measure of a set is the limit of the measures of its approximating sets (continuity from below), which is the precise mathematical mechanism used to compute areas via limits of rectangles."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "The requirement for countable additivity in measure theory is what allows Fatou's Lemma and the Dominated Convergence Theorem to hold, bridging the gap between set-theoretic measures and function-space integrals."
+   },
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Measure theory provides the rigorous definition of the Lebesgue integral by extending the domain of integration from Riemann's intervals to measurable sets defined via countable additivity."
+   }
+  ],
+  "hash": "6b0f85bc0cb4",
   "model": "qwen3.5:9b"
  },
  "zero-squeeze-in-R": {

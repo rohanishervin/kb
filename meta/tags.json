@@ -1,15 +1,15 @@
 {
  "notes": {
   "Borel-sets-and-measurability": {
-   "chars": 4942,
+   "chars": 9438,
    "domain": "Measure Theory & Integration",
-   "hash": "87ede77273e6",
+   "hash": "1ba102e259c8",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that all Borel sets are Lebesgue measurable by showing open and closed sets are measurable and using sigma-algebra properties.",
-   "tagged_at": "2026-10-19T12:56:27"
+   "summary": "This note proves that intervals, open/closed sets, and Borel sets are Lebesgue measurable using sigma-algebra properties.",
+   "tagged_at": "2026-10-23T19:36:36"
   },
   "Cauchy-Schwarz-inequality": {
    "chars": 3959,
@@ -45,15 +45,15 @@
    "tagged_at": "2026-10-19T12:56:32"
   },
   "Lebesgue-measure": {
-   "chars": 3632,
+   "chars": 8471,
    "domain": "Measure Theory & Integration",
-   "hash": "c1dc97f0eeae",
+   "hash": "c7c22fd8232d",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines Lebesgue measure on measurable sets, proves countable additivity, and establishes the complete measure space structure.",
-   "tagged_at": "2026-10-19T12:56:34"
+   "summary": "Defines Lebesgue measure via Carathéodory's construction, proving countable additivity, completeness, and translation invariance.",
+   "tagged_at": "2026-10-23T19:36:37"
   },
   "adjusting-for-overcounting": {
    "chars": 4072,
@@ -87,6 +87,17 @@
    "needs_review": false,
    "summary": "Defines subspace annihilators in dual spaces and proves dimension formulas and the double-annihilator theorem.",
    "tagged_at": "2026-10-19T15:44:52"
+  },
+  "approximation-of-measurable-sets": {
+   "chars": 11744,
+   "domain": "Measure Theory & Integration",
+   "hash": "b8a0cda416f1",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that Lebesgue measurable sets are characterized by approximation from outside by open sets and inside by closed sets.",
+   "tagged_at": "2026-10-23T19:36:39"
   },
   "arch-and-garch-models": {
    "chars": 5061,
@@ -287,15 +298,15 @@
    "tagged_at": "2026-10-19T12:57:03"
   },
   "borel-cantelli-lemma": {
-   "chars": 4550,
-   "domain": "Measure Theory & Integration",
-   "hash": "04779ecc4842",
+   "chars": 7129,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "8f8cdd228b65",
    "kind": "theorem",
-   "level": 3,
+   "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "This note states and proves the first Borel-Cantelli Lemma using measure theory concepts like countable subadditivity and continuity from above.",
-   "tagged_at": "2026-10-19T12:57:04"
+   "summary": "The note proves the Borel-Cantelli lemma using measure theory continuity and illustrates convergence vs divergence with simulations.",
+   "tagged_at": "2026-10-23T19:36:41"
   },
   "bose-einstein-problem": {
    "chars": 5715,
@@ -485,15 +496,15 @@
    "tagged_at": "2026-10-19T12:57:35"
   },
   "continuity-of-measure": {
-   "chars": 7574,
+   "chars": 7736,
    "domain": "Measure Theory & Integration",
-   "hash": "a60a320678f0",
+   "hash": "026ceb88355c",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "This note proves continuity of measure for ascending and descending sequences, explaining the necessary finiteness condition.",
-   "tagged_at": "2026-10-19T12:57:37"
+   "summary": "Proves continuity of measure for increasing and decreasing sequences of sets using countable additivity.",
+   "tagged_at": "2026-10-23T19:36:43"
   },
   "continuity-topology": {
    "chars": 6937,
@@ -682,6 +693,17 @@
    "summary": "Defines direct sums and complements in vector spaces with proofs of existence, dimension formulas, and criteria for uniqueness.",
    "tagged_at": "2026-10-19T16:15:07"
   },
+  "dominated-convergence-theorem": {
+   "chars": 8539,
+   "domain": "Measure Theory & Integration",
+   "hash": "85a8c351e1fc",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note explains Lebesgue's Dominated Convergence Theorem, its proof using Fatou's Lemma, and examples of dominated versus non-dominated sequences.",
+   "tagged_at": "2026-10-23T19:36:45"
+  },
   "dual-maps-and-transpose": {
    "chars": 9817,
    "domain": "Linear Algebra & Matrix Theory",
@@ -804,15 +826,15 @@
    "tagged_at": "2026-10-19T12:58:26"
   },
   "fatous-lemma-and-convergence-theorems": {
-   "chars": 9062,
+   "chars": 19436,
    "domain": "Measure Theory & Integration",
-   "hash": "73348e0888cc",
+   "hash": "a71d455c2747",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "This note covers Fatou's Lemma, the Monotone Convergence Theorem, and the Lebesgue Dominated Convergence Theorem with full proofs.",
-   "tagged_at": "2026-10-19T12:58:28"
+   "summary": "Presents Fatou's Lemma and the Monotone Convergence Theorem with proofs showing how to interchange limits and integrals.",
+   "tagged_at": "2026-10-23T19:36:47"
   },
   "field": {
    "chars": 3251,
@@ -1034,6 +1056,17 @@
    "summary": "Defines indicator random variables and uses linearity of expectation to solve counting problems like the matching problem.",
    "tagged_at": "2026-10-19T12:59:00"
   },
+  "integrable-functions": {
+   "chars": 15897,
+   "domain": "Measure Theory & Integration",
+   "hash": "de32ea72c988",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines integrable functions via positive/negative parts, proves linearity and monotonicity, and shows the indefinite integral of a nonnegative function defines a new measure.",
+   "tagged_at": "2026-10-23T19:36:49"
+  },
   "intro-to-difference-equations": {
    "chars": 2149,
    "domain": "Difference Equations & Dynamics",
@@ -1134,37 +1167,37 @@
    "tagged_at": "2026-10-19T12:59:11"
   },
   "lebesgue-integral": {
-   "chars": 50324,
+   "chars": 15550,
    "domain": "Measure Theory & Integration",
-   "hash": "e46e748e0945",
-   "kind": "technique",
-   "level": 4,
-   "model": "qwen3.5:9b",
-   "needs_review": false,
-   "summary": "Defines the Lebesgue integral via simple functions and proves its well-definedness using measure space properties.",
-   "tagged_at": "2026-10-19T12:59:13"
-  },
-  "lebesgue-outer-measure": {
-   "chars": 18891,
-   "domain": "Measure Theory & Integration",
-   "hash": "4e9de4b06a17",
-   "kind": "technique",
-   "level": 4,
-   "model": "qwen3.5:9b",
-   "needs_review": false,
-   "summary": "Defines Lebesgue outer measure, proves monotonicity and that countable sets have measure zero, and establishes volume agreement on boxes using compactness.",
-   "tagged_at": "2026-10-19T12:59:15"
-  },
-  "limits-of-measurable-functions": {
-   "chars": 18738,
-   "domain": "Measure Theory & Integration",
-   "hash": "f9dbc2ac2cc3",
+   "hash": "7c48836d3aa5",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that pointwise and almost everywhere limits of measurable functions remain measurable in complete measure spaces.",
-   "tagged_at": "2026-10-19T12:59:18"
+   "summary": "Defines the Lebesgue integral for nonnegative functions via simple function approximation and proves key properties like monotonicity, Chebyshev's inequality, and finiteness conditions.",
+   "tagged_at": "2026-10-23T19:36:51"
+  },
+  "lebesgue-outer-measure": {
+   "chars": 26017,
+   "domain": "Measure Theory & Integration",
+   "hash": "93586ba498c0",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Lebesgue outer measure on R^n via countable covers by open boxes and proves basic properties like monotonicity and that countable sets have measure zero.",
+   "tagged_at": "2026-10-23T19:36:53"
+  },
+  "limits-of-measurable-functions": {
+   "chars": 10950,
+   "domain": "Measure Theory & Integration",
+   "hash": "bb098e612542",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that pointwise limits, suprema, and infima of measurable functions are measurable, including almost everywhere convergence in complete spaces.",
+   "tagged_at": "2026-10-23T19:36:55"
   },
   "limsup-liminf": {
    "chars": 4085,
@@ -1221,6 +1254,17 @@
    "summary": "Defines continuous expectation and the Law of the Unconscious Statistician (LOTUS) for transforming random variables.",
    "tagged_at": "2026-10-19T12:59:31"
   },
+  "lp-spaces": {
+   "chars": 8194,
+   "domain": "Measure Theory & Integration",
+   "hash": "85f5b4961321",
+   "kind": "model",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines L^p spaces as normed vector spaces of equivalence classes under almost-everywhere equality and discusses convergence differences.",
+   "tagged_at": "2026-10-23T19:36:57"
+  },
   "markovs-inequality": {
    "chars": 6006,
    "domain": "Probability Foundations & Combinatorics",
@@ -1266,59 +1310,59 @@
    "tagged_at": "2026-10-19T12:59:37"
   },
   "measurable-functions": {
-   "chars": 21661,
+   "chars": 17779,
    "domain": "Measure Theory & Integration",
-   "hash": "66d0fd5fa7ee",
-   "kind": "definition",
-   "level": 3,
+   "hash": "3ea4c0774a58",
+   "kind": "theorem",
+   "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines measurable functions via preimages of rays, proves equivalent characterizations, and connects measurability to topology.",
-   "tagged_at": "2026-10-19T12:59:39"
+   "summary": "Defines measurable functions on measure spaces, proves closure under algebraic operations, and establishes equivalence of level-set conditions.",
+   "tagged_at": "2026-10-23T19:36:59"
   },
   "measurable-sets": {
-   "chars": 6624,
+   "chars": 11502,
    "domain": "Measure Theory & Integration",
-   "hash": "2b76c5b54d6f",
-   "kind": "theorem",
-   "level": 4,
+   "hash": "d2e2dde79711",
+   "kind": "definition",
+   "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines Lebesgue measurable sets via Carathéodory's criterion and proves an infinite ray is measurable.",
-   "tagged_at": "2026-10-19T12:59:43"
+   "summary": "Defines Lebesgue measurable sets via Carathéodory's criterion and proves basic properties like complementation and null-set inclusion.",
+   "tagged_at": "2026-10-23T19:37:03"
   },
   "measurable-sets-algebra": {
-   "chars": 5874,
+   "chars": 7766,
    "domain": "Measure Theory & Integration",
-   "hash": "99c9c3c17561",
+   "hash": "5be32a29378a",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that the collection of Carathéodory-measurable sets forms an algebra by demonstrating closure under complements and finite unions.",
-   "tagged_at": "2026-10-19T12:59:41"
+   "summary": "Proves Lebesgue measurable sets form an algebra and outer measure is finitely additive on disjoint measurable sets.",
+   "tagged_at": "2026-10-23T19:37:01"
   },
   "measure": {
-   "chars": 18705,
+   "chars": 17318,
    "domain": "Measure Theory & Integration",
-   "hash": "f8bcb17294d6",
+   "hash": "a665b587ca9d",
    "kind": "definition",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines measure spaces, sigma-algebras, and common measures like Lebesgue and Dirac, with proofs of basic properties.",
-   "tagged_at": "2026-10-19T12:59:46"
+   "summary": "Defines measurable spaces and measures, provides examples like Dirac measure, and proves basic properties including finite additivity, monotonicity, excision, and inclusion-exclusion.",
+   "tagged_at": "2026-10-23T19:37:07"
   },
   "measure-properties-and-completion": {
-   "chars": 4666,
+   "chars": 9130,
    "domain": "Measure Theory & Integration",
-   "hash": "e06f914acc7f",
-   "kind": "definition",
+   "hash": "5565c534fa25",
+   "kind": "technique",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines finite, sigma-finite, and probability measures; explains completeness of measure spaces and the construction of their completion.",
-   "tagged_at": "2026-10-19T12:59:44"
+   "summary": "Defines almost everywhere, sigma-finite measures, and completeness, then proves the completion of a measure space.",
+   "tagged_at": "2026-10-23T19:37:05"
   },
   "metric-space-topology": {
    "chars": 16122,
@@ -1793,6 +1837,17 @@
    "summary": "Explains how open and closed sets are inherited by metric subspaces via intersection with parent space sets.",
    "tagged_at": "2026-10-19T13:00:52"
   },
+  "riemann-and-lebesgue-integrals": {
+   "chars": 8534,
+   "domain": "Measure Theory & Integration",
+   "hash": "5448325d4d8c",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves equality of Riemann and Lebesgue integrals for continuous functions using uniform continuity and simple function bounds.",
+   "tagged_at": "2026-10-23T19:37:08"
+  },
   "rings-and-polynomial-rings": {
    "chars": 9001,
    "domain": "Algebraic Structures & Polynomial Rings",
@@ -1904,26 +1959,37 @@
    "tagged_at": "2026-10-19T13:01:06"
   },
   "sigma-algebra": {
-   "chars": 6978,
+   "chars": 16039,
    "domain": "Measure Theory & Integration",
-   "hash": "9eaf8cee33a6",
+   "hash": "4cc645aa5e82",
    "kind": "definition",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines sigma-algebras, proves closure under countable intersections, and demonstrates that singletons and closed intervals are Borel sets.",
-   "tagged_at": "2026-10-19T13:01:09"
+   "summary": "Defines σ-algebras, proves closure properties, and characterizes the Borel σ-algebra on ℝ using open intervals.",
+   "tagged_at": "2026-10-23T19:37:12"
   },
   "sigma-algebra-of-measurable-sets": {
-   "chars": 7522,
+   "chars": 6421,
    "domain": "Measure Theory & Integration",
-   "hash": "098789460b1c",
+   "hash": "3fde2f7214b5",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that measurable sets form a sigma-algebra by using disjointification to handle countable unions in Lebesgue measure.",
+   "tagged_at": "2026-10-23T19:37:10"
+  },
+  "simple-functions": {
+   "chars": 13842,
+   "domain": "Measure Theory & Integration",
+   "hash": "88a07f2242a8",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that Lebesgue measurable sets form a sigma-algebra by showing closure under countable unions via disjointification and Carathéodory's criterion.",
-   "tagged_at": "2026-10-19T13:01:08"
+   "summary": "Defines simple functions and their integral in measure theory, proving well-definedness and linearity properties.",
+   "tagged_at": "2026-10-23T19:37:14"
   },
   "simpsons-paradox": {
    "chars": 5634,
@@ -2177,6 +2243,17 @@
    "needs_review": false,
    "summary": "Defines vector spaces via axioms, derives basic arithmetic rules, and provides examples like coordinate spaces, functions, matrices, polynomials, and ODE solutions.",
    "tagged_at": "2026-10-19T15:45:49"
+  },
+  "why-measure-theory": {
+   "chars": 11943,
+   "domain": "Measure Theory & Integration",
+   "hash": "6b0f85bc0cb4",
+   "kind": "survey",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Explains the origins of measure theory in geometry, integration, and probability, justifying countable additivity via the Banach-Tarski paradox.",
+   "tagged_at": "2026-10-23T19:37:16"
   },
   "zero-squeeze-in-R": {
    "chars": 3120,

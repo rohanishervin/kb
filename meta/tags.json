@@ -34,15 +34,15 @@
    "tagged_at": "2026-10-19T12:56:31"
   },
   "Cauchy-sequences": {
-   "chars": 6605,
+   "chars": 5944,
    "domain": "Real Analysis (Foundations & Sequences)",
-   "hash": "1fb1c63a4d75",
+   "hash": "501f1197b17f",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves that every Cauchy sequence in R converges using the Least Upper Bound property and auxiliary lemmas.",
-   "tagged_at": "2026-10-19T12:56:32"
+   "summary": "Defines Cauchy sequences, proves boundedness, and establishes the equivalence of convergence and the Cauchy condition in R using liminf.",
+   "tagged_at": "2026-10-24T16:23:53"
   },
   "Lebesgue-measure": {
    "chars": 8471,
@@ -54,6 +54,17 @@
    "needs_review": false,
    "summary": "Defines Lebesgue measure via Carathéodory's construction, proving countable additivity, completeness, and translation invariance.",
    "tagged_at": "2026-10-23T19:36:37"
+  },
+  "absolute-and-conditional-convergence": {
+   "chars": 7783,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "dab8c8bbe036",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines absolute and conditional convergence, proves the Riemann rearrangement theorem, and establishes properties of double series and Cauchy products.",
+   "tagged_at": "2026-10-24T16:23:54"
   },
   "adjusting-for-overcounting": {
    "chars": 4072,
@@ -166,15 +177,15 @@
    "tagged_at": "2026-10-19T12:56:44"
   },
   "axiom-of-completeness": {
-   "chars": 5521,
+   "chars": 9357,
    "domain": "Real Analysis (Foundations & Sequences)",
-   "hash": "d6141796f00c",
+   "hash": "7d8e83c43737",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves the Axiom of Completeness by showing Q is incomplete and deriving a specific rational approximation function.",
-   "tagged_at": "2026-10-19T12:56:46"
+   "summary": "Proves the rational numbers lack a supremum for sqrt(2) and establishes equivalence between least upper bound and decimal completeness axioms.",
+   "tagged_at": "2026-10-24T16:23:56"
   },
   "bagging-and-random-forests": {
    "chars": 16298,
@@ -263,6 +274,17 @@
    "needs_review": false,
    "summary": "Proves the hypergeometric distribution arises as a conditional binomial and converges to it as population size grows.",
    "tagged_at": "2026-10-19T12:56:58"
+  },
+  "binomial-series": {
+   "chars": 5912,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "88d14a169909",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Derives the binomial series for real exponents and proves algebraic operations on power series with applications to limits.",
+   "tagged_at": "2026-10-24T16:23:58"
   },
   "binomial-theorem": {
    "chars": 3601,
@@ -385,6 +407,17 @@
    "summary": "This note proves the Cayley-Hamilton theorem via diagonalization, adjugate identities, and a density argument over complex numbers.",
    "tagged_at": "2026-10-19T15:44:57"
   },
+  "chain-rule-and-inverse-functions": {
+   "chars": 5823,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "3c8b38fa9cfd",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the chain rule and derivative of inverse functions with error-term proofs and examples.",
+   "tagged_at": "2026-10-24T16:23:59"
+  },
   "change-of-basis-and-similarity": {
    "chars": 10760,
    "domain": "Linear Algebra & Matrix Theory",
@@ -451,16 +484,38 @@
    "summary": "Defines Cauchy sequences and complete metric spaces, proving R^m is complete and that closed subsets of complete spaces are complete.",
    "tagged_at": "2026-10-19T12:57:29"
   },
-  "composite-sequences-limit": {
-   "chars": 4520,
-   "domain": "Real Analysis (Foundations & Sequences)",
-   "hash": "3e539fe67fac",
+  "complex-affine-maps": {
+   "chars": 5087,
+   "domain": "Complex Numbers & Geometry",
+   "hash": "a1a49159999d",
    "kind": "theorem",
    "level": 2,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Presents the algebraic limit theorem for sequences with full proofs for product and quotient rules using epsilon-delta definitions.",
-   "tagged_at": "2026-10-19T12:57:30"
+   "summary": "Classifies complex affine maps as translations, rotations, or homotheties with proofs and composition rules.",
+   "tagged_at": "2026-10-24T16:24:01"
+  },
+  "complex-numbers": {
+   "chars": 10203,
+   "domain": "Complex Numbers & Geometry",
+   "hash": "a2aa65aba180",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines complex numbers as a field, proves algebraic properties like the triangle inequality, and derives De Moivre's formula and cubic solutions.",
+   "tagged_at": "2026-10-24T16:24:03"
+  },
+  "composite-sequences-limit": {
+   "chars": 3280,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "2508df4960bd",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves limit laws for sequences with explicit error bounds and applies them to recursive sequences.",
+   "tagged_at": "2026-10-24T16:24:04"
   },
   "conditional-expectation": {
    "chars": 32299,
@@ -538,6 +593,17 @@
    "needs_review": false,
    "summary": "Defines convex sets/functions and proves the equivalence between convex hulls defined via intersections and convex combinations.",
    "tagged_at": "2026-10-19T12:57:41"
+  },
+  "convexity-and-curve-sketching": {
+   "chars": 6848,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "669a87f80d31",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers convexity definitions, the second derivative test, inflection points, and curve sketching with proofs.",
+   "tagged_at": "2026-10-24T16:24:06"
   },
   "coordinates-and-isomorphism-with-Kn": {
    "chars": 9502,
@@ -649,6 +715,17 @@
    "summary": "Proves that rationals and irrationals are dense in reals using the Archimedean property and Dedekind cuts.",
    "tagged_at": "2026-10-19T12:58:08"
   },
+  "derivative": {
+   "chars": 5966,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "4b7e4e5b6b0f",
+   "kind": "definition",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the derivative via limits, proves differentiability implies continuity, and derives rules for polynomials.",
+   "tagged_at": "2026-10-24T16:24:08"
+  },
   "determinant": {
    "chars": 13099,
    "domain": "Linear Algebra & Matrix Theory",
@@ -681,6 +758,17 @@
    "needs_review": false,
    "summary": "Defines diagonalizable operators, proves equivalence criteria using algebraic and geometric multiplicities, and applies the technique to compute matrix powers and Fibonacci numbers.",
    "tagged_at": "2026-10-19T16:15:35"
+  },
+  "differentiation-rules": {
+   "chars": 3045,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "f1f39c677ffb",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the sum, product, quotient rules and derivatives of trigonometric functions with elementary proofs.",
+   "tagged_at": "2026-10-24T16:24:09"
   },
   "direct-sums-and-complements": {
    "chars": 14051,
@@ -770,16 +858,27 @@
    "summary": "Defines an event as a subset of the sample space and describes basic set operations like intersection, union, complement, and disjointness.",
    "tagged_at": "2026-10-19T12:58:19"
   },
-  "existence-of-nth-roots-in-R": {
-   "chars": 1192,
+  "existence-of-decimal-expansion-in-R": {
+   "chars": 5917,
    "domain": "Real Analysis (Foundations & Sequences)",
-   "hash": "efa2026df2c4",
+   "hash": "436042c88c54",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves existence and uniqueness of n^th roots in R using the Axiom of Completeness and continuity.",
-   "tagged_at": "2026-10-19T12:58:21"
+   "summary": "Proves existence and periodicity of decimal expansions for real numbers using the Archimedean property and long division.",
+   "tagged_at": "2026-10-24T16:24:11"
+  },
+  "existence-of-nth-roots-in-R": {
+   "chars": 3132,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "6a8ee069762b",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves existence and uniqueness of nth roots in R using supremum properties and continuity arguments.",
+   "tagged_at": "2026-10-24T16:24:12"
   },
   "expectation": {
    "chars": 5987,
@@ -813,6 +912,17 @@
    "needs_review": false,
    "summary": "Defines a random experiment by repeatability, known outcomes, and uncertainty, distinguishing physical reality from mathematical models.",
    "tagged_at": "2026-10-19T12:58:25"
+  },
+  "exponential-and-logarithm": {
+   "chars": 7685,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "7f7875731b0e",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines natural log and exponential via integrals/inverses, proves key properties, derives hyperbolic functions, and establishes growth limits.",
+   "tagged_at": "2026-10-24T16:24:14"
   },
   "exponential-distribution": {
    "chars": 7286,
@@ -858,6 +968,17 @@
    "summary": "Defines equilibrium points and stability criteria for first-order difference equations, contrasting discrete vs. continuous dynamics.",
    "tagged_at": "2026-10-19T12:58:31"
   },
+  "fourier-series": {
+   "chars": 9215,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "8b5fde866955",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Fourier series, proves orthogonality relations, states Dirichlet's convergence theorem, and derives coefficients for square/triangle waves.",
+   "tagged_at": "2026-10-24T16:24:16"
+  },
   "full-house": {
    "chars": 4576,
    "domain": "Probability Foundations & Combinatorics",
@@ -880,6 +1001,17 @@
    "summary": "Establishes the equivalence between function limits and sequence limits, providing a practical method to prove non-existence of limits.",
    "tagged_at": "2026-10-19T12:58:34"
   },
+  "function-continuity": {
+   "chars": 6088,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "274e7f315669",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines continuity via epsilon-delta and sequences, proves algebraic properties, and establishes continuity of trigonometric functions.",
+   "tagged_at": "2026-10-24T16:24:18"
+  },
   "function-spaces": {
    "chars": 18266,
    "domain": "Function Spaces & Fixed Points",
@@ -901,6 +1033,17 @@
    "needs_review": false,
    "summary": "Defines random variable transformations via Borel measurability and derives the PMF of g(X) for discrete variables.",
    "tagged_at": "2026-10-19T12:58:37"
+  },
+  "fundamental-theorem-of-calculus": {
+   "chars": 5569,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "314e17a2946e",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers the Fundamental Theorem of Calculus, antiderivatives, and integral evaluation techniques with proofs.",
+   "tagged_at": "2026-10-24T16:24:19"
   },
   "gamblers-ruin": {
    "chars": 7382,
@@ -957,6 +1100,17 @@
    "summary": "Defines geometric and negative binomial distributions as waiting-time models for Bernoulli trials with intuitive stories and PMF derivations.",
    "tagged_at": "2026-10-19T12:58:45"
   },
+  "geometric-sequence": {
+   "chars": 2444,
+   "domain": "Probability Foundations & Combinatorics",
+   "hash": "a28b3616af9d",
+   "kind": "theorem",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines geometric sequences and series, proving the finite sum formula and convergence conditions for infinite sums.",
+   "tagged_at": "2026-10-24T16:24:21"
+  },
   "gradient-descent-and-variants": {
    "chars": 19790,
    "domain": "Machine Learning & Optimization",
@@ -1011,6 +1165,17 @@
    "needs_review": false,
    "summary": "Derives unbiased importance sampling estimators, proves optimal zero-variance proposals via Cauchy-Schwarz, and analyzes self-normalized variants with effective sample size.",
    "tagged_at": "2026-10-19T12:58:55"
+  },
+  "improper-integrals": {
+   "chars": 5419,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "06b5a696acf2",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines improper integrals, proves convergence criteria for power functions and the Gamma function, and introduces principal values.",
+   "tagged_at": "2026-10-24T16:24:22"
   },
   "inclusion-exclusion": {
    "chars": 4025,
@@ -1067,6 +1232,39 @@
    "summary": "Defines integrable functions via positive/negative parts, proves linearity and monotonicity, and shows the indefinite integral of a nonnegative function defines a new measure.",
    "tagged_at": "2026-10-23T19:36:49"
   },
+  "integration-by-parts-and-substitution": {
+   "chars": 5273,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "fb292a73ad27",
+   "kind": "technique",
+   "level": 2,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents integration by parts and substitution rules with proofs, examples, and standard trigonometric substitutions.",
+   "tagged_at": "2026-10-24T16:24:24"
+  },
+  "integration-of-rational-functions": {
+   "chars": 6853,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "a95381060f82",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "A core undergraduate technique for integrating rational functions using polynomial division, partial fraction decomposition, and reduction formulas.",
+   "tagged_at": "2026-10-24T16:24:26"
+  },
+  "intermediate-value-theorem": {
+   "chars": 4920,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "dbdd29f804b8",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the Intermediate Value Theorem, its proof via bisection and nested intervals, and applications to roots and fixed points.",
+   "tagged_at": "2026-10-24T16:24:28"
+  },
   "intro-to-difference-equations": {
    "chars": 2149,
    "domain": "Difference Equations & Dynamics",
@@ -1088,6 +1286,17 @@
    "needs_review": false,
    "summary": "Defines one-sided inverses for linear maps and proves that injectivity implies left invertibility while surjectivity implies right invertibility.",
    "tagged_at": "2026-10-19T15:45:19"
+  },
+  "irrationality-and-euclidean-algorithm": {
+   "chars": 5360,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "8f7687540ca8",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves irrationality of square roots and characterizes rational numbers via the Euclidean algorithm and continued fractions.",
+   "tagged_at": "2026-10-24T16:24:29"
   },
   "jensens-inequality": {
    "chars": 5575,
@@ -1188,6 +1397,17 @@
    "summary": "Defines Lebesgue outer measure on R^n via countable covers by open boxes and proves basic properties like monotonicity and that countable sets have measure zero.",
    "tagged_at": "2026-10-23T19:36:53"
   },
+  "limit": {
+   "chars": 8056,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "235fd952e699",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines function limits via epsilon-delta and sequences, proves continuity equivalence, limit laws, and trigonometric examples.",
+   "tagged_at": "2026-10-24T16:24:31"
+  },
   "limits-of-measurable-functions": {
    "chars": 10950,
    "domain": "Measure Theory & Integration",
@@ -1209,6 +1429,17 @@
    "needs_review": false,
    "summary": "Defines limit inferior/superior for sequences, proves their monotonicity, and establishes the equivalence of convergence with equal liminf/limsup.",
    "tagged_at": "2026-10-19T12:59:19"
+  },
+  "linear-approximation": {
+   "chars": 4431,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "04cdca213ce7",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the linear approximation error bound using the second derivative and proves it via a Rolle's theorem variant.",
+   "tagged_at": "2026-10-24T16:24:32"
   },
   "linear-independence": {
    "chars": 7055,
@@ -1309,6 +1540,17 @@
    "summary": "Defines the likelihood function and log-likelihood, derives the MLE for an exponential distribution, and analyzes estimator bias via reparameterization.",
    "tagged_at": "2026-10-19T12:59:37"
   },
+  "mean-value-theorem": {
+   "chars": 7887,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "c1f65e183b39",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Covers Fermat's theorem, Rolle's theorem, the Mean Value Theorem, Cauchy's MVT, and l'Hôpital's rule with proofs.",
+   "tagged_at": "2026-10-24T16:24:34"
+  },
   "measurable-functions": {
    "chars": 17779,
    "domain": "Measure Theory & Integration",
@@ -1407,6 +1649,17 @@
    "needs_review": false,
    "summary": "Defines moment generating functions, proves properties like uniqueness and sum rules, and derives moments for common distributions.",
    "tagged_at": "2026-10-19T12:59:52"
+  },
+  "monotone-and-inverse-functions": {
+   "chars": 6546,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "152885391610",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves continuous injective functions are strictly monotone and their inverses are continuous, with applications to roots and trig functions.",
+   "tagged_at": "2026-10-24T16:24:36"
   },
   "monty-hall-problem": {
    "chars": 7360,
@@ -1540,6 +1793,17 @@
    "summary": "Defines vector spaces and norms, lists their axioms, and distinguishes normed spaces from inner product spaces.",
    "tagged_at": "2026-10-19T13:00:10"
   },
+  "numerical-integration": {
+   "chars": 8054,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "76ebedf9c2ae",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines quadrature rules and proves error bounds for numerical integration using the Mean Value Theorem.",
+   "tagged_at": "2026-10-24T16:24:38"
+  },
   "occupancy-problem": {
    "chars": 4339,
    "domain": "Probability Foundations & Combinatorics",
@@ -1583,6 +1847,17 @@
    "needs_review": false,
    "summary": "Defines ordinary differential equations, solutions, linearity, and initial value problems with standard forms.",
    "tagged_at": "2026-10-19T13:00:17"
+  },
+  "optimization": {
+   "chars": 6403,
+   "domain": "Optimization & Linear Programming",
+   "hash": "3a0769df067b",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Covers closed-interval extrema methods, critical/singular point analysis, and applied examples like shortest travel time and marginal cost.",
+   "tagged_at": "2026-10-24T16:24:40"
   },
   "order-statistics": {
    "chars": 17963,
@@ -1694,6 +1969,17 @@
    "summary": "Derives power-law distributions, proves moment divergence conditions, and derives the Hill estimator for heavy-tailed data in recommendation systems.",
    "tagged_at": "2026-10-19T13:00:29"
   },
+  "power-series": {
+   "chars": 12979,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "30c933966ecb",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines power series, proves radius of convergence, termwise differentiation/integration, and analytic functions.",
+   "tagged_at": "2026-10-24T16:24:42"
+  },
   "pre-logic": {
    "chars": 6148,
    "domain": "Probability Foundations & Combinatorics",
@@ -1804,6 +2090,17 @@
    "summary": "Proves the Least Upper Bound property and triangle inequality for real numbers constructed via Dedekind cuts.",
    "tagged_at": "2026-10-19T13:00:50"
   },
+  "properties-of-the-riemann-integral": {
+   "chars": 6823,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "74788367a120",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note covers linearity, monotonicity, additivity, and Riemann sum limits of the Riemann integral with proofs.",
+   "tagged_at": "2026-10-24T16:24:44"
+  },
   "quotient-spaces": {
    "chars": 9654,
    "domain": "Linear Algebra & Matrix Theory",
@@ -1838,15 +2135,26 @@
    "tagged_at": "2026-10-19T13:00:52"
   },
   "riemann-and-lebesgue-integrals": {
-   "chars": 8534,
+   "chars": 8717,
    "domain": "Measure Theory & Integration",
-   "hash": "5448325d4d8c",
+   "hash": "cd2ac17a295f",
    "kind": "theorem",
-   "level": 4,
+   "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
    "summary": "Proves equality of Riemann and Lebesgue integrals for continuous functions using uniform continuity and simple function bounds.",
-   "tagged_at": "2026-10-23T19:37:08"
+   "tagged_at": "2026-10-24T16:24:46"
+  },
+  "riemann-integral": {
+   "chars": 8098,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "357700e5cc34",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the Riemann integral via partitions and sums, proving integrability criteria for continuous and monotone functions.",
+   "tagged_at": "2026-10-24T16:24:48"
   },
   "rings-and-polynomial-rings": {
    "chars": 9001,
@@ -1925,6 +2233,17 @@
    "summary": "Explains solving second-order linear homogeneous difference equations via characteristic equations and distinct/repeated roots.",
    "tagged_at": "2026-10-19T13:01:02"
   },
+  "semicontinuity-and-extreme-value-theorem": {
+   "chars": 4780,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "192b5b5cebf5",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines semicontinuity and proves that upper/lower semicontinuous functions on closed intervals attain extrema.",
+   "tagged_at": "2026-10-24T16:24:49"
+  },
   "sequence": {
    "chars": 2739,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -1937,15 +2256,15 @@
    "tagged_at": "2026-10-19T13:01:04"
   },
   "sequence-limit": {
-   "chars": 4178,
+   "chars": 5735,
    "domain": "Real Analysis (Foundations & Sequences)",
-   "hash": "af81aad27b36",
-   "kind": "definition",
-   "level": 2,
+   "hash": "19bff521a522",
+   "kind": "theorem",
+   "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines sequence limits using the epsilon-N definition and proves uniqueness via contradiction.",
-   "tagged_at": "2026-10-19T13:01:03"
+   "summary": "Defines sequence convergence, proves uniqueness and boundedness, covers monotone convergence, and illustrates divergence with examples.",
+   "tagged_at": "2026-10-24T16:24:51"
   },
   "sequences-metric-spaces": {
    "chars": 4739,
@@ -1957,6 +2276,17 @@
    "needs_review": false,
    "summary": "Defines convergence and Cauchy sequences in metric spaces, proves the relationship between them, and connects metric convergence to topological definitions.",
    "tagged_at": "2026-10-19T13:01:06"
+  },
+  "series": {
+   "chars": 7473,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "72762f677d80",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines infinite series and proves convergence tests including the term test, comparison tests, ratio test, root test, and p-series.",
+   "tagged_at": "2026-10-24T16:24:53"
   },
   "sigma-algebra": {
    "chars": 16039,
@@ -2112,6 +2442,28 @@
    "summary": "Defines supremum and infimum with epsilon-characterizations and distinguishes them from maximum/minimum.",
    "tagged_at": "2026-10-19T13:01:26"
   },
+  "taylor-polynomials": {
+   "chars": 10077,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "01807c3e705e",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Taylor polynomials and proves existence/uniqueness via Peano/Lagrange remainders, plus higher-derivative tests.",
+   "tagged_at": "2026-10-24T16:24:55"
+  },
+  "taylor-series": {
+   "chars": 5964,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "0d82d5d2b9bd",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines Taylor series, proves convergence for elementary functions, and analyzes cases where the series converges to a different function or diverges.",
+   "tagged_at": "2026-10-24T16:24:57"
+  },
   "time-series-returns": {
    "chars": 6714,
    "domain": "Time Series Analysis",
@@ -2168,15 +2520,15 @@
    "tagged_at": "2026-10-19T16:15:39"
   },
   "uniform-continuity": {
-   "chars": 4541,
-   "domain": "Metric Spaces & Topology",
-   "hash": "bd9e1a571fbd",
+   "chars": 6660,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "0af6e988d934",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
    "summary": "Defines uniform continuity and proves the Heine-Cantor theorem linking compactness to this property via contradiction.",
-   "tagged_at": "2026-10-19T13:01:32"
+   "tagged_at": "2026-10-24T16:24:58"
   },
   "uniform-distribution": {
    "chars": 5482,
@@ -2268,6 +2620,373 @@
   }
  },
  "problems": {
+  "pset-calculus-01#1": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "7fe2beb2779a",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:27",
+   "tests": [
+    "irrationality-and-euclidean-algorithm",
+    "existence-of-decimal-expansion-in-R"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-01#10": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "8749ea1eb7e5",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:35",
+   "tests": [
+    "intermediate-value-theorem",
+    "monotone-and-inverse-functions",
+    "mean-value-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#11": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "218d01c7eeef",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:36",
+   "tests": [
+    "semicontinuity-and-extreme-value-theorem",
+    "uniform-continuity"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-01#12": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "1f2a810d5455",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:37",
+   "tests": [
+    "limit"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#13": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "a615bb0c0d07",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:37",
+   "tests": [
+    "derivative",
+    "chain-rule-and-inverse-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#14": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "297bc5f8d81a",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:38",
+   "tests": [
+    "differentiation-rules",
+    "chain-rule-and-inverse-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#15": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "a615e143f519",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:39",
+   "tests": [
+    "mean-value-theorem"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-01#16": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "15fd30f8a6ce",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:40",
+   "tests": [
+    "linear-approximation"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#17": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "f84fe568e25a",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:41",
+   "tests": [
+    "convexity-and-curve-sketching",
+    "taylor-polynomials"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-01#18": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "6894c1554d5f",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:41",
+   "tests": [
+    "optimization"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#19": {
+   "difficulty": 3,
+   "est_minutes": 45,
+   "hash": "c1174e228890",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:42",
+   "tests": [
+    "taylor-polynomials"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "741222dd4148",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:28",
+   "tests": [
+    "supremum-infimum",
+    "axiom-of-completeness",
+    "existence-of-nth-roots-in-R"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#20": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "4fd064f02d13",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:43",
+   "tests": [
+    "riemann-integral",
+    "properties-of-the-riemann-integral"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#21": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "331375ddff69",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:44",
+   "tests": [
+    "fundamental-theorem-of-calculus",
+    "properties-of-the-riemann-integral"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#22": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "1f53737e2a3f",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:45",
+   "tests": [
+    "exponential-and-logarithm"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#23": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "d5c39bd936f9",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:46",
+   "tests": [
+    "integration-by-parts-and-substitution",
+    "integration-of-rational-functions"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#24": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "2eb0e5f807e3",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:47",
+   "tests": [
+    "numerical-integration"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#25": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "08520765a0da",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:47",
+   "tests": [
+    "improper-integrals",
+    "riemann-integral"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#26": {
+   "difficulty": 3,
+   "est_minutes": 45,
+   "hash": "b4a70cdb5560",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:48",
+   "tests": [
+    "power-series",
+    "taylor-series"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#27": {
+   "difficulty": 3,
+   "est_minutes": 20,
+   "hash": "1879e1763db5",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:49",
+   "tests": [
+    "binomial-series"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#28": {
+   "difficulty": 3,
+   "est_minutes": 45,
+   "hash": "fd40a1a7fcf1",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:50",
+   "tests": [
+    "fourier-series"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#29": {
+   "difficulty": 4,
+   "est_minutes": 25,
+   "hash": "e3623e03da03",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:51",
+   "tests": [
+    "taylor-polynomials",
+    "convexity-and-curve-sketching",
+    "fundamental-theorem-of-calculus",
+    "power-series"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-01#3": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "427ac9a3a024",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:29",
+   "tests": [
+    "complex-numbers"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#4": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "bacbf13aecb7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:30",
+   "tests": [
+    "complex-numbers"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#5": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "7f0d7d4a5742",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:31",
+   "tests": [
+    "complex-affine-maps"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#6": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "4ffa37f0cba6",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:32",
+   "tests": [
+    "sequence-limit",
+    "composite-sequences-limit"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#7": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "dd03c9f14c99",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:32",
+   "tests": [
+    "series",
+    "geometric-sequence"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#8": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "f8453913fdc7",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:33",
+   "tests": [
+    "absolute-and-conditional-convergence"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-01#9": {
+   "difficulty": 2,
+   "est_minutes": 25,
+   "hash": "7565e8b48531",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-10-24T16:23:34",
+   "tests": [
+    "function-continuity"
+   ],
+   "type": "computation"
+  },
   "pset-clt-01#1": {
    "difficulty": 2,
    "est_minutes": 5,

@@ -45,25 +45,25 @@
   "model": "qwen3.5:9b"
  },
  "Cauchy-sequences": {
-  "at": "2026-10-19T13:31:34",
+  "at": "2026-10-24T16:25:03",
   "connections": [
    {
     "id": "completeness",
     "new": false,
-    "why": "This note proves the specific case for $\text{ℝ}$, while 'completeness' generalizes this definition and theorem to arbitrary metric spaces where the LUB property is replaced by the existence of limits for all Cauchy sequences."
+    "why": "This note establishes the metric-space definition of completeness (Cauchy sequences converge), which generalizes the order-theoretic completeness (LUB property) discussed in the linked 'axiom-of-completeness' note and defines the specific context for the broader 'completeness' concept."
    },
    {
-    "id": "limsup-liminf",
-    "new": false,
-    "why": "The proof constructs a sequence using the infimum of tails, which is the formal definition of $\text{liminf}$; understanding this concept clarifies why $b_n$ converges to the limit of the original Cauchy sequence."
+    "id": "contractions",
+    "new": true,
+    "why": "The Banach Fixed Point Theorem relies on the space being complete (Cauchy sequences converge) to guarantee that the iterative process of a contraction mapping actually reaches a fixed point."
    },
    {
-    "id": "axiom-of-completeness",
-    "new": false,
-    "why": "The proof explicitly invokes the Least Upper Bound property (established in 'axiom-of-completeness') as the foundational reason why every bounded monotone sequence converges, bridging order-theoretic completeness to metric completeness."
+    "id": "compactness",
+    "new": true,
+    "why": "In metric spaces, compactness is often characterized by sequential compactness (every sequence has a convergent subsequence), which implies that every sequence has a Cauchy subsequence, linking these foundational completeness properties."
    }
   ],
-  "hash": "1fb1c63a4d75",
+  "hash": "501f1197b17f",
   "model": "qwen3.5:9b"
  },
  "Lebesgue-measure": {
@@ -81,6 +81,28 @@
    }
   ],
   "hash": "c7c22fd8232d",
+  "model": "qwen3.5:9b"
+ },
+ "absolute-and-conditional-convergence": {
+  "at": "2026-10-24T16:25:07",
+  "connections": [
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "Both rely on the principle that absolute convergence (or domination by an integrable function) allows swapping limits and sums/integrals, whereas conditional convergence fails this property."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The lemma's proof technique for handling infinite events mirrors the rearrangement arguments in conditional convergence, specifically how order matters when absolute bounds are missing."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma provides a lower bound for limits of integrals that parallels the behavior of conditionally convergent series where limit operations are not commutative without absolute convergence."
+   }
+  ],
+  "hash": "dab8c8bbe036",
   "model": "qwen3.5:9b"
  },
  "adjusting-for-overcounting": {
@@ -215,20 +237,20 @@
   "model": "qwen3.5:9b"
  },
  "axiom-of-completeness": {
-  "at": "2026-10-19T13:39:11",
+  "at": "2026-10-24T16:25:11",
   "connections": [
-   {
-    "id": "brouwer-fixed-point-theorem",
-    "new": true,
-    "why": "The algebraic construction of $q$ in the proof is a discrete analogue to the fixed-point iteration used in the Banach Contraction Principle, which guarantees convergence in complete spaces."
-   },
    {
     "id": "completeness",
     "new": true,
-    "why": "This note establishes the specific property (existence of suprema) that defines a 'complete' metric space, generalizing the real number axiom to abstract metric spaces."
+    "why": "This note generalizes the Axiom of Completeness from the specific field $\bb{R}$ to arbitrary metric spaces, establishing that a metric space is complete if and only if every Cauchy sequence converges."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Both concepts are fundamental completeness properties in topology; compactness implies sequential compactness (every sequence has a convergent subsequence), which relies on the underlying space's completeness to ensure the limit exists within the space."
    }
   ],
-  "hash": "d6141796f00c",
+  "hash": "7d8e83c43737",
   "model": "qwen3.5:9b"
  },
  "bagging-and-random-forests": {
@@ -365,6 +387,18 @@
    }
   ],
   "hash": "eb9a59f456ce",
+  "model": "qwen3.5:9b"
+ },
+ "binomial-series": {
+  "at": "2026-10-24T16:25:14",
+  "connections": [
+   {
+    "id": "geometric-and-negative-binomial-dist",
+    "new": true,
+    "why": "The negative binomial distribution arises directly from the infinite binomial series expansion when the exponent is a negative integer, connecting real analysis series to probability distributions."
+   }
+  ],
+  "hash": "88d14a169909",
   "model": "qwen3.5:9b"
  },
  "binomial-theorem": {
@@ -569,6 +603,28 @@
   "hash": "59bc0d6c7c6a",
   "model": "qwen3.5:9b"
  },
+ "chain-rule-and-inverse-functions": {
+  "at": "2026-10-24T16:25:19",
+  "connections": [
+   {
+    "id": "monotone-and-inverse-functions",
+    "new": false,
+    "why": "This note establishes that strictly monotone continuous functions have continuous inverses, which is the essential topological prerequisite for the inverse function derivative formula to even be defined."
+   },
+   {
+    "id": "mean-value-theorem",
+    "new": false,
+    "why": "The proof of the inverse function derivative relies on the Mean Value Theorem to guarantee that a differentiable function with non-zero derivative is strictly monotone and thus invertible."
+   },
+   {
+    "id": "linear-approximation",
+    "new": false,
+    "why": "Both the chain rule and the inverse function rule are fundamentally about composing or inverting local linear approximations (differentials), where $dy = f'(x)dx$ implies $dx = \frac{1}{f'(x)}dy$."
+   }
+  ],
+  "hash": "3c8b38fa9cfd",
+  "model": "qwen3.5:9b"
+ },
  "change-of-basis-and-similarity": {
   "at": "2026-10-19T15:46:07",
   "connections": [
@@ -686,21 +742,55 @@
   "hash": "4fff96610f52",
   "model": "qwen3.5:9b"
  },
- "composite-sequences-limit": {
-  "at": "2026-10-19T13:40:48",
+ "complex-affine-maps": {
+  "at": "2026-10-24T16:25:21",
   "connections": [
    {
-    "id": "triangle-inequality",
-    "new": false,
-    "why": "The proof of the product limit explicitly relies on the triangle inequality to split $|a_n b_n - ab|$ into manageable terms."
+    "id": "affine-subspaces",
+    "new": true,
+    "why": "Both describe the structure of linear transformations (complex affine maps vs. real affine subspaces) and how they decompose into a fixed point plus a linear part."
+   }
+  ],
+  "hash": "a1a49159999d",
+  "model": "qwen3.5:9b"
+ },
+ "complex-numbers": {
+  "at": "2026-10-24T16:25:26",
+  "connections": [
+   {
+    "id": "banach-fp-thm",
+    "new": true,
+    "why": "Both rely on the geometric intuition of contraction and fixed points, where complex multiplication by a factor less than 1 acts as a rotation-scaling contraction in the plane."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Both are fundamental inequalities governing norms and distances, with the complex triangle inequality being a direct consequence of the properties of the modulus (a norm)."
+   }
+  ],
+  "hash": "a2aa65aba180",
+  "model": "qwen3.5:9b"
+ },
+ "composite-sequences-limit": {
+  "at": "2026-10-24T16:25:30",
+  "connections": [
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The error bounds in the product and quotient limit laws are the discrete sequence analogues of the domination conditions required to prove the Dominated Convergence Theorem for integrals."
+   },
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "Both results rely on explicit control over tail behavior (bounded away from zero vs. summable probabilities) to establish convergence properties that hold almost surely or in the limit."
    },
    {
     "id": "limsup-liminf",
     "new": true,
-    "why": "Both concepts deal with the behavior of sequences at infinity, where limsup/liminf are often used to prove properties of limits or handle cases where standard limits don't exist."
+    "why": "The proof of the quotient law explicitly constructs a bound for $1/b_n$, a technique directly analogous to using limsup/liminf to handle sequences that do not converge uniformly."
    }
   ],
-  "hash": "3e539fe67fac",
+  "hash": "2508df4960bd",
   "model": "qwen3.5:9b"
  },
  "conditional-expectation": {
@@ -835,6 +925,23 @@
    }
   ],
   "hash": "06d083dd47a0",
+  "model": "qwen3.5:9b"
+ },
+ "convexity-and-curve-sketching": {
+  "at": "2026-10-24T16:25:34",
+  "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's Inequality generalizes the definition of convexity (used in curve sketching) to expectations, linking the geometric property of a function's shape to probabilistic bounds."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": false,
+    "why": "This note defines convex sets and functions via chord inequalities, which is the fundamental geometric characterization used in the 'Graph Lies Below Its Chords' section of this note."
+   }
+  ],
+  "hash": "669a87f80d31",
   "model": "qwen3.5:9b"
  },
  "coordinates-and-isomorphism-with-Kn": {
@@ -1047,6 +1154,23 @@
   "hash": "bbd2da59e1a4",
   "model": "qwen3.5:9b"
  },
+ "derivative": {
+  "at": "2026-10-24T16:25:37",
+  "connections": [
+   {
+    "id": "linear-approximation",
+    "new": false,
+    "why": "The derivative is precisely the slope of the unique linear function that provides the best local approximation (tangent line) to a differentiable function."
+   },
+   {
+    "id": "chain-rule-and-inverse-functions",
+    "new": false,
+    "why": "This note shares the same foundational concept of the derivative as the instantaneous rate of change, which is the prerequisite for deriving the chain rule and the derivative of inverse functions."
+   }
+  ],
+  "hash": "4b7e4e5b6b0f",
+  "model": "qwen3.5:9b"
+ },
  "determinant": {
   "at": "2026-10-19T15:46:18",
   "connections": [
@@ -1091,6 +1215,28 @@
    }
   ],
   "hash": "75b8c31430a1",
+  "model": "qwen3.5:9b"
+ },
+ "differentiation-rules": {
+  "at": "2026-10-24T16:25:41",
+  "connections": [
+   {
+    "id": "chain-rule-and-inverse-functions",
+    "new": false,
+    "why": "The quotient rule and trigonometric derivatives rely on the chain rule to derive derivatives of composite functions like $\tan(x)$ and $\frac{1}{\tan(x)}$."
+   },
+   {
+    "id": "exponential-and-logarithm",
+    "new": true,
+    "why": "Differentiation rules for exponentials and logarithms are derived using the same limit-based techniques (e.g., $\frac{d}{dx} e^x = \frac{d}{dx} \text{inverse of } \text{ln}(x)$) as those used for trigonometric functions."
+   },
+   {
+    "id": "taylor-polynomials",
+    "new": true,
+    "why": "The power rule and polynomial differentiation are the foundational steps required to construct Taylor polynomials, which approximate differentiable functions using their derivatives."
+   }
+  ],
+  "hash": "f1f39c677ffb",
   "model": "qwen3.5:9b"
  },
  "direct-sums-and-complements": {
@@ -1249,21 +1395,43 @@
   "hash": "7a670c1a05ad",
   "model": "qwen3.5:9b"
  },
- "existence-of-nth-roots-in-R": {
-  "at": "2026-10-19T13:42:10",
+ "existence-of-decimal-expansion-in-R": {
+  "at": "2026-10-24T16:25:46",
   "connections": [
    {
-    "id": "axiom-of-completeness",
-    "new": false,
-    "why": "The existence proof explicitly constructs the root as the supremum of a set, relying directly on the Axiom of Completeness to guarantee this least upper bound exists in ℝ."
+    "id": "irrationality-and-euclidean-algorithm",
+    "new": true,
+    "why": "Both notes address the fundamental distinction between rational and irrational numbers in $\bbR$, with this note using decimal expansions to define irrationals as non-periodic decimals and the other using Dedekind cuts or infinite descent."
    },
    {
-    "id": "supremum-infimum",
+    "id": "density-theorem-of-R",
     "new": true,
-    "why": "The proof technique identifies the candidate root as the supremum of a specific subset of real numbers, making the definition and properties of supremum/infimum essential to the argument."
+    "why": "The density theorem states that rationals and irrationals are both dense in $\bbR$; since every real has a decimal expansion (this note) and only periodic ones are rational, this structural fact underpins the topological density of both sets."
+   },
+   {
+    "id": "def-dedekind-cuts",
+    "new": true,
+    "why": "Both notes construct or characterize the real numbers from more primitive objects (decimal expansions vs. Dedekind cuts), relying on the same underlying completeness axiom to ensure every cut corresponds to a unique real number."
    }
   ],
-  "hash": "efa2026df2c4",
+  "hash": "436042c88c54",
+  "model": "qwen3.5:9b"
+ },
+ "existence-of-nth-roots-in-R": {
+  "at": "2026-10-24T16:25:49",
+  "connections": [
+   {
+    "id": "probabilistic-for-existence-proof",
+    "new": true,
+    "why": "Both use non-constructive existence arguments (supremum in one, probabilistic method in the other) to prove that an object exists without explicitly constructing it."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on topological properties of complete spaces (compactness/continuity) to guarantee the existence of a solution (fixed point vs. root)."
+   }
+  ],
+  "hash": "6a8ee069762b",
   "model": "qwen3.5:9b"
  },
  "expectation": {
@@ -1325,6 +1493,28 @@
    }
   ],
   "hash": "f8c0b1050369",
+  "model": "qwen3.5:9b"
+ },
+ "exponential-and-logarithm": {
+  "at": "2026-10-24T16:25:53",
+  "connections": [
+   {
+    "id": "gamma-function-and-distribution",
+    "new": true,
+    "why": "The Gamma function extends the factorial to real numbers using the exponential integral definition, directly generalizing the discrete summation logic found in power series and binomial expansions."
+   },
+   {
+    "id": "moment-generating-functions",
+    "new": true,
+    "why": "Moment generating functions are constructed as power series of the exponential function, leveraging its Taylor expansion properties to generate moments of a distribution."
+   },
+   {
+    "id": "taylor-series",
+    "new": false,
+    "why": "The exponential and logarithm functions serve as the primary examples for deriving Taylor series expansions, illustrating how analytic functions can be represented by infinite sums."
+   }
+  ],
+  "hash": "7f7875731b0e",
   "model": "qwen3.5:9b"
  },
  "exponential-distribution": {
@@ -1395,6 +1585,23 @@
   "hash": "c4d4cd83b7f5",
   "model": "qwen3.5:9b"
  },
+ "fourier-series": {
+  "at": "2026-10-24T16:25:56",
+  "connections": [
+   {
+    "id": "taylor-series",
+    "new": true,
+    "why": "Both are series expansions that approximate functions, but Fourier uses orthogonal trigonometric bases for periodic functions while Taylor uses polynomial bases for local approximation."
+   },
+   {
+    "id": "complex-numbers",
+    "new": true,
+    "why": "The complex exponential form of the Fourier series relies on Euler's formula to unify sine and cosine into a single basis $e^{inx}$."
+   }
+  ],
+  "hash": "8b5fde866955",
+  "model": "qwen3.5:9b"
+ },
  "full-house": {
   "at": "2026-10-19T13:42:37",
   "connections": [
@@ -1434,6 +1641,28 @@
   "hash": "7f81870fc7c3",
   "model": "qwen3.5:9b"
  },
+ "function-continuity": {
+  "at": "2026-10-24T16:26:00",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness is the topological property that guarantees continuous functions map open sets to relatively compact sets and ensures uniform continuity on the domain."
+   },
+   {
+    "id": "continuity-and-compactness",
+    "new": true,
+    "why": "This note directly links the behavior of continuous functions with compact sets, showing how continuity preserves compactness and enables extreme value results."
+   },
+   {
+    "id": "homeomorphisms-compactness",
+    "new": true,
+    "why": "Homeomorphisms are bijective continuous maps with continuous inverses; their interaction with compactness is a fundamental topological relationship."
+   }
+  ],
+  "hash": "274e7f315669",
+  "model": "qwen3.5:9b"
+ },
  "function-spaces": {
   "at": "2026-10-19T13:42:45",
   "connections": [
@@ -1461,6 +1690,28 @@
    }
   ],
   "hash": "d61c5701484a",
+  "model": "qwen3.5:9b"
+ },
+ "fundamental-theorem-of-calculus": {
+  "at": "2026-10-24T16:26:04",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The Lebesgue integral generalizes the Riemann integral (used in FTC), allowing differentiation of integrals for a broader class of functions via the Fundamental Theorem of Calculus for Lebesgue Integrals."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "Dominated Convergence is a key tool in Measure Theory that justifies swapping limits and integrals, which is often necessary when analyzing the convergence of sequences of antiderivatives or proving variants of FTC."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Fatou's Lemma and Monotone Convergence Theorem are foundational results in Measure Theory that establish the relationship between limits and integrals, providing a rigorous framework for understanding the differentiation of integral functions like those in FTC."
+   }
+  ],
+  "hash": "314e17a2946e",
   "model": "qwen3.5:9b"
  },
  "gamblers-ruin": {
@@ -1541,6 +1792,23 @@
    }
   ],
   "hash": "6c544ad0d3f1",
+  "model": "qwen3.5:9b"
+ },
+ "geometric-sequence": {
+  "at": "2026-10-24T16:26:08",
+  "connections": [
+   {
+    "id": "binomial-series",
+    "new": true,
+    "why": "The geometric series is the specific case of a power series where the coefficients are constant, and its convergence relies on the same radius-of-convergence logic used for general binomial/power series expansions."
+   },
+   {
+    "id": "exponential-and-logarithm",
+    "new": true,
+    "why": "The infinite geometric series with ratio $r = e^{-x}$ provides the fundamental definition and integral representation of the exponential function, linking discrete summation to continuous growth."
+   }
+  ],
+  "hash": "a28b3616af9d",
   "model": "qwen3.5:9b"
  },
  "gradient-descent-and-variants": {
@@ -1631,6 +1899,28 @@
    }
   ],
   "hash": "a1ac1e34ce9c",
+  "model": "qwen3.5:9b"
+ },
+ "improper-integrals": {
+  "at": "2026-10-24T16:26:12",
+  "connections": [
+   {
+    "id": "absolute-and-conditional-convergence",
+    "new": true,
+    "why": "Improper integrals of non-negative functions are always absolutely convergent, making this note a direct special case where absolute convergence implies ordinary convergence."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The comparison test used for improper integrals is the Riemann-integral analogue of the Dominated Convergence Theorem, which generalizes the logic to Lebesgue integration."
+   },
+   {
+    "id": "fatous-lemma-and-convergence-theorems",
+    "new": true,
+    "why": "Both notes rely on monotonicity arguments (Fatou's Lemma for sequences, Comparison Test for integrals) to establish convergence criteria without computing explicit limits."
+   }
+  ],
+  "hash": "06b5a696acf2",
   "model": "qwen3.5:9b"
  },
  "inclusion-exclusion": {
@@ -1733,6 +2023,62 @@
   "hash": "de32ea72c988",
   "model": "qwen3.5:9b"
  },
+ "integration-by-parts-and-substitution": {
+  "at": "2026-10-24T16:26:15",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Integration by parts and substitution are the core computational tools for evaluating integrals, which are the primary objects of study in Lebesgue integration theory."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The dominated convergence theorem provides the rigorous justification for swapping limits and integrals, a concept essential when analyzing the behavior of sequences of functions encountered in advanced integration techniques like parts and substitution."
+   }
+  ],
+  "hash": "fb292a73ad27",
+  "model": "qwen3.5:9b"
+ },
+ "integration-of-rational-functions": {
+  "at": "2026-10-24T16:26:20",
+  "connections": [
+   {
+    "id": "complex-numbers",
+    "new": false,
+    "why": "The factorization of the denominator $Q(x)$ into linear and irreducible quadratic factors relies on the Fundamental Theorem of Algebra, which is a core property of complex numbers."
+   },
+   {
+    "id": "polynomial-gcd-and-unique-factorization",
+    "new": false,
+    "why": "Partial fraction decomposition is fundamentally an application of the unique factorization theorem for polynomials over a field, allowing the splitting of a rational function into coprime components."
+   },
+   {
+    "id": "integration-by-parts-and-substitution",
+    "new": false,
+    "why": "The integration of terms like $1/(t^2+1)^k$ requires reduction formulas derived via integration by parts and substitution techniques."
+   }
+  ],
+  "hash": "a95381060f82",
+  "model": "qwen3.5:9b"
+ },
+ "intermediate-value-theorem": {
+  "at": "2026-10-24T16:26:23",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The Intermediate Value Theorem relies on the nested interval property, which is a direct consequence of compactness in ℝ, whereas Brouwer's Fixed Point Theorem generalizes this topological intuition to higher dimensions using compactness and continuity."
+   },
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both theorems guarantee the existence of a point with specific properties (a root or a fixed point) based on continuity and the topology of the domain, sharing a deep analogy in how local sign changes or boundary conditions force global behavior."
+   }
+  ],
+  "hash": "dbdd29f804b8",
+  "model": "qwen3.5:9b"
+ },
  "intro-to-difference-equations": {
   "at": "2026-10-19T13:43:36",
   "connections": [
@@ -1765,6 +2111,18 @@
    }
   ],
   "hash": "357516312099",
+  "model": "qwen3.5:9b"
+ },
+ "irrationality-and-euclidean-algorithm": {
+  "at": "2026-10-24T16:26:27",
+  "connections": [
+   {
+    "id": "polynomial-gcd-and-unique-factorization",
+    "new": true,
+    "why": "The Euclidean algorithm for real numbers generalizes the polynomial GCD algorithm, where commensurability of lengths corresponds to polynomials sharing a common factor."
+   }
+  ],
+  "hash": "8f7687540ca8",
   "model": "qwen3.5:9b"
  },
  "jensens-inequality": {
@@ -1930,6 +2288,28 @@
   "hash": "93586ba498c0",
   "model": "qwen3.5:9b"
  },
+ "limit": {
+  "at": "2026-10-24T16:26:31",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel–Cantelli Lemma uses limit theorems (specifically on series of probabilities) to determine if events occur infinitely often, connecting the concept of limits in analysis to probability."
+   },
+   {
+    "id": "law-of-large-numbers-and-central-limit-theorem",
+    "new": true,
+    "why": "The Law of Large Numbers is a probabilistic statement about the convergence (limit) of sample averages to an expected value as the number of trials goes to infinity."
+   },
+   {
+    "id": "limsup-liminf",
+    "new": true,
+    "why": "Limit superior and limit inferior are fundamental tools for analyzing the behavior of sequences and functions when standard limits do not exist, directly extending the concept of a limit."
+   }
+  ],
+  "hash": "235fd952e699",
+  "model": "qwen3.5:9b"
+ },
  "limits-of-measurable-functions": {
   "at": "2026-10-23T19:38:01",
   "connections": [
@@ -1967,6 +2347,23 @@
    }
   ],
   "hash": "8a3386f781f2",
+  "model": "qwen3.5:9b"
+ },
+ "linear-approximation": {
+  "at": "2026-10-24T16:26:35",
+  "connections": [
+   {
+    "id": "taylor-polynomials",
+    "new": false,
+    "why": "The error term derived here is the specific case ($k=1$) of Taylor's Theorem with Lagrange remainder, which generalizes linear approximation to higher-order polynomials."
+   },
+   {
+    "id": "convexity-and-curve-sketching",
+    "new": false,
+    "why": "The sign of the error depends on $f''$, which directly relates to convexity; if a function is concave ($f''<0$), the tangent line lies above the curve, as described in this note."
+   }
+  ],
+  "hash": "04cdca213ce7",
   "model": "qwen3.5:9b"
  },
  "linear-independence": {
@@ -2132,6 +2529,28 @@
   "hash": "8554c80eec0f",
   "model": "qwen3.5:9b"
  },
+ "mean-value-theorem": {
+  "at": "2026-10-24T16:26:40",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both are fixed-point theorems in function spaces where Rolle's theorem (a special case of MVT) guarantees a point where the derivative vanishes, analogous to finding a fixed point for certain contraction mappings."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality is often proved using the convexity properties that are directly implied by the Mean Value Theorem and its consequences on monotonicity."
+   },
+   {
+    "id": "intermediate-value-theorem",
+    "new": true,
+    "why": "The Intermediate Value Theorem is a fundamental topological property of continuous functions that serves as a prerequisite for proving Rolle's theorem, which in turn implies the Mean Value Theorem."
+   }
+  ],
+  "hash": "c1f65e183b39",
+  "model": "qwen3.5:9b"
+ },
  "measurable-functions": {
   "at": "2026-10-23T19:38:10",
   "connections": [
@@ -2293,6 +2712,28 @@
    }
   ],
   "hash": "393758ed6f21",
+  "model": "qwen3.5:9b"
+ },
+ "monotone-and-inverse-functions": {
+  "at": "2026-10-24T16:26:45",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both theorems establish that a continuous, strictly monotone function on an interval is a homeomorphism (invertible with a continuous inverse), which is a specific instance of the topological principle that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism."
+   },
+   {
+    "id": "continuity-topology",
+    "new": true,
+    "why": "The note uses the definition of continuity via $\forall \forall$ quantifiers and $\forall \forall$ quantifiers, which is the standard topological definition of continuity that generalizes the metric-space definition used in this note."
+   },
+   {
+    "id": "homeomorphisms-compactness",
+    "new": true,
+    "why": "This note proves that a continuous strictly monotone function on an interval has a continuous inverse, which is a specific case of the more general topological fact that a continuous bijection between compact Hausdorff spaces is a homeomorphism."
+   }
+  ],
+  "hash": "152885391610",
   "model": "qwen3.5:9b"
  },
  "monty-hall-problem": {
@@ -2494,6 +2935,28 @@
   "hash": "3cd5d33eb5e4",
   "model": "qwen3.5:9b"
  },
+ "numerical-integration": {
+  "at": "2026-10-24T16:26:50",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Numerical integration approximates the integral of a function, while the Lebesgue integral provides the rigorous theoretical foundation for defining and computing integrals in a broader class of functions."
+   },
+   {
+    "id": "improper-integrals",
+    "new": true,
+    "why": "Improper integrals extend the concept of integration to unbounded domains or singularities, often requiring numerical methods when analytical solutions are unavailable."
+   },
+   {
+    "id": "properties-of-the-riemann-integral",
+    "new": true,
+    "why": "The properties of the Riemann integral (linearity, additivity) are the theoretical basis for deriving and analyzing the error bounds of numerical integration rules like the Trapezoid and Simpson's rules."
+   }
+  ],
+  "hash": "76ebedf9c2ae",
+  "model": "qwen3.5:9b"
+ },
  "occupancy-problem": {
   "at": "2026-10-19T13:45:57",
   "connections": [
@@ -2560,6 +3023,28 @@
    }
   ],
   "hash": "cac63c331816",
+  "model": "qwen3.5:9b"
+ },
+ "optimization": {
+  "at": "2026-10-24T16:26:54",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "Convexity ensures that local extrema found via derivatives are global, which is the core assumption for many optimization algorithms discussed in this note."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "The method of Lagrange multipliers and KKT conditions are the standard techniques for solving constrained optimization problems, extending the unconstrained calculus methods shown here."
+   },
+   {
+    "id": "gradient-descent-and-variants",
+    "new": true,
+    "why": "Gradient descent is the primary algorithmic implementation of the first-order necessary conditions (setting the derivative to zero) derived in this note for finding minima."
+   }
+  ],
+  "hash": "3a0769df067b",
   "model": "qwen3.5:9b"
  },
  "order-statistics": {
@@ -2745,6 +3230,28 @@
    }
   ],
   "hash": "0162ce5fca97",
+  "model": "qwen3.5:9b"
+ },
+ "power-series": {
+  "at": "2026-10-24T16:26:59",
+  "connections": [
+   {
+    "id": "complex-numbers",
+    "new": false,
+    "why": "The radius of convergence for real power series is determined by the distance to the nearest singularity in the complex plane (e.g., $\frac{1}{1+x^2}$ has radius 1 because of roots at $\text{i},-\text{i}$)."
+   },
+   {
+    "id": "taylor-series",
+    "new": false,
+    "why": "A power series centered at a point is precisely the Taylor series of its sum function, and termwise differentiation/integration preserves this structure."
+   },
+   {
+    "id": "geometric-sequence",
+    "new": false,
+    "why": "The proof that a power series converges absolutely inside its radius relies on comparing its tail to a geometric series once the terms are bounded."
+   }
+  ],
+  "hash": "30c933966ecb",
   "model": "qwen3.5:9b"
  },
  "pre-logic": {
@@ -2952,6 +3459,28 @@
   "hash": "c7c229871ca9",
   "model": "qwen3.5:9b"
  },
+ "properties-of-the-riemann-integral": {
+  "at": "2026-10-24T16:27:05",
+  "connections": [
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "Both rely on bounding an integral by a simpler function to establish convergence or inequality properties, though DCT operates in the more general Lebesgue setting."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "The monotonicity property of the Riemann integral ($f \to g$ implies $\textstyle\frac{1}{b-a}\textstyle\frac{1}{b-a} f \to \textstyle\frac{1}{b-a} g$) is a deterministic analog of Chebyshev's inequality, which bounds tail probabilities using the same order-preserving logic."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality for integrals ($\textstyle\frac{1}{b-a}\textstyle\frac{1}{b-a} \textstyle\frac{1}{b-a} f \to \textstyle\frac{1}{b-a} g$) is the convex-function generalization of the linearity and order properties found here."
+   }
+  ],
+  "hash": "74788367a120",
+  "model": "qwen3.5:9b"
+ },
  "quotient-spaces": {
   "at": "2026-10-19T15:47:20",
   "connections": [
@@ -3009,20 +3538,47 @@
   "model": "qwen3.5:9b"
  },
  "riemann-and-lebesgue-integrals": {
-  "at": "2026-10-23T19:38:29",
+  "at": "2026-10-24T16:27:10",
   "connections": [
    {
-    "id": "uniform-continuity",
-    "new": false,
-    "why": "The proof relies on uniform continuity to show that the difference between Riemann sums and simple function integrals vanishes as the partition mesh shrinks."
+    "id": "fourier-series",
+    "new": true,
+    "why": "Fourier series rely on the Lebesgue integral (generalized to $L^2$) to define coefficients and convergence, extending the integration theory beyond continuous functions."
    },
    {
-    "id": "simple-functions",
-    "new": false,
-    "why": "Both concepts use step-like functions (simple functions) as the fundamental building blocks for defining integration, bridging the gap between discrete partitions and measurable sets."
+    "id": "improper-integrals",
+    "new": true,
+    "why": "Improper integrals are limits of Riemann/Lebesgue integrals over unbounded domains or singularities, requiring the same measure-theoretic foundations to handle infinite intervals."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The Dominated Convergence Theorem is a core convergence result in Lebesgue integration that justifies swapping limits and integrals, a technique often needed when analyzing sequences of continuous functions."
    }
   ],
-  "hash": "5448325d4d8c",
+  "hash": "cd2ac17a295f",
+  "model": "qwen3.5:9b"
+ },
+ "riemann-integral": {
+  "at": "2026-10-24T16:27:14",
+  "connections": [
+   {
+    "id": "improper-integrals",
+    "new": true,
+    "why": "It generalizes the Riemann integral to unbounded domains or unbounded functions, requiring careful handling of limits that are central to the definition of the Riemann integral."
+   },
+   {
+    "id": "fourier-series",
+    "new": true,
+    "why": "Fourier series rely on the existence and properties of the Riemann integral (specifically for square-integrable functions) to define coefficients via integration over a period."
+   },
+   {
+    "id": "integration-by-parts-and-substitution",
+    "new": true,
+    "why": "These are fundamental computational techniques that transform integrals into other forms, presupposing the underlying concept of the Riemann integral as the area under a curve."
+   }
+  ],
+  "hash": "357700e5cc34",
   "model": "qwen3.5:9b"
  },
  "rings-and-polynomial-rings": {
@@ -3144,6 +3700,23 @@
   "hash": "8a2f9c70528a",
   "model": "qwen3.5:9b"
  },
+ "semicontinuity-and-extreme-value-theorem": {
+  "at": "2026-10-24T16:27:17",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The Extreme Value Theorem for continuous functions is a special case of the general theorem that upper/lower semicontinuous functions on compact sets attain their extrema."
+   },
+   {
+    "id": "continuity-and-compactness",
+    "new": false,
+    "why": "This note provides the general proof technique (using open covers or nested compacts) that underlies the specific bisection argument used here for intervals."
+   }
+  ],
+  "hash": "192b5b5cebf5",
+  "model": "qwen3.5:9b"
+ },
  "sequence": {
   "at": "2026-10-19T13:47:39",
   "connections": [
@@ -3167,25 +3740,20 @@
   "model": "qwen3.5:9b"
  },
  "sequence-limit": {
-  "at": "2026-10-19T13:47:36",
+  "at": "2026-10-24T16:27:21",
   "connections": [
    {
     "id": "limsup-liminf",
     "new": true,
-    "why": "The limit superior and limit inferior are defined using subsequential limits of a sequence, directly extending the concept of convergence to bounded sequences that may not converge."
+    "why": "The limit superior and inferior are defined via limits of subsequences, directly extending the concept of a sequence limit to bounded sequences that may not converge."
    },
    {
     "id": "squeeze-theorem-for-sequences",
     "new": true,
-    "why": "This theorem uses the $\forall \forall \forall$ quantifier structure of the sequence limit definition to prove convergence by bounding a sequence between two convergent ones."
-   },
-   {
-    "id": "composite-sequences-limit",
-    "new": true,
-    "why": "This result relies on the uniqueness and existence of limits to establish algebraic rules (like sum/product) for combining convergent sequences."
+    "why": "This theorem uses the definition of a sequence limit (the $\forall \forall$ quantifier structure) to prove convergence by bounding a sequence between two convergent ones."
    }
   ],
-  "hash": "af81aad27b36",
+  "hash": "19bff521a522",
   "model": "qwen3.5:9b"
  },
  "sequences-metric-spaces": {
@@ -3208,6 +3776,23 @@
    }
   ],
   "hash": "d2af3aaa9894",
+  "model": "qwen3.5:9b"
+ },
+ "series": {
+  "at": "2026-10-24T16:27:24",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The Borel–Cantelli Lemma uses series convergence (specifically of probabilities) to determine whether events occur infinitely often, directly applying the comparison between convergent and divergent series."
+   },
+   {
+    "id": "chebyshevs-inequality",
+    "new": true,
+    "why": "Chebyshev's Inequality provides a bound on tail probabilities that is often used to prove the convergence of series involving random variables or to establish bounds in probabilistic number theory."
+   }
+  ],
+  "hash": "72762f677d80",
   "model": "qwen3.5:9b"
  },
  "sigma-algebra": {
@@ -3483,6 +4068,50 @@
   "hash": "e3125df4793c",
   "model": "qwen3.5:9b"
  },
+ "taylor-polynomials": {
+  "at": "2026-10-24T16:27:30",
+  "connections": [
+   {
+    "id": "fourier-series",
+    "new": true,
+    "why": "Both use orthogonal expansions (Taylor uses monomials $(x-a)^k$, Fourier uses sines/cosines) to approximate functions, sharing the same underlying idea of representing a function as a sum of simpler basis elements."
+   },
+   {
+    "id": "power-series",
+    "new": true,
+    "why": "Taylor polynomials are the partial sums of power series; this note provides the general convergence theory (radius of convergence, ratio test) that determines when the Taylor polynomial sequence actually approaches the original function."
+   },
+   {
+    "id": "exponential-and-logarithm",
+    "new": true,
+    "why": "The exponential and logarithm functions are defined via their Taylor series at 0, making this note a primary application where the abstract Taylor polynomial machinery constructs specific transcendental functions."
+   }
+  ],
+  "hash": "01807c3e705e",
+  "model": "qwen3.5:9b"
+ },
+ "taylor-series": {
+  "at": "2026-10-24T16:27:34",
+  "connections": [
+   {
+    "id": "fourier-series",
+    "new": true,
+    "why": "Both represent functions as infinite sums of orthogonal basis elements (powers vs. trigonometric functions) and share convergence issues regarding the domain of validity."
+   },
+   {
+    "id": "binomial-series",
+    "new": true,
+    "why": "The binomial series is a specific instance of a power series expansion that, like the Taylor series for $1/x$, has a finite radius of convergence determined by the singularity of the function."
+   },
+   {
+    "id": "exponential-and-logarithm",
+    "new": false,
+    "why": "The Taylor series definitions provided in this note are the primary analytic tools used to rigorously define and derive the properties of the exponential and logarithm functions."
+   }
+  ],
+  "hash": "0d82d5d2b9bd",
+  "model": "qwen3.5:9b"
+ },
  "time-series-returns": {
   "at": "2026-10-19T13:48:32",
   "connections": [
@@ -3574,20 +4203,25 @@
   "model": "qwen3.5:9b"
  },
  "uniform-continuity": {
-  "at": "2026-10-19T13:48:42",
+  "at": "2026-10-24T16:27:38",
   "connections": [
    {
     "id": "equicontinuity-Arzela-Ascoli-Thm",
     "new": true,
-    "why": "The Arzelà-Ascoli theorem generalizes the link between compactness and uniform continuity by characterizing compact subsets of function spaces using equicontinuity (a uniform condition) rather than just domain compactness."
+    "why": "Equicontinuity is the uniform continuity condition applied to a family of functions, and the Arzelà-Ascoli theorem uses this concept alongside compactness to characterize relatively compact subsets of function spaces."
    },
    {
-    "id": "continuity-of-measure",
+    "id": "completeness",
     "new": true,
-    "why": "Both concepts rely on a 'uniform' control over behavior across an entire space (domain for functions, measure space for sets) to ensure limits or integrals behave predictably without depending on specific points."
+    "why": "The Heine-Cantor theorem (compactness implies uniform continuity) fundamentally relies on the completeness of the metric space to extract convergent subsequences in the proof by contradiction."
+   },
+   {
+    "id": "contractions",
+    "new": true,
+    "why": "Contraction mappings are a specific class of uniformly continuous functions where the Lipschitz constant is strictly less than 1, illustrating how uniform continuity bounds the rate of change globally."
    }
   ],
-  "hash": "bd9e1a571fbd",
+  "hash": "0af6e988d934",
   "model": "qwen3.5:9b"
  },
  "uniform-distribution": {

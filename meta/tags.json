@@ -209,6 +209,17 @@
    "summary": "This note states and proves the Banach Contraction Principle for complete metric spaces, establishing existence, uniqueness, and constructive convergence of fixed points.",
    "tagged_at": "2026-10-19T12:56:50"
   },
+  "basic-feasible-solutions": {
+   "chars": 12417,
+   "domain": "Optimization & Linear Programming",
+   "hash": "44014c97fd04",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines basic feasible solutions in linear programming and proves their equivalence to vertices of the feasible polytope.",
+   "tagged_at": "2026-10-25T21:14:39"
+  },
   "basis-and-dimension": {
    "chars": 14896,
    "domain": "Linear Algebra & Matrix Theory",
@@ -296,6 +307,17 @@
    "needs_review": false,
    "summary": "States the algebraic expansion of binomials and provides a combinatorial proof plus probability corollaries.",
    "tagged_at": "2026-10-19T12:56:59"
+  },
+  "bipartite-matching-lp": {
+   "chars": 10296,
+   "domain": "Optimization & Linear Programming",
+   "hash": "5852c882ba7e",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that LP relaxation of bipartite matching yields an integral optimum via cycle-shifting on fractional edges.",
+   "tagged_at": "2026-10-25T21:14:40"
   },
   "birthday-problem": {
    "chars": 5609,
@@ -584,15 +606,15 @@
    "tagged_at": "2026-10-19T12:57:39"
   },
   "convex-sets-and-convex-hulls": {
-   "chars": 20932,
-   "domain": "Optimization & Linear Programming",
-   "hash": "06d083dd47a0",
+   "chars": 9758,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "731588b77771",
    "kind": "theorem",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines convex sets/functions and proves the equivalence between convex hulls defined via intersections and convex combinations.",
-   "tagged_at": "2026-10-19T12:57:41"
+   "summary": "Defines convex sets and functions, proves the epigraph characterization, and establishes that the convex hull consists of all convex combinations.",
+   "tagged_at": "2026-10-25T21:14:42"
   },
   "convexity-and-curve-sketching": {
    "chars": 6848,
@@ -825,6 +847,17 @@
    "summary": "Defines eigenvalues/eigenvectors, proves their independence for distinct roots, and derives trace/determinant formulas via the characteristic polynomial.",
    "tagged_at": "2026-10-19T16:15:37"
   },
+  "equational-form": {
+   "chars": 8993,
+   "domain": "Optimization & Linear Programming",
+   "hash": "fec601c85027",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Converts general linear programs to equational form using slack and free-variable decompositions, with geometric interpretations.",
+   "tagged_at": "2026-10-25T21:14:44"
+  },
   "equicontinuity-Arzela-Ascoli-Thm": {
    "chars": 13774,
    "domain": "Function Spaces & Fixed Points",
@@ -934,6 +967,17 @@
    "needs_review": false,
    "summary": "Defines the exponential distribution, proves its memoryless property and uniqueness among continuous distributions, and links it to Poisson processes.",
    "tagged_at": "2026-10-19T12:58:26"
+  },
+  "extreme-points-and-minkowski-theorem": {
+   "chars": 11970,
+   "domain": "Optimization & Linear Programming",
+   "hash": "088e37d7d4b3",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines faces and extreme points of convex sets, proving Minkowski's theorem that compact convex sets are the convex hull of their extreme points.",
+   "tagged_at": "2026-10-25T21:14:46"
   },
   "fatous-lemma-and-convergence-theorems": {
    "chars": 19436,
@@ -1145,15 +1189,15 @@
    "tagged_at": "2026-10-19T12:58:50"
   },
   "hyperplane-separation-theorems": {
-   "chars": 18221,
+   "chars": 13134,
    "domain": "Optimization & Linear Programming",
-   "hash": "5ffa277ebc32",
+   "hash": "bffe0d2f7709",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Proves hyperplane separation theorems for convex sets using projection arguments and characterizes sets with convex complements.",
-   "tagged_at": "2026-10-19T12:58:52"
+   "summary": "Proves existence of separating and supporting hyperplanes for closed convex sets using closest-point arguments.",
+   "tagged_at": "2026-10-25T21:14:48"
   },
   "importance-sampling": {
    "chars": 14943,
@@ -1220,6 +1264,17 @@
    "needs_review": false,
    "summary": "Defines indicator random variables and uses linearity of expectation to solve counting problems like the matching problem.",
    "tagged_at": "2026-10-19T12:59:00"
+  },
+  "integer-programming": {
+   "chars": 11590,
+   "domain": "Optimization & Linear Programming",
+   "hash": "27c6372684ac",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines integer programs, proves NP-hardness via SAT reduction, and explains LP relaxation bounds with facility location examples.",
+   "tagged_at": "2026-10-25T21:14:50"
   },
   "integrable-functions": {
    "chars": 15897,
@@ -1464,15 +1519,15 @@
    "tagged_at": "2026-10-19T15:45:27"
   },
   "linear-programs": {
-   "chars": 3550,
+   "chars": 14947,
    "domain": "Optimization & Linear Programming",
-   "hash": "fcb9c1f38927",
+   "hash": "c9a13b209443",
    "kind": "model",
    "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines linear programs, feasible regions, and outcomes while showing how to model absolute values and equalities.",
-   "tagged_at": "2026-10-19T12:59:30"
+   "summary": "Defines linear programs, converts forms, illustrates geometry with a 2D example, and discusses high-dimensional phenomena.",
+   "tagged_at": "2026-10-25T21:14:52"
   },
   "lotus": {
    "chars": 1497,
@@ -1484,6 +1539,17 @@
    "needs_review": false,
    "summary": "Defines continuous expectation and the Law of the Unconscious Statistician (LOTUS) for transforming random variables.",
    "tagged_at": "2026-10-19T12:59:31"
+  },
+  "lp-modeling": {
+   "chars": 26511,
+   "domain": "Optimization & Linear Programming",
+   "hash": "00b5abe6c1b5",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers techniques for formulating non-linear problems (diet, flow, absolute values) as linear programs.",
+   "tagged_at": "2026-10-25T21:14:54"
   },
   "lp-spaces": {
    "chars": 8194,
@@ -1926,15 +1992,15 @@
    "tagged_at": "2026-10-19T13:00:24"
   },
   "polyhedra-and-polytopes": {
-   "chars": 16322,
+   "chars": 10936,
    "domain": "Optimization & Linear Programming",
-   "hash": "5fbcec9b584c",
-   "kind": "theorem",
-   "level": 4,
+   "hash": "a29b73336fb8",
+   "kind": "definition",
+   "level": 3,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines polyhedra and proves the Minkowski-Weyl theorem linking H- and V-representations while analyzing representation complexity.",
-   "tagged_at": "2026-10-19T13:00:26"
+   "summary": "Defines polyhedra and polytopes via linear inequalities, proves their convexity, and describes standard examples like cubes and simplices.",
+   "tagged_at": "2026-10-25T21:14:56"
   },
   "polynomial-division-algorithm": {
    "chars": 6873,
@@ -2288,6 +2354,17 @@
    "summary": "Defines infinite series and proves convergence tests including the term test, comparison tests, ratio test, root test, and p-series.",
    "tagged_at": "2026-10-24T16:24:53"
   },
+  "set-cover-and-max-sat": {
+   "chars": 14218,
+   "domain": "Machine Learning & Optimization",
+   "hash": "b0518147045d",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents LP relaxation and randomized rounding techniques for Set Cover and MAX-SAT approximation algorithms.",
+   "tagged_at": "2026-10-25T21:14:58"
+  },
   "sigma-algebra": {
    "chars": 16039,
    "domain": "Measure Theory & Integration",
@@ -2320,6 +2397,17 @@
    "needs_review": false,
    "summary": "Defines simple functions and their integral in measure theory, proving well-definedness and linearity properties.",
    "tagged_at": "2026-10-23T19:37:14"
+  },
+  "simplex-method": {
+   "chars": 18607,
+   "domain": "Optimization & Linear Programming",
+   "hash": "60d025e0fef3",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note explains the simplex method for linear programming, including tableau construction, pivoting rules, and termination proofs.",
+   "tagged_at": "2026-10-25T21:15:00"
   },
   "simpsons-paradox": {
    "chars": 5634,
@@ -2595,6 +2683,28 @@
    "needs_review": false,
    "summary": "Defines vector spaces via axioms, derives basic arithmetic rules, and provides examples like coordinate spaces, functions, matrices, polynomials, and ODE solutions.",
    "tagged_at": "2026-10-19T15:45:49"
+  },
+  "vertex-cover-and-independent-set": {
+   "chars": 11785,
+   "domain": "Optimization & Linear Programming",
+   "hash": "e10b6c68a7f5",
+   "kind": "technique",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note covers LP relaxations and rounding algorithms for Vertex Cover and Independent Set problems.",
+   "tagged_at": "2026-10-25T21:15:01"
+  },
+  "vertices-of-polytopes": {
+   "chars": 11857,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "99c9c7826cc7",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves that polytopes are convex hulls of finite vertices and shows linear optimization attains maxima at these vertices.",
+   "tagged_at": "2026-10-25T21:15:04"
   },
   "why-measure-theory": {
    "chars": 11943,

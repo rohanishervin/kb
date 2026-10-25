@@ -292,6 +292,28 @@
   "hash": "284740da6b83",
   "model": "qwen3.5:9b"
  },
+ "basic-feasible-solutions": {
+  "at": "2026-10-25T21:15:08",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "Basic feasible solutions are the vertices of a polytope, which is defined as the intersection of half-spaces forming a convex set."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The geometric characterization of BFS as vertices relies on separating hyperplanes that define the facets of the feasible region."
+   },
+   {
+    "id": "vertices-of-polytopes",
+    "new": false,
+    "why": "This note provides the general definition of vertices and extreme points in convex geometry, which are proven to be equivalent to basic feasible solutions in linear programming."
+   }
+  ],
+  "hash": "44014c97fd04",
+  "model": "qwen3.5:9b"
+ },
  "basis-and-dimension": {
   "at": "2026-10-23T13:23:35",
   "connections": [
@@ -411,6 +433,28 @@
    }
   ],
   "hash": "bc164bbc9f9a",
+  "model": "qwen3.5:9b"
+ },
+ "bipartite-matching-lp": {
+  "at": "2026-10-25T21:15:15",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The proof that the LP relaxation of bipartite matching has an integral optimum relies on the fact that the constraint matrix is totally unimodular, which implies that the polytope defined by the constraints is a hypercube whose vertices are exactly the perfect matchings; this geometric property is deeply analogous to and often proved using hyperplane separation arguments for convex sets."
+   },
+   {
+    "id": "basic-feasible-solutions",
+    "new": true,
+    "why": "The algorithmic step of moving along an even cycle to drive fractional variables to 0 or 1 is a specific instance of traversing edges in the polytope to reach a basic feasible solution (a vertex), which corresponds to an integral matching."
+   },
+   {
+    "id": "extreme-points-and-minkowski-theorem",
+    "new": true,
+    "why": "The theorem states that the optimal solution lies at a vertex of the feasible region (an extreme point), directly invoking the principle that linear functions attain their extrema at extreme points of compact convex sets, a concept formalized by Minkowski's theorem and related to the geometry of polyhedra."
+   }
+  ],
+  "hash": "5852c882ba7e",
   "model": "qwen3.5:9b"
  },
  "birthday-problem": {
@@ -906,25 +950,20 @@
   "model": "qwen3.5:9b"
  },
  "convex-sets-and-convex-hulls": {
-  "at": "2026-10-19T13:41:13",
+  "at": "2026-10-25T21:15:18",
   "connections": [
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's Inequality is the fundamental analytical tool that translates the geometric definition of convexity (chords lie above graphs) into an inequality for expectations, bridging convex sets/functions with probability theory."
+   },
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "Both rely on the geometric property that a continuous function mapping a compact convex set to itself must have a fixed point, with convexity being the critical structural requirement for Brouwer's theorem."
-   },
-   {
-    "id": "hyperplane-separation-theorems",
-    "new": false,
-    "why": "The separation of disjoint convex sets by a hyperplane is a direct consequence of the geometry defined in this note (convex sets and hulls), often used to prove existence results like those in optimization."
-   },
-   {
-    "id": "compactness",
-    "new": true,
-    "why": "While convexity is an algebraic/linear property, compactness is a topological one; their intersection (e.g., in fixed-point theorems or optimization) creates the conditions where local minima become global minima."
+    "why": "Both concepts rely on the topological structure of convex sets; Brouwer's theorem guarantees a fixed point within a convex compact set, while convex hulls define the smallest convex container containing a set."
    }
   ],
-  "hash": "06d083dd47a0",
+  "hash": "731588b77771",
   "model": "qwen3.5:9b"
  },
  "convexity-and-curve-sketching": {
@@ -1339,6 +1378,23 @@
   "hash": "5db9ee85f9e0",
   "model": "qwen3.5:9b"
  },
+ "equational-form": {
+  "at": "2026-10-25T21:15:22",
+  "connections": [
+   {
+    "id": "affine-subspaces",
+    "new": true,
+    "why": "The geometric meaning of the equality constraints $Ax=b$ defines an affine subspace, which is a translation of the kernel (a linear subspace) by a particular solution."
+   },
+   {
+    "id": "linear-maps",
+    "new": true,
+    "why": "The matrix equation $Ax=b$ represents a linear map applied to vector $x$, connecting the algebraic form to the theory of linear transformations and their images."
+   }
+  ],
+  "hash": "fec601c85027",
+  "model": "qwen3.5:9b"
+ },
  "equicontinuity-Arzela-Ascoli-Thm": {
   "at": "2026-10-19T13:42:02",
   "connections": [
@@ -1532,6 +1588,28 @@
    }
   ],
   "hash": "1d1e119422db",
+  "model": "qwen3.5:9b"
+ },
+ "extreme-points-and-minkowski-theorem": {
+  "at": "2026-10-25T21:15:27",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both are fundamental existence theorems in convex analysis and topology that guarantee specific structural properties (extreme points or fixed points) under compactness and continuity conditions."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness is a critical hypothesis in Minkowski's Theorem, as the theorem fails for non-compact sets like closed half-spaces which lack extreme points."
+   },
+   {
+    "id": "convexity-and-curve-sketching",
+    "new": true,
+    "why": "The concept of an 'extreme point' defined by not lying on a segment is the geometric dual to analyzing inflection points and convexity, both describing boundary behavior of functions/sets."
+   }
+  ],
+  "hash": "088e37d7d4b3",
   "model": "qwen3.5:9b"
  },
  "fatous-lemma-and-convergence-theorems": {
@@ -1863,20 +1941,25 @@
   "model": "qwen3.5:9b"
  },
  "hyperplane-separation-theorems": {
-  "at": "2026-10-19T13:43:16",
+  "at": "2026-10-25T21:15:32",
   "connections": [
    {
     "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "Both rely on topological properties of convex sets (specifically compactness and connectedness) to derive existence results, with separation theorems often serving as a key step in proving fixed-point theorems like Brouwer's."
+    "why": "Both rely on topological properties (specifically compactness and convexity) to guarantee the existence of specific geometric configurations (separating hyperplanes vs. fixed points)."
    },
    {
-    "id": "compactness",
+    "id": "chebyshevs-inequality",
     "new": true,
-    "why": "The proofs of strict separation and the Hilbert projection theorem explicitly utilize the concept of compactness (e.g., via Bolzano-Weierstrass or the Extreme Value Theorem) to ensure existence and uniqueness of separating hyperplanes or projections."
+    "why": "The separation theorem provides a geometric foundation for deriving probabilistic inequalities like Chebyshev's by bounding deviations via linear functionals."
+   },
+   {
+    "id": "jensens-inequality",
+    "new": true,
+    "why": "Jensen's inequality characterizes convex functions, which are the fundamental objects that hyperplanes support and separate in this context."
    }
   ],
-  "hash": "5ffa277ebc32",
+  "hash": "bffe0d2f7709",
   "model": "qwen3.5:9b"
  },
  "importance-sampling": {
@@ -1999,6 +2082,28 @@
    }
   ],
   "hash": "1f983cd42c88",
+  "model": "qwen3.5:9b"
+ },
+ "integer-programming": {
+  "at": "2026-10-25T21:15:37",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The feasible region of an LP relaxation is a convex polyhedron, and the gap between the IP optimum and LP optimum arises because integer points are not necessarily vertices or contained in the convex hull of all integer solutions."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "Hyperplane separation provides the geometric intuition for why relaxing integrality constraints (moving from a discrete set to its convex hull) yields an upper bound on the maximum and a lower bound on the minimum."
+   },
+   {
+    "id": "extreme-points-and-minkowski-theorem",
+    "new": true,
+    "why": "The LP relaxation replaces the discrete feasible set with its convex hull; understanding extreme points and vertices of polyhedra is essential for analyzing when the relaxation is tight or how far off it can be."
+   }
+  ],
+  "hash": "27c6372684ac",
   "model": "qwen3.5:9b"
  },
  "integrable-functions": {
@@ -2406,20 +2511,25 @@
   "model": "qwen3.5:9b"
  },
  "linear-programs": {
-  "at": "2026-10-19T13:44:31",
+  "at": "2026-10-25T21:15:42",
   "connections": [
    {
-    "id": "lagrangian-and-kkt-conditions",
+    "id": "hyperplane-separation-theorems",
     "new": true,
-    "why": "KKT conditions generalize the optimality conditions for linear programs to nonlinear convex optimization by using Lagrange multipliers."
+    "why": "The geometry of LPs relies on the fact that a polyhedron is an intersection of half-spaces, and the separation theorem guarantees that if two convex sets (like the feasible region and an optimal point outside it) are disjoint, there exists a hyperplane separating them, which underpins duality and optimality conditions."
    },
    {
-    "id": "boosting",
+    "id": "convex-sets-and-convex-hulls",
+    "new": false,
+    "why": "The feasible set of a linear program is a polyhedron, which is a specific type of convex set; understanding the properties of convex sets (like the fact that any point in a convex set is a convex combination of extreme points) is essential for analyzing LP solutions."
+   },
+   {
+    "id": "bipartite-matching-lp",
     "new": true,
-    "why": "Boosting algorithms often formulate their sub-problems as linear programs to optimize weak learners via hinge loss or similar convex objectives."
+    "why": "This note describes a specific combinatorial optimization problem (maximum-weight bipartite matching) that can be formulated and solved as a linear program, illustrating the general application of LP techniques to discrete structures."
    }
   ],
-  "hash": "fcb9c1f38927",
+  "hash": "c9a13b209443",
   "model": "qwen3.5:9b"
  },
  "lotus": {
@@ -2437,6 +2547,28 @@
    }
   ],
   "hash": "4d9bf6a1feb1",
+  "model": "qwen3.5:9b"
+ },
+ "lp-modeling": {
+  "at": "2026-10-25T21:15:47",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "Linear programs define convex polyhedra, making the study of their extreme points and convex hulls a fundamental geometric interpretation of LP solutions."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The separation theorem is the geometric foundation for duality in linear programming, explaining why optimal solutions occur at boundaries defined by hyperplanes."
+   },
+   {
+    "id": "bipartite-matching-lp",
+    "new": true,
+    "why": "This note describes a specific combinatorial problem that is solved by formulating it as a linear program, illustrating the general technique of LP modeling for discrete structures."
+   }
+  ],
+  "hash": "00b5abe6c1b5",
   "model": "qwen3.5:9b"
  },
  "lp-spaces": {
@@ -3160,25 +3292,20 @@
   "model": "qwen3.5:9b"
  },
  "polyhedra-and-polytopes": {
-  "at": "2026-10-19T13:46:28",
+  "at": "2026-10-25T21:15:51",
   "connections": [
    {
-    "id": "cayley-hamilton-theorem-and-matrix-polynomials",
+    "id": "brouwer-fixed-point-theorem",
     "new": true,
-    "why": "The Cayley-Hamilton theorem relates a matrix to its characteristic polynomial, which is the algebraic foundation for understanding eigenvalues and eigenvectors that define the geometry of polytopes and their representations."
+    "why": "The Brouwer Fixed Point Theorem is the deep geometric analogue to the Minkowski theorem (linked via extreme-points-and-minkowski-theorem), which states that every polytope contains an extreme point, guaranteeing solutions in optimization."
    },
    {
-    "id": "eigenvalues-eigenvectors-and-diagonalization",
+    "id": "convexity-and-curve-sketching",
     "new": true,
-    "why": "Eigenvalues and eigenvectors are essential tools in analyzing the symmetry and structure of canonical polyhedra like the hypercube and cross-polytope, which are duals of each other."
-   },
-   {
-    "id": "linear-independence-basis-dimension",
-    "new": true,
-    "why": "Linear independence is the core concept used to define vertices (extreme points) of polytopes as basic feasible solutions in linear programming."
+    "why": "Both notes rely on the fundamental property that intersections of half-spaces (polyhedra) and convex functions preserve convexity, linking discrete geometry to real analysis curve properties."
    }
   ],
-  "hash": "5fbcec9b584c",
+  "hash": "a29b73336fb8",
   "model": "qwen3.5:9b"
  },
  "polynomial-division-algorithm": {
@@ -3795,6 +3922,28 @@
   "hash": "72762f677d80",
   "model": "qwen3.5:9b"
  },
+ "set-cover-and-max-sat": {
+  "at": "2026-10-25T21:15:56",
+  "connections": [
+   {
+    "id": "borel-cantelli-lemma",
+    "new": true,
+    "why": "The proof of the existence of a full cover in repeated randomized rounding relies on bounding the probability that any element remains uncovered after many independent trials, which is the direct application of the Borel–Cantelli lemma (specifically the first part) to show that with high probability no element is missed infinitely often or after sufficient repetitions."
+   },
+   {
+    "id": "inclusion-exclusion",
+    "new": true,
+    "why": "While the note uses independence to compute probabilities directly, the underlying combinatorial structure of covering elements by sets relates to the Principle of Inclusion-Exclusion, which provides an exact formula for the probability that a union of events occurs (covering all elements), contrasting with the probabilistic bound used here."
+   },
+   {
+    "id": "adjusting-for-overcounting",
+    "new": true,
+    "why": "The randomized rounding technique inherently deals with overcounting the cost of sets chosen in multiple rounds (where a set is counted once despite being selected in several trials), requiring an adjustment similar to correcting for overcounting in combinatorial arguments to bound the expected weight."
+   }
+  ],
+  "hash": "b0518147045d",
+  "model": "qwen3.5:9b"
+ },
  "sigma-algebra": {
   "at": "2026-10-23T19:38:36",
   "connections": [
@@ -3854,6 +4003,18 @@
    }
   ],
   "hash": "88a07f2242a8",
+  "model": "qwen3.5:9b"
+ },
+ "simplex-method": {
+  "at": "2026-10-25T21:15:59",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The geometric movement of the simplex method along edges between vertices relies on the underlying principle that convex polytopes can be separated by hyperplanes, which is a foundational concept for understanding optimality conditions in linear programming."
+   }
+  ],
+  "hash": "60d025e0fef3",
   "model": "qwen3.5:9b"
  },
  "simpsons-paradox": {
@@ -4339,6 +4500,45 @@
    }
   ],
   "hash": "5604af7bdb83",
+  "model": "qwen3.5:9b"
+ },
+ "vertex-cover-and-independent-set": {
+  "at": "2026-10-25T21:16:03",
+  "connections": [
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "The proof that the LP relaxation is exact for bipartite graphs relies on the fact that the constraint matrix is totally unimodular, a property deeply connected to hyperplane separation and duality."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The rounding argument constructs a vertex cover by intersecting the fractional solution with a half-space ($x_v \neq 1/2$), which is a technique involving convex sets and their boundaries."
+   }
+  ],
+  "hash": "e10b6c68a7f5",
+  "model": "qwen3.5:9b"
+ },
+ "vertices-of-polytopes": {
+  "at": "2026-10-25T21:16:07",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both rely on topological properties of compact convex sets to guarantee the existence of specific points (vertices or fixed points) that characterize the set's structure."
+   },
+   {
+    "id": "annihilators",
+    "new": true,
+    "why": "The proof that vertices are extreme points uses a separation argument involving linear functionals, which is conceptually linked to the definition of annihilators in dual spaces."
+   },
+   {
+    "id": "dual-spaces",
+    "new": true,
+    "why": "The characterization of vertices via supporting hyperplanes (linear functionals achieving their maximum) directly utilizes the geometry defined by dual spaces and linear maps."
+   }
+  ],
+  "hash": "99c9c7826cc7",
   "model": "qwen3.5:9b"
  },
  "why-measure-theory": {

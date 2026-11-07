@@ -66,6 +66,17 @@
    "summary": "Defines absolute and conditional convergence, proves the Riemann rearrangement theorem, and establishes properties of double series and Cauchy products.",
    "tagged_at": "2026-10-24T16:23:54"
   },
+  "absolute-extrema-in-several-variables": {
+   "chars": 7492,
+   "domain": "Optimization & Linear Programming",
+   "hash": "1a7adb74f47c",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Describes the method for finding absolute extrema in several variables by checking critical points and boundaries.",
+   "tagged_at": "2026-11-07T15:44:43"
+  },
   "adjusting-for-overcounting": {
    "chars": 4072,
    "domain": "Probability Foundations & Combinatorics",
@@ -451,6 +462,17 @@
    "summary": "Defines transition matrices and proves the similarity transformation law for linear operators under basis changes.",
    "tagged_at": "2026-10-19T15:44:59"
   },
+  "change-of-variables-multiple-integrals": {
+   "chars": 9205,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "2fbd66708da3",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers the change of variables formula for multiple integrals, including coordinate transformations and improper integrals.",
+   "tagged_at": "2026-11-07T15:44:44"
+  },
   "chebyshevs-inequality": {
    "chars": 5989,
    "domain": "Probability Foundations & Combinatorics",
@@ -660,6 +682,28 @@
    "summary": "Defines covariance and correlation, proves bilinearity properties, distinguishes independence from uncorrelatedness, and derives bounds using Cauchy-Schwarz.",
    "tagged_at": "2026-10-19T12:57:45"
   },
+  "critical-points-and-hessian": {
+   "chars": 9103,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "987b346493c6",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines critical points and proves the second derivative test for classifying local extrema using Hessian eigenvalues.",
+   "tagged_at": "2026-11-07T15:44:46"
+  },
+  "cross-product": {
+   "chars": 6810,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "76ca86b7c8ea",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the cross product in R3, proves algebraic rules and geometric interpretations like Lagrange's identity, and applies it to finding planes and volumes.",
+   "tagged_at": "2026-11-07T15:44:48"
+  },
   "cumulative-distribution-functions": {
    "chars": 3758,
    "domain": "Probability Foundations & Combinatorics",
@@ -670,6 +714,17 @@
    "needs_review": false,
    "summary": "Defines CDFs for discrete and continuous variables, lists three validity properties with proofs, and visualizes the relationship to PMFs.",
    "tagged_at": "2026-10-19T12:57:57"
+  },
+  "curvature-of-plane-curves": {
+   "chars": 8065,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "4abc4c9740b1",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines signed curvature, proves the Fundamental Theorem of Plane Curves, and derives formulas for arbitrary parameters.",
+   "tagged_at": "2026-11-07T15:44:50"
   },
   "de-montmorts-matching-problem": {
    "chars": 5886,
@@ -781,6 +836,17 @@
    "summary": "Defines diagonalizable operators, proves equivalence criteria using algebraic and geometric multiplicities, and applies the technique to compute matrix powers and Fibonacci numbers.",
    "tagged_at": "2026-10-19T16:15:35"
   },
+  "differentiability-in-Rn": {
+   "chars": 8943,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "00892a0e2a3e",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines differentiability in Rn via linear approximation, proves the Jacobian matrix is the derivative, and shows continuous partials imply differentiability.",
+   "tagged_at": "2026-11-07T15:44:52"
+  },
   "differentiation-rules": {
    "chars": 3045,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -802,6 +868,17 @@
    "needs_review": false,
    "summary": "Defines direct sums and complements in vector spaces with proofs of existence, dimension formulas, and criteria for uniqueness.",
    "tagged_at": "2026-10-19T16:15:07"
+  },
+  "divergence-theorem": {
+   "chars": 11069,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "89c254809775",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the Divergence Theorem and Poincaré Lemma with proofs for star-shaped domains and applications to flux.",
+   "tagged_at": "2026-11-07T15:44:54"
   },
   "dominated-convergence-theorem": {
    "chars": 8539,
@@ -1012,6 +1089,17 @@
    "summary": "Defines equilibrium points and stability criteria for first-order difference equations, contrasting discrete vs. continuous dynamics.",
    "tagged_at": "2026-10-19T12:58:31"
   },
+  "flux-divergence-and-curl": {
+   "chars": 9634,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "5cfba0897bb9",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines flux, divergence, and curl; proves identities like curl(grad)=0; includes product rules and computational examples.",
+   "tagged_at": "2026-11-07T15:44:55"
+  },
   "fourier-series": {
    "chars": 9215,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -1155,6 +1243,17 @@
    "summary": "Defines geometric sequences and series, proving the finite sum formula and convergence conditions for infinite sums.",
    "tagged_at": "2026-10-24T16:24:21"
   },
+  "gradient": {
+   "chars": 6888,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "617c8477ee94",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines the gradient vector field and proves its orthogonality to level sets using the chain rule and Cauchy-Schwarz inequality.",
+   "tagged_at": "2026-11-07T15:44:57"
+  },
   "gradient-descent-and-variants": {
    "chars": 19790,
    "domain": "Machine Learning & Optimization",
@@ -1165,6 +1264,39 @@
    "needs_review": false,
    "summary": "Derives convergence bounds for gradient descent, analyzes SGD variance, and proves Adam's bias-corrected moment estimates.",
    "tagged_at": "2026-10-19T12:58:47"
+  },
+  "graphs-and-level-sets": {
+   "chars": 9619,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "2a2e2df6e4ba",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Classifies graphs, level sets, and quadric surfaces using eigenvalues, orthogonal transformations, and completing the square.",
+   "tagged_at": "2026-11-07T15:44:59"
+  },
+  "greens-theorem": {
+   "chars": 11049,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "b2115b04f479",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Green's Theorem relates double integrals over a region to line integrals over its boundary, with proofs and applications.",
+   "tagged_at": "2026-11-07T15:45:01"
+  },
+  "higher-partials-and-taylor": {
+   "chars": 11037,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "716f1fda6b79",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines higher partial derivatives, proves Schwarz's theorem on mixed partials, and establishes Taylor's theorem with multiple remainder forms in several variables.",
+   "tagged_at": "2026-11-07T15:45:03"
   },
   "homeomorphisms-compactness": {
    "chars": 5411,
@@ -1198,6 +1330,17 @@
    "needs_review": false,
    "summary": "Proves existence of separating and supporting hyperplanes for closed convex sets using closest-point arguments.",
    "tagged_at": "2026-10-25T21:14:48"
+  },
+  "implicit-function-theorem": {
+   "chars": 9043,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "4b3788b7f4db",
+   "kind": "theorem",
+   "level": 4,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note covers the Implicit Function Theorem, level set smoothness, and applications to cyclic rules with proofs.",
+   "tagged_at": "2026-11-07T15:45:05"
   },
   "importance-sampling": {
    "chars": 14943,
@@ -1287,6 +1430,17 @@
    "summary": "Defines integrable functions via positive/negative parts, proves linearity and monotonicity, and shows the indefinite integral of a nonnegative function defines a new measure.",
    "tagged_at": "2026-10-23T19:36:49"
   },
+  "integrals-over-curves-and-surfaces": {
+   "chars": 7292,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "6ec1aebfccb8",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines and proves invariance for scalar line and surface integrals, computing mass and centroids with examples.",
+   "tagged_at": "2026-11-07T15:45:07"
+  },
   "integration-by-parts-and-substitution": {
    "chars": 5273,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -1331,6 +1485,17 @@
    "summary": "Defines difference equations, explains order and linearity with examples, and distinguishes homogeneous from non-homogeneous forms.",
    "tagged_at": "2026-10-19T12:59:02"
   },
+  "inverse-function-theorem": {
+   "chars": 8231,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "47943c2a26c9",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Proves the Inverse Function Theorem via contraction mapping and applies it to polar, cylindrical, and spherical coordinates.",
+   "tagged_at": "2026-11-07T15:45:08"
+  },
   "invertible-linear-maps": {
    "chars": 7298,
    "domain": "Linear Algebra & Matrix Theory",
@@ -1352,6 +1517,17 @@
    "needs_review": false,
    "summary": "Proves irrationality of square roots and characterizes rational numbers via the Euclidean algorithm and continued fractions.",
    "tagged_at": "2026-10-24T16:24:29"
+  },
+  "iterated-integrals-and-fubini": {
+   "chars": 8174,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "55ba04772c3d",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "This note covers Fubini's Theorem for multiple integrals, including proofs for rectangular and non-rectangular regions with computational examples.",
+   "tagged_at": "2026-11-07T15:45:10"
   },
   "jensens-inequality": {
    "chars": 5575,
@@ -1387,15 +1563,15 @@
    "tagged_at": "2026-10-19T15:45:21"
   },
   "lagrangian-and-kkt-conditions": {
-   "chars": 20566,
+   "chars": 22277,
    "domain": "Optimization & Linear Programming",
-   "hash": "009573d47149",
+   "hash": "5b7fd341f846",
    "kind": "theorem",
    "level": 4,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Derives Lagrangian and KKT first-order conditions for constrained optimization with equality and inequality constraints.",
-   "tagged_at": "2026-10-19T12:59:08"
+   "summary": "Derives Karush-Kuhn-Tucker first-order conditions for constrained optimization with equality and inequality constraints.",
+   "tagged_at": "2026-11-07T15:45:12"
   },
   "laplace-expansion-adjugate-and-cramers-rule": {
    "chars": 8572,
@@ -1463,6 +1639,17 @@
    "summary": "Defines function limits via epsilon-delta and sequences, proves continuity equivalence, limit laws, and trigonometric examples.",
    "tagged_at": "2026-10-24T16:24:31"
   },
+  "limits-and-continuity-in-Rn": {
+   "chars": 8139,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "1a9b03772e40",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines limits and continuity in R^n, proves composition rules, and demonstrates path-dependence with polar coordinates.",
+   "tagged_at": "2026-11-07T15:45:14"
+  },
   "limits-of-measurable-functions": {
    "chars": 10950,
    "domain": "Measure Theory & Integration",
@@ -1484,6 +1671,17 @@
    "needs_review": false,
    "summary": "Defines limit inferior/superior for sequences, proves their monotonicity, and establishes the equivalence of convergence with equal liminf/limsup.",
    "tagged_at": "2026-10-19T12:59:19"
+  },
+  "line-integrals-and-conservative-fields": {
+   "chars": 10500,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "5ecd30395dc1",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines vector fields and line integrals, proves the fundamental theorem for line integrals, and characterizes conservative fields via curl-free conditions.",
+   "tagged_at": "2026-11-07T15:45:16"
   },
   "linear-approximation": {
    "chars": 4431,
@@ -1771,6 +1969,17 @@
    "summary": "Defines the multinomial distribution as a generalization of the binomial, deriving its PMF, marginals, lumping property, and conditional distributions.",
    "tagged_at": "2026-10-19T12:59:57"
   },
+  "multiple-integrals": {
+   "chars": 11557,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "ca55ed841b3c",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines multiple integrals over boxes and regions, proves continuity implies integrability, and establishes measure-zero criteria.",
+   "tagged_at": "2026-11-07T15:45:18"
+  },
   "multiplication-rule": {
    "chars": 2081,
    "domain": "Probability Foundations & Combinatorics",
@@ -1781,6 +1990,17 @@
    "needs_review": false,
    "summary": "Defines the multiplication rule for counting sequential outcomes using Cartesian products and provides a simple menu example.",
    "tagged_at": "2026-10-19T12:59:58"
+  },
+  "multivariable-chain-rule": {
+   "chars": 7941,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "8c3874f18ad0",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Presents the multivariable chain rule with proofs, applications to coordinate changes, and consequences like Euler's theorem.",
+   "tagged_at": "2026-11-07T15:45:20"
   },
   "multivariate-normal-distribution": {
    "chars": 13985,
@@ -1947,6 +2167,17 @@
    "summary": "Defines ordered fields and proves basic properties like positivity of squares and impossibility for finite fields.",
    "tagged_at": "2026-10-19T13:00:20"
   },
+  "orthogonality-and-gram-schmidt": {
+   "chars": 13732,
+   "domain": "Linear Algebra & Matrix Theory",
+   "hash": "379455404f7d",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines orthogonality and projections in inner product spaces, proves the Gram-Schmidt process, and establishes the spectral theorem for symmetric matrices.",
+   "tagged_at": "2026-11-07T15:45:22"
+  },
   "outcome": {
    "chars": 1296,
    "domain": "Probability Foundations & Combinatorics",
@@ -1957,6 +2188,39 @@
    "needs_review": false,
    "summary": "Defines outcome, sample space, and distinguishes between mutually exclusive/exhaustive outcomes versus events.",
    "tagged_at": "2026-10-19T13:00:21"
+  },
+  "parametrized-curves": {
+   "chars": 10220,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "fd7515260082",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines parametrized curves, arc length via polygonal limits, reparametrization invariance, and differentiation rules for vector functions.",
+   "tagged_at": "2026-11-07T15:45:24"
+  },
+  "parametrized-surfaces": {
+   "chars": 10116,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "5a911b00fda0",
+   "kind": "technique",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines smooth parametrized surfaces, computes area elements via cross products and the first fundamental form, and calculates areas for spheres and tori.",
+   "tagged_at": "2026-11-07T15:45:26"
+  },
+  "partial-and-directional-derivatives": {
+   "chars": 6355,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "a6819ca89b45",
+   "kind": "definition",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines partial and directional derivatives for multivariable functions with proofs of scaling properties and counterexamples showing existence does not imply differentiability.",
+   "tagged_at": "2026-11-07T15:45:28"
   },
   "partnerships": {
    "chars": 3335,
@@ -2442,6 +2706,17 @@
    "summary": "Derives cross-entropy loss from maximum likelihood, proves softmax gradient properties, and analyzes extreme classification bottlenecks with Bengio's correction.",
    "tagged_at": "2026-10-19T13:01:15"
   },
+  "space-curves-and-frenet-serret": {
+   "chars": 8370,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "29d5312f7d97",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "Defines curvature and torsion for space curves, proves the Frenet-Serret formulas, and establishes the Fundamental Theorem of Space Curves.",
+   "tagged_at": "2026-11-07T15:45:30"
+  },
   "squeeze-theorem-for-sequences": {
    "chars": 2567,
    "domain": "Real Analysis (Foundations & Sequences)",
@@ -2485,6 +2760,17 @@
    "needs_review": false,
    "summary": "Defines stochastic processes, state spaces, and Gaussian processes with financial examples like Brownian motion and regime switching.",
    "tagged_at": "2026-10-19T13:01:21"
+  },
+  "stokes-theorem": {
+   "chars": 11031,
+   "domain": "Real Analysis (Foundations & Sequences)",
+   "hash": "d969e49b42fb",
+   "kind": "theorem",
+   "level": 3,
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "summary": "The note defines Stokes' Theorem for simple and orientable surfaces in R3, provides a proof using Green's Theorem, and discusses potentials.",
+   "tagged_at": "2026-11-07T15:45:32"
   },
   "story-proofs": {
    "chars": 2866,
@@ -3094,6 +3380,352 @@
    "tagged_at": "2026-10-24T16:23:34",
    "tests": [
     "function-continuity"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#1": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "126a0bb359c2",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:18",
+   "tests": [
+    "orthogonality-and-gram-schmidt"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#10": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "36d8c0ab8662",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:26",
+   "tests": [
+    "multivariable-chain-rule",
+    "chain-rule-and-inverse-functions"
+   ],
+   "type": "proof"
+  },
+  "pset-calculus-02#11": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "c13f50c1e54f",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:27",
+   "tests": [
+    "gradient"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#12": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "1f6f082442a6",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:28",
+   "tests": [
+    "higher-partials-and-taylor"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#13": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "280d7fd15669",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:28",
+   "tests": [
+    "critical-points-and-hessian"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#14": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "9e9b47f27dfa",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:29",
+   "tests": [
+    "inverse-function-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#15": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "97d86334bb41",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:30",
+   "tests": [
+    "implicit-function-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#16": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "495f18fae7ea",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:31",
+   "tests": [
+    "lagrangian-and-kkt-conditions",
+    "absolute-extrema-in-several-variables"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#17": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "2f61fec3d7b2",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:32",
+   "tests": [
+    "absolute-extrema-in-several-variables"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#18": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "b9ea3442b195",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:32",
+   "tests": [
+    "multiple-integrals",
+    "mean-value-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#19": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "2ec2a4774a46",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:33",
+   "tests": [
+    "iterated-integrals-and-fubini"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#2": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "8014b089ec0b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:19",
+   "tests": [
+    "cross-product",
+    "determinant-volume-and-orientation"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#20": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "ded281d9b26e",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:34",
+   "tests": [
+    "change-of-variables-multiple-integrals",
+    "improper-integrals"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#21": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "ef83cb6adb55",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:35",
+   "tests": [
+    "parametrized-surfaces"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#22": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "b75e7cf3f345",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:36",
+   "tests": [
+    "integrals-over-curves-and-surfaces"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#23": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "e71b9345b6c0",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:37",
+   "tests": [
+    "line-integrals-and-conservative-fields"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#24": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "79fc61cd07ab",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:38",
+   "tests": [
+    "flux-divergence-and-curl"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#25": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "61277039de2b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:38",
+   "tests": [
+    "greens-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#26": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "6f79ba3e636b",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:39",
+   "tests": [
+    "stokes-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#27": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "dd84d66517cf",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:40",
+   "tests": [
+    "divergence-theorem"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#28": {
+   "difficulty": 4,
+   "est_minutes": 25,
+   "hash": "57d7b09e9dae",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:41",
+   "tests": [
+    "lagrangian-and-kkt-conditions",
+    "iterated-integrals-and-fubini",
+    "change-of-variables-multiple-integrals"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#3": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "32c88f2bba52",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:20",
+   "tests": [
+    "kernel-image-and-rank-nullity",
+    "affine-subspaces",
+    "graphs-and-level-sets"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#4": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "d7ba3be9a901",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:21",
+   "tests": [
+    "parametrized-curves"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#5": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "a4f2c26ba710",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:22",
+   "tests": [
+    "curvature-of-plane-curves"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#6": {
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "1eee11ea85e9",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:23",
+   "tests": [
+    "space-curves-and-frenet-serret"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#7": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "6a7bb887723e",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:24",
+   "tests": [
+    "graphs-and-level-sets"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#8": {
+   "difficulty": 2,
+   "est_minutes": 15,
+   "hash": "86d42553d420",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:24",
+   "tests": [
+    "limits-and-continuity-in-Rn"
+   ],
+   "type": "computation"
+  },
+  "pset-calculus-02#9": {
+   "difficulty": 3,
+   "est_minutes": 15,
+   "hash": "21d8bd1e6597",
+   "model": "qwen3.5:9b",
+   "needs_review": false,
+   "tagged_at": "2026-11-07T15:44:25",
+   "tests": [
+    "partial-and-directional-derivatives",
+    "differentiability-in-Rn"
    ],
    "type": "computation"
   },

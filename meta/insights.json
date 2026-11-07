@@ -105,6 +105,28 @@
   "hash": "dab8c8bbe036",
   "model": "qwen3.5:9b"
  },
+ "absolute-extrema-in-several-variables": {
+  "at": "2026-11-07T15:45:36",
+  "connections": [
+   {
+    "id": "semicontinuity-and-extreme-value-theorem",
+    "new": true,
+    "why": "It provides the topological condition (lower semicontinuity on a compact set) that guarantees an absolute minimum exists, which is the theoretical foundation for the Extreme Value Theorem used in this note."
+   },
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "Convexity of the domain and function ensures that local extrema found via critical points are global, simplifying the search strategy described here."
+   },
+   {
+    "id": "hyperplane-separation-theorems",
+    "new": true,
+    "why": "This theorem characterizes the geometry of convex sets (like the feasible regions in optimization) where absolute extrema often occur at boundary points or vertices."
+   }
+  ],
+  "hash": "1a7adb74f47c",
+  "model": "qwen3.5:9b"
+ },
  "adjusting-for-overcounting": {
   "at": "2026-10-19T13:31:54",
   "connections": [
@@ -686,6 +708,23 @@
   "hash": "f332db79c094",
   "model": "qwen3.5:9b"
  },
+ "change-of-variables-multiple-integrals": {
+  "at": "2026-11-07T15:45:40",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "The change of variables formula is the geometric engine that allows us to transform integrals over arbitrary regions into standard forms, which is a foundational technique for defining and computing the Lebesgue integral on general measurable sets."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "Both theorems relate integrals over a region to boundary data (via the Jacobian determinant here, or via flux of a vector field there), sharing the same underlying principle of how local linear transformations affect volume and integration."
+   }
+  ],
+  "hash": "2fbd66708da3",
+  "model": "qwen3.5:9b"
+ },
  "chebyshevs-inequality": {
   "at": "2026-10-19T13:40:25",
   "connections": [
@@ -1049,6 +1088,40 @@
   "hash": "1bdef59808ab",
   "model": "qwen3.5:9b"
  },
+ "critical-points-and-hessian": {
+  "at": "2026-11-07T15:45:44",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The Hessian test relies on the geometry of quadratic forms, which is fundamentally governed by the properties of convex sets and functions."
+   },
+   {
+    "id": "eigenvalues-and-eigenvectors",
+    "new": true,
+    "why": "The Second Derivative Test classifies critical points by analyzing the eigenvalues of the symmetric Hessian matrix."
+   }
+  ],
+  "hash": "987b346493c6",
+  "model": "qwen3.5:9b"
+ },
+ "cross-product": {
+  "at": "2026-11-07T15:45:54",
+  "connections": [
+   {
+    "id": "multilinear-and-alternating-forms",
+    "new": true,
+    "why": "The cross product is the unique bilinear, alternating map from $\times$ to $\times$ in 3D that satisfies the determinant formula, making it a concrete realization of an alternating multilinear form."
+   },
+   {
+    "id": "dual-maps-and-transpose",
+    "new": true,
+    "why": "The cross product can be represented as a linear map $v \to u\times v$ whose matrix is the skew-symmetric matrix associated with $u$, illustrating the relationship between vectors and dual maps via the Hodge star."
+   }
+  ],
+  "hash": "76ca86b7c8ea",
+  "model": "qwen3.5:9b"
+ },
  "cumulative-distribution-functions": {
   "at": "2026-10-19T13:41:24",
   "connections": [
@@ -1069,6 +1142,28 @@
    }
   ],
   "hash": "eb4f1fd40f8a",
+  "model": "qwen3.5:9b"
+ },
+ "curvature-of-plane-curves": {
+  "at": "2026-11-07T15:45:58",
+  "connections": [
+   {
+    "id": "greens-theorem",
+    "new": true,
+    "why": "Both relate local geometric properties (curvature/normal vector) to global integrals via Stokes' Theorem in 2D, where the line integral of curvature relates to the turning number."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "The proof of the Fundamental Theorem of Plane Curves uses a dot product argument on tangent vectors that mirrors the geometric intuition behind divergence and curl identities used in these theorems."
+   },
+   {
+    "id": "flux-divergence-and-curl",
+    "new": true,
+    "why": "The definition of signed curvature $\theta' = T_1T_2' - T_2T_1'$ is the 2D scalar curl (vorticity) of the tangent field, directly linking to the concepts of flux and divergence in vector calculus."
+   }
+  ],
+  "hash": "4abc4c9740b1",
   "model": "qwen3.5:9b"
  },
  "de-montmorts-matching-problem": {
@@ -1256,6 +1351,28 @@
   "hash": "75b8c31430a1",
   "model": "qwen3.5:9b"
  },
+ "differentiability-in-Rn": {
+  "at": "2026-11-07T15:46:03",
+  "connections": [
+   {
+    "id": "implicit-function-theorem",
+    "new": true,
+    "why": "The Implicit Function Theorem uses the Jacobian matrix (specifically its invertibility) as the precise condition to guarantee that a differentiable map locally admits an inverse or can be solved for one variable in terms of others."
+   },
+   {
+    "id": "inverse-function-theorem",
+    "new": true,
+    "why": "The Inverse Function Theorem is the direct application of the derivative being an invertible linear map (Jacobian) to prove the existence and smoothness of local inverses for differentiable functions."
+   },
+   {
+    "id": "chain-rule-and-inverse-functions",
+    "new": true,
+    "why": "This note connects the Jacobian matrix directly to the multivariable chain rule, which is the fundamental mechanism used in the proofs of both the Inverse Function Theorem and the Implicit Function Theorem."
+   }
+  ],
+  "hash": "00892a0e2a3e",
+  "model": "qwen3.5:9b"
+ },
  "differentiation-rules": {
   "at": "2026-10-24T16:25:41",
   "connections": [
@@ -1293,6 +1410,23 @@
    }
   ],
   "hash": "4ef265b1761b",
+  "model": "qwen3.5:9b"
+ },
+ "divergence-theorem": {
+  "at": "2026-11-07T15:46:07",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both theorems establish existence results for continuous maps on specific domains (star-shaped sets vs. compact convex sets) by leveraging topological properties like homotopy or fixed points."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof of the Poincaré Lemma relies on integrating along straight lines within a star-shaped domain, a concept deeply connected to the definition and utility of compactness in ensuring uniform continuity and convergence."
+   }
+  ],
+  "hash": "89c254809775",
   "model": "qwen3.5:9b"
  },
  "dominated-convergence-theorem": {
@@ -1663,6 +1797,28 @@
   "hash": "c4d4cd83b7f5",
   "model": "qwen3.5:9b"
  },
+ "flux-divergence-and-curl": {
+  "at": "2026-11-07T15:46:11",
+  "connections": [
+   {
+    "id": "cross-product",
+    "new": false,
+    "why": "The definition of curl relies on the cross product to define its components and geometric interpretation."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": false,
+    "why": "Divergence is defined as the local flux density, which is integrated globally in the Divergence Theorem."
+   },
+   {
+    "id": "greens-theorem",
+    "new": false,
+    "why": "Green's Theorem is the 2D analog of Stokes' Theorem, relating line integrals (circulation) to curl over a region."
+   }
+  ],
+  "hash": "5cfba0897bb9",
+  "model": "qwen3.5:9b"
+ },
  "fourier-series": {
   "at": "2026-10-24T16:25:56",
   "connections": [
@@ -1889,6 +2045,23 @@
   "hash": "a28b3616af9d",
   "model": "qwen3.5:9b"
  },
+ "gradient": {
+  "at": "2026-11-07T15:46:14",
+  "connections": [
+   {
+    "id": "convex-sets-and-convex-hulls",
+    "new": true,
+    "why": "The gradient of a convex function points outward from its level sets, and the geometry of convex hulls ensures that these level sets bound convex regions where the gradient never vanishes except at minima."
+   },
+   {
+    "id": "lagrangian-and-kkt-conditions",
+    "new": true,
+    "why": "At constrained extrema, the gradient of the objective function must be orthogonal to the tangent space of the constraint surface (a level set), which is precisely the geometric condition encoded in the KKT multipliers."
+   }
+  ],
+  "hash": "617c8477ee94",
+  "model": "qwen3.5:9b"
+ },
  "gradient-descent-and-variants": {
   "at": "2026-10-19T13:43:06",
   "connections": [
@@ -1909,6 +2082,72 @@
    }
   ],
   "hash": "e6975101822a",
+  "model": "qwen3.5:9b"
+ },
+ "graphs-and-level-sets": {
+  "at": "2026-11-07T15:46:18",
+  "connections": [
+   {
+    "id": "gradient",
+    "new": false,
+    "why": "The gradient vector is the normal to the level sets defined in this note, providing the geometric link between scalar fields and their surfaces."
+   },
+   {
+    "id": "implicit-function-theorem",
+    "new": true,
+    "why": "This theorem guarantees that smooth level sets (like those of quadric surfaces) locally define functions, directly applying the concepts of graphs and level sets discussed here."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "Both notes utilize the fundamental connection between local properties (gradients/level sets) and global integrals over boundaries (surfaces defined by level sets)."
+   }
+  ],
+  "hash": "2a2e2df6e4ba",
+  "model": "qwen3.5:9b"
+ },
+ "greens-theorem": {
+  "at": "2026-11-07T15:46:23",
+  "connections": [
+   {
+    "id": "stokes-theorem",
+    "new": false,
+    "why": "Green's Theorem is the specific two-dimensional case of Stokes' Theorem, which generalizes this relationship between boundary integrals and interior derivatives to arbitrary dimensions and manifolds."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": false,
+    "why": "The divergence form of Green's Theorem (flux across a boundary equals volume integral of divergence) is the planar special case of the Divergence Theorem in $\nabla \times \nabla = 0$ and $\nabla \times (\nabla f) = 0$."
+   },
+   {
+    "id": "flux-divergence-and-curl",
+    "new": false,
+    "why": "This note defines the curl and divergence operators that appear as the integrand in Green's Theorem, establishing the local-to-global relationship between these quantities and their line/surface integrals."
+   }
+  ],
+  "hash": "b2115b04f479",
+  "model": "qwen3.5:9b"
+ },
+ "higher-partials-and-taylor": {
+  "at": "2026-11-07T15:46:28",
+  "connections": [
+   {
+    "id": "taylor-series",
+    "new": true,
+    "why": "It is the infinite-limit generalization of Taylor's theorem in several variables, describing convergence to a power series rather than a finite polynomial."
+   },
+   {
+    "id": "fourier-series",
+    "new": true,
+    "why": "Both are fundamental approximation theorems that represent functions as sums of basis elements (monomials vs. trigonometric functions) with associated error analysis."
+   },
+   {
+    "id": "linear-approximation",
+    "new": true,
+    "why": "The first-order Taylor polynomial in several variables is precisely the linear approximation, making this note a direct generalization of that concept."
+   }
+  ],
+  "hash": "716f1fda6b79",
   "model": "qwen3.5:9b"
  },
  "homeomorphisms-compactness": {
@@ -1960,6 +2199,23 @@
    }
   ],
   "hash": "bffe0d2f7709",
+  "model": "qwen3.5:9b"
+ },
+ "implicit-function-theorem": {
+  "at": "2026-11-07T15:46:32",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "Both are fundamental existence theorems in topology/analysis that guarantee a solution exists under specific conditions (non-zero Jacobian for IFT, non-contractibility for Brouwer), often serving as the primary tools to prove properties of continuous maps."
+   },
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "The proof of the Implicit Function Theorem relies on the Inverse Function Theorem, which in turn depends on local invertibility and continuity concepts deeply connected to compactness arguments used to establish global existence or behavior."
+   }
+  ],
+  "hash": "4b3788b7f4db",
   "model": "qwen3.5:9b"
  },
  "importance-sampling": {
@@ -2128,6 +2384,28 @@
   "hash": "de32ea72c988",
   "model": "qwen3.5:9b"
  },
+ "integrals-over-curves-and-surfaces": {
+  "at": "2026-11-07T15:46:35",
+  "connections": [
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "The divergence theorem generalizes these surface integrals to vector fields, relating the flux through a closed surface to the volume integral of the divergence."
+   },
+   {
+    "id": "stokes-theorem",
+    "new": true,
+    "why": "Stokes' theorem generalizes line integrals over curves to surface integrals involving curl, providing the higher-dimensional analogue for the curve case."
+   },
+   {
+    "id": "greens-theorem",
+    "new": true,
+    "why": "Green's theorem is the specific 2D planar case connecting line integrals around a closed curve to double integrals over the enclosed region."
+   }
+  ],
+  "hash": "6ec1aebfccb8",
+  "model": "qwen3.5:9b"
+ },
  "integration-by-parts-and-substitution": {
   "at": "2026-10-24T16:26:15",
   "connections": [
@@ -2196,6 +2474,28 @@
   "hash": "8fb334c607ac",
   "model": "qwen3.5:9b"
  },
+ "inverse-function-theorem": {
+  "at": "2026-11-07T15:46:40",
+  "connections": [
+   {
+    "id": "brouwer-fixed-point-theorem",
+    "new": true,
+    "why": "The proof of the Inverse Function Theorem explicitly constructs a local inverse by showing that a specific map is a contraction, which relies on the Banach Fixed Point Theorem (linked) and shares the same topological spirit as Brouwer's theorem regarding existence of fixed points in compact sets."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "Both theorems fundamentally rely on the concept of local invertibility and coordinate changes to transform integrals or derivatives, with the Divergence Theorem being a global consequence of the Inverse Function Theorem applied to volume forms (change of variables)."
+   },
+   {
+    "id": "implicit-function-theorem",
+    "new": false,
+    "why": "The Implicit Function Theorem is a direct generalization/special case relationship where solving for one variable in terms of others is treated as a specific instance of the broader inverse mapping principle."
+   }
+  ],
+  "hash": "47943c2a26c9",
+  "model": "qwen3.5:9b"
+ },
  "invertible-linear-maps": {
   "at": "2026-10-19T15:46:45",
   "connections": [
@@ -2228,6 +2528,28 @@
    }
   ],
   "hash": "8f7687540ca8",
+  "model": "qwen3.5:9b"
+ },
+ "iterated-integrals-and-fubini": {
+  "at": "2026-11-07T15:46:44",
+  "connections": [
+   {
+    "id": "lebesgue-integral",
+    "new": true,
+    "why": "Fubini's Theorem is the cornerstone that allows iterated integration to define the Lebesgue integral on product spaces, generalizing the Riemann case."
+   },
+   {
+    "id": "dominated-convergence-theorem",
+    "new": true,
+    "why": "The Dominated Convergence Theorem provides the rigorous conditions (integrability of the dominating function) required for Fubini's Theorem to hold in the Lebesgue setting."
+   },
+   {
+    "id": "sigma-algebra-of-measurable-sets",
+    "new": true,
+    "why": "Fubini's Theorem fundamentally relies on the product $\text{σ}$-algebra structure, which is generated by measurable rectangles and ensures the measurability of the slices."
+   }
+  ],
+  "hash": "55ba04772c3d",
   "model": "qwen3.5:9b"
  },
  "jensens-inequality": {
@@ -2287,20 +2609,25 @@
   "model": "qwen3.5:9b"
  },
  "lagrangian-and-kkt-conditions": {
-  "at": "2026-10-19T13:43:49",
+  "at": "2026-11-07T15:46:49",
   "connections": [
    {
     "id": "convex-sets-and-convex-hulls",
     "new": true,
-    "why": "KKT conditions rely on convexity to ensure that first-order necessary conditions are also sufficient for global optimality, linking directly to the geometry of convex sets and functions."
+    "why": "KKT conditions are the first-order optimality criteria specifically for problems involving convex sets and convex functions, where they become sufficient rather than just necessary."
    },
    {
     "id": "hyperplane-separation-theorems",
-    "new": false,
-    "why": "The geometric intuition behind KKT multipliers (gradients being parallel) is a specific instance of the broader hyperplane separation principle used to characterize boundaries between feasible and infeasible regions."
+    "new": true,
+    "why": "The geometric intuition behind Lagrange multipliers relies on the fact that at an optimum, the objective's level set is tangent to a constraint surface, which is a specific instance of hyperplane separation between convex sets."
+   },
+   {
+    "id": "bipartite-matching-lp",
+    "new": true,
+    "why": "This note illustrates how KKT conditions (or their linear programming equivalents like complementary slackness) are used to prove optimality in combinatorial optimization problems modeled as linear programs."
    }
   ],
-  "hash": "009573d47149",
+  "hash": "5b7fd341f846",
   "model": "qwen3.5:9b"
  },
  "laplace-expansion-adjugate-and-cramers-rule": {
@@ -2415,6 +2742,28 @@
   "hash": "235fd952e699",
   "model": "qwen3.5:9b"
  },
+ "limits-and-continuity-in-Rn": {
+  "at": "2026-11-07T15:46:53",
+  "connections": [
+   {
+    "id": "compactness",
+    "new": true,
+    "why": "Compactness is the topological generalization of closed and bounded sets that ensures continuous functions attain extrema, directly linking continuity to optimization outcomes."
+   },
+   {
+    "id": "continuity-and-compactness",
+    "new": true,
+    "why": "This note explicitly connects the property of continuity with compactness, a fundamental relationship in metric space topology relevant to limits."
+   },
+   {
+    "id": "uniform-continuity",
+    "new": true,
+    "why": "Uniform continuity is a stronger form of continuity that relies on the same epsilon-delta definition but imposes a uniform delta across the domain, often studied alongside standard continuity."
+   }
+  ],
+  "hash": "1a9b03772e40",
+  "model": "qwen3.5:9b"
+ },
  "limits-of-measurable-functions": {
   "at": "2026-10-23T19:38:01",
   "connections": [
@@ -2452,6 +2801,28 @@
    }
   ],
   "hash": "8a3386f781f2",
+  "model": "qwen3.5:9b"
+ },
+ "line-integrals-and-conservative-fields": {
+  "at": "2026-11-07T15:46:58",
+  "connections": [
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "Both relate the integral of a derivative (curl or divergence) over a region to a boundary integral, generalizing the line integral concept to higher dimensions."
+   },
+   {
+    "id": "greens-theorem",
+    "new": false,
+    "why": "Green's Theorem is the specific 2D case that connects the circulation of a vector field around a closed curve to the double integral of its curl, directly extending the logic used for conservative fields."
+   },
+   {
+    "id": "stokes-theorem",
+    "new": true,
+    "why": "Stokes' Theorem is the ultimate generalization of both Green's Theorem and the Fundamental Theorem for Line Integrals, relating the surface integral of a curl to the line integral around the boundary."
+   }
+  ],
+  "hash": "5ecd30395dc1",
   "model": "qwen3.5:9b"
  },
  "linear-approximation": {
@@ -2941,6 +3312,23 @@
   "hash": "14f454010817",
   "model": "qwen3.5:9b"
  },
+ "multiple-integrals": {
+  "at": "2026-11-07T15:47:02",
+  "connections": [
+   {
+    "id": "change-of-variables-multiple-integrals",
+    "new": true,
+    "why": "It provides the Jacobian determinant technique needed to compute multiple integrals over non-box regions by transforming coordinates."
+   },
+   {
+    "id": "integrals-over-curves-and-surfaces",
+    "new": true,
+    "why": "It extends the concept of integration from volumes in $\text{R}^n$ to fluxes and areas on lower-dimensional manifolds, using similar limit definitions."
+   }
+  ],
+  "hash": "ca55ed841b3c",
+  "model": "qwen3.5:9b"
+ },
  "multiplication-rule": {
   "at": "2026-10-19T13:45:28",
   "connections": [
@@ -2951,6 +3339,28 @@
    }
   ],
   "hash": "1f29c33fdd36",
+  "model": "qwen3.5:9b"
+ },
+ "multivariable-chain-rule": {
+  "at": "2026-11-07T15:47:06",
+  "connections": [
+   {
+    "id": "change-of-variables-multiple-integrals",
+    "new": true,
+    "why": "The chain rule provides the Jacobian determinant required to transform integrals under coordinate changes (e.g., polar or spherical coordinates)."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "The divergence theorem relies on the multivariable chain rule to relate volume integrals of divergences to surface fluxes via parametrized boundaries."
+   },
+   {
+    "id": "greens-theorem",
+    "new": true,
+    "why": "Green's theorem uses the chain rule to convert line integrals over curves into double integrals over regions by accounting for coordinate transformations."
+   }
+  ],
+  "hash": "8c3874f18ad0",
   "model": "qwen3.5:9b"
  },
  "multivariate-normal-distribution": {
@@ -3218,6 +3628,18 @@
   "hash": "fe50a7326912",
   "model": "qwen3.5:9b"
  },
+ "orthogonality-and-gram-schmidt": {
+  "at": "2026-11-07T15:47:09",
+  "connections": [
+   {
+    "id": "direct-sums-and-complements",
+    "new": true,
+    "why": "The orthogonal complement $W^\top$ is a specific instance of a direct sum decomposition $\text{span}(W) \bigoplus W^\top = \text{span}(W) + W^\top$, where the subspaces are mutually orthogonal."
+   }
+  ],
+  "hash": "379455404f7d",
+  "model": "qwen3.5:9b"
+ },
  "outcome": {
   "at": "2026-10-19T13:46:17",
   "connections": [
@@ -3238,6 +3660,67 @@
    }
   ],
   "hash": "5cc2faa87a78",
+  "model": "qwen3.5:9b"
+ },
+ "parametrized-curves": {
+  "at": "2026-11-07T15:47:15",
+  "connections": [
+   {
+    "id": "change-of-variables-multiple-integrals",
+    "new": true,
+    "why": "The arc length formula $L = \frac{ds}{dt} = |\boldsymbol{\nu}(t)|$ is a specific instance of the change-of-variables theorem where the parameter transformation $s(t) = \text{arc-length}$ simplifies the integral to $\tilde{\boldsymbol{\nu}}'(\tau) = 1$, analogous to how coordinate changes simplify multiple integrals."
+   },
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "Both concepts rely on the fundamental principle that a global geometric quantity (total length or total flux) can be computed by integrating local derivatives (speed or divergence) over the domain, often utilizing Stokes' Theorem as the unifying generalization."
+   },
+   {
+    "id": "greens-theorem",
+    "new": true,
+    "why": "Green's Theorem relates a line integral around a closed curve to a double integral over its interior, directly connecting the arc-length/velocity concepts in this note to the broader theory of integrals over curves and surfaces."
+   }
+  ],
+  "hash": "fd7515260082",
+  "model": "qwen3.5:9b"
+ },
+ "parametrized-surfaces": {
+  "at": "2026-11-07T15:47:19",
+  "connections": [
+   {
+    "id": "determinant-volume-and-orientation",
+    "new": true,
+    "why": "The cross product magnitude used for surface area is fundamentally defined by the determinant of a matrix whose columns are the tangent vectors, linking directly to how determinants measure volume and orientation."
+   },
+   {
+    "id": "change-of-variables-multiple-integrals",
+    "new": false,
+    "why": "Surface area calculation relies on integrating the area element over a parameter domain, which requires the change of variables formula to handle reparametrizations correctly."
+   },
+   {
+    "id": "integrals-over-curves-and-surfaces",
+    "new": false,
+    "why": "This note provides the general framework for integrating scalar functions (like 1) over surfaces, which is the specific operation used to compute surface area in this note."
+   }
+  ],
+  "hash": "5a911b00fda0",
+  "model": "qwen3.5:9b"
+ },
+ "partial-and-directional-derivatives": {
+  "at": "2026-11-07T15:47:23",
+  "connections": [
+   {
+    "id": "gradient",
+    "new": true,
+    "why": "The gradient vector is the unique linear map that represents all directional derivatives simultaneously, generalizing the concept from single-variable slopes to multivariable rates of change."
+   },
+   {
+    "id": "chain-rule-and-inverse-functions",
+    "new": true,
+    "why": "The chain rule for partial derivatives relies on the definition of directional derivatives along coordinate axes to establish the relationship between composite function derivatives and their components."
+   }
+  ],
+  "hash": "a6819ca89b45",
   "model": "qwen3.5:9b"
  },
  "partnerships": {
@@ -4073,6 +4556,28 @@
   "hash": "84dc28f88502",
   "model": "qwen3.5:9b"
  },
+ "space-curves-and-frenet-serret": {
+  "at": "2026-11-07T15:47:28",
+  "connections": [
+   {
+    "id": "divergence-theorem",
+    "new": true,
+    "why": "The Frenet–Serret formulas describe the local evolution of a frame along a curve (a 1D boundary), while the Divergence Theorem relates integrals over a volume to integrals over its 2D boundary, sharing the deep analogy of relating local differential operators to global integral invariants."
+   },
+   {
+    "id": "flux-divergence-and-curl",
+    "new": true,
+    "why": "Both topics utilize the cross product and vector calculus identities (like $T' = \nabla \times (\text{something})$ analogies) to relate geometric rates of change (torsion/curvature) to flux-like quantities, often appearing in proofs involving Stokes' or Divergence theorems."
+   },
+   {
+    "id": "stokes-theorem",
+    "new": true,
+    "why": "The Frenet–Serret formulas are a specific instance of the structural relationships between derivatives of vector fields that underpin Stokes' Theorem, where the curl (local rotation) relates to circulation (boundary integral), just as torsion relates to the twisting of the binormal."
+   }
+  ],
+  "hash": "29d5312f7d97",
+  "model": "qwen3.5:9b"
+ },
  "squeeze-theorem-for-sequences": {
   "at": "2026-10-19T13:48:06",
   "connections": [
@@ -4144,6 +4649,28 @@
    }
   ],
   "hash": "3502031d66c8",
+  "model": "qwen3.5:9b"
+ },
+ "stokes-theorem": {
+  "at": "2026-11-07T15:47:33",
+  "connections": [
+   {
+    "id": "divergence-theorem",
+    "new": false,
+    "why": "Both are special cases of the generalized Stokes' theorem relating integrals over a boundary to integrals of a derivative (curl for Stokes, divergence for Divergence) over the enclosed volume."
+   },
+   {
+    "id": "greens-theorem",
+    "new": false,
+    "why": "Green's Theorem is the specific instance of Stokes' Theorem where the surface lies in a plane ($z=0$), reducing the curl integral to a 2D line integral."
+   },
+   {
+    "id": "flux-divergence-and-curl",
+    "new": false,
+    "why": "This note defines the geometric concepts (curl, divergence, flux) that appear directly as the integrands and normal vectors in the statement of Stokes' Theorem."
+   }
+  ],
+  "hash": "d969e49b42fb",
   "model": "qwen3.5:9b"
  },
  "story-proofs": {

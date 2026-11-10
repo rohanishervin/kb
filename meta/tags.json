@@ -3019,13 +3019,14 @@
   "pset-calculus-01#1": {
    "difficulty": 3,
    "est_minutes": 25,
-   "hash": "7fe2beb2779a",
+   "hash": "2184402a39bc",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-24T16:23:27",
+   "tagged_at": "2026-11-10T17:56:01",
    "tests": [
     "irrationality-and-euclidean-algorithm",
-    "existence-of-decimal-expansion-in-R"
+    "existence-of-decimal-expansion-in-R",
+    "geometric-sequence"
    ],
    "type": "proof"
   },
@@ -3158,10 +3159,10 @@
   "pset-calculus-01#2": {
    "difficulty": 2,
    "est_minutes": 15,
-   "hash": "741222dd4148",
+   "hash": "88260a9b501c",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-24T16:23:28",
+   "tagged_at": "2026-11-10T18:52:28",
    "tests": [
     "supremum-infimum",
     "axiom-of-completeness",

@@ -2960,15 +2960,15 @@
    "tagged_at": "2026-10-19T13:01:39"
   },
   "vector-spaces": {
-   "chars": 11917,
+   "chars": 12048,
    "domain": "Linear Algebra & Matrix Theory",
-   "hash": "5604af7bdb83",
+   "hash": "088668d0b73a",
    "kind": "definition",
    "level": 2,
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "summary": "Defines vector spaces via axioms, derives basic arithmetic rules, and provides examples like coordinate spaces, functions, matrices, polynomials, and ODE solutions.",
-   "tagged_at": "2026-10-19T15:45:49"
+   "summary": "Defines vector spaces via axioms, derives basic arithmetic rules, and provides examples like matrices and function spaces.",
+   "tagged_at": "2026-11-12T15:23:36"
   },
   "vertex-cover-and-independent-set": {
    "chars": 11785,
@@ -3299,36 +3299,40 @@
    "type": "proof"
   },
   "pset-calculus-01#3": {
-   "difficulty": 2,
-   "est_minutes": 15,
-   "hash": "427ac9a3a024",
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "3c9a20f99d7b",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-24T16:23:29",
+   "tagged_at": "2026-11-12T15:20:24",
    "tests": [
-    "complex-numbers"
+    "complex-numbers",
+    "geometric-sequence",
+    "polynomial-division-algorithm"
    ],
    "type": "computation"
   },
   "pset-calculus-01#4": {
    "difficulty": 3,
-   "est_minutes": 25,
-   "hash": "bacbf13aecb7",
+   "est_minutes": 45,
+   "hash": "78c7e9e7848c",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-24T16:23:30",
+   "tagged_at": "2026-11-12T15:20:27",
    "tests": [
-    "complex-numbers"
+    "complex-numbers",
+    "mean-value-theorem",
+    "intermediate-value-theorem"
    ],
    "type": "computation"
   },
   "pset-calculus-01#5": {
-   "difficulty": 2,
-   "est_minutes": 15,
-   "hash": "7f0d7d4a5742",
+   "difficulty": 3,
+   "est_minutes": 25,
+   "hash": "6c3cae393604",
    "model": "qwen3.5:9b",
    "needs_review": false,
-   "tagged_at": "2026-10-24T16:23:31",
+   "tagged_at": "2026-11-12T15:20:28",
    "tests": [
     "complex-affine-maps"
    ],

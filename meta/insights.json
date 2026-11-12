@@ -5008,25 +5008,25 @@
   "model": "qwen3.5:9b"
  },
  "vector-spaces": {
-  "at": "2026-10-19T15:47:38",
+  "at": "2026-11-12T15:23:40",
   "connections": [
    {
     "id": "normed-vector-spaces",
     "new": true,
-    "why": "It generalizes vector spaces by adding a norm (length) to the structure, bridging linear algebra with metric space topology."
+    "why": "It generalizes the concept of a vector space by adding a norm to define distance and convergence, bridging linear algebra with metric spaces."
    },
    {
     "id": "function-spaces",
     "new": true,
-    "why": "It provides the crucial example of infinite-dimensional vector spaces where functions replace finite lists, essential for analysis and ODEs."
+    "why": "It provides the specific example of function spaces (like continuous functions) as concrete instances of abstract vector spaces."
    },
    {
-    "id": "ode-intro",
+    "id": "subspaces",
     "new": false,
-    "why": "It connects the abstract definition to a concrete application: the solution set of a homogeneous linear differential equation forms a vector space."
+    "why": "It defines the necessary structure for a subset to be considered a subspace, which is a fundamental concept within vector space theory."
    }
   ],
-  "hash": "5604af7bdb83",
+  "hash": "088668d0b73a",
   "model": "qwen3.5:9b"
  },
  "vertex-cover-and-independent-set": {
